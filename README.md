@@ -1,2 +1,2 @@
 # bdg-trainings-oop
-This is a public repository educational purposes
+This is a public repository for educational purposes
