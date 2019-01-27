@@ -7,7 +7,7 @@ public class Employee {
 	String lastName;
 	int salary;
 	
-	public Employee (int id, String firstName, String lastName, int salary) {
+	public Employee (final int id, final String firstName, final String lastName, final int salary) {
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -28,7 +28,7 @@ public class Employee {
 	}
 	
 	public String getName() {
-		return "firstName, lastName";
+		return "firstName lastName";
 	}
 	
 	public int getSalary() {
@@ -49,8 +49,10 @@ public class Employee {
 		return salary_raise;		
 	}
 	
+	@Override
 	public String toString() {
-		return String.format("Employee[id = %03d, name = firstName, name = lastName, salary = %03d]", getID(), getFirstName(), getLastName(), getSalary());
+		return "Employee[id = " + id + ", name = " + firstName + " " + lastName + ", salary = " + salary +"]";
+		
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -58,8 +60,9 @@ public class Employee {
 		Employee emp =  new Employee(1, "Vika", "Karamyan", 300000);
 		System.out.println(emp);
 		emp.setSalary(450000);
-		System.out.println(emp.getAnnualSalary());
-		System.out.println(emp.raiseSalary(20));
+		System.out.println("Annual salary is:" + emp.getAnnualSalary());
+		System.out.println("Raise salary:" + emp.raiseSalary(20));
+		
 
 	}
 
