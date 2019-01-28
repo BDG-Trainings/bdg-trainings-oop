@@ -32,6 +32,5 @@ public class Executor {
         Department department = new Department("Accounting", employee, employee1, employee1.getSalary()+employee2.getSalary() );
         System.out.println(department.toString());
 
-
     }
 }

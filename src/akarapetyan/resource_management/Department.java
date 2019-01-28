@@ -14,6 +14,12 @@ public class Department {
         this.departmentSalary = departmentSalary;
     }
 
+    public Department (String departmentName, Employee [] employees, double departmentSalary){
+        this.departmentName = departmentName;
+        this.employees = employees;
+        this.departmentSalary = departmentSalary;
+    }
+
     public void setDepartmentName(String departmentName) {
         this.departmentName = departmentName;
     }
