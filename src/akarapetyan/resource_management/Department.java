@@ -17,8 +17,8 @@ public class Department {
         this.departmentSalary = departmentSalary;
     }
 
-    public Employee [] setDepartmentforEmployee (String depName, Employee employee){
-        departmentName = depName;
+    public Employee [] setDepartmentforEmployee (Employee employee){
+
         Employee [] employee_update = new Employee[employees.length +1];
         for (int i = 0; i < employees.length; i++)
         {

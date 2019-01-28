@@ -11,27 +11,13 @@ public class ResourceManagement {
 
     public void addEmployeeToDepartment (Employee emp, String departmentName){
 
+        for (int i=0; i < departments.length; i++){
 
+            if (departments[i].getDepartmentName() == departmentName)
+            {
+                Department dep = departments [i];
+            }
 
-    }
-
-
-    public void AddDepartment (Department department) {
-
-        Department [] upd_department = new Department[departments.length+1];
-
-        for (int i =0; i < departments.length; i++){
-            upd_department[i] = departments [i];
-        }
-        upd_department [departments.length] = department;
-    }
-
-    public void PrintListOfDepartments() {
-        System.out.print("Departments: " );
-
-        for (int i = 0; i < departments.length; i++)
-        {
-            System.out.print(departments[i] + ", ");
         }
     }
 }
