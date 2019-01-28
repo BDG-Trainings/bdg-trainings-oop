@@ -12,6 +12,8 @@ public class Executor {
         add [0] = add0;
         add [1] = add1;
         add [2] = add2;
+        Address [] addresses1 = new Address [1];
+        addresses1 [0] = add0;
 
         Person person1 = new Person("Angelina", "Jolie", "Voight", (short)43, add);
         //System.out.println(person1.toString());
@@ -29,5 +31,7 @@ public class Executor {
 
         Department department = new Department("Accounting", employee, employee1, employee1.getSalary()+employee2.getSalary() );
         System.out.println(department.toString());
+
+
     }
 }
