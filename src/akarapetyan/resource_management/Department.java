@@ -14,10 +14,16 @@ public class Department {
         this.departmentSalary = departmentSalary;
     }
 
-    public Department (String departmentName, Employee [] employees, double departmentSalary){
-        this.departmentName = departmentName;
-        this.employees = employees;
-        this.departmentSalary = departmentSalary;
+    public Employee [] setDepartmentforEmployee (String depName, Employee employee){
+        departmentName = depName;
+        Employee [] employee_update = new Employee[employees.length +1];
+        for (int i = 0; i < employees.length; i++)
+        {
+            employee_update[i] = employees[i];
+        }
+        employee_update [employees.length] = employee;
+        employees = employee_update;
+        return employees;
     }
 
     public void setDepartmentName(String departmentName) {
