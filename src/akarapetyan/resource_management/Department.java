@@ -7,6 +7,9 @@ public class Department {
     Employee departmentHeadEmployee;
     private double departmentSalary;
 
+    public Department (String departmentName){
+    }
+
     public Department (String departmentName, Employee [] employees, Employee departmentHeadEmployee, double departmentSalary){
         this.departmentName = departmentName;
         this.employees = employees;
@@ -26,9 +29,6 @@ public class Department {
         return employees;
     }
 
-    public void setDepartmentName(String departmentName) {
-        this.departmentName = departmentName;
-    }
 
     public void setEmployees(Employee[] employees) {
         this.employees = employees;
@@ -64,4 +64,6 @@ public class Department {
                 employees[1].getPerson() + employees[1].toString() +"\n\nDepartment Head: " + departmentHeadEmployee.getPerson()
                 + "\nDepartment salary: " + departmentSalary;
     }
+
+
 }

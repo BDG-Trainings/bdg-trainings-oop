@@ -4,8 +4,9 @@ public class ResourceManagement {
 
     private Department departments [];
 
-    public ResourceManagement (Department departments []){
-        this.departments = departments;
+    public ResourceManagement (){
+
+
     }
 
     public void addEmployeeToDepartment (Employee emp, String departmentName){
