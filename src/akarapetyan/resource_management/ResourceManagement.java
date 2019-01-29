@@ -65,6 +65,11 @@ public class ResourceManagement {
         return emp;
     }
 
+    public Department findDepartmentByname (String department){
+        Department dep = null;
+        return dep;
+    }
+
 
 
 }
