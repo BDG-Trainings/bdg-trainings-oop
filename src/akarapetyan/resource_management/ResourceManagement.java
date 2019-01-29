@@ -48,14 +48,21 @@ public class ResourceManagement {
     public Employee findEmployeeByName (String firstName, String lastName){
 
         Department dep = null;
+        Employee [] employees = null;
         Employee emp = null;
 
         for (int i =0; i < departments.length; i++ ) {
-            for (int m = 0; m < dep.getEmployees().length - 1; m++) {
 
-                dep.getEmployees();
+            dep = departments[i];
+            employees = dep.getEmployees();
+            for (int m = 0; m < employees.length - 1; m++) {
+
+                if (employees[i].getPerson().getFirstName() == firstName && employees[i].getPerson().getLastName() == lastName){
+                    emp = employees [i];
+                }
             }
-        } return emp;
+        }
+        return emp;
     }
 
 
