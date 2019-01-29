@@ -1,6 +1,7 @@
 package aiskandaryan.Lesson_07;
 
 public class InvoiceItem {
+    //Make private
     String id;
     String decs;
     int qty;

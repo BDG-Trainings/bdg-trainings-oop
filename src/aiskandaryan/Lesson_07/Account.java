@@ -1,6 +1,7 @@
 package aiskandaryan.Lesson_07;
 
 public class Account {
+    //Make private
     String id;
     String name;
     int balance = 0;

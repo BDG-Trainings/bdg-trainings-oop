@@ -1,6 +1,7 @@
 package aiskandaryan.Lesson_07;
 
 public class Time {
+    //Make private
     int hour;
     int minute;
     int second;

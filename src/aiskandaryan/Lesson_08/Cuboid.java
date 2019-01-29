@@ -1,6 +1,7 @@
 package aiskandaryan.Lesson_08;
 
 public class Cuboid {
+    //Make private
     float length = 1.0f;
     float width = 1.0f;
     float height = 1.0f;

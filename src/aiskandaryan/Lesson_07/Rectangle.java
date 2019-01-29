@@ -1,6 +1,7 @@
 package aiskandaryan.Lesson_07;
 
 public class Rectangle {
+    //Make private
     float length = 1.0f;
     float width = 1.0f;
 

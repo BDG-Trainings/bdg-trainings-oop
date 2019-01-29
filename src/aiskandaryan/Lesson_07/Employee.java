@@ -1,6 +1,7 @@
 package aiskandaryan.Lesson_07;
 
 public class Employee {
+    //Make private
     int id;
     String firstName;
     String lastName;

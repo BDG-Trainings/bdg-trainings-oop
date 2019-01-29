@@ -1,6 +1,7 @@
 package aiskandaryan.Lesson_07;
 
 public class Date {
+    //Make private
     int day;
     int month;
     int year;

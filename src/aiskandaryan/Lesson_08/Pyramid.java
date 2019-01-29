@@ -1,6 +1,7 @@
 package aiskandaryan.Lesson_08;
 
 public class Pyramid {
+    //Make private
     float height = 1.0f;
     float baseSide = 1.0f;
 

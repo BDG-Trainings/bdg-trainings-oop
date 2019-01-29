@@ -1,6 +1,7 @@
 package aiskandaryan.Lesson_08;
 
 public class Ball {
+    //Make private
     float radius = 1.0f;
 
     public Ball(final float radius) {
