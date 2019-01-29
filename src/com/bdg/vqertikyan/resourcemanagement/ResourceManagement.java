@@ -3,7 +3,8 @@ package com.bdg.vqertikyan.resourcemanagement;
 public class ResourceManagement {
     private Department[] departments;
 
-
+    //This method should use own departments
+    //public Department findDepartmentByName(String departmentName) {
     public Department findDepartmentByName(String departmentName, Department[] departments) {
         for (int i = 0; i < departments.length; i++) {
             if (departments[i].getDepartmentName().contentEquals(departmentName)) {
@@ -14,6 +15,8 @@ public class ResourceManagement {
     }
 
 
+    //Same here
+    //public Department getDepartmentWithMaxSalary() {
     public Department getDepartmentWithMaxSalary(Department[] departments) {
         int maxSalary = (int) departments[0].getDepartmentSalary();
 
