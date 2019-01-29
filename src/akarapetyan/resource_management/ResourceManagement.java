@@ -3,6 +3,7 @@ package akarapetyan.resource_management;
 public class ResourceManagement {
 
     private Department departments [];
+    Department dep = null;
 
     public ResourceManagement (){
     }
@@ -34,8 +35,6 @@ public class ResourceManagement {
 
     public Department searchDepartment (String departmentName){
 
-        Department dep = null;
-
         for (int i=0; i < departments.length; i++){
 
             if (departments[i].getDepartmentName() == departmentName)
@@ -47,7 +46,6 @@ public class ResourceManagement {
 
     public Employee findEmployeeByName (String firstName, String lastName){
 
-        Department dep = null;
         Employee [] employees = null;
         Employee emp = null;
 
@@ -66,10 +64,17 @@ public class ResourceManagement {
     }
 
     public Department findDepartmentByname (String department){
-        Department dep = null;
-        return dep;
+
+        for (int i =0; i < departments.length; i++ ) {
+            if (departments[i].getDepartmentName()== department){
+                dep = departments[i];
+            }
+        }   return dep;
     }
 
+    public Department getDepartmentWithMaxSalary(){
 
 
+        return dep;
+    }
 }
