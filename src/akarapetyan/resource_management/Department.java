@@ -17,19 +17,6 @@ public class Department {
         this.departmentSalary = departmentSalary;
     }
 
-    public Employee [] setDepartmentforEmployee (Employee employee){
-
-        Employee [] employee_update = new Employee[employees.length +1];
-        for (int i = 0; i < employees.length; i++)
-        {
-            employee_update[i] = employees[i];
-        }
-        employee_update [employees.length] = employee;
-        employees = employee_update;
-        return employees;
-    }
-
-
     public void setEmployees(Employee[] employees) {
         this.employees = employees;
     }
