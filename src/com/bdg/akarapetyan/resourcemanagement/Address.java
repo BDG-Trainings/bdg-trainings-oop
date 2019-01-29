@@ -1,4 +1,4 @@
-package akarapetyan.resource_management;
+package com.bdg.akarapetyan.resourcemanagement;
 
 public class Address {
 

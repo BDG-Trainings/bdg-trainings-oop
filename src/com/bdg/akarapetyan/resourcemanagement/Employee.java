@@ -1,4 +1,6 @@
-package akarapetyan.resource_management;
+package com.bdg.akarapetyan.resourcemanagement;
+
+import com.bdg.akarapetyan.resourcemanagement.Person;
 
 public class Employee {
 

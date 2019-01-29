@@ -1,4 +1,4 @@
-package akarapetyan.resource_management;
+package com.bdg.akarapetyan.resourcemanagement;
 
 public class Person {
 
@@ -6,7 +6,7 @@ public class Person {
     private String lastName;
     private String middleName;
     private short age;
-    private Address [] addresses;
+    private Address[] addresses;
 
     public Person (String firstName, short age){
         this.firstName = firstName;
