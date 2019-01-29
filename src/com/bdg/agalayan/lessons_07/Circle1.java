@@ -1,4 +1,4 @@
-package Lessons_07;
+package com.bdg.agalayan.lessons_07;
 
 public class Circle1 {
     private double radius= 1.0;

@@ -1,4 +1,6 @@
-import Lessons_07.Rectangle;
+package com.bdg.agalayan.lessons_08;
+
+import com.bdg.agalayan.lessons_07.Rectangle;
 
 public class Rectangular {
     private int depth;

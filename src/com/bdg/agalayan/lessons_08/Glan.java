@@ -1,4 +1,6 @@
-import Lessons_07.Circle1;
+package com.bdg.agalayan.lessons_08;
+
+import com.bdg.agalayan.lessons_07.Circle1;
 
 public class Glan {
     private double heigth;

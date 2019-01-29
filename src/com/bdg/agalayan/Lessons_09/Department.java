@@ -1,12 +1,12 @@
-package Lessons_09;
+package com.bdg.agalayan.Lessons_09;
 
 public class Department {
     private String departmentName;
-    private Employee[] employees;
-    private Employee departmentHeadEmplaoyee;
+    private Lessons_09.Employee[] employees;
+    private Lessons_09.Employee departmentHeadEmplaoyee;
     private double departmentSalary;
 
-    public Department(String departmentName, Employee [] employees, Employee departmentHeadEmplaoyee,
+    public Department(String departmentName, Lessons_09.Employee[] employees, Lessons_09.Employee departmentHeadEmplaoyee,
                       double departmentSalary){
         this.departmentName = departmentName;
         this.employees= employees;
@@ -17,11 +17,11 @@ public class Department {
         return departmentName;
     }
 
-    public Employee [] getEmployees() {
+    public Lessons_09.Employee[] getEmployees() {
         return employees;
     }
 
-    public Employee getDepartmentHeadEmployee() {
+    public Lessons_09.Employee getDepartmentHeadEmployee() {
         return departmentHeadEmplaoyee;
     }
 
@@ -33,11 +33,11 @@ public class Department {
         this.departmentName = departamentName;
     }
 
-    public void setEmployees(Employee[]employees) {
+    public void setEmployees(Lessons_09.Employee[]employees) {
         this.employees = employees;
     }
 
-    public void setDepartmentHeadEmplaoyee(Employee departamentHeadEmplaoyee) {
+    public void setDepartmentHeadEmplaoyee(Lessons_09.Employee departamentHeadEmplaoyee) {
         this.departmentHeadEmplaoyee = departmentHeadEmplaoyee;
     }
 
