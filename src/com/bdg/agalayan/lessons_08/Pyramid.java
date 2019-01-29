@@ -1,4 +1,4 @@
-package Lessons_08;
+package com.bdg.agalayan.lessons_08;
 
 public class Pyramid {
     private int lendth;

@@ -1,4 +1,4 @@
-package Lessons_09;
+package com.bdg.agalayan.Lessons_09;
 
 public class Address {
     private String street;

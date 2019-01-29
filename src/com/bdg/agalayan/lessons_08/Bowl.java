@@ -1,6 +1,6 @@
-package Lessons_08;
+package com.bdg.agalayan.lessons_08;
 
-import Lessons_07.Circle1;
+import com.bdg.agalayan.lessons_07.Circle1;
 
 public class Bowl {
     private Circle1 circle;
