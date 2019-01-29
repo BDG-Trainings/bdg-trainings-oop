@@ -1,7 +1,9 @@
 package com.bdg.vkaramyan;
 
 public class Employee {
-	
+
+
+    //same make private
 	int id;
 	String firstName;
 	String lastName;

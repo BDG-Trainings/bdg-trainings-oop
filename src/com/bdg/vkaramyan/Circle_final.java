@@ -1,5 +1,6 @@
 package com.bdg.vkaramyan;
 
+//Class names should not contains underscore replace Circle_final => CircleFinale
 public class Circle_final {
 	double radius = 1.0;
 

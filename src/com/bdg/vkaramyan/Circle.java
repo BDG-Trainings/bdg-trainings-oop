@@ -1,7 +1,8 @@
 package com.bdg.vkaramyan;
 
 public class Circle {
-	
+
+    //make private
 	double radius = 1.0;
 	String color = "red";
 

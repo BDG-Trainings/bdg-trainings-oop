@@ -53,6 +53,7 @@ public class Date {
 		if (year >= 1900 && year <= 9999) {
 			this.year = year;
 		} else {
+		    //mb this.year ?
 			year = 1900;
 		}
 	}

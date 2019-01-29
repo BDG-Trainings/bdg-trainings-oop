@@ -3,7 +3,7 @@ package com.bdg.vkaramyan;
 public class Employees {
 	
 	private double salary;
-	private Person person;
+	private Person person; //<---  change to Employee
 	private Department department;
 	
 	public Employees(final double salary, final Person person, final Department department) {

@@ -1,5 +1,7 @@
 package com.bdg.vkaramyan;
 
+
+//Change Pyramid class construction from primitive to reference type (side, height => Triangle class)
 public class Pyramid {
 	
 	private int side;

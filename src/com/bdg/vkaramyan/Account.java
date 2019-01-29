@@ -1,7 +1,9 @@
 package com.bdg.vkaramyan;
 
 public class Account {
-	
+
+
+    //Make id, name balance private
 	String id;
 	String name;
 	int balance = 0;

@@ -1,7 +1,8 @@
 package com.bdg.vkaramyan;
 
 public class Time {
-	
+
+    //PRIVATE
 	int hour;
 	int minute;
 	int second;

@@ -5,7 +5,8 @@ public class Rectangle {
 
 	float lenght = 1.0f;
 	float width = 1.0f;
-	
+
+	//This constructor unusable.
 	public Rectangle() {
 		
 	}

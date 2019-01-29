@@ -27,7 +27,8 @@ public class Ball {
 	public void setDiam(int diam) {
 		this.diam = diam;
 	}
-	
+
+	//method names should start from lowercase
 	public double Volume() {
 		int radius = diam/2;
 		double volume = ( 4.0 / 3.0 ) * Math.PI * Math.pow(radius, 3 );

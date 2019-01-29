@@ -2,7 +2,7 @@ package com.bdg.vkaramyan;
 
 public class InvoiceItem {
 	
-	String id;
+	String id; //<- private
 	String desc;
 	int qty;
 	double unitPrice;
