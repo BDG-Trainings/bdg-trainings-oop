@@ -29,18 +29,18 @@ public class Ball {
 	}
 
 	//method names should start from lowercase
-	public double Volume() {
+	public double volume() {
 		int radius = diam/2;
-		double volume = ( 4.0 / 3.0 ) * Math.PI * Math.pow(radius, 3 );
-		return volume;
+		double volumeBall = ( 4.0 / 3.0 ) * Math.PI * Math.pow(radius, 3 );
+		return volumeBall;
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 		Ball ball = new Ball(2, 4);
-		ball.Volume();
-		System.out.println("Ball volume is:" + " " + ball.Volume());
+		ball.volume();
+		System.out.println("Ball volume is:" + " " + ball.volume());
 
 	}
 

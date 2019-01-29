@@ -2,10 +2,10 @@ package com.bdg.vkaramyan;
 
 public class InvoiceItem {
 	
-	String id; //<- private
-	String desc;
-	int qty;
-	double unitPrice;
+	private String id; //<- private
+	private String desc;
+	private int qty;
+	private double unitPrice;
 	
 	public InvoiceItem(String id, String desc, int qty, double unitPrice) {
 		this.id = id;

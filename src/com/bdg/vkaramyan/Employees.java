@@ -3,12 +3,12 @@ package com.bdg.vkaramyan;
 public class Employees {
 	
 	private double salary;
-	private Person person; //<---  change to Employee
+	private Employees employees; //<---  change to Employee
 	private Department department;
 	
-	public Employees(final double salary, final Person person, final Department department) {
+	public Employees(final double salary, final Employees employees, final Department department) {
 		this.salary = salary;
-		this.person = person;
+		this.employees = employees;
 		this.department =  department;
 	}
 	
@@ -16,8 +16,8 @@ public class Employees {
 		return salary;
 	}
 	
-	public Person getPerson() {
-		return person;
+	public Employees getEmployees() {
+		return employees;
 	}
 	
 	public Department getDepartment() {
@@ -28,8 +28,8 @@ public class Employees {
 		this.salary = salary;
 	}
 	
-	public void setPerson(Person person) {
-		this.person = person;
+	public void setEmployees(Employees employees) {
+		this.employees = employees;
 	}
 
 	public void setDepartment(Department department) {

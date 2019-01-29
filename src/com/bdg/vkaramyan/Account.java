@@ -4,9 +4,9 @@ public class Account {
 
 
     //Make id, name balance private
-	String id;
-	String name;
-	int balance = 0;
+	private String id;
+	private String name;
+	private int balance = 0;
 
 	public Account(String id, String name) {
 		this.id = id;

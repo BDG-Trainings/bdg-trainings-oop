@@ -4,10 +4,10 @@ public class Employee {
 
 
     //same make private
-	int id;
-	String firstName;
-	String lastName;
-	int salary;
+	private int id;
+	private String firstName;
+	private String lastName;
+	private int salary;
 	
 	public Employee (final int id, final String firstName, final String lastName, final int salary) {
 		this.id = id;

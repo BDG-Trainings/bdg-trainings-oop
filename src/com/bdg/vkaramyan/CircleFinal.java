@@ -1,14 +1,14 @@
 package com.bdg.vkaramyan;
 
 //Class names should not contains underscore replace Circle_final => CircleFinale
-public class Circle_final {
+public class CircleFinal {
 	double radius = 1.0;
 
-	public Circle_final() {
+	public CircleFinal() {
 		
 	}
 
-	public Circle_final(double radius) {
+	public CircleFinal(double radius) {
 		this.radius = radius;
 	}
 
@@ -38,7 +38,7 @@ public class Circle_final {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Circle_final circle = new Circle_final();
+		CircleFinal circle = new CircleFinal();
 		System.out.println(circle);
 		circle.setRadius(3.0);
 		System.out.println(circle.getArea());

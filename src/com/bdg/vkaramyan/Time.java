@@ -3,9 +3,9 @@ package com.bdg.vkaramyan;
 public class Time {
 
     //PRIVATE
-	int hour;
-	int minute;
-	int second;
+	private int hour;
+	private int minute;
+	private int second;
 	
 	public Time (final int hour, final int minute, final int second) {
 		this.hour  = hour;
