@@ -1,9 +1,9 @@
 package com.bdg.hhertevtsyan;
 
 public class Account {
-    String id;
-    String name;
-    int balance=0;
+    private String id;
+    private String name;
+    private int balance=0;
 
     public Account (final String id, final String name) {
         this.id=id;

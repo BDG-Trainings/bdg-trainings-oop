@@ -22,7 +22,7 @@ public class Date {
         return year;
     }
 
-    private boolean validation () {
+    private boolean isValid () {
         if (day > 0 && day < 32 && month > 0 && month < 12 && year > 1899 && year < 10000) {
             return true;
         } else {
@@ -55,7 +55,7 @@ public class Date {
     }
 
     public void setDate (int day, int month, int year) {
-        if (validation()) {
+        if (isValid()) {
             this.day = day;
             this.month = month;
             this.year = year;
