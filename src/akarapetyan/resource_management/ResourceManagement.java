@@ -74,7 +74,23 @@ public class ResourceManagement {
 
     public Department getDepartmentWithMaxSalary(){
 
+        Employee [] employees = null;
+        Employee emp = null;
+        double max = 0;
 
+        for (int i =0; i < departments.length; i++ ) {
+
+            employees = departments[i].getEmployees();
+
+            for (int m = 0; m < employees.length - 1; m++) {
+
+                if (employees[i].getSalary() > max ){
+                    max = employees[i].getSalary();
+                    dep = departments[i];
+                    emp = employees[i];
+                }
+            }
+        }
         return dep;
     }
 }
