@@ -1,6 +1,7 @@
 package com.bdg.hhertevtsyan;
 
 public class Account {
+    //Make it private
     String id;
     String name;
     int balance=0;

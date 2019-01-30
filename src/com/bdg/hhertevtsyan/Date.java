@@ -22,6 +22,7 @@ public class Date {
         return year;
     }
 
+    //change function name to isValid or validate
     private boolean validation () {
         if (day > 0 && day < 32 && month > 0 && month < 12 && year > 1899 && year < 10000) {
             return true;
