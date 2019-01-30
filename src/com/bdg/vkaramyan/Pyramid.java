@@ -1,48 +1,50 @@
 package com.bdg.vkaramyan;
 
-
 //Change Pyramid class construction from primitive to reference type (side, height => Triangle class)
 public class Pyramid {
-	
-	private int side;
-	private int height;
-	
-	
-	public Pyramid (final int side, final int height) {
-		this.side = side;
-		this.height = height;
-		
+
+	private double baseLenght;
+	private double baseWidth;
+	private double height;
+
+	public Pyramid() {
+
 	}
-	
-	public int getSide() {
-		return side;
+
+	public double getBaseLenght() {
+		return baseLenght;
 	}
-	
-	public int getHeight() {
+
+	public double getBaseWidth() {
+		return baseWidth;
+	}
+
+	public double getHeight() {
 		return height;
 	}
-	
-	
-	public void setSide(int side) {
-		this.side = side;
+
+	public void setBaseLenght(double baseLenght) {
+		this.baseLenght = baseLenght;
 	}
-	
-	public void setHeight(int height) {
+
+	public void setBaseWidth(double baseWidth) {
+		this.baseWidth = baseWidth;
+	}
+
+	public void setHeight(double height) {
 		this.height = height;
+
 	}
-	
-	public int Volume() {
-		int sqr = side/2;
-		int volume = ((sqr)*height) / 3;
-		return volume;
+
+	public double pyramidVolume(final double baseLenght, final double baseWidth, final double height) {
+		double baseArea = baseLenght * baseWidth;
+		return baseArea * height / 3;
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-		Pyramid pyramid = new Pyramid(10, 10);
-		pyramid.Volume();
-		System.out.println("Pyramid volume is:" + " " + pyramid.Volume());
+
+		Pyramid pyramid = new Pyramid();
+		System.out.println("Volume: " + pyramid.pyramidVolume(10, 20, 15));
 
 	}
 
