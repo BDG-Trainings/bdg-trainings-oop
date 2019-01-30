@@ -3,9 +3,16 @@ package com.bdg.vqertikyan.resourcemanagement;
 public class ResourceManagement {
     private Department[] departments;
 
+    public ResourceManagement(final Department[] departments) {
+        this.departments = departments;
+    }
+
+    public ResourceManagement() {
+    }
+
     //This method should use own departments
     //public Department findDepartmentByName(String departmentName) {
-    public Department findDepartmentByName(String departmentName, Department[] departments) {
+    public Department findDepartmentByName(String departmentName) {
         for (int i = 0; i < departments.length; i++) {
             if (departments[i].getDepartmentName().contentEquals(departmentName)) {
                 return departments[i];
@@ -14,10 +21,13 @@ public class ResourceManagement {
         return null;
     }
 
+    public void setDepartments(Department... departments) {
+        this.departments = departments;
+    }
 
     //Same here
     //public Department getDepartmentWithMaxSalary() {
-    public Department getDepartmentWithMaxSalary(Department[] departments) {
+    public Department getDepartmentWithMaxSalary() {
         int maxSalary = (int) departments[0].getDepartmentSalary();
 
         for (int i = 1; i < departments.length; i++) {
