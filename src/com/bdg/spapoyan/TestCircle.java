@@ -5,5 +5,8 @@ public class TestCircle {
         Circle c1 = new Circle();
         System.out.println("The circle has radius of = " + c1.getRadius()
                 + ", And area of = " + c1.getArea());
+        System.out.println(c1.toString());
+
+        }
     }
-}
+
