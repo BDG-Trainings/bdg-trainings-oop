@@ -1,4 +1,4 @@
-package com.bdg.vkaramyan;
+package com.bdg.vkaramyan.encapsulation;
 
 //Class names should not contains underscore replace Circle_final => CircleFinale
 public class CircleFinal {

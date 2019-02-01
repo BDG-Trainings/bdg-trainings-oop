@@ -1,4 +1,4 @@
-package com.bdg.vkaramyan;
+package com.bdg.vkaramyan.encapsulation;
 
 public class Account {
 
