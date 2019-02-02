@@ -4,7 +4,8 @@ public class ResourceManagement {
     private Department departments [];
     Department department = null;
 
-    public ResourceManagement (){
+    public ResourceManagement (Department [] departments){
+        this.departments = departments;
     }
 
     public Department findDepartmentByName (String departmentName){
