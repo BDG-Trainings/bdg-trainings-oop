@@ -3,12 +3,12 @@ package com.bdg.vkaramyan.resourceManagement;
 public class Employees {
 	
 	private double salary;
-	private Employees employees; //<---  change to Employee
+	private Person person; //<---  change to Employee
 	private Department department;
 	
-	public Employees(final double salary, final Employees employees, final Department department) {
+	public Employees(final double salary, final Person person, final Department department) {
 		this.salary = salary;
-		this.employees = employees;
+		this.person = person;
 		this.department =  department;
 	}
 	
@@ -16,8 +16,8 @@ public class Employees {
 		return salary;
 	}
 	
-	public Employees getEmployees() {
-		return employees;
+	public Person getPerson() {
+		return person;
 	}
 	
 	public Department getDepartment() {
@@ -28,8 +28,8 @@ public class Employees {
 		this.salary = salary;
 	}
 	
-	public void setEmployees(Employees employees) {
-		this.employees = employees;
+	public void setPerson(Person person) {
+		this.person = person;
 	}
 
 	public void setDepartment(Department department) {

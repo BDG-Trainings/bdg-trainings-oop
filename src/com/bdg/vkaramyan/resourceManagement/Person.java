@@ -58,5 +58,8 @@ public class Person {
 		this.addresses = addresses;
 	}
 	
+	public String getFullName () {
+		return getFirstName() + getLastName() + getMiddleName();
+	}
 
 }
