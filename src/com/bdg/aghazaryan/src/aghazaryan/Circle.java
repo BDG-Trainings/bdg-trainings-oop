@@ -17,21 +17,21 @@ public class Circle {
 		 color = "red";
 			
 }
-	public double getRadious() {
+	public double getRadius() {
 	return radius;
 	}
 	
     public String getColor() {
     	return color;
     }
-	public void setRadious (double radious) {
+	public void setRadius (double radius) {
 		
 	}
 	public void setColor (String color) {
 }
 	public String toString() {
 	      
-	      return String.format("Circle[radious = %s, color = %s ]",  getRadious(), getColor());
+	      return String.format("Circle[radius = %s, color = %s ]",  getRadius(), getColor());
 	      }
 	public double getArea() {
 	      return radius*radius*Math.PI;
