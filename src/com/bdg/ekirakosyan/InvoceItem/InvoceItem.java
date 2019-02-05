@@ -1,4 +1,4 @@
-package com.bdg.ekirakosyan.InvoceItem;
+package InvoceItem;
 
 public class InvoceItem {
     String id;

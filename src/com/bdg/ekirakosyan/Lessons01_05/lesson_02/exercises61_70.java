@@ -1,4 +1,4 @@
-package com.bdg.ekirakosyan.Lessons01_05.lesson_02;
+package Lessons01_05.lesson_02;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package com.bdg.ekirakosyan.InvoceItem;
+package InvoceItem;
 
 public class Main {
     public static void main(String[] args) {

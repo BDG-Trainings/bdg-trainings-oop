@@ -1,4 +1,4 @@
-package com.bdg.ekirakosyan.GeometricShapes.Rectangle;
+package GeometricShapes.Rectangle;
 
 public class Main {
     public static void main(String[] args) {

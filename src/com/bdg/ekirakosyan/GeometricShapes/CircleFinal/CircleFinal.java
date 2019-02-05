@@ -1,4 +1,4 @@
-package com.bdg.ekirakosyan.GeometricShapes.CircleFinal;
+package GeometricShapes.CircleFinal;
 
 public class CircleFinal {
 

@@ -1,4 +1,4 @@
-package com.bdg.ekirakosyan.Lessons01_05.lesson_05;
+package Lessons01_05.lesson_05;
 
 /**
  **  Տրված են m ամբողջ թիվը և m x m չափի մատրց, որի տարրերը բնական թվեր են:

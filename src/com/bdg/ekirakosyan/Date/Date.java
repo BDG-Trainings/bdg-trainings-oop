@@ -1,4 +1,4 @@
-package com.bdg.ekirakosyan.Date;
+package Date;
 
 class Date {
     int day;

@@ -1,4 +1,4 @@
-package com.bdg.ekirakosyan.ResourceManagement;
+package ResourceManagement;
 
 public class Person {
     private int ID;

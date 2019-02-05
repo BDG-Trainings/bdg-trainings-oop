@@ -1,4 +1,4 @@
-package com.bdg.ekirakosyan.Employee;
+package Employee;
 
 public class Employee {
     int id;

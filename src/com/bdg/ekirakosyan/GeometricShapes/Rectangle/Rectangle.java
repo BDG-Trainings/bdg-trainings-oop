@@ -1,4 +1,4 @@
-package com.bdg.ekirakosyan.GeometricShapes.Rectangle;
+package GeometricShapes.Rectangle;
 
 public class Rectangle {
     float length;

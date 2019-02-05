@@ -1,4 +1,4 @@
-package com.bdg.ekirakosyan.Date;
+package Date;
 
 import java.util.Scanner;
 

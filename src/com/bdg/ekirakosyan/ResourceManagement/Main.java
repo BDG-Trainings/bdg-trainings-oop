@@ -1,4 +1,4 @@
-package com.bdg.ekirakosyan.ResourceManagement;
+package ResourceManagement;
 
 public class Main {
     public static void main(String[] args) {

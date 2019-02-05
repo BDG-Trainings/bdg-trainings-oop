@@ -1,4 +1,4 @@
-package com.bdg.ekirakosyan.Time;
+package Time;
 
 import java.util.Scanner;
 

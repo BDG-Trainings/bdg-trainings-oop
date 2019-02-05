@@ -1,4 +1,4 @@
-package com.bdg.ekirakosyan.Account;
+package Account;
 
 public class Accout {
     String id;

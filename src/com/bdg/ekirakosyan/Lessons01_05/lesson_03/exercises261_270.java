@@ -1,4 +1,4 @@
-package com.bdg.ekirakosyan.Lessons01_05.lesson_03;
+package Lessons01_05.lesson_03;
 /**
  **  Տրված են  X և Y միաչափ զանգվածները
  **  Կազմել բլոկ սխեմա և ծրագիր որոնք կհաշվեն և կտպեն

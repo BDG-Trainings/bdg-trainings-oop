@@ -1,4 +1,4 @@
-package com.bdg.ekirakosyan.Lessons01_05;
+package Lessons01_05;
 
 public class Lesson_01 {
     public static void main(String[] args) {

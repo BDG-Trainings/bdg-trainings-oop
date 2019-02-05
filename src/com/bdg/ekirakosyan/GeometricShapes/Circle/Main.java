@@ -1,4 +1,4 @@
-package com.bdg.ekirakosyan.GeometricShapes.Circle;
+package GeometricShapes.Circle;
 
 import java.util.Scanner;
 
