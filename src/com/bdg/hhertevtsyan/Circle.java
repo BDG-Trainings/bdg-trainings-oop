@@ -31,6 +31,7 @@ public class Circle {
         this.color = color;
     }
 
+    @Override
     public String toString() {
         return "Circle [radius = " + radius + " , color = " + color;
     }

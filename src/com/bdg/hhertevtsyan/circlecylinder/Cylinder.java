@@ -10,14 +10,14 @@ public class Cylinder extends Circle {
     }
 
     public Cylinder (final double radius, final double height) {
-        this.setRadius(radius);
+        this.radius = radius;
         this.height = height;
     }
 
     public Cylinder (final double radius, final double height, final String color) {
-        this.setRadius(radius);
+        this.radius = radius;
         this.height = height;
-        this.setColor(color);
+        this.setColor(color); // if color is protected - this.color = color;
     }
 
     public double getHeight () {
