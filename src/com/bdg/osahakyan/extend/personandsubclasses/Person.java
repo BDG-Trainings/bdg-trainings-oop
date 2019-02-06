@@ -5,13 +5,28 @@ public class Person {
     protected String name;
     protected String address;
 
-    public Person(String name, String address){ this.name = name; this.address = address;}
+    public Person(String name, String address) {
+        this.name = name;
+        this.address = address;
+    }
 
-    public String getName(){return name;}
+    public Person() {
+    }
 
-    public String getAddress(){return address;}
-    public void setAddress(String address){this.address = address;}
+    public String getName() {
+        return name;
+    }
 
-    public String toString(){ return "Person("+ getName() + "," + getAddress() + ")"; }
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String toString() {
+        return "Person(" + name + "," + address + ")";
+    }
 
 }
