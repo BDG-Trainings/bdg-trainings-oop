@@ -15,7 +15,7 @@ public class MovablePoint extends Point {
     public float getYSpeed(){return ySpeed;}
     public void setYSpeed(float ySpeed){this.ySpeed = ySpeed;}
 
-    public float Speed(){return xSpeed; ySpeed; }  //?
+//    public float Speed(){return xSpeed; ySpeed; }  //?
     public void Speed(float xSpeed, float ySpeed){ this.xSpeed = xSpeed; this.ySpeed = ySpeed;}
 
     @Override

@@ -14,7 +14,7 @@ public class Point {
     public float getY(){return y;}
     public void setY(float y){this.y = y;}
 
-    public float getXY(){return x; y; }  //?
+//    public float getXY(){return x; y; }  //?
     public void setXY(float x, float y){ this.x = x; this.y = y;}
 
     @Override
