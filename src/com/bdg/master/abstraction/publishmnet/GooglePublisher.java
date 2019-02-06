@@ -1,7 +1,6 @@
-package com.bdg.osahakyan.abstraction.publishmnet;
+package com.bdg.master.abstraction.publishmnet;
 
 
-import javax.sql.DataSource;
 import java.sql.SQLException;
 
 public final class GooglePublisher extends Publisher {

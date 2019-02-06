@@ -1,4 +1,4 @@
-package com.bdg.osahakyan.abstraction;
+package com.bdg.master.abstraction;
 
 
 public class VTypeEngine extends Engine {

@@ -1,10 +1,10 @@
-package com.bdg.osahakyan.abstraction;
+package com.bdg.master.abstraction;
 
 
-import com.bdg.osahakyan.abstraction.publishmnet.FacebookPublisher;
-import com.bdg.osahakyan.abstraction.publishmnet.GooglePublisher;
-import com.bdg.osahakyan.abstraction.publishmnet.Placement;
-import com.bdg.osahakyan.abstraction.publishmnet.Publisher;
+import com.bdg.master.abstraction.publishmnet.FacebookPublisher;
+import com.bdg.master.abstraction.publishmnet.GooglePublisher;
+import com.bdg.master.abstraction.publishmnet.Placement;
+import com.bdg.master.abstraction.publishmnet.Publisher;
 
 import java.sql.SQLException;
 

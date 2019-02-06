@@ -1,4 +1,4 @@
-package com.bdg.osahakyan.abstraction.publishmnet;
+package com.bdg.master.abstraction.publishmnet;
 
 
 import javax.sql.DataSource;
