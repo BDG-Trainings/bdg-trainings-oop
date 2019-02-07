@@ -1,19 +1,18 @@
 package com.bdg.spapoyan.CircleCylinder;
 
 public class Circle {
-    private double radius;
-    private String color;
+    private double radius = 1.0;
+    private String color = "red";
 
-    public Circle(){
-        radius = 1.0;
-        color = "red";
+    Circle(){
+
        }
 
-    public Circle(double radius) {
+    Circle(double radius) {
         this.radius = radius;
     }
 
-    public Circle(double radius, String color){
+    Circle(double radius, String color){
         this.radius = radius; this.color = color;
     }
 
@@ -25,7 +24,7 @@ public class Circle {
         return color;
     }
 
-    public void setRadius(double radius) {
+    void setRadius(double radius) {
         this.radius = radius;
     }
 
@@ -33,7 +32,7 @@ public class Circle {
         this.color = color;
     }
 
-    public double getArea () {
+    double getArea () {
         return Math.pow(radius, 2) * Math.PI;
     }
 
