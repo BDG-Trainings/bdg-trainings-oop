@@ -10,6 +10,11 @@ public class Executor {
         Student s = new Student("Arsen", "Yerevan", "Maths", 25, 1000);
         System.out.println(s.toString());
 
+        Staff staff = new Staff("Arsen_employee", "Moscow", "Chekhov", 500.0);
+        System.out.println(staff.toString());
+
+
+
 
 
     }
