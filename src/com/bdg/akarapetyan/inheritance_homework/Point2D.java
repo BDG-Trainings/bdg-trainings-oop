@@ -38,6 +38,4 @@ public class Point2D {
         this.y = y;
         this.x = x;
     }
-
-
 }
