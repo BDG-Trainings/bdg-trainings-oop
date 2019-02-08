@@ -1,6 +1,6 @@
 package com.bdg.spapoyan.ShapeAndSubclasses;
 
-public class Shape {
+public abstract class Shape {
 
     private String color = "red";
     private boolean filled = true;
