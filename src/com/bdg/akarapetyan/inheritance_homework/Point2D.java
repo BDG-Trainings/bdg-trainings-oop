@@ -38,4 +38,12 @@ public class Point2D {
         this.y = y;
         this.x = x;
     }
+
+    @Override
+    public String toString() {
+        return "Point2D{" +
+                "x=" + x +
+                ", y=" + y +
+                '}';
+    }
 }

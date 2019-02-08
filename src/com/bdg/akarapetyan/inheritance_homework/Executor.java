@@ -13,9 +13,8 @@ public class Executor {
         Staff staff = new Staff("Arsen_employee", "Moscow", "Chekhov", 500.0);
         System.out.println(staff.toString());
 
-
-
-
+        Point3D point3D = new Point3D(1,2,3);
+        System.out.println(point3D.toString());
 
     }
 }
