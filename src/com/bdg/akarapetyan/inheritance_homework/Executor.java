@@ -6,5 +6,8 @@ public class Executor {
 
         Cylinder c = new Cylinder();
         System.out.println(c.getArea());
+
+        Person p = new Person("Arsen", "Yerevan");
+        System.out.println(p.toString());
     }
 }
