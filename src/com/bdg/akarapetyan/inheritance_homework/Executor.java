@@ -9,5 +9,9 @@ public class Executor {
 
         Person p = new Person("Arsen", "Yerevan");
         System.out.println(p.toString());
+
+        Student s = new Student("Arsen", "Yerevan", "Maths", 25, 1000);
+        System.out.println(s.toString());
+
     }
 }
