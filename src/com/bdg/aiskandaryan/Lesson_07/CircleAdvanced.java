@@ -1,4 +1,4 @@
-package aiskandaryan.Lesson_07;
+package com.bdg.aiskandaryan.Lesson_07;
 
 public class CircleAdvanced {
     //Make private

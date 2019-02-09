@@ -1,20 +1,19 @@
-package aiskandaryan.Lesson_08;
+package com.bdg.aiskandaryan.Lesson_07;
 
-public class Cuboid {
+public class Rectangle {
     //Make private
     float length = 1.0f;
     float width = 1.0f;
-    float height = 1.0f;
 
-    public Cuboid(final float length, final float width, final float height) {
+    public Rectangle() {
+    }
+
+    public Rectangle(final float length, final float width) {
         if (length > 0) {
             this.length = length;
         }
         if (width > 0) {
             this.width = width;
-        }
-        if (height > 0) {
-            this.height = height;
         }
     }
 
@@ -34,23 +33,16 @@ public class Cuboid {
         this.width = width;
     }
 
-    public float getHeight() {
-        return height;
-    }
-
-    public void setHeight(final float height) {
-        this.height = height;
-    }
-
     public double getArea() {
-        return 2 *length * width + 2 * length * height + 2 * width * height;
+        return length * width;
     }
 
     public double getPerimeter() {
-        return 4 * length + 4 * width + 4 * height;
+        return length * 2 + width * 2;
     }
 
-    public double getVolume() {
-        return length * width * height;
+    @Override
+    public String toString() {
+        return "Rectangle[length=" + length + ",width=" + width + "]";
     }
 }

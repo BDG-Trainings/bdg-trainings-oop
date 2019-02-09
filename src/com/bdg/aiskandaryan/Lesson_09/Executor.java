@@ -1,4 +1,4 @@
-package aiskandaryan.Lesson_09;
+package com.bdg.aiskandaryan.Lesson_09;
 
 public class Executor {
 

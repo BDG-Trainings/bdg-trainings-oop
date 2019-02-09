@@ -1,4 +1,4 @@
-package aiskandaryan.Lesson_08;
+package com.bdg.aiskandaryan.Lesson_08;
 
 public class Pyramid {
     //Make private
