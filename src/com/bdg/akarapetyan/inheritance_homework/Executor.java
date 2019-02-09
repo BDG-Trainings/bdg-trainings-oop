@@ -26,5 +26,8 @@ public class Executor {
         Shape shape1 = new Shape("blue",false);
         System.out.println(shape1.toString());
 
+        Circle_shape circle_shape = new Circle_shape();
+        System.out.println(circle_shape.toString());
+
     }
 }
