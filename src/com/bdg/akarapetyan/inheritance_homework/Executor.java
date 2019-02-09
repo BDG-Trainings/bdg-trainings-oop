@@ -20,5 +20,11 @@ public class Executor {
         mp.move(mp);
         System.out.println(mp.toString());
 
+        Shape shape = new Shape();
+        System.out.println(shape.toString());
+
+        Shape shape1 = new Shape("blue",false);
+        System.out.println(shape1.toString());
+
     }
 }
