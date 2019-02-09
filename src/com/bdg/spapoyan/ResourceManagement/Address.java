@@ -46,7 +46,13 @@ public class Address {
     }
 
     @Override
-    public String toString (){
-     return "Address - " + getState() + ", " + getCity() + ", " + getStreet() + ", " + getZipCode();
+    public String toString() {
+        return "Address{" +
+                "street='" + street + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", zipCode='" + zipCode + '\'' +
+                '}';
     }
 }
+

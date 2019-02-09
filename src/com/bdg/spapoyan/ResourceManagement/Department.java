@@ -1,10 +1,12 @@
 package com.bdg.spapoyan.ResourceManagement;
 
+import java.util.Arrays;
+
 public class Department {
     private String departmentName;
     private Employee[] employees;
     private Employee departmentHeadEmployee;
-    private double departmentSalary = 15;
+    private double departmentSalary;
 
     public Department (final String departmentName, final Employee[]employees, final Employee departmentHeadEmployee, final double departmentSalary) {
         this.departmentName = departmentName;
@@ -45,4 +47,13 @@ public class Department {
         this.departmentSalary = departmentSalary;
     }
 
+    @Override
+    public String toString() {
+        return "Department{" +
+                "departmentName='" + departmentName + '\'' +
+                ", employees=" + Arrays.toString(employees) +
+                ", departmentHeadEmployee=" + departmentHeadEmployee +
+                ", departmentSalary=" + departmentSalary +
+                '}';
+    }
 }

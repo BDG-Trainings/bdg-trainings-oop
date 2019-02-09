@@ -1,5 +1,7 @@
 package com.bdg.spapoyan.ResourceManagement;
 
+import java.util.Arrays;
+
 public class Person {
     private String firstName;
     private String lastName;
@@ -56,10 +58,16 @@ public class Person {
         this.address = address;
     }
 
+
     @Override
-    public String toString (){
-        return "Person - " + getFirstName() + ", " + getMiddleName() + ", " + getLastName() + ", "
-                + getAge() + ", " + getAddress() + ":";
+    public String toString() {
+        return "Person{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", middleName='" + middleName + '\'' +
+                ", age=" + age +
+                ", address=" + Arrays.toString(address) +
+                '}';
     }
 }
 
