@@ -7,16 +7,16 @@ public class App_270 {
 
 		int[] X = { 1, 3, 6, 10 };
 		int[] Y = { 2, 5, 9, 8 };
-		int sum_X = 0;
-		int sum_Y = 0;
+		int sumX = 0;
+		int sumY = 0;
 
 		for (int i = 0; i < X.length && i < Y.length; i++) {
-			sum_X += Math.pow(X[i], 2);
-			sum_Y += Math.pow(Y[i], 2);
+			sumX += Math.pow(X[i], 2);
+			sumY += Math.pow(Y[i], 2);
 
 		}
 
-		System.out.println("Result:" + (sum_X + sum_Y));
+		System.out.println("Result:" + (sumX + sumY));
 
 	}
 

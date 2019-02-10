@@ -6,23 +6,23 @@ public class App_264 {
 		// TODO Auto-generated method stub
 		int[] X = { -5, -1, 3, 6, -10, -3 };
 		int[] Y = { 2, 5, -13, 9, -8, -15 };
-		int count_X = 0;
-		int count_Y = 0;
+		int countX = 0;
+		int countY = 0;
 
 		for (int i = 0; i < X.length && i < Y.length; i++) {
 			if (X[i] < 0) {
-				count_X++;
+				countX++;
 			}
 
 			if (Y[i] < 0) {
-				count_Y++;
+				countY++;
 
 			}
 
 		}
 
-		System.out.println("Result:" + count_X);
-		System.out.println("Result:" + count_Y);
+		System.out.println("Result:" + countX);
+		System.out.println("Result:" + countY);
 
 	}
 
