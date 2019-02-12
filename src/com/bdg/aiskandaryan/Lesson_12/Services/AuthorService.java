@@ -31,6 +31,6 @@ public class AuthorService extends AbstractAuthorService {
 
     @Override
     public boolean delete(final int id) {
-        return authorStorage.remove(authorStorage.get(id));
+        return authorStorage.remove(authorStorage.get(id));sdf
     }
 }
