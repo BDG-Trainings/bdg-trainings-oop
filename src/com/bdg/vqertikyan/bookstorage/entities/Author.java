@@ -1,4 +1,4 @@
-package com.bdg.vqertikyan.bookstorage;
+package com.bdg.vqertikyan.bookstorage.entities;
 
 public class Author {
 

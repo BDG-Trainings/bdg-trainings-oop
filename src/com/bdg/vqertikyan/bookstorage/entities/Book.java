@@ -1,6 +1,4 @@
-package com.bdg.vqertikyan.bookstorage;
-
-import com.bdg.vqertikyan.bookstorage.Author;
+package com.bdg.vqertikyan.bookstorage.entities;
 
 public class Book {
 

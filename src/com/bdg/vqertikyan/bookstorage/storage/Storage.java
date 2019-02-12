@@ -1,4 +1,4 @@
-package com.bdg.vqertikyan.bookstorage;
+package com.bdg.vqertikyan.bookstorage.storage;
 
 public abstract class Storage {
 
