@@ -1,12 +1,13 @@
-/*
-package com.bdg.warustamyan.service;
- idep AuthorService-i mej e gtnvum AuthorStorage-y
-import com.bdg.warustamyan.entity.Author;
-import com.bdg.warustamyan.entity.Book;
-import com.bdg.warustamyan.parameters.AuthorCreateParameters;
-import com.bdg.warustamyan.parameters.BookCreateParameters;
-import com.bdg.warustamyan.parameters.BookUpdateParameters;
-import com.bdg.warustamyan.storage.BookStorage;
+package com.bdg.vqertikyan.bookstorage.services;
+
+// idep AuthorService-i mej e gtnvum AuthorStorage-y
+
+import com.bdg.vqertikyan.bookstorage.createupdateobjects.AuthorCreateParameters;
+import com.bdg.vqertikyan.bookstorage.createupdateobjects.BookCreateParameters;
+import com.bdg.vqertikyan.bookstorage.createupdateobjects.BookUpdateParameters;
+import com.bdg.vqertikyan.bookstorage.entities.Author;
+import com.bdg.vqertikyan.bookstorage.entities.Book;
+import com.bdg.vqertikyan.bookstorage.storage.BookStorage;
 
 public final class BookService extends AbstractBookService {
 
@@ -50,4 +51,3 @@ public final class BookService extends AbstractBookService {
         return null;
     }
 }
-*/

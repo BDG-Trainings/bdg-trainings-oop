@@ -1,12 +1,12 @@
 package com.bdg.vqertikyan.bookstorage.createupdateobjects;
 
-public class BookCreateParameter {
+public class BookCreateParameters {
     private String name;
     private String title;
     private double price;
-    private AuthorCreateParameter[] authors;
+    private AuthorCreateParameters[] authors;
 
-    public BookCreateParameter(String name, String title, double price, AuthorCreateParameter[] authors){
+    public BookCreateParameters(String name, String title, double price, AuthorCreateParameters[] authors){
         this.name = name;
         this.title =title;
         this.price = price;
@@ -25,7 +25,7 @@ public class BookCreateParameter {
         return price;
     }
 
-    public AuthorCreateParameter[] getAuthors() {
+    public AuthorCreateParameters[] getAuthors() {
         return authors;
     }
 }
