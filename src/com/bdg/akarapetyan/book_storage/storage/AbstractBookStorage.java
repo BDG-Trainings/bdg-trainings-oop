@@ -11,6 +11,4 @@ public abstract class AbstractBookStorage {
     public abstract boolean remove (Book book);
 
     public abstract Book get (int id);
-
-
 }
