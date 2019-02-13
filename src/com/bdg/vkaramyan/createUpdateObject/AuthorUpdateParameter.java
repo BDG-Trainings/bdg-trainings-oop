@@ -1,31 +1,36 @@
 package com.bdg.vkaramyan.createUpdateObject;
 
-
-public class AuthorCreateParameter {
-
+public class AuthorUpdateParameter {
+	
+	private int id;
 	private String name;
 	private String surname;
-	private String gender;
 	
-	public AuthorCreateParameter(String name, String surname, String gender) {
+	
+	public AuthorUpdateParameter(int id, String name, String surname) {
 		super();
+		this.id = id;
 		this.name = name;
 		this.surname = surname;
-		this.gender = gender;
 	}
+
+
+	public int getId() {
+		return id;
+	}
+
 
 	public String getName() {
 		return name;
 	}
 
+
 	public String getSurname() {
 		return surname;
 	}
 
-	public String getGender() {
-		return gender;
-	}
+
 	
 	
-	
+
 }
