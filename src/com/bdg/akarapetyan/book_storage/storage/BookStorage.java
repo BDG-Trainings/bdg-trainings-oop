@@ -13,7 +13,13 @@ public class BookStorage extends AbstractBookStorage{
 
     @Override
     public Book store(Book book) {
-        return null;
+        Book [] bookstore1 = new Book[bookStore.length+1];
+        for (int i=0; i< bookStore.length; i++){
+            bookstore1[i]=bookStore[i];
+        }
+        bookstore1[bookStore.length] = book;
+        bookStore = bookstore1;
+        return book;
     }
 
     @Override
