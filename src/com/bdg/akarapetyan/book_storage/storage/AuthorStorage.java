@@ -4,10 +4,15 @@ import com.bdg.akarapetyan.book_storage.entitys.Author;
 
 public class AuthorStorage extends AbstractAuthorStorage{
 
-    private int currentStorage;
+    public AuthorStorage(int storageSize, Author[] authorStore) {
+        super(storageSize, authorStore);
+        this.size = storageSize;
+        this.authorStore = new Author[storageSize];
+    }
 
-    public AuthorStorage(int currentStorage) {
-        this.currentStorage = currentStorage;
+    @Override
+    public int getCurrentStorageSize() {
+        return size;
     }
 
     @Override
