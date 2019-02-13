@@ -4,10 +4,10 @@ import com.sun.glass.ui.Size;
 
 public abstract class Storage {
 
-    protected int Size;
+    protected int size;
 
     protected Storage (int storageSize){
-        this.Size = storageSize;
+        this.size = storageSize;
     }
 
     public abstract int getCurrentStorageSize();

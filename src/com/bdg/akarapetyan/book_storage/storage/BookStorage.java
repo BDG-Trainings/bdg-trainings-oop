@@ -4,10 +4,10 @@ import com.bdg.akarapetyan.book_storage.entitys.Book;
 
 public class BookStorage extends AbstractBookStorage{
 
-    private int currentStorageSize;
+    private int currentStorage;
 
     public BookStorage(int currentStorageSize) {
-        this.currentStorageSize = currentStorageSize;
+        this.currentStorage = currentStorageSize;
     }
 
     @Override
@@ -26,6 +26,6 @@ public class BookStorage extends AbstractBookStorage{
     }
 
     public int getCurrentStorageSize() {
-        return currentStorageSize;
+        return currentStorage;
     }
 }
