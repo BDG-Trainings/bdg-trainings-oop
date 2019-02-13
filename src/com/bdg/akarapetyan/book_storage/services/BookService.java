@@ -35,11 +35,17 @@ public final class BookService extends AbstractBookService {
 
     @Override
     public Book update(BookUpdateParameter params) {
+        final Book book = storage.get(params.getId());
+        if (book != null) {
+            book.setPrice(params.getPrice());
+            return book;
+        }
         return null;
     }
 
     @Override
     public boolean delete(int id) {
-        return false;
+        final Book book = storage.get(id);
+        return storage.remove(book);
     }
 }
