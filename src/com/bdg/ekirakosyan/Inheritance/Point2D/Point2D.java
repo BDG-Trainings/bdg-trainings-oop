@@ -41,7 +41,6 @@ public class Point2D {
         return xy;
     }
 
-
     @Override
     public String toString() {
         return "Point2D{" +
