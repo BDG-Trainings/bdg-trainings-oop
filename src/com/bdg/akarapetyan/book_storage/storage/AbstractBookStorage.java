@@ -4,7 +4,7 @@ import com.bdg.akarapetyan.book_storage.entitys.Book;
 
 public abstract class AbstractBookStorage {
 
-    protected Book bookStore;
+    protected Book [] bookStore;
 
     public abstract Book store (Book book);
 

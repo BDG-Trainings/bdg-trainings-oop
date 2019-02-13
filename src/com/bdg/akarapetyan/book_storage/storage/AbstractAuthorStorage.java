@@ -4,7 +4,7 @@ import com.bdg.akarapetyan.book_storage.entitys.Author;
 
 public abstract class AbstractAuthorStorage {
 
-    protected Author authorStore;
+    protected Author [] authorStore;
 
     public abstract Author store (Author author);
 
