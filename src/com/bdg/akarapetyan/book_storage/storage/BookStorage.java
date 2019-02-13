@@ -24,7 +24,6 @@ public class BookStorage extends AbstractBookStorage{
 
     @Override
     public boolean remove(Book book) {
-        Book [] bookstore1 = new Book[bookStore.length-1];
         return false;
     }
 
@@ -39,7 +38,6 @@ public class BookStorage extends AbstractBookStorage{
         }
         return book;
     }
-
 
     public int getCurrentStorageSize() {
         return size;
