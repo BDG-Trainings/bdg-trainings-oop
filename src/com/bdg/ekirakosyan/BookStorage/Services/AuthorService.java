@@ -16,11 +16,13 @@ public final class AuthorService extends AbstractAuthorService {
 
     @Override
     public Author create(AuthorCreateParameter params) {
-        return null;
+        Author author = new Author(params.getName(), params.getSurname(), params.getGender());
+        return author;
     }
 
     @Override
     public Author update(AuthorUpdateParameter params) {
+
         return null;
     }
 

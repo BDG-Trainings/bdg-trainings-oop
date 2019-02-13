@@ -16,7 +16,7 @@ public class BookCreateParameter {
     }
 
     public int getId() {
-        return id;
+        return this.id;
     }
 
     public String getName(){
@@ -24,7 +24,7 @@ public class BookCreateParameter {
     }
 
     public String getTitle() {
-        return title;
+        return this.title;
     }
 
     public double getPrice(){
