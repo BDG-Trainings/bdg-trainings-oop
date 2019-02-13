@@ -7,6 +7,7 @@ public class Book {
     private String title;
     private double price;
     private Author [] authors;
+    private Book [] books;
 
     public Book(int id, String name, String title, double price, Author[] authors) {
         this.id = id;
@@ -54,5 +55,13 @@ public class Book {
 
     public void setAuthors(Author[] authors) {
         this.authors = authors;
+    }
+
+    public Book[] getBooks() {
+        return books;
+    }
+
+    public void setBooks(Book[] books) {
+        this.books = books;
     }
 }

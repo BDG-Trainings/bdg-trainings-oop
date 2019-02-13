@@ -1,13 +1,14 @@
 package com.bdg.akarapetyan.book_storage.storage;
 
+import com.bdg.akarapetyan.book_storage.entitys.Author;
 import com.bdg.akarapetyan.book_storage.entitys.Book;
 
 public class BookStorage extends AbstractBookStorage{
 
-    private int currentStorage;
-
-    public BookStorage(int currentStorageSize) {
-        this.currentStorage = currentStorageSize;
+    public BookStorage(int storageSize, Book[] books) {
+        super(storageSize, books);
+        this.size = storageSize;
+        this.bookStore = new Book[storageSize];
     }
 
     @Override
@@ -26,6 +27,6 @@ public class BookStorage extends AbstractBookStorage{
     }
 
     public int getCurrentStorageSize() {
-        return currentStorage;
+        return size;
     }
 }
