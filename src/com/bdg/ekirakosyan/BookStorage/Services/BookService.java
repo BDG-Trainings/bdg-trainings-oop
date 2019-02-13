@@ -1,7 +1,7 @@
 package BookStorage.Services;
 
-import BookStorage.Book;
-import BookStorage.CRUD.BookCreateParameter;
+import BookStorage.*;
+import BookStorage.CRUD.*;
 import BookStorage.Storage.*;
 
 public final class BookService extends AbstractBookService {
@@ -21,16 +21,28 @@ public final class BookService extends AbstractBookService {
 
     @Override
     public Book create(BookCreateParameter params) {
-        return null;
+        final Author[] authors = new Author[params.getAuthors().length];
+        int i = 0;
+        for (AuthorCreateParameter p : params.getAuthors()) {  //???
+            authors[i] = authorService.create(p);
+            i++;
+        }
+        return new Book(bookStorage.getCurrentStorageSize() + 1, params.getName(), params.getTitle(), params.getPrice(), authors);
     }
 
     @Override
     public Book update(BookCreateParameter params) {
+        final Book book = bookStorage.get(params.getId());
+        if (book != null) {
+            book.setPrice(params.getPrice());
+            return book;
+        }
         return null;
     }
 
     @Override
-    public Book delete(int id) {
-        return null;
+    public boolean delete(int id) {
+        final Book book = bookStorage.get(id);
+        return bookStorage.remove(book);
     }
 }

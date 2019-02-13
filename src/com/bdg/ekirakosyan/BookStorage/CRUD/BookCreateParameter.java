@@ -2,6 +2,7 @@ package BookStorage.CRUD;
 
 public class BookCreateParameter {
 
+    private int id;
     private String name;
     private String title;
     private double price;
@@ -12,6 +13,10 @@ public class BookCreateParameter {
         this.title = title;
         this.price = price;
         this.authors = authors;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getName(){

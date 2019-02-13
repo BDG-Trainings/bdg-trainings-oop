@@ -5,10 +5,14 @@ import BookStorage.Book;
 
 public final class BookStorage extends AsbstractBookStorage{
 
-    private int currentStorageSiz;
+    private int currentStorageSize;
 
-    public BookStorage(int currentStorageSiz) {
-        this.currentStorageSiz = currentStorageSiz;
+    public BookStorage(int currentStorageSize) {
+        this.currentStorageSize = currentStorageSize;
+    }
+
+    public int getCurrentStorageSize() {
+        return currentStorageSize;
     }
 
     @Override
