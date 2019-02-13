@@ -6,6 +6,7 @@ public class Author {
     private String name;
     private String surname;
     private boolean gender;
+    public Author [] authors;
 
     public Author(int id, String name, String surname, boolean gender) {
         this.id = id;

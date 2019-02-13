@@ -24,4 +24,8 @@ public class BookStorage extends AbstractBookStorage{
     public Book get(int id) {
         return null;
     }
+
+    public int getCurrentStorageSize() {
+        return currentStorageSize;
+    }
 }

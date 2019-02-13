@@ -5,6 +5,7 @@ public class AuthorCreateParameter {
     private String name;
     private String surname;
     private String gender;
+    public AuthorCreateParameter p;
 
     public AuthorCreateParameter(String name, String surname, String gender) {
         this.name = name;

@@ -1,11 +1,13 @@
 package com.bdg.akarapetyan.book_storage.services;
 
+import com.bdg.akarapetyan.book_storage.create_update_objects.AuthorCreateParameter;
 import com.bdg.akarapetyan.book_storage.create_update_objects.BookCreateParameter;
 import com.bdg.akarapetyan.book_storage.create_update_objects.BookUpdateParameter;
+import com.bdg.akarapetyan.book_storage.entitys.Author;
 import com.bdg.akarapetyan.book_storage.entitys.Book;
 import com.bdg.akarapetyan.book_storage.storage.BookStorage;
 
-public class BookService extends AbstractBookService {
+public final class BookService extends AbstractBookService {
 
     private BookStorage storage;
 
@@ -22,7 +24,13 @@ public class BookService extends AbstractBookService {
 
     @Override
     public Book create(BookCreateParameter params) {
-        return null;
+        final Author[] authors = new Author[params.getAuthors().length];
+        int i = 0;
+        for (AuthorCreateParameter p : params.getAuthors()) {
+            authors[i] = authorService.create(p);
+            i++;
+        }
+        return new Book(storage.getCurrentStorageSize() + 1, params.getName(), params.getTitle(), params.getPrice(), authors);
     }
 
     @Override
