@@ -6,48 +6,48 @@ public class Worker {
     private String lastName;
     private int salary;
 
-    public Worker (final int id, final String firstName, final String lastName, final int salary) {
+    public Worker(final int id, final String firstName, final String lastName, final int salary) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.salary = salary;
     }
 
-    public int getId () {
+    public int getId() {
         return id;
     }
 
-    public String getFirstName () {
+    public String getFirstName() {
         return firstName;
     }
 
-    public String getLastName () {
+    public String getLastName() {
         return lastName;
     }
 
-    public String getName () {
+    public String getName() {
         return firstName + " " + lastName;
     }
 
-    public int getSalary () {
+    public int getSalary() {
         return salary;
     }
 
-    public void setSalary (int salary) {
+    public void setSalary(int salary) {
         this.salary = salary;
     }
 
-    public int getAnnualSalary () {
-        return salary*12;
+    public int getAnnualSalary() {
+        return salary * 12;
     }
 
     public int raiseSalary(int percent) {
-        this.salary = salary + salary*percent/100;
+        this.salary = salary + salary * percent / 100;
         return salary;
     }
 
-    public String toString () {
-        return "Employee [id = " + id + ", name = " + getName() + ", salary = " + salary +"]";
+    public String toString() {
+        return "Employee [id = " + id + ", name = " + getName() + ", salary = " + salary + "]";
     }
 
 }

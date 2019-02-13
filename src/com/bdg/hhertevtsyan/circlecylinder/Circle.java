@@ -4,19 +4,19 @@ public class Circle {
     protected double radius = 1.0;
     private String color = "red";
 
-    public Circle () {
+    public Circle() {
     }
 
-    public Circle (final double radius) {
+    public Circle(final double radius) {
         this.radius = radius;
     }
 
-    public Circle (final double radius, final String color) {
+    public Circle(final double radius, final String color) {
         this.radius = radius;
         this.color = color;
     }
 
-    public double getRadius () {
+    public double getRadius() {
         return radius;
     }
 
@@ -32,12 +32,12 @@ public class Circle {
         this.color = color;
     }
 
-    public double getArea () {
-        return Math.PI*radius*radius;
+    public double getArea() {
+        return Math.PI * radius * radius;
     }
 
     @Override
-    public String toString () {
+    public String toString() {
         return "Circle [radius = " + radius + ", color = " + color + "]";
     }
 }

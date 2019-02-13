@@ -2,22 +2,23 @@ package com.bdg.hhertevtsyan.shapeandsubclasses;
 
 public class Square extends Rectangle {
 
-    public Square () {}
+    public Square() {
+    }
 
-    public Square (final double side) {
+    public Square(final double side) {
         setLength(side);
         setWidth(side);
     }
 
-    public Square (final double side, final String color, final boolean filled) {
+    public Square(final double side, final String color, final boolean filled) {
         super(side, side, color, filled);
     }
 
-    public double getSide () {
+    public double getSide() {
         return getWidth();
     }
 
-    public void setSide (final double side) {
+    public void setSide(final double side) {
         this.setWidth(side);
         this.setLength(side);
     }

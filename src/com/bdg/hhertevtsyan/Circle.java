@@ -4,13 +4,14 @@ public class Circle {
     private double radius = 1.0;
     private String color = "red";
 
-    public Circle() { }
+    public Circle() {
+    }
 
     public Circle(final double radius) {
         this.radius = radius;
     }
 
-    public Circle (final double radius, final String color) {
+    public Circle(final double radius, final String color) {
         this.radius = radius;
         this.color = color;
     }
@@ -37,10 +38,10 @@ public class Circle {
     }
 
     public double getArea() {
-        return radius*radius*Math.PI;
+        return radius * radius * Math.PI;
     }
 
     public double getCicumference() {
-        return 2*Math.PI*radius;
+        return 2 * Math.PI * radius;
     }
 }

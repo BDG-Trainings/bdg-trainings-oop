@@ -4,21 +4,21 @@ public class Rectangle {
     private float length;
     private float width;
 
-    public Rectangle () {
+    public Rectangle() {
         length = 1.0f;
         width = 1.0f;
     }
 
-    public Rectangle (final float length, final float width) {
+    public Rectangle(final float length, final float width) {
         this.length = length;
         this.width = width;
     }
 
-    public float getLength () {
+    public float getLength() {
         return length;
     }
 
-    public float getWidth () {
+    public float getWidth() {
         return width;
     }
 
@@ -30,12 +30,12 @@ public class Rectangle {
         this.width = width;
     }
 
-    public double getArea () {
-        return length*width;
+    public double getArea() {
+        return length * width;
     }
 
-    public double getPerimeter () {
-        return 2*length + 2*width;
+    public double getPerimeter() {
+        return 2 * length + 2 * width;
     }
 
     public String toString() {

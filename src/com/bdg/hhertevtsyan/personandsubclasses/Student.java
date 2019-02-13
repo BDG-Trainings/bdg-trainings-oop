@@ -15,7 +15,8 @@ public class Student extends Person {
         this.year = year;
         this.fee = fee;
     }
-    public String getProgram () {
+
+    public String getProgram() {
         return program;
     }
 
@@ -40,7 +41,7 @@ public class Student extends Person {
     }
 
     @Override
-    public String toString () {
+    public String toString() {
         return "Student [Person [name = " + this.getFullName() + ", address = " + this.getAddress() + ", program = " + program + ", year = " + year + ", fee = " + fee + "]";
     }
 }

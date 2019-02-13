@@ -13,24 +13,18 @@ public class AuthorService extends AbstarctAuthorService {
     }
     @Override
     public Author get(final int id) {
-        Author result = null;
-        Author[] newAuthorStorage = new Author[authorStorage.getCurrentStorageSize()];
-        for (int i = 0; i < authorStorage.getCurrentStorageSize(); i = i + 1) {
-            if (newAuthorStorage[i].getId() == id)
-                result = newAuthorStorage[i];
-        }
-        return result;
+       return authorStorage.get(id);
     }
 
     @Override
     public Author create(AuthorCreateParameter params) {
-        //Author newAuthor = AuthorCreateParameter.
-       // authorStorage.store()
-        return null;
+        Author newAuthor = new Author(params.getId(),params.getName(),params.getSurename(),params.getGender());
+        return authorStorage.store(newAuthor);
     }
 
     @Override
     public Author update(AuthorUpdateParameter params) {
+
         return null;
     }
 

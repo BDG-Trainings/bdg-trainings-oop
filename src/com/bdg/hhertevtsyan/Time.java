@@ -5,7 +5,7 @@ public class Time {
     private int minute;
     private int second;
 
-    public Time (final int hour, final int minute, final int second) {
+    public Time(final int hour, final int minute, final int second) {
         this.hour = hour;
         this.minute = minute;
         this.second = second;
@@ -18,11 +18,12 @@ public class Time {
     public int getMinute() {
         return minute;
     }
+
     public int getSecond() {
         return second;
     }
 
-    private boolean validation () {
+    private boolean validation() {
         if (hour >= 0 && hour < 24 && minute >= 0 && minute < 60 && second >= 0 && second < 60) {
             return true;
         } else {
@@ -54,7 +55,7 @@ public class Time {
         }
     }
 
-    public void setTime (int hour, int minute, int second) {
+    public void setTime(int hour, int minute, int second) {
         if (validation()) {
             this.hour = hour;
             this.minute = minute;
@@ -64,7 +65,7 @@ public class Time {
         }
     }
 
-    public Time nextSecond () {
+    public Time nextSecond() {
         this.second = this.second + 1;
         if (second > 59) {
             second = 0;
@@ -80,7 +81,7 @@ public class Time {
         return this;
     }
 
-    public Time previousSecond () {
+    public Time previousSecond() {
         this.second = this.second - 1;
         if (second < 0) {
             second = 59;
@@ -123,6 +124,6 @@ public class Time {
 
     @Override
     public String toString() {
-        return formatHour()+formatMinute()+formatSecond();
+        return formatHour() + formatMinute() + formatSecond();
     }
 }

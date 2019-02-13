@@ -3,11 +3,14 @@ package com.bdg.hhertevtsyan.BookStorage.createupdateobjects;
 public class AuthorUpdateParameter {
     private int id;
     private String name;
+    private String surename;
     private String gender;
 
-    public AuthorUpdateParameter (final int id, final String name, final String gender) {
+
+    public AuthorUpdateParameter (final int id, final String name, final String surename, final String gender) {
         this.id = id;
         this.name = name;
+        this.surename = surename;
         this.gender = gender;
     }
 
@@ -25,6 +28,14 @@ public class AuthorUpdateParameter {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getSurename() {
+        return surename;
+    }
+
+    public void setSurename(String surename) {
+        this.surename = surename;
     }
 
     public String getGender() {

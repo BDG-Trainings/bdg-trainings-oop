@@ -4,12 +4,13 @@ public class Point2D {
     private float x = 0.0f;
     private float y = 0.0f;
 
-    public Point2D (final float x, final float y) {
+    public Point2D(final float x, final float y) {
         this.x = x;
         this.y = y;
     }
 
-    public Point2D () {}
+    public Point2D() {
+    }
 
     public float getX() {
         return x;
@@ -27,20 +28,20 @@ public class Point2D {
         this.y = y;
     }
 
-    public void  setXY (float x, float y) {
+    public void setXY(float x, float y) {
         this.x = x;
         this.y = y;
     }
 
-    public float [] getXY () {
-        float [] XY = new float[2];
+    public float[] getXY() {
+        float[] XY = new float[2];
         XY[0] = x;
         XY[1] = y;
         return XY;
     }
 
     @Override
-    public String toString () {
+    public String toString() {
         return "(" + x + "," + y + ")";
     }
 }

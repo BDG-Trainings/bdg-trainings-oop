@@ -7,13 +7,13 @@ public class MainApplication {
         Department dev = new Department("Development", null, null, 8000000);
         Department qa = new Department("Quality Assurance", null, null, 6000000);
 
-        Person kkarapetyan = new Person("Karen", "Karapetyan", "Kareni", (short)30, null);
+        Person kkarapetyan = new Person("Karen", "Karapetyan", "Kareni", (short) 30, null);
         Person ppetrosyan = new Person("Petros", "Petrosyan", "Petrosi", (short) 32, null);
-        Person ppoghosyan = new Person("Poghos", "Poghosyan", "Phoghosi", (short)37, null);
+        Person ppoghosyan = new Person("Poghos", "Poghosyan", "Phoghosi", (short) 37, null);
         Person amargaryan = new Person("Avag", "Margaryan", "Ashoti", (short) 32, null);
-        Person agevorgyan = new Person("Artak", "Gevorgyan", "Kareni", (short)29, null);
+        Person agevorgyan = new Person("Artak", "Gevorgyan", "Kareni", (short) 29, null);
         Person aminasyan = new Person("Ani", "Minasyan", "Vazgeni", (short) 32, null);
-        Person santonyan = new Person("Sergey", "Antonyan", "Vladimiri", (short)30, null);
+        Person santonyan = new Person("Sergey", "Antonyan", "Vladimiri", (short) 30, null);
         Person amesropyan = new Person("Aida", "Mesropyan", "Tigrani", (short) 33, null);
         Person amakarpyan = new Person("Aida", "Makaryan", "Tigrani", (short) 33, null);
 
@@ -31,17 +31,17 @@ public class MainApplication {
         acc.setDepartmentHeadEmployee(accHead);
         dev.setDepartmentHeadEmployee(devHead);
         qa.setDepartmentHeadEmployee(accHead);
-      //  System.out.println(hr.getEmployees().toString());
+        //  System.out.println(hr.getEmployees().toString());
 
-        Department [] departments = new Department[4];
+        Department[] departments = new Department[4];
         departments[0] = acc;
         departments[1] = hr;
         departments[2] = dev;
         departments[3] = qa;
 
-        ResourceManagement JavaProgrammingCompany = new ResourceManagement (departments);
+        ResourceManagement JavaProgrammingCompany = new ResourceManagement(departments);
 
-        JavaProgrammingCompany.addEmployeeToDepartment(accSpecialist,"Development");
+        JavaProgrammingCompany.addEmployeeToDepartment(accSpecialist, "Development");
         //String searchResult = JavaProgrammingCompany.findEmployeeByName("Avag Margaryan Ashoti").toString();
         System.out.println("searchResult");
     }

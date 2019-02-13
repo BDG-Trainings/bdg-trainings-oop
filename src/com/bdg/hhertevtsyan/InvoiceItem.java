@@ -6,25 +6,26 @@ public class InvoiceItem {
     private int qty;
     private double unitPrice;
 
-    public InvoiceItem (final String id, final String desc, final int qty, final double unitPrice) {
+    public InvoiceItem(final String id, final String desc, final int qty, final double unitPrice) {
         this.id = id;
         this.desc = desc;
         this.qty = qty;
         this.unitPrice = unitPrice;
     }
-    public String getId () {
+
+    public String getId() {
         return id;
     }
 
-    public String getDesc () {
+    public String getDesc() {
         return desc;
     }
 
-    public int getQty () {
+    public int getQty() {
         return qty;
     }
 
-    public double getUnitPrice () {
+    public double getUnitPrice() {
         return unitPrice;
     }
 
@@ -36,11 +37,11 @@ public class InvoiceItem {
         this.unitPrice = unitPrice;
     }
 
-    public double getTotal () {
-        return qty*unitPrice;
+    public double getTotal() {
+        return qty * unitPrice;
     }
 
-    public String toString () {
+    public String toString() {
         return "InvoiceItem [id = " + id + ", desc = " + desc + ", qty = " + qty + ", unitPrice = " + unitPrice;
     }
 }
