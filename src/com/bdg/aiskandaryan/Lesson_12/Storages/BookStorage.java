@@ -5,31 +5,30 @@ import com.bdg.aiskandaryan.Lesson_12.Book;
 
 public class BookStorage extends AbstractBookStorage {
 
-    private int currentStorageSize;
 
     public BookStorage(final int storageSize) {
-        this.currentStorageSize = storageSize;
-        this.bookStore = new Book[currentStorageSize];
+        this.storageSize = storageSize;
+        this.bookStore = new Book[storageSize];
     }
 
     @Override
     public Book store(final Book book) {
-        Book [] newStorage = new Book[currentStorageSize + 1];
-        for (int i = 0; i < currentStorageSize; i++) {
+        Book [] newStorage = new Book[storageSize + 1];
+        for (int i = 0; i < storageSize; i++) {
             newStorage[i] = bookStore[i];
         }
-        newStorage[currentStorageSize] = book;
+        newStorage[storageSize] = book;
         bookStore = newStorage;
-        currentStorageSize++;
+        storageSize++;
         return book;
     }
 
     @Override
     public boolean remove(final Book book) {
-        if (currentStorageSize > 0){
-            Book [] newStorage = new Book[currentStorageSize - 1];
+        if (storageSize > 0 && book != null){
+            Book [] newStorage = new Book[storageSize - 1];
             int deltaIndex = 0;
-            for (int i = 0; i < currentStorageSize; i++) {
+            for (int i = 0; i < storageSize; i++) {
                 if (bookStore[i + deltaIndex].getId() == book.getId()) {
                     deltaIndex = 1;
                 }
@@ -37,7 +36,7 @@ public class BookStorage extends AbstractBookStorage {
             }
             if (deltaIndex != 0) {
                 bookStore = newStorage;
-                currentStorageSize--;
+                storageSize--;
                 return true;
             }else {
                 return false;
@@ -49,7 +48,7 @@ public class BookStorage extends AbstractBookStorage {
 
     @Override
     public Book get(final int id) {
-        for (int i = 0; i < currentStorageSize; i++) {
+        for (int i = 0; i < storageSize; i++) {
             if (bookStore[i].getId() == id) {
                 return bookStore[i];
             }
@@ -59,6 +58,6 @@ public class BookStorage extends AbstractBookStorage {
 
     @Override
     public int getCurrentStorageSize() {
-        return currentStorageSize;
+        return storageSize;
     }
 }

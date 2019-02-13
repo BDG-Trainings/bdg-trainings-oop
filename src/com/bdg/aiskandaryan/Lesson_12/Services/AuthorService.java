@@ -19,18 +19,20 @@ public class AuthorService extends AbstractAuthorService {
 
     @Override
     public Author create(final AuthorCreateParameter params) {
-        Author author = new Author(100 /**/, params.getName(), params.getSurname(), params.isGender());
+        Author author = new Author(authorStorage.getCurrentStorageSize() + 1, params.getName(), params.getSurname(), params.isGender());
         return authorStorage.store(author);
     }
 
     @Override
     public Author update(final AuthorUpdateParameter params) {
-        Author author = new Author(100 /**/, params.getName(), params.getSurname(), params.isGender());
-        return null; ////***********
+        Author author = authorStorage.get(params.getId());
+        author.setName(params.getName());
+        author.setSurname(params.getSurname());
+        return author;
     }
 
     @Override
     public boolean delete(final int id) {
-        return authorStorage.remove(authorStorage.get(id));sdf
+        return authorStorage.remove(authorStorage.get(id));
     }
 }
