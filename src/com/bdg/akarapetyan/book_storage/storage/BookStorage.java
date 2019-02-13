@@ -24,13 +24,22 @@ public class BookStorage extends AbstractBookStorage{
 
     @Override
     public boolean remove(Book book) {
+        Book [] bookstore1 = new Book[bookStore.length-1];
         return false;
     }
 
     @Override
     public Book get(int id) {
-        return null;
+        Book book = null;
+        for (int i=0; i< bookStore.length; i++){
+            if (bookStore[i].getId() == id) {
+                book = bookStore[i];
+                break;
+            }
+        }
+        return book;
     }
+
 
     public int getCurrentStorageSize() {
         return size;
