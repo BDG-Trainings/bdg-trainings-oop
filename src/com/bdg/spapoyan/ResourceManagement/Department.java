@@ -19,7 +19,7 @@ public class Department {
         return departmentName;
     }
 
-    public Employee[] getEmloyees() {
+    public Employee[] getEmployees() {
         return employees;
     }
 
@@ -35,8 +35,8 @@ public class Department {
         this.departmentName = departmenName;
     }
 
-    public void setEmloyees(Employee[] emloyees) {
-        this.employees = emloyees;
+    public void setEmployees(Employee[] employees) {
+        this.employees = employees;
     }
 
     public void setDepartmentHeadEmployee(Employee departmentHeadEmployee) {

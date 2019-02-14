@@ -1,10 +1,12 @@
 package com.bdg.spapoyan.ResourceManagement;
 
 public class ResourceManagement {
-    private Department departments [];
+
+    private Department [] departments;
 
 
     public void addEmplyeeToDepartment(Employee emp, String departmentName){
+
 
 
 
