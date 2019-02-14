@@ -2,28 +2,18 @@ package BookStorage;
 
 public class Book {
     private int id;
-    private String name;
     private String title;
     private double price;
     private Author[] authors;
 
-    public Book(int id, String name, String title, double price, Author[] authors) {
+    public Book(int id, String title, double price, Author[] authors) {
         this.id = id;
-        this.name = name;
         this.title = title;
         this.price = price;
         this.authors = authors;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getId() {
+   public int getId() {
         return id;
     }
 
@@ -47,8 +37,8 @@ public class Book {
         this.price = price;
     }
 
-    public Author[] getAuthors() {
-        return this.authors;
+    public Author []getAuthors() {
+        return authors;
     }
 
     public void setAuthors(Author author) {

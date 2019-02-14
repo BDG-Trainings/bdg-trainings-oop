@@ -1,12 +1,12 @@
 package BookStorage;
 
 public abstract class Storage {
-    protected int storageSize;
+    protected int storageMaxSize;
 
-    protected Storage(int storageSize){
-        this.storageSize=storageSize;
+    protected Storage(int storageMaxSize){
+        this.storageMaxSize=storageMaxSize;
 
     }
-public abstract int getCurrentStorageSize();
+protected abstract int getCurrentStorageSize();
 }
 

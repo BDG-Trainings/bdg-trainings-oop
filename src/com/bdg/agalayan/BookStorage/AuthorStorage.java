@@ -1,22 +1,21 @@
 package BookStorage;
 
-public class AuthorStorage extends AbstractAutherStorage {
-private int currentStorageSize;
+public final class AuthorStorage extends AbstractAutherStorage {
+private Author[ ] authors;
 
-    public AuthorStorage(int StorageSize) {
-        super(StorageSize);
+    public AuthorStorage(int StorageMaxSize) {
+        super(StorageMaxSize);
+        authors = new Author[StorageMaxSize];
 
     }
-
     @Override
-    public Author[] store(Author author) {
-        Author[] autherstore1= new Author[autherStore.length+1];
-       for(int i =0; i < autherStore.length; i++){
-           autherstore1[i]=autherStore[i];
+    public Author store(Author author) {
+        Author []author1= new Author[autherStore.length+1];
+        for (int i=0; i<autherStore.length; i++) {
+            author1[i] = autherStore[i];
+        }author1[autherStore.length+1]=author;
 
-       }autherstore1[autherStore.length+1]=author;
-       this.autherStore=autherstore1;
-       return autherstore1;
+        return author;
     }
 
     @Override
@@ -51,8 +50,5 @@ private int currentStorageSize;
         return null;
     }
 
-    @Override
-    public int getCurrentStorageSize() {
-        return currentStorageSize;
-    }
+
 }

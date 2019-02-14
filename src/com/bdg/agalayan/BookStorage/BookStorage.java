@@ -1,57 +1,37 @@
 package BookStorage;
 
-public class BookStorage extends AbstractBookStorage {
-
-    private int currentStorageSize;
-
+public final class BookStorage extends AbstractBookStorage {
+    private int currentStorageSize=0;
     public BookStorage(int StorageSize){
-
         super(StorageSize);
-    }
+    }    public int getCurrentStorageSize(){
+        return currentStorageSize;    }
     @Override
-    public Book [] store(Book book) {
-        Book[]bookstore1= new Book[bookStore.length+1];
-        for(int i=0; i<bookStore.length; i++) {
-            bookStore[i] = bookstore1[i];
-        }bookstore1[bookStore.length+1]=book;
-        this.bookStore= bookstore1;
-           return bookstore1 ;
-    }
-
+    public boolean store(Book book) {
+        if (currentStorageSize < bookStore.length) {
+           bookStore[currentStorageSize] = book;
+           currentStorageSize++;
+           return true;                }
+                return false;            }
     @Override
-    public boolean remove(Book book) {
-        int index =-1;
-        for(int i=0; i<bookStore.length; i++){
+    public Book get ( int id){
+        for (int i = 0; i < bookStore.length; i++) {
+           if (bookStore[i].getId() == id) {
+           return bookStore[i];           }
+        }        return null;    }
+    @Override
+    public boolean remove (Book book) {
+        int index=-1;
+        for(int i =0; i<bookStore.length; i++){
             if(bookStore[i]==book){
-                index=i;
-            }
-        }if(index==-1){
-            return false;
-        }
-        Book [] bookstore2 = new Book[bookStore.length-1];
+                index=i;            }
+        }if(index==-1){           return false;        }
+        Book[] books = new Book[bookStore.length-1];
         for(int i = 0; i< bookStore.length; i++){
             if(bookStore[i]!=book){
-                bookstore2[i]=bookStore[i];
-            }
-
+                books[i]=bookStore[i];            }
         }
-        this.bookStore=bookstore2;
+        this.bookStore=books;
         return true;
     }
-
-    @Override
-    public Book get(int id) {
-        for(int i=0; i<bookStore.length; i++){
-            if(bookStore[i].getId()==id){
-                return bookStore[i];
-            }
-        }
-
-        return null;
     }
-
-    @Override
-    public int getCurrentStorageSize() {
-        return currentStorageSize;
-    }
-}
