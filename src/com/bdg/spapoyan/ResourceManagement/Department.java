@@ -19,7 +19,7 @@ public class Department {
         return departmentName;
     }
 
-    public Employee[] getEmployees() {
+    public Employee[] getEmployees(Employee emp) {
         return employees;
     }
 
