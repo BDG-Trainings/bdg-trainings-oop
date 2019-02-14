@@ -27,6 +27,7 @@ public final class BookService extends AbstractBookService {
             authors[i] = authorService.create(p);
             i++;
         }
+
         return new Book(bookStorage.getCurrentStorageSize() + 1, params.getName(), params.getTitle(), params.getPrice(), authors);
     }
 

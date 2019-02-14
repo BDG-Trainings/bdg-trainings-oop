@@ -32,6 +32,6 @@ public class BookCreateParameter {
     }
 
     public AuthorCreateParameter[] getAuthors() {
-        return authors;
+        return this.authors;
     }
 }
