@@ -2,6 +2,7 @@ package Lessons_10;
 
 import Lessons_09.Department;
 import Lessons_09.Employee;
+import Lessons_09.Person;
 
 import javax.swing.plaf.synth.SynthOptionPaneUI;
 
@@ -18,19 +19,15 @@ public class ResourceMenegment {
            Employee[] emp = departments[i].getEmployees();
            for (int j = 0; j < emp.length; j++) {
                if (emp[j].getPerson().getFirstName() == employeeName) {
-                   return emp[j];
-               }
+                   return emp[j];               }
            }
-       }return  null;
-    }
+       }return  null;    }
     public Department findDepartmantbyName(String depatrmentName){
         for(int i = 0; i < departments.length; i++){
             if (departments[i].getDepartmentName()==depatrmentName){
                 return departments[i];
-            }
-        }
-        return null;
-    }
+            }        }
+        return null;    }
     public Department getDepartmentwihtMaxSalary(){
         Department department=departments[0];
         double maxSalary=0;
@@ -42,7 +39,22 @@ public class ResourceMenegment {
             }
         }return department;
     }
-    public static void main(String []args){
-         System.out.print("jkj");
+    public void removeEmployeefromDepartment(Employee emp,String DepartmentName) {
+        int index=-1;
+        for(int i =0; i<departments[i].getEmployees().length; i++){
+            if(departments[i].getEmployees()[i]==emp){
+                index=i;
+            }
+        }if(index==-1) {
+            Employee[] e = new Employee[departments.length - 1];
+            for (int i = 0; i < departments[i].getEmployees().length; i++) {
+                if (departments[i].getEmployees()[i] != emp) {
+                    e[i] = departments[i].getEmployees()[i];
+                }
+                this.departments[i].getEmployees();
+            }
+
+        }
     }
+
 }
