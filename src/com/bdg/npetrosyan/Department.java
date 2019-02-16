@@ -6,11 +6,11 @@ public class Department {
     private Employee departmentHeadEmployee;
     private double departmentSalary;
 
-    public Department(final String departmentName, final Employee[] employees, final Employee departmentHeadEmployee, final double budget) {
+    public Department(final String departmentName, final Employee[] employees, final Employee departmentHeadEmployee, final double departmentSalary) {
         this.departmentHeadEmployee = departmentHeadEmployee;
         this.departmentName = departmentName;
         this.employees = employees;
-        this.departmentSalary = budget;
+        this.departmentSalary = departmentSalary;
     }
 }
 
