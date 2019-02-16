@@ -20,6 +20,14 @@ public final class Account {
             this.accountBalance.withdraw(amount);
     }
 
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public double getAccountBalance() {
+        return accountBalance.getBalance();
+    }
+
     @Override
     public String toString() {
         return "Account{"+

@@ -20,11 +20,14 @@ public final class BankService {
         return account;
     }
 
-    public boolean transfer(final Account from, final Account to, final double amount) {
+    public BankService transfer(final Account from, final Account to, final double amount) {
 
+            if (from.getAccountBalance() >= amount){
+                from.withdraw(amount);
+                to.deposit(amount);
+            }
 
-
-        return false;
+        return null;
     }
 
     public Account[] findAllAccountWithBalanceRange(final double balanceFrom, final double balanceTo) {
