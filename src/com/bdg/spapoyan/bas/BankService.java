@@ -1,9 +1,10 @@
-package com.bdg.master.bas;
+package com.bdg.spapoyan.bas;
 
 
 public final class BankService {
 
     private Account[] accounts;
+    private int index;
 
     public BankService(final int maxAccountSize) {
         this.accounts = new Account[maxAccountSize];
@@ -11,7 +12,15 @@ public final class BankService {
 
     public Account create(String customerName, String customerSurname, Country country, String street, String phoneNumber, double initialBalance) {
         //Implement this functionality
-        return null;
+
+        Address address = new Address(country, street, phoneNumber);
+        Customer customer = new Customer(0, customerName, customerSurname, address);
+        AccountBalance accountBalance = new AccountBalance(initialBalance);
+        Account account = new Account(customer, accountBalance);
+        accounts[index] = account;
+        index++;
+
+        return account;
     }
 
     public boolean transfer(final Account from, final Account to, final double amount) {

@@ -1,4 +1,4 @@
-package com.bdg.master.bas;
+package com.bdg.spapoyan.bas;
 
 
 public final class Account {
@@ -16,5 +16,13 @@ public final class Account {
 
     public void withdraw(final double amount) {
 
+    }
+
+    @Override
+    public String toString() {
+        return "Account{" +
+                "customer=" + customer +
+                ", accountBalance=" + accountBalance +
+                '}';
     }
 }

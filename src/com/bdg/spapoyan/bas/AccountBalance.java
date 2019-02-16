@@ -1,4 +1,4 @@
-package com.bdg.master.bas;
+package com.bdg.spapoyan.bas;
 
 
 public final class AccountBalance {
