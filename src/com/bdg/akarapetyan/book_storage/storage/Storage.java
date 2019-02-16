@@ -1,7 +1,5 @@
 package com.bdg.akarapetyan.book_storage.storage;
 
-import com.sun.glass.ui.Size;
-
 public abstract class Storage {
 
     protected int size;
