@@ -12,7 +12,7 @@ public final class BankSystem {
         //Customer customer = new Customer(1, "Arsen", "Karapetyan", address );
         //System.out.println(customer);
 
-        System.out.println(Country.findByCountryName("Asajdjadasj"));
+        System.out.println(Country.findByCountryName("Italy"));
         System.out.println(Country.findByNumericCode("051"));
     }
 
