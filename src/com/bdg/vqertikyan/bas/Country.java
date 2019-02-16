@@ -1,4 +1,4 @@
-package com.bdg.master.bas;
+package com.bdg.vqertikyan.bas;
 
 //See https://en.wikipedia.org/wiki/ISO_3166-1
 public enum Country {
