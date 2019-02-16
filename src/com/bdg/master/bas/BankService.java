@@ -4,7 +4,7 @@ package com.bdg.master.bas;
 public final class BankService {
 
     private int index;
-    private Account[] accounts;
+    private Account [] accounts;
 
 
     public BankService(final int maxAccountSize) {
@@ -17,15 +17,21 @@ public final class BankService {
             Customer        customer = new Customer(customerName,customerSurname,address);
             AccountBalance  balance  = new AccountBalance(initialBalance);
             Account         account  = new Account(customer,balance);
+
+            accounts[index] = account;
+
         return account;
     }
 
+
     public BankService transfer(final Account from, final Account to, final double amount) {
 
-            if (from.getAccountBalance() >= amount){
+        if (from.getAccountBalance() >= amount){
                 from.withdraw(amount);
                 to.deposit(amount);
-            }
+            }else {
+            return null;
+        }
 
         return null;
     }
@@ -36,7 +42,11 @@ public final class BankService {
     }
 
     public Account findByCustomerName(final String customerName) {
-        //Implement this functionality
+        for (Account acount: accounts) {
+            if (customerName == acount.getCustomer().getCustomerName()){
+                return acount;
+            }
+        }
         return null;
     }
 
