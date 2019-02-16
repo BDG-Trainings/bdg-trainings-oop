@@ -1,4 +1,4 @@
-package com.bdg.vkaramyan.Storage;
+package com.bdg.vkaramyan.storage;
 
 import com.bdg.vkaramyan.entitys.Book;
 
