@@ -26,12 +26,24 @@ public enum Country {
     }
 
     public static Country findByCountryName(final String countryName) {
+
+       for(Country country : values()){
+           if(country.countryName==countryName){
+               return country;
+           }
+       }
         //Implement this functionality
         return null;
     }
 
     public static Country findByNumericCode(final String numericCode) {
         //Implement this functionality
+
+        for(Country country : values()){
+            if(country.numericCode==numericCode){
+                return country;
+            }
+        }
         return null;
     }
 }
