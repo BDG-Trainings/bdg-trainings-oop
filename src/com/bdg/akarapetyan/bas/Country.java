@@ -25,13 +25,21 @@ public enum Country {
     }
 
     public static Country findByCountryName(final String countryName) {
-        //Implement this functionality
-        return null;
+        Country c = null;
+        for (Country country : Country.values()){
+            if (country.countryName == countryName){
+                c = country;
+            }
+        } return c;
     }
 
     public static Country findByNumericCode(final String numericCode) {
-        //Implement this functionality
-        return null;
+        Country c = null;
+        for (Country country : Country.values()){
+            if (country.countryName == numericCode){
+                c = country;
+            }
+        } return c;
     }
 }
 
