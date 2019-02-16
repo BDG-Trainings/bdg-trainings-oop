@@ -8,6 +8,9 @@ public final class BankSystem {
 
         Address address = new Address(Country.IT, "Moscovyan", "094566747" );
         System.out.println(address);
+
+        Customer customer = new Customer(1, "Arsen", "Karapetyan", address );
+        System.out.println(customer);
     }
 
 }
