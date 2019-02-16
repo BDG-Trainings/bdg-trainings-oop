@@ -36,7 +36,7 @@ public enum Country {
     public static Country findByNumericCode(final String numericCode) {
         Country c = null;
         for (Country country : Country.values()){
-            if (country.countryName == numericCode){
+            if (country.numericCode == numericCode){
                 c = country;
             }
         } return c;
