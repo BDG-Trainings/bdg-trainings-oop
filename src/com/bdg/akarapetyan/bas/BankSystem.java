@@ -11,6 +11,10 @@ public final class BankSystem {
 
         Customer customer = new Customer(1, "Arsen", "Karapetyan", address );
         System.out.println(customer);
+
+        Country country = Country.AM;
+        System.out.println(country.getCountryName());
+        System.out.println(country.getNumericCode());
     }
 
 }
