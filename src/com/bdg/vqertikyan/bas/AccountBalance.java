@@ -19,4 +19,11 @@ public final class AccountBalance {
     public void withdraw(final double amount) {
         this.balance = this.balance - amount;
     }
+
+    @Override
+    public String toString() {
+        return "AccountBalance{" +
+                "balance=" + balance +
+                '}';
+    }
 }

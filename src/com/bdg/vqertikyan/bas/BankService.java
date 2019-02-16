@@ -1,8 +1,9 @@
 package com.bdg.vqertikyan.bas;
 
 
-public final class BankService {
+import java.util.Arrays;
 
+public final class BankService {
     private Account[] accounts;
     private int index;
     private int maxAccountSize;
@@ -10,6 +11,7 @@ public final class BankService {
     public BankService(final int maxAccountSize) {
         this.accounts = new Account[maxAccountSize];
     }
+
 
     public Account create(String customerName, String customerSurname, Country country, String street, String phoneNumber, double initialBalance) {
         //Implement this functionality
@@ -58,11 +60,26 @@ public final class BankService {
 
     public Account findByCustomerName(final String customerName) {
         //Implement this functionality
+
+        for(Account account : accounts){
+            if(account.getCustomer().getCustomerName()==customerName){
+                return account;
+            }
+        }
         return null;
     }
 
     public Account[] findAllAccountsByCountry(final Country country) {
         //Implement this functionality
-        return null;
+
+        Account[] filterAccounts = new Account[accounts.length];
+        int i = 0;
+        for(Account account : accounts) {
+            if(account.getCustomer().getAddress().getCountry()==country){
+                filterAccounts[i] = account;
+                i++;
+            }
+        }
+        return filterAccounts;
     }
 }
