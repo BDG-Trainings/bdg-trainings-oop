@@ -24,6 +24,11 @@ public class BookStorage extends AbstractBookStorage{
 
     @Override
     public boolean remove(Book book) {
+        if (get(book.getId()) != null){
+
+
+
+        }
         return false;
     }
 
