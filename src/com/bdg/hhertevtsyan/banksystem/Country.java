@@ -25,13 +25,27 @@ public enum Country {
         return this.numericCode;
     }
 
-    public static Country findByCountryName(final String countryName) {
-        //Implement this functionality
+    public  Country findByCountryName(final String countryName) {
+        Country [] countryList = new Country[Country.values().length];
+        countryList = Country.values();
+        for (int i = 0; i < Country.values().length; i++) {
+            if (countryList[i].getCountryName()== countryName) {
+                return countryList[i];
+            }
+        }
         return null;
     }
 
     public static Country findByNumericCode(final String numericCode) {
-        //Implement this functionality
+        Country[] countryList = new Country[Country.values().length];
+        countryList = Country.values();
+        for (int i = 0; i < Country.values().length; i++) {
+            if (countryList[i].getNumericCode() == numericCode) {
+                return countryList[i];
+            }
+        }
         return null;
     }
+
+
 }

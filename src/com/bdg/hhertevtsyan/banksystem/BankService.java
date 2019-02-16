@@ -2,18 +2,24 @@ package com.bdg.hhertevtsyan.banksystem;
 
 public final class BankService {
     private int currentAccountSize = 0;
-    private  Customer [] customers;
+    private  int customersId =0;
     private Account[] accounts;
 
     public BankService(final int maxAccountSize) {
         this.accounts = new Account[maxAccountSize];
     }
 
-    public Account create(String customerName, String customerSurname, Country country, String city, String street, String phoneNumber, double initialBalance) {
+    public int getMaxAccountSize () {
+        return accounts.length;
+    }
+
+    public Account create(int accountNumber, String customerName, String customerSurname, Country country, String city, String street, String phoneNumber, double initialBalance) {
         if (currentAccountSize<accounts.length) {
-           Customer newCustomer = new Customer(customers.length+1,customerName,customerSurname, new Address(country, city, street, phoneNumber));
-           accounts[currentAccountSize] = new Account(90005000, newCustomer, new AccountBalance(initialBalance));
-           currentAccountSize = currentAccountSize+1;
+           Customer newCustomer = new Customer(customersId,customerName,customerSurname, new Address(country, city, street, phoneNumber));
+           accounts[currentAccountSize] = new Account(accountNumber, newCustomer, new AccountBalance(initialBalance));
+           currentAccountSize ++;
+           customersId ++;
+
            return accounts[currentAccountSize-1];
         } else {
         return null; }
@@ -21,7 +27,7 @@ public final class BankService {
 
     public boolean transfer(final Account from, final Account to, final double amount) {
         boolean transferIsComplete = false;
-        for (int i = 0; i < accounts.length; i++) {
+        for (int i = 0; i < currentAccountSize; i++) {
             if (from.getAccountNumber() == accounts[i].getAccountNumber()) {
                 from.withdraw(amount);
                 accounts[i].deposit(amount);
@@ -44,7 +50,6 @@ public final class BankService {
     }
 
     public Account findByCustomerName(final String customerName, final String customerSurename) {
-        //Implement this functionality
         for (int i = 0; i< accounts.length; i++) {
             if (accounts[i].getCustomer().getCustomerName() == customerName && accounts[i].getCustomer().getCustomerSurname() == customerSurename)
                 return accounts[i];
@@ -62,5 +67,9 @@ public final class BankService {
             }
         }
         return accountsByCountry;
+    }
+
+    public int getCurrentAccountSize() {
+        return currentAccountSize;
     }
 }

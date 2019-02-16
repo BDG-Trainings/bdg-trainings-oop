@@ -13,7 +13,6 @@ public final class Account {
 
     public void deposit(final double amount) {
         accountBalance.deposit(amount);
-
     }
 
     public void withdraw(final double amount) {
