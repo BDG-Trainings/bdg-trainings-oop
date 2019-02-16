@@ -6,5 +6,6 @@ package com.bdg.npetrosyan;
         private String middleName;
         private short age;
         private Address [] adresses;
+
     }
 
