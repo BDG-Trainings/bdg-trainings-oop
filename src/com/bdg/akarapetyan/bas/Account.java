@@ -43,7 +43,7 @@ public final class Account {
     public String toString() {
         return "Account{" +
                 "customer=" + customer +
-                ", accountBalance=" + accountBalance +
+                ", accountBalance=" + accountBalance.getBalance() +
                 '}';
     }
 }
