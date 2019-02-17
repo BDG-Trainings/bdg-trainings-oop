@@ -11,6 +11,7 @@ public final class BankSystem {
         Customer customer1 = new Customer(customerid, "Person1", "Surname1", address1 );
         customerid++;
         Customer customer2 = new Customer(customerid, "Person2", "Surname2", address2 );
+        customerid++;
         //System.out.println(customer1);
         //System.out.println(Country.findByCountryName("Italy"));
         //System.out.println(Country.findByNumericCode("051"));
@@ -21,7 +22,8 @@ public final class BankSystem {
         Account account1 = new Account(customer1,balance1);
         Account account2 = new Account(customer2,balance2);
         BankService bankService = new BankService();
-        Account account3 = bankService.create("Arsen", "Karapetyan", Country.IT, "Moscovyan8", "099111111", 7000);
+        Account account3 = bankService.create(customerid,"Arsen", "Karapetyan", Country.IT, "Moscovyan8", "099111111", 7000);
+        customerid++;
         System.out.println(account1.toString());
         System.out.println(account2.toString());
         System.out.println(account3.toString());

@@ -9,12 +9,11 @@ public final class BankService {
     public BankService() {
     }
 
-    public Account create(String customerName, String customerSurname, Country country, String street, String phoneNumber, double initialBalance) {
+    public Account create(int customerID, String customerName, String customerSurname, Country country, String street, String phoneNumber, double initialBalance) {
         accountId = accountId++;
         if (accountId <= maxSize){
             Address address = new Address(country,street,phoneNumber);
-            Customer customer_draft = new Customer();
-            Customer customer = new Customer (customer_draft.getCustomerId()+1, customerName, customerSurname, address);
+            Customer customer = new Customer (customerID, customerName, customerSurname, address);
             AccountBalance balance = new AccountBalance(initialBalance);
             Account account = new Account(customer, balance);
             this.accounts [accountId] = account;
