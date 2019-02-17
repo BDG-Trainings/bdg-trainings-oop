@@ -6,9 +6,10 @@ import com.bdg.resourcemanagement.ekirakosyan.SalaryDetail;
 
 public class EmployeeService {
 
-    public Employee create(SalaryDetail salaryDetail, Person person){
+    public Employee create(final SalaryDetail salaryDetail, final Person person){
         Employee employee = new Employee(salaryDetail, person);
         return employee;
     }
+
 
 }
