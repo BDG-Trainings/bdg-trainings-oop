@@ -1,7 +1,7 @@
 package com.bdg.master.abstraction;
 
 
-import com.bdg.osahakyan.date.Date;
+
 
 public abstract class Car {
 
