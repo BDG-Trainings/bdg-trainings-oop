@@ -11,7 +11,6 @@ public class ResourceManagement {
         this.departments = new Department[departmentSize];
     }
 
-    DepartmentService departmentService = new DepartmentService();
 
     public boolean addDepartment(final Department department) {
         if (currentIndex < departments.length){
