@@ -4,14 +4,11 @@ public final class BankSystem {
 
     public static void main(String[] args) {
         BankService service = new BankService();
-        Address address1 = new Address(Country.IT, "Moscovyan", "094566747" );
-        Address address2 = new Address(Country.AM, "Pushkin", "094111111" );
+        //Address address1 = new Address(Country.IT, "Moscovyan", "094566747" );
+        //Address address2 = new Address(Country.AM, "Pushkin", "094111111" );
         //System.out.println(address);
         int customerid = 1;
-        Customer customer1 = new Customer(customerid, "Person1", "Surname1", address1 );
-        customerid++;
-        Customer customer2 = new Customer(customerid, "Person2", "Surname2", address2 );
-        customerid++;
+
         //System.out.println(customer1);
         //System.out.println(Country.findByCountryName("Italy"));
         //System.out.println(Country.findByNumericCode("051"));
@@ -19,9 +16,12 @@ public final class BankSystem {
         AccountBalance balance1 = new AccountBalance(5000);
         AccountBalance balance2 = new AccountBalance(2000);
 
-        Account account1 = new Account(customer1,balance1);
-        Account account2 = new Account(customer2,balance2);
+
         BankService bankService = new BankService();
+        Account account1 = bankService.create(customerid,"Person1", "Surname1", Country.IT, "Pushkin", "094566747", 5000);
+        customerid++;
+        Account account2 = bankService.create(customerid,"Person2", "Surname2", Country.AM, "Moscovyan", "099111122", 2000);
+        customerid++;
         Account account3 = bankService.create(customerid,"Arsen", "Karapetyan", Country.IT, "Moscovyan8", "099111111", 7000);
         customerid++;
         System.out.println(account1.toString());
@@ -38,5 +38,8 @@ public final class BankSystem {
         System.out.println();
         Account account_search = bankService.findByCustomerName("Arsen");
         System.out.println(account_search.toString());
+        System.out.println();
+        Account[]accounts = bankService.findAllAccountsByCountry(Country.IT);
+        bankService.toString(accounts);
     }
 }
