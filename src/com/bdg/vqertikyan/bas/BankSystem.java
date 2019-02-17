@@ -9,7 +9,7 @@ public final class BankSystem {
         System.out.println(Country.findByCountryName("Armenia"));
         System.out.println(Country.findByNumericCode("380"));
 
-        BankService bankService = new BankService(20); //????? if here instead 4  write 20 findAllAccountWithBalanceRange not work, why?????????
+        BankService bankService = new BankService(4); //????? if here instead 4  write 20 findAllAccountWithBalanceRange not work, why?????????
 
         Account account1 = bankService.create("name1", "surname1", Country.IT, "street1", "phone1", 5000);
         Account account2 = bankService.create("name2", "surname2", Country.AM, "street2", "phone2", 1000);

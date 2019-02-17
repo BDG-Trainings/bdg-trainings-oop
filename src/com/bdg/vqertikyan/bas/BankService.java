@@ -14,7 +14,7 @@ public final class BankService {
 
     public Account create(String customerName, String customerSurname, Country country, String street, String phoneNumber, double initialBalance) {
         //Implement this functionality
-        if (maxAccountSize <= index) {
+
             Address address = new Address(country, street, phoneNumber);
             Customer customer = new Customer(0, customerName, customerSurname, address);
             AccountBalance accountBalance = new AccountBalance(initialBalance);
@@ -22,6 +22,7 @@ public final class BankService {
             Account account = new Account(customer, accountBalance);
 
             accounts[index] = account;
+        if (maxAccountSize <= index) {
             index++;
             return account;
         }
