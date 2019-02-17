@@ -35,5 +35,8 @@ public final class BankSystem {
         System.out.println(account1.toString());
         System.out.println(account2.toString());
         System.out.println(account3.toString());
+        System.out.println();
+        Account account_search = bankService.findByCustomerName("Arsen");
+        System.out.println(account_search.toString());
     }
 }

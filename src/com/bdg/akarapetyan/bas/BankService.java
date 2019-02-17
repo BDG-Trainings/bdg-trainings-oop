@@ -36,7 +36,11 @@ public final class BankService {
     }
 
     public Account findByCustomerName(final String customerName) {
-        //Implement this functionality
+        for (int i=0; i<accounts.length; i++){
+            if (accounts[i].getCustomer().getCustomerName() == customerName){
+                return accounts[i];
+            }
+        }
         return null;
     }
 
