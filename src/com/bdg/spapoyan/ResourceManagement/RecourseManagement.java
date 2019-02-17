@@ -5,11 +5,13 @@ public class RecourseManagement {
     private Department[] departments;
 
     public void addEmployeeToDepartment(Employee emp, String departmentName){
-        Department department = findDepartmentByName(departmentName);
-        if (department != null){
-            department.getEmployees(emp);
-        }
+        Employee[] employees = new Employee[2];
+        Department department = new Department(departmentName, employees, emp, 1000 );
+            if(department != null){
+                if (employees != null){
 
+                }
+            }
 
     }
 

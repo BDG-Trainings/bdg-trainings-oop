@@ -7,6 +7,8 @@ public final class Account {
     private AccountBalance accountBalance;
 
     public Account(final Customer customer, final AccountBalance balance) {
+        this.customer = customer;
+        this.accountBalance = balance;
 
     }
 
