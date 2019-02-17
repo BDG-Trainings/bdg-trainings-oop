@@ -1,12 +1,12 @@
 package com.bdg.resourcemanagement.osahakyan;
 
-public class SalaryDetail {
+public final class SalaryDetail {
 
     private double salaryAmount;
     private SalaryType salaryType;
     private String cardNumber;
 
-    public SalaryDetail(final double amount, String cardNumber) {
+    public SalaryDetail(final double amount, final String cardNumber) {
         this.salaryAmount = amount;
         this.cardNumber = cardNumber;
         this.salaryType = SalaryType.CARD;
@@ -32,9 +32,10 @@ public class SalaryDetail {
 
     @Override
     public String toString() {
-        return "SalaryDetail{" +
-                "salaryAmount =" + salaryAmount +
-                ", salaryType =" + salaryType +
-                ", cardNumber =" + cardNumber +"}";
+        return "SalaryDetail( " +
+                "SalaryAmount: " + salaryAmount +
+                ", SalaryType: " + salaryType +
+                ", CardNumber: " + cardNumber +
+                ")";
     }
 }

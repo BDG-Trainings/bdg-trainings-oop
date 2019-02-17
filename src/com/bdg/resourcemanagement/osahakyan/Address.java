@@ -1,11 +1,11 @@
 package com.bdg.resourcemanagement.osahakyan;
 
-public class Address {
-    private Country country;
-    private String street;
-    private String phoneNumber;
+public final class Address {
+    private final Country country;
+    private final String street;
+    private final String phoneNumber;
 
-    public Address(Country country, String street, String phoneNumber) {
+    public Address(final Country country, final String street, final String phoneNumber) {
         this.country = country;
         this.street = street;
         this.phoneNumber = phoneNumber;
@@ -25,9 +25,10 @@ public class Address {
 
     @Override
     public String toString() {
-        return "Address(" +
-                country + "," +
-                street + "," + "," +
-                phoneNumber + ", " + ")";
+        return "Address (" +
+                "Country: " + country + "," +
+                "Street: " + street + "," +
+                "PhoneNumber: " + phoneNumber + ", " +
+                ")";
     }
 }

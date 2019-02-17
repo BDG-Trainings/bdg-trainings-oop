@@ -1,13 +1,15 @@
 package com.bdg.resourcemanagement.osahakyan;
 
-public class Department {
+import java.util.Arrays;
 
-    private DepartmentType departmentType;
-    private String departmentName;
-    private Employee departmentHead;
-    private Employee[] employees;
+public final class Department {
 
-    public Department(DepartmentType departmentType, String departmentName, Employee departmentHead, Employee[] employees) {
+    private final DepartmentType departmentType;
+    private final String departmentName;
+    private final Employee departmentHead;
+    private final Employee[] employees;
+
+    public Department(DepartmentType departmentType, String departmentName,  Employee departmentHead, Employee[] employees) {
         this.departmentType = departmentType;
         this.departmentName = departmentName;
         this.departmentHead = departmentHead;
@@ -32,11 +34,11 @@ public class Department {
 
     @Override
     public String toString() {
-        return "Department{" +
-                "departmentType =" + departmentType +
-                ", departmentName ='" + departmentName +
-                ", departmentHead =" + departmentHead +
-                ", employees =" + employees +
-                ",";
+        return "Department (" +
+                "departmentType: " + departmentType +
+                ", departmentName: '" + departmentName +
+                ", departmentHead: " + departmentHead +
+                ", employees: " + Arrays.toString(employees) +
+                ")";
     }
 }

@@ -1,12 +1,14 @@
 package com.bdg.resourcemanagement.osahakyan;
 
-public class Person {
+import java.util.Arrays;
 
-        private String firstName;
-        private String lastName;
-        private String middleName;
-        private short age;
-        private Address[] addresses;
+public final class Person {
+
+        private final String firstName;
+        private final String lastName;
+        private final String middleName;
+        private final short age;
+        private final Address[] addresses;
 
         public Person(final String firstName, final String lastName, final String middleName, final short age, final Address[] addresses) {
             this.firstName = firstName;
@@ -39,10 +41,11 @@ public class Person {
         @Override
         public String toString() {
             return "Person(" +
-                    firstName + "," +
-                    middleName + "," +
-                   lastName + "," +
-                    age + "," +
-                   addresses + ")";
+                    "FirstName: " + firstName + "," +
+                    "MiddleName: " + middleName + "," +
+                    "LastName: " + lastName + "," +
+                    "Age: " + age + "," +
+                    "Address" + Arrays.toString(addresses) +
+                    ")";
         }
 }
