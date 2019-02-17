@@ -1,34 +1,36 @@
 package com.bdg.resourcemanagement.vkaramyan;
 
+import java.util.Arrays;
+
 public class Address {
 	
+	private Country [] country;
+	private String phoneNumber;
 	private String street;
-	private String city;
-	private String state;
-	private String zipCode;
 	
-	public Address(final String street, final String city, final String state, final String zipCode) {
-		super();
+	public Address(final Country[] country, final String phoneNumber, final String street) {
+		this.country = country;
+		this.phoneNumber = phoneNumber;
 		this.street = street;
-		this.city = city;
-		this.state = state;
-		this.zipCode = zipCode;
+	}
+
+	public Country[] getCountry() {
+		return country;
+	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
 	}
 
 	public String getStreet() {
 		return street;
 	}
 
-	public String getCity() {
-		return city;
+	@Override
+	public String toString() {
+		return "Address [country=" + Arrays.toString(country) + ", phoneNumber=" + phoneNumber + ", street=" + street
+				+ "]";
 	}
-
-	public String getState() {
-		return state;
-	}
-
-	public String getZipCode() {
-		return zipCode;
-	}
-
+	
+	
 }
