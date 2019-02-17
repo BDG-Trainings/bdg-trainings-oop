@@ -1,4 +1,4 @@
-package bas;
+package com.bdg.agalayan.bas;
 
 
 public final class BankService {
@@ -31,7 +31,7 @@ public final class BankService {
 
     public boolean transfer(final Account from, final Account to, final double amount) {
 
-        }
+
         //Implement this functionality
         return false;
     }
