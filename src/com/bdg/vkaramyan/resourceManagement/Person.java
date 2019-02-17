@@ -19,40 +19,25 @@ public class Person {
 		return firstName;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
 	public String getLastName() {
 		return lastName;
 	}
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
 
 	public String getMiddleName() {
 		return middleName;
-	}
-
-	public void setMiddleName(String middleName) {
-		this.middleName = middleName;
 	}
 
 	public short getAge() {
 		return age;
 	}
 
-	public void setAge(short age) {
-		this.age = age;
-	}
+	
 
 	@Override
 	public String toString() {
 		return "Person [firstName=" + firstName + ", lastName=" + lastName + ", middleName=" + middleName + ", age="
 				+ age + "]";
 	}
-	
-	
-	
+
 }
