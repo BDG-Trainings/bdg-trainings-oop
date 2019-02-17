@@ -28,11 +28,18 @@ public final class Account {
     }
 
 
-    public void deposit(final double amount) {
+    public boolean deposit(final double amount) {
+        this.accountBalance.deposit(amount);
 
+        return true;
     }
 
-    public void withdraw(final double amount) {
-
+    public boolean withdraw(final double amount) {
+        boolean success = false;
+        if (this.accountBalance.getBalance() >= amount) {
+            this.accountBalance.withdraw(amount);
+            success = true;
+        }
+        return success;
     }
 }

@@ -39,9 +39,11 @@ public final class BankService {
         }
 
         Account[] accountsByRange = new Account[lenght];
+        int j=0;
         for (int i=0; i<accounts.length; i++){
             if(accounts[i].getAccountBalance().getBalance() >= balanceFrom && accounts[i].getAccountBalance().getBalance() <= balanceTo){
                 accountsByRange[i] = accounts[i];
+                j++;
             }
         }
         if(accountsByRange != null){
@@ -52,13 +54,35 @@ public final class BankService {
 
     public Account findByCustomerName(final String customerName) {
         //Implement this functionality
-
+        for (int i=0; i<accounts.length; i++){
+            if(accounts[i].getCustomer().getCustomerName().contentEquals(customerName)){
+                return accounts[i];
+            }
+        }
 
         return null;
     }
 
     public Account[] findAllAccountsByCountry(final Country country) {
         //Implement this functionality
+        int lenght = 0;
+        for (int i=0; i<accounts.length; i++){
+            if(accounts[i].getCustomer().getAddress().getCountry().equals(country)){
+                lenght++;
+            }
+        }
+        Account[] accountsByCountry = new Account[lenght];
+        int j=0;
+        for (int i=0; i<accounts.length; i++){
+            if(accounts[i].getCustomer().getAddress().getCountry().equals(country)){
+                accountsByCountry[j] = accounts[i];
+                j++;
+            }
+        }
+        if(accountsByCountry != null){
+            return  accountsByCountry;
+        }
+
         return null;
     }
 }
