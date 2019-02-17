@@ -35,6 +35,8 @@ public final class BankService {
         final Account internalFromAccount = this.findByCustomerName(from.getCustomer().getCustomerName());
         final Account internalToAccount = this.findByCustomerName(to.getCustomer().getCustomerName());
 
+        //Add additional checking here is internal account exist, after perform operations.
+
         if (internalFromAccount.getAccountBalance().getBalance() >= amount) {
             internalFromAccount.getAccountBalance().withdraw(amount);
             internalToAccount.getAccountBalance().deposit(amount);
