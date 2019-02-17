@@ -27,18 +27,6 @@ public class Address {
 		return street;
 	}
 
-	public void setCountry(Country[] country) {
-		this.country = country;
-	}
-
-	public void setPhoneNumber(String phoneNumber) {
-		this.phoneNumber = phoneNumber;
-	}
-
-	public void setStreet(String street) {
-		this.street = street;
-	}
-
 	@Override
 	public String toString() {
 		return "Address [country=" + Arrays.toString(country) + ", phoneNumber=" + phoneNumber + ", street=" + street
