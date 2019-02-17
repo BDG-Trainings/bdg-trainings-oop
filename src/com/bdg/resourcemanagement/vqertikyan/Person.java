@@ -6,7 +6,7 @@ public class Person {
     private String middleName;
     private short age;
 
-    public Person(String firstName, String lastName, String middleName, short age){
+    public Person(final String firstName, final String lastName, final String middleName,final short age){
         this.firstName = firstName;
         this.lastName = lastName;
         this.middleName = middleName;
