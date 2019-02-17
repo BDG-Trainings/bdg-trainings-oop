@@ -7,4 +7,5 @@ public enum DepartmentType {
     Marketing,
     Engineering,
     Sales
+
 }
