@@ -6,7 +6,7 @@ public final class SalaryDetail {
     private SalaryType salaryType;
     private String cardNumber;
 
-    public SalaryDetail(final double amount, String cardNumber) {
+    public SalaryDetail(final double amount, final String cardNumber) {
         this.salaryAmount = amount;
         this.cardNumber = cardNumber;
         this.salaryType = SalaryType.CARD;
