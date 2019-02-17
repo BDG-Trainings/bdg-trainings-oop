@@ -24,7 +24,10 @@ public final class BankService {
     }
 
     public boolean transfer(final Account from, final Account to, final double amount) {
-        //Implement this functionality
+        if (from.withdraw(amount)){
+            to.deposit(amount);
+            return true;
+        }
         return false;
     }
 

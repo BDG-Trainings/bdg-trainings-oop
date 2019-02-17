@@ -38,4 +38,12 @@ public final class Account {
         }
         return success;
     }
+
+    @Override
+    public String toString() {
+        return "Account{" +
+                "customer=" + customer +
+                ", accountBalance=" + accountBalance +
+                '}';
+    }
 }
