@@ -1,4 +1,4 @@
-package com.bdg.agalayan.bas;
+package bas;
 
 //See https://en.wikipedia.org/wiki/ISO_3166-1
 public enum Country {
@@ -31,7 +31,6 @@ public enum Country {
                 return c;
             }
         }
-        //Implement this functionality
         return null;
     }
 
@@ -41,7 +40,6 @@ public enum Country {
                 return c;
             }
         }
-        //Implement this functionality
         return null;
     }
 }

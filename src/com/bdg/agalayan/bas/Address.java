@@ -1,4 +1,4 @@
-package com.bdg.agalayan.bas;
+package bas;
 
 
 public final class Address {

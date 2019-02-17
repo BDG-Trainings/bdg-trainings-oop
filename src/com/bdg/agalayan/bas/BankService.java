@@ -1,4 +1,4 @@
-package com.bdg.agalayan.bas;
+package bas;
 
 
 public final class BankService {
@@ -25,16 +25,16 @@ public final class BankService {
             currentAccountSize++;
             return account;
         }
-        //Implement this functionality
+
         return null;
     }
-
     public boolean transfer(final Account from, final Account to, final double amount) {
-
-
-        //Implement this functionality
-        return false;
-    }
+        boolean t = true;
+        if(from.getAccountBalance()>=amount){
+            from.withdraw(amount);
+            to.deposit(amount);
+            }return t;
+        }
 
     public Account[] findAllAccountWithBalanceRange(final double balanceFrom, final double balanceTo) {
         int count=0;
@@ -50,24 +50,17 @@ public final class BankService {
             }
 
         }return allAccountWithBalanceRenge;
-        //Implement this functionality
 
     }
-
-
-
-
-
     public Account findByCustomerName(final String customerName) {
         for(int i =0; i< accounts.length; i++){
             if(accounts[i].getCustomer().getCustomerName().equals(customerName)){
                 return accounts[i];
             }
         }
-        //Implement this functionality
+
         return null;
     }
-
     public Account[] findAllAccountsByCountry(final Country country) {
         int count=0;
         for(int i=0; i< accounts.length; i++){
@@ -82,7 +75,6 @@ public final class BankService {
             }
         }return allAccountsByCountry;
 
-        //Implement this functionality
 
     }
 }

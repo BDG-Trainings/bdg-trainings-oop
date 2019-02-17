@@ -1,4 +1,4 @@
-package com.bdg.agalayan.bas;
+package bas;
 
 
 public final class Account {
@@ -27,7 +27,8 @@ public final class Account {
     }
 
     public void withdraw(final double amount) {
-        this.accountBalance.withdraw(amount);
-
+        if(this.getAccountBalance()>=amount){
+            this.accountBalance.withdraw(amount);
+        }
     }
 }
