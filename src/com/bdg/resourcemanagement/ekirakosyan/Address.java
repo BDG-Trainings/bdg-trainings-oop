@@ -1,36 +1,34 @@
 package com.bdg.resourcemanagement.ekirakosyan;
 
 public class Address {
+    private Country country;
     private String street;
-    private String city;
-    private String state;
-    private String zipCode;
+    private String phoneNumber;
 
-    public Address(String street, String city, String state, String zipCode) {
+    public Address(Country country, String street, String phoneNumber) {
+        this.country = country;
         this.street = street;
-        this.city = city;
-        this.state = state;
-        this.zipCode = zipCode;
+        this.phoneNumber = phoneNumber;
+    }
+
+    public Country getCountry() {
+        return country;
     }
 
     public String getStreet() {
         return street;
     }
 
-    public String getCity() {
-        return city;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public String getState() {
-        return state;
-    }
-
-    public String getZipCode() {
-        return zipCode;
-    }
-
-    public String getAddress() {
-        String addressRow = getStreet()+", "+getCity()+", "+getState()+", "+getZipCode();
-        return addressRow;
+    @Override
+    public String toString() {
+        return "Address{" +
+                "country=" + country +
+                ", street='" + street + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                '}';
     }
 }
