@@ -10,8 +10,13 @@ public class ResourceManagement {
 	    }
 	    
 	    public boolean addDepartment(final Department department) {
-	    	return true;
-	    	
+	        if (currentIndex < this.departments.length) {
+	            this.departments[currentIndex] = department;
+	            currentIndex++;
+	            return true;
+	        }
+	        System.out.println("Departments is full");
+	        return false;
 	    }
 
 }
