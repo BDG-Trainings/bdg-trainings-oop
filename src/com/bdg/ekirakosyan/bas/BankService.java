@@ -15,10 +15,9 @@ public final class BankService {
         Customer customer = new Customer(customerName, customerSurname, address);
         AccountBalance balance = new AccountBalance(initialBalance);
         Account account = new Account(customer, balance);
-        if(account !=null ) {
-            return account;
-        }
-        return null;
+
+        return account;
+
     }
 
     public boolean transfer(final Account from, final Account to, final double amount) {
