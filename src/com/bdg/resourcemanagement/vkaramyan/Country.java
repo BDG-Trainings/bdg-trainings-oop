@@ -1,8 +1,7 @@
-package com.bdg.resourcemanagement.warustamyan;
+package com.bdg.resourcemanagement.vkaramyan;
 
 public enum Country {
-
-    AM("Armenia", "Yerevan"),
+	AM("Armenia", "Yerevan"),
     RU("Russia", "Moscow"),
     US("USA", "Washington");
 
@@ -21,13 +20,7 @@ public enum Country {
 
     public String getCity() {
         return this.city;
+   
     }
 
-    @Override
-    public String toString() {
-        return "Country{" +
-                "countryName='" + countryName + '\'' +
-                ", city='" + city + '\'' +
-                '}';
-    }
 }

@@ -1,4 +1,5 @@
 package com.bdg.resourcemanagement.ekirakosyan;
+import java.util.Arrays;
 
 public class Person {
     private int ID;
@@ -6,9 +7,9 @@ public class Person {
     private String lastName;
     private String middleName;
     private int age;
-    private String address[];
+    private Address[] address;
 
-    public Person(final String firstName, final String lastName, final String middleName, final int age, final String[] address) {
+    public Person(final String firstName, final String lastName, final String middleName, final int age, final Address[] address) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.middleName = middleName;
@@ -32,25 +33,18 @@ public class Person {
         return age;
     }
 
-    public String[] getAddress() {
+    public Address[] getAddress() {
         return address;
     }
 
     @Override
     public String toString() {
-        String personInfo = "First Name: "+getFirstName()
-                            +", Last Name: "+ getLastName()
-                            + ", Middle Name: "+ getMiddleName()
-                            + ", Age: "+ getAge();
-
-
-        for(int i=0; i<getAddress().length; i++){
-            personInfo += ", Address"+(i+1)+": ";
-            personInfo += getAddress()[i];
-            if(i<getAddress().length-1){
-                personInfo += ", ";
-            }
-        }
-        return personInfo;
+        return "Person{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", middleName='" + middleName + '\'' +
+                ", age=" + age +
+                ", addresses=" + Arrays.toString(address) +
+                '}';
     }
 }

@@ -1,34 +1,35 @@
-package com.bdg.resourcemanagement.ekirakosyan;
+package com.bdg.resourcemanagement.warustamyan;
 
-public class Address {
-    private Country country;
-    private String street;
-    private String phoneNumber;
+public final class Address {
 
-    public Address(Country country, String street, String phoneNumber) {
+    private final Country country;
+    private final String phoneNumber;
+    private final String street;
+
+    public Address(final Country country, final String phoneNumber, final String street) {
         this.country = country;
-        this.street = street;
         this.phoneNumber = phoneNumber;
+        this.street = street;
     }
 
     public Country getCountry() {
         return country;
     }
 
-    public String getStreet() {
-        return street;
-    }
-
     public String getPhoneNumber() {
         return phoneNumber;
+    }
+
+    public String getStreet() {
+        return street;
     }
 
     @Override
     public String toString() {
         return "Address{" +
                 "country=" + country +
-                ", street='" + street + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
+                ", street='" + street + '\'' +
                 '}';
     }
 }

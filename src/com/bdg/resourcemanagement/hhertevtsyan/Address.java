@@ -1,36 +1,32 @@
 package com.bdg.resourcemanagement.hhertevtsyan;
 
+import com.bdg.resourcemanagement.hhertevtsyan.enums.CountryEnum;
+
 public class Address {
-    private String city;
-    private String state;
+    private CountryEnum country;
     private String  street;
-    private String zipCode;
+    private String phoneNumber;
 
-    public Address (final String city, final String state, final String street, final String zipCode){
-        this.city = city;
-        this.state = state;
+    public Address (final CountryEnum country, final String street, final String phoneNumber){
+        this.country = country;
         this.street = street;
-        this.zipCode = zipCode;
+        this.phoneNumber = phoneNumber;
     }
 
-    public String getCity() {
-        return city;
-    }
-
-    public String getState() {
-        return state;
+    public CountryEnum getCountry() {
+        return country;
     }
 
     public String getStreet() {
         return street;
     }
 
-    public String getZipCode() {
-        return zipCode;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
     @Override
     public String toString() {
-        return "Address is: " +state+ ", "+ city +", " +street+ ", " + zipCode;
+        return "Address is: " +country.getCountryName()+ ", "+ country.getCity() +", " +street+ ", " + phoneNumber;
     }
 }
