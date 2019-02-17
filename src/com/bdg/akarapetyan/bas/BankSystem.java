@@ -3,20 +3,17 @@ package com.bdg.akarapetyan.bas;
 public final class BankSystem {
 
     public static void main(String[] args) {
-        BankService service = new BankService();
+        //BankService service = new BankService();
         //Address address1 = new Address(Country.IT, "Moscovyan", "094566747" );
         //Address address2 = new Address(Country.AM, "Pushkin", "094111111" );
         //System.out.println(address);
-        int customerid = 1;
+
 
         //System.out.println(customer1);
         //System.out.println(Country.findByCountryName("Italy"));
         //System.out.println(Country.findByNumericCode("051"));
 
-        AccountBalance balance1 = new AccountBalance(5000);
-        AccountBalance balance2 = new AccountBalance(2000);
-
-
+        int customerid = 1;
         BankService bankService = new BankService();
         Account account1 = bankService.create(customerid,"Person1", "Surname1", Country.IT, "Pushkin", "094566747", 5000);
         customerid++;
