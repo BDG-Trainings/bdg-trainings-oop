@@ -22,4 +22,12 @@ public enum Country {
     public String getCity() {
         return this.city;
     }
+
+    @Override
+    public String toString() {
+        return "Country{" +
+                "countryName='" + countryName + '\'' +
+                ", city='" + city + '\'' +
+                '}';
+    }
 }

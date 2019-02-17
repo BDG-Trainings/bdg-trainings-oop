@@ -2,57 +2,46 @@ package com.bdg.resourcemanagement.spapoyan;
 
 public class Address {
 
+    private Country country;
+    private String phoneNumber;
     private String street;
-    private String city;
-    private String state;
-    private String zipCode;
 
-    public Address (final String street, final String city, final String state, final String zipCode){
+    public Address(Country country, String phoneNumber, String street) {
+        this.country = country;
+        this.phoneNumber = phoneNumber;
         this.street = street;
-        this. city = city;
-        this.state = state;
-        this.zipCode = zipCode;
     }
 
-    public String getStreet (){
+    public Country getCountry() {
+        return country;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public String getStreet() {
         return street;
+    }
+
+    public void setCountry(Country country) {
+        this.country = country;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public void setStreet(String street) {
         this.street = street;
     }
 
-    public String getCity(){
-        return city;
-    }
-
-    public void setCity(String city){
-        this.city = city;
-    }
-
-    public String getState() {
-        return state;
-    }
-
-    public void setState(String state) {
-        this.state = state;
-    }
-
-    public String getZipCode() {
-        return zipCode;
-    }
-
-    public void setZipCode(String zipCode){
-        this.zipCode = zipCode;
-    }
-
     @Override
     public String toString() {
         return "Address{" +
-                "street='" + street + '\'' +
-                ", city='" + city + '\'' +
-                ", state='" + state + '\'' +
-                ", zipCode='" + zipCode + '\'' +
+                "country=" + country +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", street='" + street + '\'' +
                 '}';
     }
 }

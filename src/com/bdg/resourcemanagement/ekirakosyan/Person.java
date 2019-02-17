@@ -6,9 +6,9 @@ public class Person {
     private String lastName;
     private String middleName;
     private int age;
-    private String address[];
+    private Address[] address;
 
-    public Person(final String firstName, final String lastName, final String middleName, final int age, final String[] address) {
+    public Person(final String firstName, final String lastName, final String middleName, final int age, final Address[] address) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.middleName = middleName;
@@ -32,7 +32,7 @@ public class Person {
         return age;
     }
 
-    public String[] getAddress() {
+    public Address[] getAddress() {
         return address;
     }
 
