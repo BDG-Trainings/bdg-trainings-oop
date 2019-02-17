@@ -1,5 +1,7 @@
 package com.bdg.resourcemanagement.vqertikyan;
 
+import java.util.Arrays;
+
 public class Person {
     private String firstName;
     private String lastName;
@@ -35,7 +37,6 @@ public class Person {
         return addresses;
     }
 
-
     @Override
     public String toString() {
         return "Person{" +
@@ -43,7 +44,7 @@ public class Person {
                 ", lastName='" + lastName + '\'' +
                 ", middleName='" + middleName + '\'' +
                 ", age=" + age +
+                ", addresses=" + Arrays.toString(addresses) +
                 '}';
     }
-
 }
