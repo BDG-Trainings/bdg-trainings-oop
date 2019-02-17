@@ -1,15 +1,22 @@
 package com.bdg.resourcemanagement.spapoyan;
 
-public class SalaryDetail {
+public final class SalaryDetail {
 
     private double salaryAmount;
     private SalaryType salaryType;
     private String cardNumber;
 
-    public SalaryDetail(double salaryAmount, SalaryType salaryType, String cardNumber) {
-        this.salaryAmount = salaryAmount;
-        this.salaryType = salaryType;
+    public SalaryDetail(final double amount, String cardNumber) {
+        this.salaryAmount = amount;
         this.cardNumber = cardNumber;
+        this.salaryType = SalaryType.CARD;
+    }
+
+    public SalaryDetail(final double amount) {
+        this.salaryAmount = amount;
+        this.cardNumber = null;
+        this.salaryType = SalaryType.CASH;
+
     }
 
     public double getSalaryAmount() {
@@ -22,14 +29,5 @@ public class SalaryDetail {
 
     public String getCardNumber() {
         return cardNumber;
-    }
-
-    @Override
-    public String toString() {
-        return "SalaryDetail{" +
-                "salaryAmount=" + salaryAmount +
-                ", salaryType=" + salaryType +
-                ", cardNumber='" + cardNumber + '\'' +
-                '}';
     }
 }
