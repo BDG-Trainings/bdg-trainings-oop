@@ -8,7 +8,8 @@ public class Department {
 	private String departmentName;
 	private Employee departmentHead;
 	private Employee[] employees;
-	public Department(final String departmentName, final Employee departmentHead, final Employee[] employees) {
+	
+	public Department(final String departmentName, final Employee departmentHead, final Employee[] employees, final DepartmentType departmentType) {
 		this.departmentName = departmentName;
 		this.departmentHead = departmentHead;
 		this.employees = employees;
