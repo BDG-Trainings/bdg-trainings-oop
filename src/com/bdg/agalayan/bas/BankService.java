@@ -29,11 +29,11 @@ public final class BankService {
         return null;
     }
     public boolean transfer(final Account from, final Account to, final double amount) {
-        boolean t = true;
+        boolean t = false;
         if(from.getAccountBalance()>=amount){
             from.withdraw(amount);
             to.deposit(amount);
-            }return t;
+            } return t=true;
         }
 
     public Account[] findAllAccountWithBalanceRange(final double balanceFrom, final double balanceTo) {
