@@ -15,6 +15,7 @@ public class ResourceManagement {
 	            currentIndex++;
 	            return true;
 	        }
+	        
 	        System.out.println("Departments is full");
 	        return false;
 	    }
