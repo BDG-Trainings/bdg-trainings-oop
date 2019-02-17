@@ -27,10 +27,15 @@ public final class Account {
     }
 
     public void deposit(final double amount) {
-
+        accountBalance.deposit(amount);
     }
 
-    public void withdraw(final double amount) {
-
+    public boolean withdraw(final double amount) {
+        boolean success = false;
+        if (this.accountBalance.getBalance() >= amount) {
+            this.accountBalance.withdraw(amount);
+            success = true;
+        }
+        return success;
     }
 }
