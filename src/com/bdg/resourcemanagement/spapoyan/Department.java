@@ -9,7 +9,7 @@ public class Department {
         private Employee departmentHead;
         private Employee[] employees;
 
-    public Department(DepartmentType departmentType, String departmentName, Employee departmentHead, Employee[] employees) {
+    public Department(final DepartmentType departmentType, final String departmentName, final Employee departmentHead, final Employee[] employees) {
         this.departmentType = departmentType;
         this.departmentName = departmentName;
         this.departmentHead = departmentHead;

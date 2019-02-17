@@ -11,7 +11,7 @@ public class Person {
     private Address[] addresses;
 
 
-    public Person(String firstName, String lastName, String middleName, short age, Address[] addresses) {
+    public Person(final String firstName, final String lastName, final String middleName, final short age, final Address[] addresses) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.middleName = middleName;
