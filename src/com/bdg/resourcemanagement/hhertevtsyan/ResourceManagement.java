@@ -1,7 +1,4 @@
-package com.bdg.hhertevtsyan.resourcemanagment;
-
-import com.bdg.hhertevtsyan.resourcemanagment.Department;
-import com.bdg.hhertevtsyan.resourcemanagment.Employee;
+package com.bdg.resourcemanagement.hhertevtsyan;
 
 public class ResourceManagement {
     private Department departments[];

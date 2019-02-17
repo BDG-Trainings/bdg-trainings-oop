@@ -1,4 +1,4 @@
-package com.bdg.hhertevtsyan.resourcemanagment;
+package com.bdg.resourcemanagement.hhertevtsyan;
 
 public class Person {
     private String firstName;
@@ -7,7 +7,7 @@ public class Person {
     private short age;
     private Address [] address;
 
-    public Person (final String firstName, final String lastName, final String middleName, final short age, final Address [] address) {
+    public Person(final String firstName, final String lastName, final String middleName, final short age, final Address [] address) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.middleName = middleName;

@@ -1,4 +1,4 @@
-package com.bdg.hhertevtsyan.resourcemanagment;
+package com.bdg.resourcemanagement.hhertevtsyan;
 
 public class Employee {
     private double salary;
