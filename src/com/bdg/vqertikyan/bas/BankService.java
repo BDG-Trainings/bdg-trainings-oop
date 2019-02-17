@@ -50,12 +50,11 @@ public final class BankService {
     public Account[] findAllAccountWithBalanceRange(final double balanceFrom, final double balanceTo) {
         //Implement this functionality
 
-        Account[] filterAccounts = new Account[accounts.length];
-        int i = 0;
-        for (Account account : accounts) {
+        Account[] filterAccounts = new Account[index];
+        for (int i = 0; i < index; i++) {
+            Account account = this.accounts[i];
             if (account.getAccountBalance().getBalance() >= balanceFrom && account.getAccountBalance().getBalance() <= balanceTo) {
                 filterAccounts[i] = account;
-                i++;
             }
         }
         return filterAccounts;
