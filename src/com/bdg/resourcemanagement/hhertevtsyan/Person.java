@@ -1,47 +1,53 @@
 package com.bdg.resourcemanagement.hhertevtsyan;
 
 public class Person {
-    private String firstName;
-    private String lastName;
+    private String name;
+    private String surename;
     private String middleName;
     private short age;
-    private Address [] address;
 
-    public Person(final String firstName, final String lastName, final String middleName, final short age, final Address [] address) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+
+    public Person (final String name, final String surename, final String middleName, final short age) {
+        this.name = name;
+        this.surename = surename;
         this.middleName = middleName;
         this.age = age;
-        this.address = address;
     }
 
-    public String getFirstName () {
-        return firstName;
+    public String getName() {
+        return name;
     }
 
-    public String getLastName () {
-        return lastName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getMiddleName() { return middleName;}
+    public String getSurename() {
+        return surename;
+    }
 
-    public short getAge() { return age;}
+    public void setSurename(String surename) {
+        this.surename = surename;
+    }
 
-    public Address[] getAddress() { return address;}
+    public String getMiddleName() {
+        return middleName;
+    }
 
-    public String getFullName () { return firstName + " " + lastName + " " + middleName;}
+    public void setMiddleName(String middleName) {
+        this.middleName = middleName;
+    }
 
-    public void setFirstName(String firstName) { this.firstName = firstName;}
+    public short getAge() {
+        return age;
+    }
 
-    public void setLastName(String lastName) { this.lastName = lastName;}
+    public void setAge(short age) {
+        this.age = age;
+    }
 
-    public void setMiddleName(String middleName) { this.middleName = middleName;}
-
-    public void setAge(short age) { this.age = age;}
-
-    public void setAddress(Address[] address) { this.address = address;}
-
-    public String toString () {
-        return "Employee [name = " + getFullName() + ", age = " + age + ", Address = " + address +"]";
+    @Override
+    public String toString() {
+        return "Person: Full Name = " + name + " " + surename + " " + middleName + ", Age: " + age;
     }
 }
