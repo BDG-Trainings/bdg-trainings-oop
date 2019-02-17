@@ -2,6 +2,8 @@ package com.bdg.resourcemanagement.hhertevtsyan;
 
 import com.bdg.resourcemanagement.hhertevtsyan.enums.CountryEnum;
 
+import java.util.Arrays;
+
 public class Person {
     private String name;
     private String surename;
@@ -36,6 +38,12 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person: Full Name = " + name + " " + surename + " " + middleName + ", Age: " + age;
+        return "Person{" +
+                "firstName='" + name + '\'' +
+                ", lastName='" + surename + '\'' +
+                ", middleName='" + middleName + '\'' +
+                ", age=" + age +
+                ", addresses=" + Arrays.toString(addresses) +
+                '}';
     }
 }
