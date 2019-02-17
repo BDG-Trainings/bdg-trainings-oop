@@ -5,10 +5,16 @@ public class SalaryDetail {
     private SalaryType salaryType;
     private String cardNumber;
 
-    public SalaryDetail(final double salaryAmount, final SalaryType salaryType, final String cardNumber){
+    public SalaryDetail(final double salaryAmount, final String cardNumber){
         this.salaryAmount = salaryAmount;
-        this.salaryType = salaryType;
         this.cardNumber = cardNumber;
+        this.salaryType = SalaryType.CARD;
+    }
+
+    public SalaryDetail(final double salaryAmount){
+        this.salaryAmount = salaryAmount;
+        this.cardNumber = null;
+        this.salaryType = SalaryType.CASH;
     }
 
     public double getSalaryAmount() {
