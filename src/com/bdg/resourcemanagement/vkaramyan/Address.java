@@ -1,4 +1,4 @@
-package com.bdg.vkaramyan.resourceManagement;
+package com.bdg.resourcemanagement.vkaramyan;
 
 public class Address {
 	

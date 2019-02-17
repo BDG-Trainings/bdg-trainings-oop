@@ -1,12 +1,12 @@
-package com.bdg.vkaramyan.resourceManagement;
+package com.bdg.resourcemanagement.vkaramyan;
 
 public class Person {
-	
+
 	private String firstName;
 	private String lastName;
 	private String middleName;
 	private short age;
-	
+
 	public Person(final String firstName, final String lastName, final String middleName, final short age) {
 		super();
 		this.firstName = firstName;
