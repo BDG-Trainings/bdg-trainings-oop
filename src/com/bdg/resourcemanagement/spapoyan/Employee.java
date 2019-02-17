@@ -6,7 +6,7 @@ public class Employee {
     private SalaryDetail salary;
 
 
-    public Employee(final Person person, final SalaryDetail salary) {
+    public Employee(final Person person, SalaryDetail salary) {
         this.person = person;
         this.salary = salary;
     }
