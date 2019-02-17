@@ -1,19 +1,22 @@
 package com.bdg.resourcemanagement.spapoyan;
 
+import java.util.Arrays;
+
 public class Person {
 
     private String firstName;
     private String lastName;
     private String middleName;
     private short age;
+    private Address[] addresses;
 
 
-
-    public Person(final String firstName, final String lastName, final String middleName, final short age) {
+    public Person(String firstName, String lastName, String middleName, short age, Address[] addresses) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.middleName = middleName;
         this.age = age;
+        this.addresses = addresses;
     }
 
     public String getFirstName() {
@@ -32,6 +35,10 @@ public class Person {
         return age;
     }
 
+    public Address[] getAddresses() {
+        return addresses;
+    }
+
     @Override
     public String toString() {
         return "Person{" +
@@ -39,6 +46,7 @@ public class Person {
                 ", lastName='" + lastName + '\'' +
                 ", middleName='" + middleName + '\'' +
                 ", age=" + age +
+                ", addresses=" + Arrays.toString(addresses) +
                 '}';
     }
 }
