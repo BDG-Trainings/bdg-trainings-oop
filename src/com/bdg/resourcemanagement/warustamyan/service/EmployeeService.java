@@ -8,6 +8,6 @@ public final class EmployeeService {
 
 
     public Employee create(final Person person, final SalaryDetail salaryDetail) {
-        return null;
+        return new Employee(person, salaryDetail);
     }
 }
