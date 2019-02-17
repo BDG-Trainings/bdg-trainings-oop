@@ -10,6 +10,11 @@ public class ResourceManagement {
     public ResourceManagement() {
     }
 
+
+    public void addEmployeeToDepartment(Employee Emp, String departmentName){
+        findDepartmentByName(departmentName);
+    }
+
     //This method should use own departments
     //public Department findDepartmentByName(String departmentName) {
     public Department findDepartmentByName(String departmentName) {
@@ -42,6 +47,9 @@ public class ResourceManagement {
         }
         return null;
     }
+
+
+
 
 
 /////if max salary not one

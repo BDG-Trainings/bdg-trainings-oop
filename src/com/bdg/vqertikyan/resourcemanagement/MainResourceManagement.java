@@ -18,8 +18,8 @@ public class MainResourceManagement {
         departments[3] = new Department("dep4", null, null, 1000);
         departments[4] = new Department("dep5", null, null, 2000);
 
-//        ResourceManagement resourceManagement = new ResourceManagement(departments);
-        ResourceManagement resourceManagement = new ResourceManagement();
+        ResourceManagement resourceManagement = new ResourceManagement(departments);
+      //  ResourceManagement resourceManagement = new ResourceManagement();
 //        resourceManagement.setDepartments(departments);
         String depName = "department";
         Department dep3 = resourceManagement.findDepartmentByName(depName);
@@ -30,5 +30,8 @@ public class MainResourceManagement {
             System.out.println("Department with name : " + depName + " not found !!!");
         }
         resourceManagement.getDepartmentWithMaxSalary();
+
+
+
     }
 }
