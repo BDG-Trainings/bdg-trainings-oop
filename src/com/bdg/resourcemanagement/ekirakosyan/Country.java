@@ -25,5 +25,11 @@ public enum Country {
         return countryCapital;
     }
 
-
+    @Override
+    public String toString() {
+        return "Country{" +
+                "countryName='" + countryName + '\'' +
+                ", countryCapital='" + countryCapital + '\'' +
+                '}';
+    }
 }
