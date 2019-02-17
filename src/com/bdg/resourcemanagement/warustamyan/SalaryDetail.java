@@ -29,4 +29,13 @@ public final class SalaryDetail {
     public String getCardNumber() {
         return cardNumber;
     }
+
+    @Override
+    public String toString() {
+        return "SalaryDetail{" +
+                "salaryAmount=" + salaryAmount +
+                ", salaryType=" + salaryType +
+                ", cardNumber='" + cardNumber + '\'' +
+                '}';
+    }
 }
