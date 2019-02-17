@@ -1,8 +1,6 @@
 package com.bdg.vqertikyan.bas;
 
 
-import java.util.Arrays;
-
 public final class BankService {
     private Account[] accounts;
     private int index;
@@ -25,23 +23,27 @@ public final class BankService {
         accounts[index] = account;
         index++;
 
+        //Move to up, we can check before and after do creation.
         if (maxAccountSize <= index) {
             return account;
-        } else {
-            return null;
         }
+        return null;
+
     }
 
     public boolean transfer(final Account from, final Account to, final double amount) {
         //Implement this functionality
+        //find from and to accounts in internal array.
+        final Account internalFromAccount = this.findByCustomerName(from.getCustomer().getCustomerName());
+        final Account internalToAccount = this.findByCustomerName(to.getCustomer().getCustomerName());
 
-        if (from.getAccountBalance().getBalance() >= amount) {
-            from.getAccountBalance().withdraw(amount);
-            to.getAccountBalance().deposit(amount);
+        if (internalFromAccount.getAccountBalance().getBalance() >= amount) {
+            internalFromAccount.getAccountBalance().withdraw(amount);
+            internalToAccount.getAccountBalance().deposit(amount);
             return true;
-        } else {
-            return false;   // ??????????????
         }
+        return false;
+
     }
 
     public Account[] findAllAccountWithBalanceRange(final double balanceFrom, final double balanceTo) {
@@ -49,7 +51,7 @@ public final class BankService {
 
         Account[] filterAccounts = new Account[accounts.length];
         int i = 0;
-         for (Account account : accounts) {
+        for (Account account : accounts) {
             if (account.getAccountBalance().getBalance() >= balanceFrom && account.getAccountBalance().getBalance() <= balanceTo) {
                 filterAccounts[i] = account;
                 i++;
@@ -61,8 +63,8 @@ public final class BankService {
     public Account findByCustomerName(final String customerName) {
         //Implement this functionality
 
-        for(Account account : accounts){
-            if(account.getCustomer().getCustomerName()==customerName){
+        for (Account account : accounts) {
+            if (account.getCustomer().getCustomerName() == customerName) {
                 return account;
             }
         }
@@ -74,8 +76,8 @@ public final class BankService {
 
         Account[] filterAccounts = new Account[accounts.length];
         int i = 0;
-        for(Account account : accounts) {
-            if(account.getCustomer().getAddress().getCountry()==country){
+        for (Account account : accounts) {
+            if (account.getCustomer().getAddress().getCountry() == country) {
                 filterAccounts[i] = account;
                 i++;
             }
