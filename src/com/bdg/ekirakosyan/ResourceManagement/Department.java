@@ -20,32 +20,16 @@ public class Department {
         return departmentName;
     }
 
-    public void setDepartmentName(String departmentName) {
-        this.departmentName = departmentName;
-    }
-
     public Employee[] getEmployees() {
         return employees;
-    }
-
-    public void setEmployees(Employee[] employees) {
-        this.employees = employees;
     }
 
     public Employee getDepartmentHeadEmployee() {
         return departmentHeadEmployee;
     }
 
-    public void setDepartmentHeadEmployee(Employee departmentHeadEmployee) {
-        this.departmentHeadEmployee = departmentHeadEmployee;
-    }
-
     public double getDepartmentSalary() {
         return departmentSalary;
-    }
-
-    public void setDepartmentSalary(double departmentSalary) {
-        this.departmentSalary = departmentSalary;
     }
 
     @Override
