@@ -29,6 +29,10 @@ public class Employee {
         return department;
     }
 
+    public void setDepartment(Department department) {
+        this.department = department;
+    }
+
     @Override
     public String toString() {
         String employeeInfo = "Person: "+ getPerson() + ", Salary: "+getSalary();
