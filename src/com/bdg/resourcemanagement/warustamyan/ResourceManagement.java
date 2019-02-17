@@ -1,8 +1,6 @@
-package com.bdg.resourcemanagement.vqertikyan;
+package com.bdg.resourcemanagement.warustamyan;
 
-import com.bdg.resourcemanagement.vqertikyan.service.DepartmentService;
-
-public class ResourceManagement {
+public final class ResourceManagement {
 
     private Department[] departments;
     private int currentIndex;
@@ -11,10 +9,9 @@ public class ResourceManagement {
         this.departments = new Department[departmentSize];
     }
 
-    DepartmentService departmentService = new DepartmentService();
 
     public boolean addDepartment(final Department department) {
-        if (currentIndex < departments.length){
+        if (currentIndex < this.departments.length) {
             this.departments[currentIndex] = department;
             currentIndex++;
             return true;
