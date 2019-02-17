@@ -3,17 +3,17 @@ package com.bdg.resourcemanagement.ekirakosyan;
 public class Application {
     public static void main(String[] args) {
 
-        Address address1 = new Address(Country.AM,"Street 1", "0232313" );
-        Address address2 = new Address(Country.AM,"Street 2", "5464646" );
-        Address address3 = new Address(Country.AM,"Street 3", "9968965" );
+        Address address1 = new Address(Country.AM, "Street 1", "0232313");
+        Address address2 = new Address(Country.AM, "Street 2", "5464646");
+        Address address3 = new Address(Country.AM, "Street 3", "9968965");
 
         Address[] addressArr1 = {address1, address2, address3};
         Address[] addressArr2 = {address1, address2};
         Address[] addressArr3 = {address3};
 
-        Person person1 = new Person("FName1", "LName1", "MName1",28, addressArr1);
-        Person person2 = new Person("FName2", "LName2", "MName2",35, addressArr2);
-        Person person3 = new Person("FName3", "LName3", "MName3",18, addressArr3);
+        Person person1 = new Person("FName1", "LName1", "MName1", 28, addressArr1);
+        Person person2 = new Person("FName2", "LName2", "MName2", 35, addressArr2);
+        Person person3 = new Person("FName3", "LName3", "MName3", 18, addressArr3);
 
         SalaryDetail salaryDetail = new SalaryDetail(125.300, "121212121");
         SalaryDetail salaryDetai2 = new SalaryDetail(456.007, "786786786");
