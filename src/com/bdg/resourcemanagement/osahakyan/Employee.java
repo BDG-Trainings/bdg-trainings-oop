@@ -10,6 +10,9 @@ public class Employee {
         this.person = person;
     }
 
+    public Employee(SalaryDetail salaryDetail, com.bdg.resourcemanagement.warustamyan.Person person) {
+    }
+
     public SalaryDetail getSalaryDetail(){return salaryDetail;}
     public Person getPerson(){return person;}
 
