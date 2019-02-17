@@ -5,7 +5,7 @@ public enum Country {
 
     AM("Armenia", "Yerevan"),
     RU("Russia", "Moscow"),
-    US("USA", "Washington");
+    US("United States of America", "Washington");
 
 
     private final String countryName;
