@@ -14,8 +14,8 @@ public class ResourceManagement {
     DepartmentService departmentService = new DepartmentService();
 
     public boolean addDepartment(final Department department) {
-        if (currentIndex > departments.length){
-            departmentService.create(department.getDepartmentType(), department.getDepartmentName(), department.getDepartmentHead(), department.getEmployees());
+        if (currentIndex < departments.length){
+            this.departments[currentIndex] = department;
             currentIndex++;
             return true;
         }
