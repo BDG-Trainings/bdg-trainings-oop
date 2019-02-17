@@ -7,6 +7,7 @@ public final class BankService {
     private int maxAccountSize;
 
     public BankService(final int maxAccountSize) {
+        this.maxAccountSize = maxAccountSize;
         this.accounts = new Account[maxAccountSize];
     }
 
