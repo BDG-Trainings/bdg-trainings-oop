@@ -18,32 +18,16 @@ public class Person {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getSurename() {
         return surename;
-    }
-
-    public void setSurename(String surename) {
-        this.surename = surename;
     }
 
     public String getMiddleName() {
         return middleName;
     }
 
-    public void setMiddleName(String middleName) {
-        this.middleName = middleName;
-    }
-
-    public short getAge() {
+   public short getAge() {
         return age;
-    }
-
-    public void setAge(short age) {
-        this.age = age;
     }
 
     @Override
