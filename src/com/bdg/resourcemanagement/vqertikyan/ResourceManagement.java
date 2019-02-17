@@ -13,7 +13,7 @@ public class ResourceManagement {
 
 
     public boolean addDepartment(final Department department) {
-        if (currentIndex < departments.length){
+        if (currentIndex < this.departments.length){
             this.departments[currentIndex] = department;
             currentIndex++;
             return true;
