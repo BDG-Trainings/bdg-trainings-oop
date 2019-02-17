@@ -24,4 +24,6 @@ public enum Country {
     public String getCountryCapital() {
         return countryCapital;
     }
+
+
 }
