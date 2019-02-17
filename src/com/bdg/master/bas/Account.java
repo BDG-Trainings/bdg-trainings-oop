@@ -14,7 +14,7 @@ public final class Account {
 
     }
 
-    public void withdraw(final double amount) {
-
+    public boolean withdraw(final double amount) {
+        return false;
     }
 }
