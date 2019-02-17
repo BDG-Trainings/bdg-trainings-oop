@@ -7,8 +7,6 @@ public final class Account {
     private AccountBalance accountBalance;
 
     public Account(final Customer customer, final AccountBalance balance) {
-        this.customer = customer;
-        this.accountBalance = balance;
 
     }
 
@@ -16,15 +14,8 @@ public final class Account {
 
     }
 
-    public void withdraw(final double amount) {
-
-    }
-
-    @Override
-    public String toString() {
-        return "Account{" +
-                "customer=" + customer +
-                ", accountBalance=" + accountBalance +
-                '}';
+    public boolean withdraw(final double amount) {
+        return false;
     }
 }
+
