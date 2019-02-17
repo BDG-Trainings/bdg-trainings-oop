@@ -9,7 +9,6 @@ public class Address {
 	private String street;
 	
 	public Address(final Country[] country, final String phoneNumber, final String street) {
-		super();
 		this.country = country;
 		this.phoneNumber = phoneNumber;
 		this.street = street;

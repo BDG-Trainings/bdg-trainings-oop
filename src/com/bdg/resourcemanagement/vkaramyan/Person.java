@@ -11,7 +11,6 @@ public class Person {
 	private Address [] address;
 
 	public Person(final String firstName, final String lastName, final String middleName, final short age, final Address [] address) {
-		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.middleName = middleName;
