@@ -6,8 +6,9 @@ import com.bdg.resourcemanagement.warustamyan.Person;
 
 public class EmployeeService {
 
-    public Employee create(SalaryDetail salaryDetail, Person person){
-        Employee employee = new Employee(salaryDetail, person);
-                return employee;
+    public Employee create(SalaryDetail salaryDetail, Person person) {
+//        Employee employee = new Employee(salaryDetail, person);
+//                return employee;
+        return null;
     }
 }
