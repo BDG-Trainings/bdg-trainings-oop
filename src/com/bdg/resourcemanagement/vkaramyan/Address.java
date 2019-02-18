@@ -4,17 +4,17 @@ import java.util.Arrays;
 
 public class Address {
 	
-	private Country [] country;
+	private Country country;
 	private String phoneNumber;
 	private String street;
 	
-	public Address(final Country[] country, final String phoneNumber, final String street) {
+	public Address(final Country country, final String phoneNumber, final String street) {
 		this.country = country;
 		this.phoneNumber = phoneNumber;
 		this.street = street;
 	}
 
-	public Country[] getCountry() {
+	public Country getCountry() {
 		return country;
 	}
 
@@ -28,7 +28,7 @@ public class Address {
 
 	@Override
 	public String toString() {
-		return "Address [country=" + Arrays.toString(country) + ", phoneNumber=" + phoneNumber + ", street=" + street
+		return "Address [country=" + country + ", phoneNumber=" + phoneNumber + ", street=" + street
 				+ "]";
 	}
 	

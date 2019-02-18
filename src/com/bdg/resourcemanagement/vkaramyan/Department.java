@@ -13,11 +13,9 @@ public class Department {
 		this.departmentName = departmentName;
 		this.departmentHead = departmentHead;
 		this.employees = employees;
-		this.departmentType = DepartmentType.ACCOUNTING;
-		this.departmentType = DepartmentType.ENGINEERING;
-		this.departmentType = DepartmentType.CEO;
-		this.departmentType = DepartmentType.MARKETING;
-		this.departmentType = DepartmentType.SALES;
+		this.departmentType = departmentType;
+		
+	
 	}
 	public DepartmentType getDepartmentType() {
 		return departmentType;
