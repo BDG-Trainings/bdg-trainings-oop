@@ -24,7 +24,7 @@ public class AuthorStorage extends AbstractAuthorStorage {
 
     @Override
     public boolean remove(final Author author) {
-        if (storageSize > 0){
+        if (storageSize > 0 && author != null){
             Author [] newStorage = new Author[storageSize - 1];
             int deltaIndex = 0;
             for (int i = 0; i < storageSize; i++) {
