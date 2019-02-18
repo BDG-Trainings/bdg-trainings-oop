@@ -4,6 +4,7 @@ import com.bdg.aiskandaryan.Lesson_12.Author;
 import com.bdg.aiskandaryan.Lesson_12.Services.CreateUpdateObjects.AuthorCreateParameter;
 import com.bdg.aiskandaryan.Lesson_12.Services.CreateUpdateObjects.AuthorUpdateParameter;
 import com.bdg.aiskandaryan.Lesson_12.Storages.AuthorStorage;
+import com.bdg.aiskandaryan.Lesson_12.Storages.BookStorage;
 
 public class AuthorService extends AbstractAuthorService {
     private AuthorStorage authorStorage;
@@ -48,10 +49,5 @@ public class AuthorService extends AbstractAuthorService {
         authorService.create(new AuthorCreateParameter("Author2F", "Author2L", true));
         authorService.create(new AuthorCreateParameter("Author3F", "Author3L", false));
         authorService.create(new AuthorCreateParameter("Author4F", "Author4L", true));
-        System.out.println(authorService.get(0).getName());
-        System.out.println(authorService.get(1).getName());
-        System.out.println(authorService.get(2).getName());
-        System.out.println(authorService.get(3).getName());
-        System.out.println(authorService.get(4).getName());
     }
 }

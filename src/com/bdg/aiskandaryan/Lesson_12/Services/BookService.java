@@ -18,6 +18,11 @@ public class BookService extends AbstractBookService {
         this.authorService = authorService;
     }
 
+    public BookService(final AuthorService authorService) {
+        this.bookStorage = new BookStorage(0);
+        this.authorService = authorService;
+    }
+
     @Override
     public Book get(final int id) {
         return bookStorage.get(id);
@@ -29,7 +34,7 @@ public class BookService extends AbstractBookService {
         for (int i = 0; i < params.getAuthors().length; i++) {
             authors[i] = authorService.create(params.getAuthors()[i]);
         }
-        return new Book(bookStorage.getCurrentStorageSize() + 1, params.getTitle(), params.getPrice(), authors);
+        return bookStorage.store(new Book(bookStorage.getCurrentStorageSize(), params.getTitle(), params.getPrice(), authors));
     }
 
     @Override
@@ -44,5 +49,33 @@ public class BookService extends AbstractBookService {
     @Override
     public boolean delete(final int id) {
         return bookStorage.remove(bookStorage.get(id));
+    }
+
+    public static void main(String[] args) {
+
+        AuthorService authorService = new AuthorService();
+        authorService.create(new AuthorCreateParameter("Author0F", "Author0L", true));
+        authorService.create(new AuthorCreateParameter("Author1F", "Author1L", false));
+        authorService.create(new AuthorCreateParameter("Author2F", "Author2L", true));
+        authorService.create(new AuthorCreateParameter("Author3F", "Author3L", false));
+        authorService.create(new AuthorCreateParameter("Author4F", "Author4L", true));
+
+        AuthorCreateParameter authorCreate5 = new AuthorCreateParameter("Author5F", "Author5L", false);
+        AuthorCreateParameter authorCreate6 = new AuthorCreateParameter("Author6F", "Author6L", true);
+        AuthorCreateParameter authorCreate7 = new AuthorCreateParameter("Author7F", "Author7L", false);
+        AuthorCreateParameter[] authors1 = {authorCreate5, authorCreate6};
+        AuthorCreateParameter[] authors2 = {authorCreate7};
+
+        BookService bookService = new BookService(new BookStorage(0), authorService);
+        bookService.create(new BookCreateParameter("Book #1 Title", 10, authors1));
+        bookService.create(new BookCreateParameter("Book #2 Title", 20, authors2));
+        System.out.println(bookService.get(0).getTitle());
+        System.out.println(bookService.get(1).getTitle());
+        System.out.println(bookService.get(0).getPrice());
+
+        System.out.println();
+        bookService.update(new BookUpdateParameter(0, 15));
+        System.out.println(bookService.get(0).getPrice());
+
     }
 }
