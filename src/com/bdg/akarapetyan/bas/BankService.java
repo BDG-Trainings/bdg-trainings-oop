@@ -32,8 +32,20 @@ public final class BankService {
     }
 
     public Account[] findAllAccountWithBalanceRange(final double balanceFrom, final double balanceTo) {
-        //Implement this functionality
-        return null;
+
+        Account [] account = new Account[accounts.length];
+        int j=0;
+        for (int i=0; i<accounts.length; i++){
+            if (accounts[i] != null && accounts[i].getAccountBalance().getBalance() >= balanceFrom && accounts[i].getAccountBalance().getBalance() <= balanceTo){
+                account[j]=accounts[i];
+                j++;
+            }
+        }
+        Account [] accountUpdate = new Account[j];
+        for (int i=0; i<j; i++){
+            accountUpdate[i]=account[i];
+        }
+        return accountUpdate;
     }
 
     public Account findByCustomerName(final String customerName) {
