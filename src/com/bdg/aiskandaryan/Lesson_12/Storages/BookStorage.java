@@ -5,7 +5,6 @@ import com.bdg.aiskandaryan.Lesson_12.Book;
 
 public class BookStorage extends AbstractBookStorage {
 
-
     public BookStorage(final int storageSize) {
         this.storageSize = storageSize;
         this.bookStore = new Book[storageSize];
