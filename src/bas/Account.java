@@ -5,9 +5,9 @@ public final class Account {
     private Customer customer;
     private AccountBalance accountBalance;
 
-    public Account(final Customer customer, final AccountBalance Balance) {
+    public Account(final Customer customer, final AccountBalance balance) {
         this.customer = customer;
-        this.accountBalance = Balance;
+        this.accountBalance = balance;
     }
 
     public Customer getCustomer() {
@@ -19,11 +19,11 @@ public final class Account {
     }
 
     public void deposit(final double amount) {
-        deposit(amount);
+        getAccountBalance().deposit(amount);
     }
 
     public boolean withdraw(final double amount) {
-        if(this.accountBalance >= amount) {
+        if(amount <= accountBalance) {
          return true;
         }
         return false;
