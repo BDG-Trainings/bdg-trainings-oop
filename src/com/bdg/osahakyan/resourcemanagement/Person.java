@@ -1,6 +1,4 @@
-package com.bdg.osahakyan.resourcemanagement.person;
-
-import com.bdg.osahakyan.resourcemanagement.address.Address;
+package com.bdg.osahakyan.resourcemanagement;
 
 public class Person {
     private String firstName;
@@ -20,40 +18,31 @@ public class Person {
     public String getFirstName() {
         return firstName;
     }
-    public void setFirstName(final String firstName) {
-        this.firstName = firstName;
-    }
 
     public String getLastName() {
         return lastName;
-    }
-    public void setLastName(final String lastName) {
-        this.lastName = lastName;
     }
 
     public String getMiddleName() {
         return middleName;
     }
-    public void setMiddleName(final String middleName) {
-        this.middleName = middleName;
-    }
 
     public short getAge() {
         return age;
-    }
-    public void setAge(final short age) {
-        this.age = age;
     }
 
     public Address[] getAddresses() {
         return addresses;
     }
-    public void setAddresses(final Address[] addresses) {
-        this.addresses = addresses;
-    }
+
 
     @Override
     public String toString() {
-        return "Person(" + getFirstName() + "," + getMiddleName() + "," + getLastName() + "," + getAge() + "," + getAddresses() + ")";
+        return "Person("
+                + firstName + ","
+                + middleName+ ","
+                + lastName + ","
+                + age + ","
+                + addresses + ")";
     }
 }
