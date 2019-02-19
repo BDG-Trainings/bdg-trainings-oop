@@ -28,9 +28,9 @@ public class Application {
         Employee[] empArr2 = {employee2, employee3};
 
 
-        Department dep1 = new Department(DepartmentType.ENGINEERING, "Developers", employee1, empArr1);
-        Department dep2 = new Department(DepartmentType.ACCOUNTING, "Payroll", employee3, empArr2);
-        Department dep3 = new Department(DepartmentType.MARKETING, "SMM", employee3, empArr2);
+        Department dep1 = new Department("Dep1", employee1, empArr1, DepartmentType.ENGINEERING);
+        Department dep2 = new Department("Dep2", employee3, empArr2, DepartmentType.ACCOUNTING);
+        Department dep3 = new Department("Dep3", employee3, empArr2, DepartmentType.MARKETING);
 
         ResourceManagement resourceManagement = new ResourceManagement(2);
 
