@@ -6,17 +6,18 @@ public class Person {
     private String lastName;
     private String middleName;
     private short age;
+    private Address[] address;
 
-    public Person (String firstName, String lastName, String middleName, short age) {
+    public Person (String firstName, String lastName, String middleName, short age, Address[] address) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.middleName = middleName;
         this.age = age;
+        this.address = address;
     }
 
     public String getFirstName() {
-        return
-                firstName;
+        return firstName;
     }
 
     public String getLastName() {
@@ -34,4 +35,8 @@ public class Person {
         return age;
     }
 
+    public Address[] getAddresses (){
+        return address;
+    }
 }
+
