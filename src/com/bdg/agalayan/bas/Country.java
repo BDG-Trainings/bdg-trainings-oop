@@ -1,4 +1,4 @@
-package bas;
+package com.bdg.agalayan.bas;
 
 //See https://en.wikipedia.org/wiki/ISO_3166-1
 public enum Country {

@@ -1,4 +1,4 @@
-package bas;
+package com.bdg.agalayan.bas;
 
 
 public final class AccountBalance {
