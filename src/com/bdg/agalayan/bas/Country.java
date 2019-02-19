@@ -42,4 +42,8 @@ public enum Country {
         }
         return null;
     }
+    @Override
+    public String toString(){
+        return "Country [name = "+ getCountryName() + ","+ "numericCode = "+ getNumericCode()+ "]";
+    }
 }

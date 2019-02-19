@@ -36,4 +36,9 @@ public final class Address {
     public void setStreet(String street) {
         this.street = street;
     }
+    @Override
+    public String toString(){
+        return "address [Country = "+ getCountry()+ ","+ "street = "+ getStreet()+ ","
+                + "phoneNumber = " + getPhoneNumber();
+    }
 }

@@ -33,27 +33,29 @@ public final class BankService {
         if(from.getAccountBalance()>=amount){
             from.withdraw(amount);
             to.deposit(amount);
-            } return t=true;
+             t=true;
+        }
+        return t;
         }
 
     public Account[] findAllAccountWithBalanceRange(final double balanceFrom, final double balanceTo) {
         int count=0;
-        for(int i=0; i< accounts.length; i++){
+        for(int i=0; i< currentAccountSize; i++){
             if(accounts[i].getAccountBalance()> balanceFrom && accounts[i].getAccountBalance()<balanceTo){
              count++;
             }
         }
-        Account [] allAccountWithBalanceRenge= new Account[count];
+        Account [] allAccountWithBalanceRange= new Account[count];
         for(int i = 0; i < count; i++){
             if(accounts[i].getAccountBalance()> balanceFrom && accounts[i].getAccountBalance()<balanceTo){
-                allAccountWithBalanceRenge[i]=accounts[i];
+                allAccountWithBalanceRange[i]=accounts[i];
             }
 
-        }return allAccountWithBalanceRenge;
+        }return allAccountWithBalanceRange;
 
     }
     public Account findByCustomerName(final String customerName) {
-        for(int i =0; i< accounts.length; i++){
+        for(int i =0; i< currentAccountSize; i++){
             if(accounts[i].getCustomer().getCustomerName().equals(customerName)){
                 return accounts[i];
             }
@@ -63,7 +65,7 @@ public final class BankService {
     }
     public Account[] findAllAccountsByCountry(final Country country) {
         int count=0;
-        for(int i=0; i< accounts.length; i++){
+        for(int i=0; i< currentAccountSize; i++){
             if(accounts[i].getCustomer().getAddress().getCountry().equals(country)){
                count ++;
             }

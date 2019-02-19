@@ -9,7 +9,6 @@ public final class Account {
     public Account(final Customer customer, AccountBalance balance) {
         this.customer=customer;
         this.accountBalance=balance;
-
     }
 
     public double getAccountBalance() {
@@ -22,13 +21,15 @@ public final class Account {
 
     public void deposit(final double amount) {
         this.accountBalance.deposit(amount);
-
-
     }
 
     public void withdraw(final double amount) {
         if(this.getAccountBalance()>=amount){
             this.accountBalance.withdraw(amount);
         }
+    }
+    @Override
+    public String toString(){
+        return "Account[" + getCustomer() + "," + "balance = " + accountBalance.getBalance();
     }
 }

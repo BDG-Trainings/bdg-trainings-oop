@@ -47,4 +47,9 @@ public final class Customer {
     public void setCustomerSurname(String customerSurname) {
         this.customerSurname = customerSurname;
     }
+    @Override
+    public String toString(){
+        return "Customer [name="+getCustomerName() + ","+ "surname="+ getCustomerSurname()+
+                ","+ getAddress()+ "," + "id="+ getCustomerId() + "]";
+    }
 }
