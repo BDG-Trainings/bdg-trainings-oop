@@ -2,6 +2,8 @@ package com.bdg.resourcemanagement.aghazaryan;
 
 public enum Country {
 
+    RU("Russia", "Moscow"),
+    AM("Armenia", "Yerevan"),
     US("USA", "New York");
 
     private final String countryName;

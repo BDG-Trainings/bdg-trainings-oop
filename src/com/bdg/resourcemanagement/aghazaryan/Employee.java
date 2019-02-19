@@ -2,18 +2,18 @@ package com.bdg.resourcemanagement.aghazaryan;
 
 public class Employee {
 
-    private double salary;
+    private SalaryDetail  salaryDetail;
     private Person person;
     private Department department;
 
-    public Employee(double salary, Person person, Department department) {
-        this.salary = salary;
+    public Employee(SalaryDetail salaryDetail, Person person) {
+        this.salaryDetail = salaryDetail;
         this.person = person;
         this.department = department;
     }
 
-    public double getSalary (){
-        return salary;
+    public SalaryDetail getSalaryDetail() {
+        return salaryDetail;
     }
 
     public Person getPerson()
