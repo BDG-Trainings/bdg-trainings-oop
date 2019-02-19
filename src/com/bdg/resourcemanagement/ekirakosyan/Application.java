@@ -1,10 +1,9 @@
-package com.bdg.resourcemanagement.vkaramyan;
+package com.bdg.resourcemanagement.ekirakosyan;
 
 public class Application {
-	
-	public static void main(String[] args) {
-		
-		Address address1 = new Address(Country.AM,"Street 1", "0232313" );
+    public static void main(String[] args) {
+
+        Address address1 = new Address(Country.AM,"Street 1", "0232313" );
         Address address2 = new Address(Country.AM,"Street 2", "5464646" );
         Address address3 = new Address(Country.AM,"Street 3", "9968965" );
 
@@ -12,9 +11,9 @@ public class Application {
         Address[] addressArr2 = {address1, address2};
         Address[] addressArr3 = {address3};
 
-        Person person1 = new Person("FName1", "LName1", "MName1", (short) 28, addressArr1);
-        Person person2 = new Person("FName2", "LName2", "MName2", (short) 35, addressArr2);
-        Person person3 = new Person("FName3", "LName3", "MName3", (short) 18, addressArr3);
+        Person person1 = new Person("FName1", "LName1", "MName1",28, addressArr1);
+        Person person2 = new Person("FName2", "LName2", "MName2",35, addressArr2);
+        Person person3 = new Person("FName3", "LName3", "MName3",18, addressArr3);
 
         SalaryDetail salaryDetail = new SalaryDetail(125.300, "121212121");
         SalaryDetail salaryDetai2 = new SalaryDetail(456.007, "786786786");
@@ -28,9 +27,9 @@ public class Application {
         Employee[] empArr2 = {employee2, employee3};
 
 
-        Department dep1 = new Department("Dep1", employee1, empArr1, DepartmentType.ENGINEERING);
-        Department dep2 = new Department("Dep2", employee3, empArr2, DepartmentType.ACCOUNTING);
-        Department dep3 = new Department("Dep3", employee3, empArr2, DepartmentType.MARKETING);
+        Department dep1 = new Department(DepartmentType.ENGINEERING, "Developers", employee1, empArr1);
+        Department dep2 = new Department(DepartmentType.ACCOUNTING, "Payroll", employee3, empArr2);
+        Department dep3 = new Department(DepartmentType.MARKETING, "SMM", employee3, empArr2);
 
         ResourceManagement resourceManagement = new ResourceManagement(2);
 
@@ -38,7 +37,6 @@ public class Application {
         resourceManagement.addDepartment(dep2);
         resourceManagement.addDepartment(dep3);
 
-		
-	}
 
+    }
 }

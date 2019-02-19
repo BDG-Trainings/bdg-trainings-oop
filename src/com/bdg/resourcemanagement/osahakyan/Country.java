@@ -21,5 +21,13 @@ public enum  Country {
         public String getCity() {
             return this.city;
         }
+
+        @Override
+    public String toString(){
+            return "Country ( " +
+                    "CountryName: " + countryName +
+                    ", City: " + city +
+                    ")";
     }
+}
 
