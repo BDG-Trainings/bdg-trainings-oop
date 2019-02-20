@@ -12,10 +12,17 @@ public class AuthorStorage extends AbstractAuthorStorage {
 
     @Override
     public Author store(final Author author) {
+        for (int i = 0; i < storageSize; i ++) {
+            if (authorStore[i].getName() == author.getName() && authorStore[i].getSurname() == author.getSurname() && authorStore[i].isMale() == author.isMale()) {
+                return authorStore[i];
+            }
+        }
         Author [] newStorage = new Author[storageSize + 1];
+        int newId = authorStore[authorStore.length - 1].getId() + 1;
         for (int i = 0; i < storageSize; i++) {
             newStorage[i] = authorStore[i];
         }
+        author.setId(newId);
         newStorage[storageSize] = author;
         authorStore = newStorage;
         storageSize++;
