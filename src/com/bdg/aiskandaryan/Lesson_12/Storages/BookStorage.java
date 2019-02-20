@@ -2,6 +2,8 @@ package com.bdg.aiskandaryan.Lesson_12.Storages;
 
 import com.bdg.aiskandaryan.Lesson_12.Author;
 import com.bdg.aiskandaryan.Lesson_12.Book;
+import com.sun.deploy.util.ArrayUtil;
+
 
 public class BookStorage extends AbstractBookStorage {
 
@@ -24,14 +26,15 @@ public class BookStorage extends AbstractBookStorage {
 
     @Override
     public boolean remove(final Book book) {
+        /*
         if (storageSize > 0 && book != null){
             Book [] newStorage = new Book[storageSize - 1];
             int deltaIndex = 0;
             for (int i = 0; i < storageSize; i++) {
-                if (bookStore[i + deltaIndex].getId() == book.getId()) {
+                if (bookStore[i].getId() == book.getId()) {
                     deltaIndex = 1;
                 }
-                newStorage[i] = bookStore[i + deltaIndex];
+                newStorage[i - deltaIndex] = bookStore[i];
             }
             if (deltaIndex != 0) {
                 bookStore = newStorage;
@@ -42,7 +45,26 @@ public class BookStorage extends AbstractBookStorage {
             }
         } else {
             return false;
+        }*/
+        Book [] newStorage;
+        if (storageSize > 0 && book != null) {
+            for (int i = 0; i < storageSize; i++) {
+                if (bookStore[i].getId() == book.getId()) {
+                    newStorage = new Book[storageSize - 1];
+                    for (int k = 0; k < i; k++) {
+                        newStorage[k] = bookStore[k];
+                    }
+                    for (int l = i; l < bookStore.length - 1; l++) {
+                        newStorage[l] = bookStore[l + 1];
+                    }
+                    bookStore = newStorage;
+                    storageSize--;
+                    return true;
+                }
+            }
+            return false;
         }
+        return false;
     }
 
     @Override

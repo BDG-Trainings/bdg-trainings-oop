@@ -34,7 +34,9 @@ public class BookService extends AbstractBookService {
         for (int i = 0; i < params.getAuthors().length; i++) {
             authors[i] = authorService.create(params.getAuthors()[i]);
         }
-        return bookStorage.store(new Book(bookStorage.getCurrentStorageSize(), params.getTitle(), params.getPrice(), authors));
+        Book book = bookStorage.store(new Book(bookStorage.getCurrentStorageSize(), params.getTitle(), params.getPrice(), authors));
+        System.out.println("Create a new book with ID - " + book.getId() + " SUCCESS :)");
+        return book;
     }
 
     @Override
@@ -42,13 +44,22 @@ public class BookService extends AbstractBookService {
         Book book = bookStorage.get(params.getId());
         if (book != null) {
             book.setPrice(params.getPrice());
+            System.out.println("Update book with ID - " + params.getId() + " SUCCESS :)");
+        } else {
+            System.out.println("Update book with ID - " + params.getId() + " FAILED :(");
         }
         return book;
     }
 
     @Override
     public boolean delete(final int id) {
-        return bookStorage.remove(bookStorage.get(id));
+        boolean r = bookStorage.remove(bookStorage.get(id));
+        if (r) {
+            System.out.println("Remove book with ID - " + id + " SUCCESS :)");
+        } else {
+            System.out.println("Remove book with ID - " + id + " FAILED :(");
+        }
+        return r;
     }
 
     public static void main(String[] args) {
@@ -69,13 +80,14 @@ public class BookService extends AbstractBookService {
         BookService bookService = new BookService(new BookStorage(0), authorService);
         bookService.create(new BookCreateParameter("Book #1 Title", 10, authors1));
         bookService.create(new BookCreateParameter("Book #2 Title", 20, authors2));
-        System.out.println(bookService.get(0).getTitle());
-        System.out.println(bookService.get(1).getTitle());
-        System.out.println(bookService.get(0).getPrice());
-
+        System.out.println(bookService.get(0).getTitle() + " " + bookService.get(0).getPrice());
         System.out.println();
         bookService.update(new BookUpdateParameter(0, 15));
-        System.out.println(bookService.get(0).getPrice());
+        System.out.println(bookService.get(0).getTitle() + " " + bookService.get(0).getPrice());
+        bookService.delete(0);
+        bookService.delete(1);
+        bookService.delete(0);
+        bookService.update(new BookUpdateParameter(0, 15));
 
     }
 }

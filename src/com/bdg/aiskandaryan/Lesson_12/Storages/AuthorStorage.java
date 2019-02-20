@@ -24,6 +24,7 @@ public class AuthorStorage extends AbstractAuthorStorage {
 
     @Override
     public boolean remove(final Author author) {
+        /*
         if (storageSize > 0 && author != null){
             Author [] newStorage = new Author[storageSize - 1];
             int deltaIndex = 0;
@@ -42,7 +43,26 @@ public class AuthorStorage extends AbstractAuthorStorage {
             }
         } else {
             return false;
+        } */
+        Author [] newStorage;
+        if (storageSize > 0 && author != null) {
+            for (int i = 0; i < storageSize; i++) {
+                if (authorStore[i].getId() == author.getId()) {
+                    newStorage = new Author[storageSize - 1];
+                    for (int k = 0; k < i; k++) {
+                        newStorage[k] = authorStore[k];
+                    }
+                    for (int l = i; l < authorStore.length - 1; l++) {
+                        newStorage[l] = authorStore[l + 1];
+                    }
+                    authorStore = newStorage;
+                    storageSize--;
+                    return true;
+                }
+            }
+            return false;
         }
+        return false;
     }
 
     @Override
