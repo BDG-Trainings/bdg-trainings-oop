@@ -17,22 +17,27 @@ public class MovablePoint implements Movable {
     }
 
     @Override
-    public void moveUp(int x) {
-
+    public void moveUp(int y) {
+        this.y = this.y + y;
+        this.ySpeed = this.ySpeed + y;
     }
 
     @Override
     public void moveDown(int y) {
-
+            this.y = this.y - y;
+            this.ySpeed = this.ySpeed - y;
     }
 
     @Override
-    public void moveLeft(int xSpeed) {
-
+    public void moveLeft(int x) {
+        this.x = this.x - x;
+        this.xSpeed = this.xSpeed - x;
     }
 
     @Override
     public void moveRight(int x) {
+        this.x = this.x + x;
+        this.xSpeed = this.xSpeed + x;
 
     }
 
@@ -71,9 +76,9 @@ public class MovablePoint implements Movable {
     @Override
     public String toString() {
         return "MovablePoint {"+
-                    "x:" + '\''+ x +'\'' +
-                    "y:" + '\'' + y + '\'' +
-                    "xSpeed:" + '\'' + xSpeed + '\''+
+                    "x:" + '\''+ x +'\'' + "," +
+                    "y:" + '\'' + y + '\'' + "," +
+                    "xSpeed:" + '\'' + xSpeed + '\'' + "," +
                     "ySpeed:" + '\'' + ySpeed + '\'' +
                 "}";
     }
