@@ -25,7 +25,7 @@ public final class Account {
     }
 
     public double getAccountBalance() {
-        return accountBalance.getBalance();
+        return this.accountBalance.getBalance();
     }
 
     @Override

@@ -50,7 +50,6 @@ public final class Customer {
                     "id:"+ '\'' + getCustomerId() + '\''+
                     ",name:"+ '\'' + getCustomerName() + '\''+
                     ",surname:" + '\'' + getCustomerSurname() + '\''+"" +
-                    ",address:"+ '\'' + getAddress()+'\''+
-                "}";
+                    ",address:" + getAddress() + "}";
     }
 }

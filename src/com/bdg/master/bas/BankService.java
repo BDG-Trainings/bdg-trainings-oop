@@ -1,12 +1,14 @@
 package com.bdg.master.bas;
 
 
+import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
 public final class BankService {
 
     private int index;
     private Account [] accounts;
-
-
     public BankService(final int maxAccountSize) {
         this.accounts = new Account[maxAccountSize];
     }
@@ -24,6 +26,7 @@ public final class BankService {
     }
 
 
+    @Nullable
     public BankService transfer(final Account from, final Account to, final double amount) {
 
         if (from.getAccountBalance() >= amount){
@@ -36,12 +39,29 @@ public final class BankService {
         return null;
     }
 
+    @Contract(pure = true)
     public Account[] findAllAccountWithBalanceRange(final double balanceFrom, final double balanceTo) {
-        //Implement this functionality
-        return null;
+        int i = 0;
+        Account [] finded = new Account[1];
+        double balance;
+        for (Account account: accounts) {
+            if (account != null){
+                balance = account.getAccountBalance();
+
+            }else {
+                balance = 0;
+            }
+                if (balance  >= balanceFrom && balance  <= balanceTo ){
+                    finded[i] = account;
+                   i++;
+                }
+        }
+        return finded;
     }
 
+    @Nullable
     public Account findByCustomerName(final String customerName) {
+
         for (Account acount: accounts) {
             if (customerName == acount.getCustomer().getCustomerName()){
                 return acount;
@@ -51,13 +71,25 @@ public final class BankService {
     }
 
     public Account[] findAllAccountsByCountry(final Country country) {
-        //Implement this functionality
-        return null;
+        Account[] accounts = new Account[10];
+        int i = 0;
+        for (Account account: accounts) {
+            if (account != null){
+                if (country.getCountryName() == account.getCustomer().getAddress().getCountry().getCountryName()){
+                    accounts[i] = account;
+                    System.out.println(i);
+                    i++;
+                }
+            }
+        }
+
+        return accounts;
     }
 
+    @NotNull
+    @Contract(pure = true)
     @Override
     public String toString() {
-        return "Acounts{"+
-                "";
+        return "Acounts{"+accounts[index]+"}";
     }
 }
