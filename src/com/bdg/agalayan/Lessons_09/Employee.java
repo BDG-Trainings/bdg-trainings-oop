@@ -2,10 +2,10 @@ package com.bdg.agalayan.Lessons_09;
 
 public class Employee{
     private double salary;
-    private Lessons_09.Person person;
+    private Person person;
     private Department departments;
 
-    public Employee(double salary, Lessons_09.Person person, Department departments) {
+    public Employee(double salary, Person person, Department departments) {
         this.salary = salary;
         this.person = person;
         this.departments = departments;
@@ -15,14 +15,14 @@ public class Employee{
         return salary;
     }
 
-    public Lessons_09.Person getPerson() {
+    public Person getPerson() {
         return person;
     }
     public Department getDepartament() {
         return departments;
     }
 
-    public void setPerson(Lessons_09.Person person) {
+    public void setPerson(Person person) {
         this.person = person;
     }
 

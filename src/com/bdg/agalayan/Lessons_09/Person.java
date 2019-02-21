@@ -4,11 +4,11 @@ public class Person {
     private  String firstName;
     private String lastName;
     private String middleName;
-    private short age;
+    private int age;
     private Address[] addresses;
 
     public Person(String firstName, String lastName,String middleName,
-                  short age, Address[] addresses){
+                  int age, Address[] addresses){
         this.firstName=firstName;
         this.lastName = lastName;
         this.middleName = middleName;
@@ -29,7 +29,7 @@ public class Person {
         return middleName;
     }
 
-    public short getAge() {
+    public int getAge() {
         return age;
     }
 
@@ -49,6 +49,7 @@ public class Person {
         this.middleName = middleName;
     }
     public void setAddress(Address[] address) {
+
         this.addresses = addresses;
     }
 }

@@ -2,46 +2,46 @@ package com.bdg.agalayan.Lessons_09;
 
 public class Department {
     private String departmentName;
-    private Lessons_09.Employee[] employees;
-    private Lessons_09.Employee departmentHeadEmplaoyee;
-    private double departmentSalary;
+    private Employee[] employees;
+    private Employee departmentHeadEmployee;
+    private double departmentBudget;
 
-    public Department(String departmentName, Lessons_09.Employee[] employees, Lessons_09.Employee departmentHeadEmplaoyee,
-                      double departmentSalary){
+    public Department(String departmentName, Employee[] employees, Employee departmentHeadEmployee,
+                      double departmentBudget){
         this.departmentName = departmentName;
         this.employees= employees;
-        this.departmentHeadEmplaoyee = departmentHeadEmplaoyee;
-        this.departmentSalary=departmentSalary;
+        this.departmentHeadEmployee = departmentHeadEmployee;
+        this.departmentBudget=departmentBudget;
     }
     public String getDepartmentName() {
         return departmentName;
     }
 
-    public Lessons_09.Employee[] getEmployees() {
+    public Employee[] getEmployees() {
         return employees;
     }
 
-    public Lessons_09.Employee getDepartmentHeadEmployee() {
-        return departmentHeadEmplaoyee;
+    public Employee getDepartmentHeadEmployee() {
+        return departmentHeadEmployee;
     }
 
-    public double getDepartmentSalary() {
-        return departmentSalary;
+    public double getDepartmentBudget() {
+        return departmentBudget;
     }
 
     public void setDepartmentName(String departamentName) {
         this.departmentName = departamentName;
     }
 
-    public void setEmployees(Lessons_09.Employee[]employees) {
-        this.employees = employees;
+    public void setEmployees(Employee[]employees) {
+         this.employees = employees;
     }
 
-    public void setDepartmentHeadEmplaoyee(Lessons_09.Employee departamentHeadEmplaoyee) {
-        this.departmentHeadEmplaoyee = departmentHeadEmplaoyee;
+    public void setDepartmentHeadEmployee(Employee departamentHeadEmployee) {
+        this.departmentHeadEmployee = departmentHeadEmployee;
     }
 
-    public void setDepartmentSalary(double departamentSalary) {
-        this.departmentSalary = departmentSalary;
+    public void setDepartmentBudget(double departmentBudget) {
+        this.departmentBudget=departmentBudget;
     }
 }

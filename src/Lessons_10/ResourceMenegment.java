@@ -1,20 +1,20 @@
 package Lessons_10;
 
-import Lessons_09.Department;
-import Lessons_09.Employee;
-import Lessons_09.Person;
 
-import javax.swing.plaf.synth.SynthOptionPaneUI;
+import com.bdg.agalayan.Lessons_09.Address;
+import com.bdg.agalayan.Lessons_09.Department;
+import com.bdg.agalayan.Lessons_09.Employee;
+import com.bdg.agalayan.Lessons_09.Person;
 
 public class ResourceMenegment {
 
-    private Department []departments;
+    private Department[]departments;
 
     public void addEmployeetoDepartment(Employee emp, String departmentName){
          Department dep=findDepartmantbyName(departmentName);
-         dep.setEmployees(emp);
+
              }
-    public  Employee  findEmployeebyName(String employeeName){
+    public Employee findEmployeebyName(String employeeName){
        for(int i = 0; i < departments.length; i++) {
            Employee[] emp = departments[i].getEmployees();
            for (int j = 0; j < emp.length; j++) {
@@ -31,10 +31,10 @@ public class ResourceMenegment {
     public Department getDepartmentwihtMaxSalary(){
         Department department=departments[0];
         double maxSalary=0;
-        maxSalary= departments[0].getDepartmentSalary();
+        maxSalary= departments[0].getDepartmentBudget();
         for(int i = 0; i < departments.length; i++){
-            if(departments[i].getDepartmentSalary()>maxSalary){
-                maxSalary=departments[i].getDepartmentSalary();
+            if(departments[i].getDepartmentBudget()>maxSalary){
+                maxSalary=departments[i].getDepartmentBudget();
                 department=departments[i];
             }
         }return department;
@@ -55,6 +55,14 @@ public class ResourceMenegment {
             }
 
         }
+    }
+    public static void main(String[]args){
+        ResourceMenegment resourceMenegment= new ResourceMenegment();
+        Address []addresses=new Address[1];
+        addresses[0]= new Address("Street1", "State1", "City1", "212121");
+        Person person= new Person("Anun1", "Azganun1", "Hayranun1", 22, addresses);
+       // Department department= new Department("Dep1", )
+        //Employee employee= new Employee(200000, person, )
     }
 
 }

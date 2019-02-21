@@ -14,21 +14,17 @@ public final class BankService {
     public Account create(String customerName, String customerSurname,
                           Country country, String street,
                           String phoneNumber, double initialBalance) {
+        if (currentAccountSize >= accounts.length) {
+            return null;
+        }
         Address a = new Address(country, street, phoneNumber);
         Customer c = new Customer(customerName, customerSurname, a, index);
         index++;
         AccountBalance balance = new AccountBalance(initialBalance);
         Account account = new Account(c, balance);
-
-
-        //Move to top we can check before and after process account creation
-        if (currentAccountSize < accounts.length) {
-            accounts[currentAccountSize] = account;
-            currentAccountSize++;
-            return account;
-        }
-
-        return null;
+        accounts[currentAccountSize] = account;
+        currentAccountSize++;
+        return account;
     }
 
     public boolean transfer(final Account from, final Account to, final double amount) {
