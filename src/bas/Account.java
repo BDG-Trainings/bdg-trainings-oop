@@ -23,7 +23,7 @@ public final class Account {
     }
 
     public boolean withdraw(final double amount) {
-        if(amount <= accountBalance) {
+        if(accountBalance.getBalance() >= amount) {
          return true;
         }
         return false;

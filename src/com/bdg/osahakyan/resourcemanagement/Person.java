@@ -5,15 +5,15 @@ public class Person {
     private String lastName;
     private String middleName;
     private short age;
-    private Address[] addresses;
+   // private Address[] addresses;
 
-    public Person(final String firstName, final String lastName, final String middleName, final short age, final Address[] addresses) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.middleName = middleName;
-        this.age = age;
-        this.addresses = addresses;
-    }
+   // public Person(final String firstName, final String lastName, final String middleName, final short age, final Address[] addresses) {
+       // this.firstName = firstName;
+        //this.lastName = lastName;
+       // this.middleName = middleName;
+        //this.age = age;
+      //  this.addresses = addresses;
+   // }
 
     public String getFirstName() {
         return firstName;
@@ -31,9 +31,9 @@ public class Person {
         return age;
     }
 
-    public Address[] getAddresses() {
-        return addresses;
-    }
+   // public Address[] getAddresses() {
+  //      return addresses;
+    //}
 
 
     @Override
@@ -42,7 +42,8 @@ public class Person {
                 + firstName + ","
                 + middleName+ ","
                 + lastName + ","
-                + age + ","
-                + addresses + ")";
+                + age + "," +
+                //addresses +
+                ")";
     }
 }

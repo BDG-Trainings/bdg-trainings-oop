@@ -7,7 +7,9 @@ public class AuthorUpdateParameters {
     private String surname;
 
     public AuthorUpdateParameters(final int id, final String name, final String surname){
-        this.id = id; this.name = name; this.surname = surname;
+        this.id = id;
+        this.name = name;
+        this.surname = surname;
     }
 
     public int getID(){return id;}

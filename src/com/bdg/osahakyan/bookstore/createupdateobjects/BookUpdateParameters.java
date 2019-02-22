@@ -6,7 +6,8 @@ public class BookUpdateParameters {
     private double price;
 
     public BookUpdateParameters(final int id, final double price){
-        this.id = id; this.price = price;
+        this.id = id;
+        this.price = price;
     }
 
     public int getID(){return id;}
