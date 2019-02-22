@@ -30,9 +30,14 @@ public final class BankService {
         for (int i = 0; i < currentAccountSize; i++) {
             if (from.getAccountNumber() == accounts[i].getAccountNumber()) {
                 from.withdraw(amount);
-                accounts[i].deposit(amount);
                 transferIsComplete = true;
             }
+        }
+            for (int i = 0; i < currentAccountSize; i++) {
+                if (to.getAccountNumber() == accounts[i].getAccountNumber()) {
+                    accounts[i].deposit(amount);
+                    transferIsComplete = true;
+                }
         }
         return transferIsComplete;
     }
