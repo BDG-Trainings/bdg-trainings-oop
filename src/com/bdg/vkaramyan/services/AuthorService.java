@@ -1,9 +1,9 @@
 package com.bdg.vkaramyan.services;
 
-import com.bdg.vkaramyan.Storage.AuthorStorage;
 import com.bdg.vkaramyan.createUpdateObject.AuthorCreateParameter;
 import com.bdg.vkaramyan.createUpdateObject.BookUpdateParameter;
 import com.bdg.vkaramyan.entitys.Author;
+import com.bdg.vkaramyan.storage.AuthorStorage;
 
 public class AuthorService extends AbstractAuthorService {
 	
