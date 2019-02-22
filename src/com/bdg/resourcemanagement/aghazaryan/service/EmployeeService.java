@@ -8,8 +8,8 @@ package com.bdg.resourcemanagement.aghazaryan.service;
 public class EmployeeService {
 
     public Employee create(final SalaryDetail salaryDetail, final Person person){
-        Employee employee = new Employee( salaryDetail, person);
-        return employee;
+        //Employee employee = new Employee( salaryDetail, person);
+        return null;
     }
 
 
