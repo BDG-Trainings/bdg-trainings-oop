@@ -1,5 +1,10 @@
 package com.bdg.hhertevtsyan;
 
+import com.bdg.hhertevtsyan.resourcemanagment.Department;
+import com.bdg.hhertevtsyan.resourcemanagment.Employee;
+import com.bdg.hhertevtsyan.resourcemanagment.Person;
+import com.bdg.hhertevtsyan.resourcemanagment.ResourceManagement;
+
 public class MainApplication {
     public static void main(String[] args) {
         Department acc = new Department("Accounting", null, null, 2000000);

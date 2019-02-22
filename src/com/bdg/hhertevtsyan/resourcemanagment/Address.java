@@ -1,4 +1,4 @@
-package com.bdg.hhertevtsyan;
+package com.bdg.hhertevtsyan.resourcemanagment;
 
 public class Address {
     private String street;
