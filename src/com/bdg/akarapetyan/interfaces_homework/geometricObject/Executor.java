@@ -1,4 +1,4 @@
-package com.bdg.akarapetyan.interfaces_homework;
+package com.bdg.akarapetyan.interfaces_homework.geometricObject;
 
 public class Executor {
 
