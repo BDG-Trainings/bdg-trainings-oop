@@ -1,4 +1,4 @@
-package com.bdg.npetrosyan;
+package com.bdg.npetrosyan.ResourceManagement;
 
 public class App {
     public static void main(String[] args) {

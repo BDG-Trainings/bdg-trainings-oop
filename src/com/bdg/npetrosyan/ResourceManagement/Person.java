@@ -1,4 +1,4 @@
-package com.bdg.npetrosyan;
+package com.bdg.npetrosyan.ResourceManagement;
 
     class Person {
         private String firstName;
