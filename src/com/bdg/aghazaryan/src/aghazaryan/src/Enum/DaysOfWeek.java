@@ -4,7 +4,7 @@ package com.bdg.aghazaryan.src.aghazaryan.src.Enum;
 public enum DaysOfWeek {
 
     MONDAY("first day", "Mondays are bad."),
-    TUESDAY("second day", "Fridays are better."),
+    TUESDAY("second day", "TUESDAY are better."),
     WEDNESDAY("third day","Midweek days are so-so."),
     THURSDAY("fourth day", "Midweek days are so-so."),
     FRIDAY("fifth day", "Fridays are better."),
