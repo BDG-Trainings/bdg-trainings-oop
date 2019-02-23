@@ -11,8 +11,6 @@ public class MovablePoint implements Movable {
         this.ySpeed = ySpeed;
     }
 
-
-
     public void moveUp() {
         y -= ySpeed;
     }
@@ -23,11 +21,9 @@ public class MovablePoint implements Movable {
 
     }
 
-
     public void moveLeft() {
         x -= xSpeed;
     }
-
 
     public void moveRight() {
         x += xSpeed;
