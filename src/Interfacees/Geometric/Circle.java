@@ -1,4 +1,4 @@
-package Interfacees.Geometrik;
+package Interfacees.Geometric;
 
 public class Circle implements GeometricObject {
     public  double radius=1.0;

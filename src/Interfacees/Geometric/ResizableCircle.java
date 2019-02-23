@@ -1,4 +1,4 @@
-package Interfacees.Geometrik;
+package Interfacees.Geometric;
 
 public class ResizableCircle extends Circle implements Resizable {
 

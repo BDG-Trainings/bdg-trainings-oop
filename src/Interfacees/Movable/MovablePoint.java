@@ -1,4 +1,4 @@
-package com.bdg.agalayan.Movable;
+package Interfacees.Movable;
 
 public class MovablePoint implements Movable{
     protected int x;

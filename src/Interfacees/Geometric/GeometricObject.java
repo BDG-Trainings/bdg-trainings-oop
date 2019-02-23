@@ -1,4 +1,4 @@
-package Interfacees.Geometrik;
+package Interfacees.Geometric;
 
 public interface GeometricObject {
 
