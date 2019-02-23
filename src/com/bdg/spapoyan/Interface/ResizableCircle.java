@@ -9,7 +9,7 @@ public class ResizableCircle extends Circle implements Resizable {
 
 
     @Override
-    public Resizable resize(int percent) {
-        return this::resize;
+    public double resize(int percent) {
+        return this.radius = radius / 100 * percent;
     }
 }
