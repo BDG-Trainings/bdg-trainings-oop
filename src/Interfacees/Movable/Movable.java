@@ -1,4 +1,4 @@
-package Interface.Movable;
+package com.bdg.agalayan.Movable;
 
 public interface Movable {
 

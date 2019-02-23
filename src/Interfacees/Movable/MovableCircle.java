@@ -1,4 +1,4 @@
-package Interface.Movable;
+package com.bdg.agalayan.Movable;
 
 public class MovableCircle implements Movable {
     private int radius;
