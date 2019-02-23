@@ -48,6 +48,6 @@ public final class Customer {
 
     @Override
     public String toString() {
-        return "Custumer [ ID = " + customerId + ", Name = " + customerName + ", Surename = " + customerSurname + ", Address = " + address.toString() + "]";
+        return "Customer [ ID = " + customerId + ", Name = " + customerName + ", Surname = " + customerSurname + ", Address = " + address.toString() + "]";
     }
 }

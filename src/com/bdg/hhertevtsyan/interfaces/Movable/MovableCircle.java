@@ -4,10 +4,11 @@ public class MovableCircle implements Movable {
     private int radius;
     private MovablePoint center;
 
-    public MovableCircle (final int x, final int y, final int xSpeed, final int ySpeed, final int radius) {
-        this.center = new MovablePoint(x,y,xSpeed,ySpeed);
+    public MovableCircle(final int x, final int y, final int xSpeed, final int ySpeed, final int radius) {
+        this.center = new MovablePoint(x, y, xSpeed, ySpeed);
         this.radius = radius;
     }
+
     @Override
     public void moveUp() {
         center.moveUp();

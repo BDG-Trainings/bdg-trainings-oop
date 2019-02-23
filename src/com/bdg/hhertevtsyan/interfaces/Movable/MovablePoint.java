@@ -6,7 +6,7 @@ public class MovablePoint implements Movable {
     int xSpeed;
     int ySpeed;
 
-    public  MovablePoint (final int x, final int y, final int xSpeed, final int ySpeed) {
+    public MovablePoint(final int x, final int y, final int xSpeed, final int ySpeed) {
         this.x = x;
         this.y = y;
         this.xSpeed = xSpeed;

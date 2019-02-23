@@ -5,9 +5,9 @@ public class MovableRectangle implements Movable {
     private MovablePoint topLeft;
     private MovablePoint topRight;
 
-    public MovableRectangle (final int x1, final int y1, final int x2, final int y2, final int xSpeed, final int ySpeed) {
-        this.topLeft = new MovablePoint(x1,y1,xSpeed,ySpeed);
-        this.topRight = new MovablePoint(x2,y2,xSpeed,ySpeed);
+    public MovableRectangle(final int x1, final int y1, final int x2, final int y2, final int xSpeed, final int ySpeed) {
+        this.topLeft = new MovablePoint(x1, y1, xSpeed, ySpeed);
+        this.topRight = new MovablePoint(x2, y2, xSpeed, ySpeed);
     }
 
     @Override

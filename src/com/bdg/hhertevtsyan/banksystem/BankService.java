@@ -29,15 +29,14 @@ public final class BankService {
         boolean transferIsComplete = false;
         for (int i = 0; i < currentAccountSize; i++) {
             if (from.getAccountNumber() == accounts[i].getAccountNumber()) {
-                from.withdraw(amount);
-                transferIsComplete = true;
-            }
-        }
-            for (int i = 0; i < currentAccountSize; i++) {
-                if (to.getAccountNumber() == accounts[i].getAccountNumber()) {
-                    accounts[i].deposit(amount);
-                    transferIsComplete = true;
+                for (int j = 0; j < currentAccountSize; j++) {
+                    if (to.getAccountNumber() == accounts[j].getAccountNumber()) {
+                        accounts[i].withdraw(amount);
+                        accounts[j].deposit(amount);
+                        transferIsComplete = true;
+                    }
                 }
+            }
         }
         return transferIsComplete;
     }
@@ -59,6 +58,7 @@ public final class BankService {
             if (accounts[i].getCustomer().getCustomerName() == customerName && accounts[i].getCustomer().getCustomerSurname() == customerSurename)
                 return accounts[i];
         }
+        System.out.println("Customer not found");
         return null;
     }
 
