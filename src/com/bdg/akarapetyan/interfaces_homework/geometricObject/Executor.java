@@ -10,5 +10,8 @@ public class Executor {
         circle1.resize(2);
         System.out.println(circle1.getPerimeter());
         System.out.println(circle1.getArea());
+        circle1.resize(4);
+        System.out.println(circle1.getPerimeter());
+        System.out.println(circle1.getArea());
     }
 }
