@@ -2,7 +2,6 @@ package com.bdg.spapoyan.Interface;
 
 public interface GeometricObject {
 
-    void getPerimeter();
-    void getArea();
-
+    double getPerimeter();
+    double getArea();
 }
