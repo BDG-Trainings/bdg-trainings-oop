@@ -8,6 +8,6 @@ public class ResizeableCircle extends Circle implements Resizable {
 
     @Override
     public void resize(int percent) {
-    this.radius = radius/100*percent;
+        this.radius = radius / 100 * percent;
     }
 }
