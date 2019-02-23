@@ -2,7 +2,7 @@ package com.bdg.akarapetyan.interfaces_homework;
 
 public class Cicrcle implements GeometricObject {
 
-    protected double radius = 1.0;
+    protected double radius;
 
     public Cicrcle(double radius) {
         this.radius = radius;
