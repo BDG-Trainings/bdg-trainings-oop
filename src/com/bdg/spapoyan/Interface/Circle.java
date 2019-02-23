@@ -2,7 +2,7 @@ package com.bdg.spapoyan.Interface;
 
 public class Circle implements GeometricObject {
 
-    protected double radius =1.0;
+    protected double radius = 1.0;
 
     public Circle (double radius){
         this.radius = radius;
