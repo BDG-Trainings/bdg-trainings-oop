@@ -1,11 +1,12 @@
-package com.bdg.bookstorage.agalayan.entity;
+package com.bdg.bookstorage.aghazaryan.entity;
 
-import com.bdg.bookstorage.agalayan.common.Gender;
+import com.bdg.bookstorage.aghazaryan.common.Gender;
 
 public class Author {
+
     private int id;
-    private  String name;
-    private  String surname;
+    private String name;
+    private String surname;
     private Gender gender;
 
     public Author(int id, String name, String surname, Gender gender) {

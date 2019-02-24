@@ -1,20 +1,18 @@
-package com.bdg.bookstorage.agalayan.entity;
-
-import java.util.Arrays;
+package com.bdg.bookstorage.npetrosyan.entity;
 
 public class Book {
     private int id;
     private String name;
     private String title;
     private double price;
-    private Author[] author;
+    private Author[] authors;
 
-    public Book(int id, String name, String title, double price, Author[] author) {
+    public Book(int id, String name, String title, double price, Author[] authors) {
         this.id = id;
         this.name = name;
         this.title = title;
         this.price = price;
-        this.author = author;
+        this.authors = authors;
     }
 
     public int getId() {
@@ -49,22 +47,11 @@ public class Book {
         this.price = price;
     }
 
-    public Author[] getAuthor() {
-        return author;
+    public Author[] getAuthors() {
+        return authors;
     }
 
-    public void setAuthor(Author[] author) {
-        this.author = author;
-    }
-
-    @Override
-    public String toString() {
-        return "Book{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", title='" + title + '\'' +
-                ", price=" + price +
-                ", author=" + Arrays.toString(author) +
-                '}';
+    public void setAuthors(Author[] authors) {
+        this.authors = authors;
     }
 }
