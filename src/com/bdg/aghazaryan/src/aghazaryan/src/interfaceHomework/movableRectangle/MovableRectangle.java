@@ -1,4 +1,4 @@
-package com.bdg.aghazaryan.src.aghazaryan.src.Interface.movableRectangle;
+package com.bdg.aghazaryan.src.aghazaryan.src.interfaceHomework.movableRectangle;
 
 public class MovableRectangle extends MovablePoint implements Movable {
 

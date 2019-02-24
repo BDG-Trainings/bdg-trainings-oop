@@ -1,4 +1,4 @@
-package com.bdg.aghazaryan.src.aghazaryan.src.Interface.geometricObject;
+package com.bdg.aghazaryan.src.aghazaryan.src.interfaceHomework.geometricObject;
 
 public class Circle implements GeometricObject {
 
@@ -25,7 +25,7 @@ public class Circle implements GeometricObject {
   }*/
 
     public static void main(String args[]) {
-        com.bdg.aghazaryan.src.aghazaryan.src.Interface.Circle circ = new com.bdg.aghazaryan.src.aghazaryan.src.Interface.Circle(5);
+        com.bdg.aghazaryan.src.aghazaryan.src.interfaceHomework.Circle circ = new com.bdg.aghazaryan.src.aghazaryan.src.interfaceHomework.Circle(5);
         System.out.println("Area"  + circ.getArea());
         System.out.println("Perimeter"  + circ.getPerimeter());
 

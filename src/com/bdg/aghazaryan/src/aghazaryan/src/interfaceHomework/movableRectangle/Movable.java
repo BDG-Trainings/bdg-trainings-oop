@@ -1,4 +1,4 @@
-package com.bdg.aghazaryan.src.aghazaryan.src.Interface.movable;
+package com.bdg.aghazaryan.src.aghazaryan.src.interfaceHomework.movableRectangle;
 
 public interface Movable {
     public void moveUp();

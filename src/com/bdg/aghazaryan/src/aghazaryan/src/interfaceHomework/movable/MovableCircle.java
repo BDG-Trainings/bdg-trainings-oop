@@ -1,4 +1,4 @@
-package com.bdg.aghazaryan.src.aghazaryan.src.Interface.movable;
+package com.bdg.aghazaryan.src.aghazaryan.src.interfaceHomework.movable;
 
 public class  MovableCircle extends MovablePoint implements Movable  {
     private int radius;

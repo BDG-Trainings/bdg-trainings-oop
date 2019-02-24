@@ -1,4 +1,4 @@
-package com.bdg.aghazaryan.src.aghazaryan.src.Interface.geometricObject;
+package com.bdg.aghazaryan.src.aghazaryan.src.interfaceHomework.geometricObject;
 
 public interface GeometricObject {
 
