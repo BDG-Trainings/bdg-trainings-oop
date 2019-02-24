@@ -11,8 +11,8 @@ public class MovableRectangle extends MovablePoint implements Movable {
         this.topLeft = topLeft;
         this.bottomRight = bottomRight;
 
-        topLeft = new MovablePoint (5, 2, 6, 5, 6,5);
-        bottomRight = new MovablePoint (5,2,6, 5,6,5);
+        topLeft = new MovablePoint(5, 2, 6, 5, 6, 5);
+        bottomRight = new MovablePoint(5, 2, 6, 5, 6, 5);
 
     }
 
@@ -23,11 +23,13 @@ public class MovableRectangle extends MovablePoint implements Movable {
 
     @Override
     public void moveUp() {
+
         super.moveUp();
     }
 
     @Override
     public void moveDown() {
+
         super.moveDown();
     }
 
@@ -38,17 +40,28 @@ public class MovableRectangle extends MovablePoint implements Movable {
 
     @Override
     public void moveRight() {
+
         super.moveRight();
     }
 
-    public static void main(String args[]) {
-        MovableRectangle rectangle = new MovableRectangle(6,5,8,9,10,8, 5,5);
-        System.out.println(rectangle.topLeft);
-        System.out.println(rectangle.bottomRight);
+    public void bottomRight() {
 
+    }
+
+    public void topLeft() {
 
 
     }
 
-}
+   public static void main(String args[]) {
+       MovableRectangle rectangle = new MovableRectangle(2, 5, 8, 9, 8, 8, 4, 4);
+       rectangle.moveUp();
+       rectangle.moveDown();
+       rectangle.moveLeft();
+       rectangle.moveRight();
+       rectangle.bottomRight();
+       rectangle.topLeft();
 
+
+   }
+}

@@ -35,6 +35,9 @@ public class  MovableCircle extends MovablePoint implements Movable  {
     public static void main(String args[]) {
         MovableCircle moveCirc = new MovableCircle(5, 6, 8, 9, 8);
         moveCirc.moveUp();
+        moveCirc.moveDown();
+        moveCirc.moveLeft();
+        moveCirc.moveRight();
 
     }
 }

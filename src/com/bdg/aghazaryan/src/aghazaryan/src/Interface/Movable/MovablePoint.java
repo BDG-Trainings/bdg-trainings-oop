@@ -12,6 +12,7 @@ public class MovablePoint implements Movable {
     }
 
     public void moveUp() {
+
         y -= ySpeed;
     }
 
@@ -22,15 +23,17 @@ public class MovablePoint implements Movable {
     }
 
     public void moveLeft() {
+
         x -= xSpeed;
     }
 
     public void moveRight() {
+
         x += xSpeed;
     }
 
     public static void main(String args[]) {
-        MovablePoint moveObj = new MovablePoint(5, 6, 8, 9);
+        MovablePoint moveObj = new MovablePoint(5, 6, 8, 8);
         System.out.println("moveObj.moveUp()");
         moveObj.moveUp();
         System.out.println("moveObj.moveDown()");
