@@ -1,26 +1,15 @@
-package com.bdg.bookstorage.warustamyan.entity;
+package com.bdg.bookstorage.warustamyan.common;
 
-import com.bdg.bookstorage.warustamyan.common.Gender;
+public final class AuthorCreateParameter {
 
-public final class Author {
-    private int id;
     private String name;
     private String surname;
     private Gender gender;
 
-    public Author(int id, String name, String surname, Gender gender) {
-        this.id = id;
+    public AuthorCreateParameter(String name, String surname, Gender gender) {
         this.name = name;
         this.surname = surname;
         this.gender = gender;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -49,9 +38,8 @@ public final class Author {
 
     @Override
     public String toString() {
-        return "Author{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
+        return "AuthorCreateParameter{" +
+                "name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", gender=" + gender +
                 '}';
