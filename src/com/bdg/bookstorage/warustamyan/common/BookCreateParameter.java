@@ -1,29 +1,19 @@
-package com.bdg.bookstorage.ekirakosyan.entity;
+package com.bdg.bookstorage.warustamyan.common;
 
 import java.util.Arrays;
 
-public class Book {
+public final class BookCreateParameter {
 
-    private int id;
     private String name;
     private String title;
     private double price;
-    private Author[] authors;
+    private AuthorCreateParameter[] authorCreateParameters;
 
-    public Book(final int id, final String name, final String title, final double price, final Author[] authors) {
-        this.id = id;
+    public BookCreateParameter(String name, String title, double price, AuthorCreateParameter[] authorCreateParameters) {
         this.name = name;
         this.title = title;
         this.price = price;
-        this.authors = authors;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+        this.authorCreateParameters = authorCreateParameters;
     }
 
     public String getName() {
@@ -50,22 +40,21 @@ public class Book {
         this.price = price;
     }
 
-    public Author[] getAuthors() {
-        return authors;
+    public AuthorCreateParameter[] getAuthorCreateParameters() {
+        return authorCreateParameters;
     }
 
-    public void setAuthors(Author[] authors) {
-        this.authors = authors;
+    public void setAuthorCreateParameters(AuthorCreateParameter[] authorCreateParameters) {
+        this.authorCreateParameters = authorCreateParameters;
     }
 
     @Override
     public String toString() {
-        return "Book{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
+        return "BookCreateParameter{" +
+                "name='" + name + '\'' +
                 ", title='" + title + '\'' +
                 ", price=" + price +
-                ", authors=" + Arrays.toString(authors) +
+                ", authorCreateParameters=" + Arrays.toString(authorCreateParameters) +
                 '}';
     }
 }

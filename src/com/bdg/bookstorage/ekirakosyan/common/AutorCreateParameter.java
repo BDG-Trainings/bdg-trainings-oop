@@ -1,26 +1,15 @@
-package com.bdg.bookstorage.ekirakosyan.entity;
+package com.bdg.bookstorage.ekirakosyan.common;
 
-import com.bdg.bookstorage.ekirakosyan.common.Gender;
+public class AutorCreateParameter {
 
-public class Author {
-
-    private int id;
     private String name;
     private String surname;
     private Gender gender;
 
-    public Author(final int id, final String name, final String surname, final Gender gender) {
+    public AutorCreateParameter(final String name, final String surname, final Gender gender) {
         this.name = name;
         this.surname = surname;
         this.gender = gender;
-    }
-
-    public int getId(){
-        return id;
-    }
-
-    public void setId(int id){
-        this.id = id;
     }
 
     public String getName() {
@@ -45,14 +34,5 @@ public class Author {
 
     public void setGender(Gender gender) {
         this.gender = gender;
-    }
-
-    @Override
-    public String toString() {
-        return "Author{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", gender=" + gender +
-                '}';
     }
 }
