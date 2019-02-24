@@ -10,6 +10,4 @@ public interface AuthorService {
     Author get();
 
     boolean delete();
-
-    Author update();
 }
