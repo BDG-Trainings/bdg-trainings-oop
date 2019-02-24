@@ -1,12 +1,11 @@
-package com.bdg.bookstorage.osahakyan.common;
+package com.bdg.bookstorage.npetrosyan.common;
 
-public class AuthorCreateParameters {
-
+public class AuthorCreateParameter {
     private String name;
     private String surname;
     private Gender gender;
 
-    public AuthorCreateParameters(final String name, final String surname, final Gender gender){
+    public AuthorCreateParameter(String name, String title, double price) {
         this.name = name;
         this.surname = surname;
         this.gender = gender;
@@ -15,17 +14,17 @@ public class AuthorCreateParameters {
     public String getName() {
         return name;
     }
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getSurname() {
         return surname;
     }
-    public void setSurname(String surname){this.surname = surname;}
-
     public Gender getGender() {
         return gender;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
     public void setGender(Gender gender) {
         this.gender = gender;

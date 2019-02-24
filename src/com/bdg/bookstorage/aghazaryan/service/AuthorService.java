@@ -4,7 +4,7 @@ import com.bdg.bookstorage.aghazaryan.entity.Author;
 
 public interface AuthorService {
 
-    Author create();
+    Author create( AuthorCreateParameter createParameter);
 
     Author update();
 

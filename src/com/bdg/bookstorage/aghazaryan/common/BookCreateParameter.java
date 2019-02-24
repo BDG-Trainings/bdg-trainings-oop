@@ -3,12 +3,11 @@ package com.bdg.bookstorage.aghazaryan.common;
 public class BookCreateParameter {
 
     private String name;
-    private String title;
     private int price;
+    AuthorCreateParameter [] AuthorCreateParameter;
 
     public BookCreateParameter(String name, String title, int price) {
         this.name = name;
-        this.title = title;
         this.price = price;
     }
 
@@ -16,19 +15,18 @@ public class BookCreateParameter {
         return name;
     }
 
-    public String getTitle() {
-        return title;
+      public int getPrice() {
+        return price;
     }
 
-    public int getPrice() {
-        return price;
+    public AuthorCreateParameter getAuthorCreateParameter(){
+        return getAuthorCreateParameter();
     }
 
     @Override
     public String toString() {
         return "BookCreateParameter{" +
-                ", name='" + name + '\'' +
-                ", title='" + title + '\'' +
+                "name='" + name + '\'' +
                 ", price=" + price +
                 '}';
     }
