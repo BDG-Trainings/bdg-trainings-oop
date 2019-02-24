@@ -18,7 +18,6 @@ public class BookCreateParameter {
         this.name = name;
     }
 
-
     public double getPrice() {
         return price;
     }
