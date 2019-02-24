@@ -14,13 +14,22 @@ public class BookCreateParameter {
     public String getName() {
         return name;
     }
-
+    public void setName(String name) {
+        this.name = name;
+    }
     public int getPrice() {
         return price;
+    }
+    public void setPrice(int price) {
+        this.price = price;
     }
 
     public AuthorCreateParameter[] getAuthorCreateParameters() {
         return authorCreateParameters;
+    }
+
+    public void setAuthorCreateParameters(AuthorCreateParameter[] authorCreateParameters) {
+        this.authorCreateParameters = authorCreateParameters;
     }
 
     @Override
@@ -31,3 +40,4 @@ public class BookCreateParameter {
                 '}';
     }
 }
+
