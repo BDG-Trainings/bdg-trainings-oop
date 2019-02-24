@@ -1,13 +1,17 @@
 package com.bdg.bookstorage.spapoyan.common;
 
+import java.util.Arrays;
+
 public class BookCreateParameter {
 
     private String name;
     private double price;
+    private AuthorCreateParameter [] authorCreateParameters;
 
-    public BookCreateParameter(final String name, final double price) {
+    public BookCreateParameter(final String name, final double price, final AuthorCreateParameter[] authorCreateParameters) {
         this.name = name;
         this.price = price;
+        this.authorCreateParameters = authorCreateParameters;
     }
 
     public String getName() {
@@ -26,11 +30,20 @@ public class BookCreateParameter {
         this.price = price;
     }
 
+    public AuthorCreateParameter[] getAuthorCreateParameters() {
+        return authorCreateParameters;
+    }
+
+    public void setAuthorCreateParameters(AuthorCreateParameter[] authorCreateParameters) {
+        this.authorCreateParameters = authorCreateParameters;
+    }
+
     @Override
     public String toString() {
         return "BookCreateParameter{" +
                 "name='" + name + '\'' +
                 ", price=" + price +
+                ", authorCreateParameters=" + Arrays.toString(authorCreateParameters) +
                 '}';
     }
 }

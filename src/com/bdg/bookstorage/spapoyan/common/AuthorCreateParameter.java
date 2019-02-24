@@ -1,27 +1,15 @@
-package com.bdg.bookstorage.spapoyan.entitys;
+package com.bdg.bookstorage.spapoyan.common;
 
+public class AuthorCreateParameter {
 
-import com.bdg.bookstorage.spapoyan.common.Gender;
-
-public class Author {
-    private int id;
     private String name;
     private String surname;
-    private Gender gender;
+    Gender gender;
 
-    public Author(final int id, final String name, final String surname, final Gender gender) {
-        this.id = id;
+    public AuthorCreateParameter(final String name, final String surname, final Gender gender) {
         this.name = name;
         this.surname = surname;
         this.gender = gender;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -50,9 +38,8 @@ public class Author {
 
     @Override
     public String toString() {
-        return "Author{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
+        return "AuthorCreateParameter{" +
+                "name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", gender=" + gender +
                 '}';
