@@ -8,7 +8,9 @@ public class AuthorServiceImpl implements AuthorService {
     @Override
     public Author create(final AuthorCreateParameter createParameter) {
 
-        return null;
+        final Author author = new Author(1, createParameter.getName(), createParameter.getSurname(), createParameter.getGender());
+
+        return author;
     }
 
     @Override
