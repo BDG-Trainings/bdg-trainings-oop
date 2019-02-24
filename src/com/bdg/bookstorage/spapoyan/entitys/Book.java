@@ -1,6 +1,5 @@
 package com.bdg.bookstorage.spapoyan.entitys;
 
-
 import java.util.Arrays;
 
 public final class Book {
