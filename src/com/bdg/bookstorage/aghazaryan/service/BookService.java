@@ -7,7 +7,7 @@ public interface BookService {
 
     Book create(BookCreateParameter createParameter);
 
-    Book update();
+    Book update(BookUpdateParameter createParameter);
 
     boolean delete();
 
