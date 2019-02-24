@@ -1,12 +1,13 @@
 package com.bdg.bookstorage.ekirakosyan.service;
 
+import com.bdg.bookstorage.ekirakosyan.common.AutorCreateParameter;
 import com.bdg.bookstorage.ekirakosyan.entity.Author;
-import com.bdg.bookstorage.npetrosyan.createUpdateProject.AuthorCreateParameter;
 
 public interface AuthorService {
 
+    Author create(AutorCreateParameter createParameter);
+
     Author get();
-    Author create(AuthorCreateParameter authorCreateParameter );
-    Author update();
+
     boolean delete();
 }
