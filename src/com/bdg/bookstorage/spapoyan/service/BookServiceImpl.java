@@ -11,7 +11,7 @@ public class BookServiceImpl implements BookService {
     private AuthorService authorService;
 
     public BookServiceImpl() {
-        //this.authorService = new AuthorServiceImpl();
+        this.authorService = new AuthorServiceImpl();
     }
 
     @Override
