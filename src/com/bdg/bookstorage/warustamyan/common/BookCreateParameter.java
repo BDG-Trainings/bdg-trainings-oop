@@ -1,15 +1,19 @@
 package com.bdg.bookstorage.warustamyan.common;
 
+import java.util.Arrays;
+
 public final class BookCreateParameter {
 
     private String name;
     private String title;
     private double price;
+    private AuthorCreateParameter[] authorCreateParameters;
 
-    public BookCreateParameter(String name, String title, double price) {
+    public BookCreateParameter(String name, String title, double price, AuthorCreateParameter[] authorCreateParameters) {
         this.name = name;
         this.title = title;
         this.price = price;
+        this.authorCreateParameters = authorCreateParameters;
     }
 
     public String getName() {
@@ -36,12 +40,21 @@ public final class BookCreateParameter {
         this.price = price;
     }
 
+    public AuthorCreateParameter[] getAuthorCreateParameters() {
+        return authorCreateParameters;
+    }
+
+    public void setAuthorCreateParameters(AuthorCreateParameter[] authorCreateParameters) {
+        this.authorCreateParameters = authorCreateParameters;
+    }
+
     @Override
     public String toString() {
         return "BookCreateParameter{" +
                 "name='" + name + '\'' +
                 ", title='" + title + '\'' +
                 ", price=" + price +
+                ", authorCreateParameters=" + Arrays.toString(authorCreateParameters) +
                 '}';
     }
 }
