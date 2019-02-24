@@ -9,8 +9,6 @@ public interface AuthorService {
 
     Author create(AuthorCreateParameter authorCreateParameter);
 
-    Author update();
-
     boolean delete();
 
 
