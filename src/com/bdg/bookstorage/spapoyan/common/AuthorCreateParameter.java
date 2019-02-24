@@ -1,12 +1,12 @@
 package com.bdg.bookstorage.spapoyan.common;
 
-public class AutorCreateParameter {
+public class AuthorCreateParameter {
 
     private String name;
     private String surname;
     Gender gender;
 
-    public AutorCreateParameter(final String name, final String surname, final Gender gender) {
+    public AuthorCreateParameter(final String name, final String surname, final Gender gender) {
         this.name = name;
         this.surname = surname;
         this.gender = gender;
@@ -38,7 +38,7 @@ public class AutorCreateParameter {
 
     @Override
     public String toString() {
-        return "AutorCreateParameter{" +
+        return "AuthorCreateParameter{" +
                 "name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", gender=" + gender +

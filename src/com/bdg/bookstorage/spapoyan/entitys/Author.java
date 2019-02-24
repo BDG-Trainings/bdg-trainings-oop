@@ -9,7 +9,7 @@ public class Author {
     private String surname;
     private Gender gender;
 
-    public Author(int id, String name, String surname, Gender gender) {
+    public Author(final int id, final String name, final String surname, final Gender gender) {
         this.id = id;
         this.name = name;
         this.surname = surname;
