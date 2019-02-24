@@ -2,7 +2,6 @@ package com.bdg.bookstorage.spapoyan.entitys;
 
 import com.bdg.bookstorage.spapoyan.entitys.common.Gender;
 
-
 public class Author {
 
     private int id;
