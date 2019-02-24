@@ -1,4 +1,4 @@
-package com.bdg.bookstorage.spapoyan.entitys.common;
+package com.bdg.bookstorage.spapoyan.common;
 
 public enum Gender {
 
