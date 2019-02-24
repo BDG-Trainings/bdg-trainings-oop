@@ -1,10 +1,12 @@
 package com.bdg.bookstorage.spapoyan.service;
 
+import com.bdg.bookstorage.spapoyan.entitys.Book;
+
 public interface BookService {
 
-    BookService get();
-    BookService create();
-    BookService update();
-    BookService delete();
+    Book get();
+    Book create();
+    Book update();
+    boolean delete();
 
 }
