@@ -29,4 +29,12 @@ public class AuthorCreateParameter {
     public void setGender(Gender gender) {
         this.gender = gender;
     }
+    @Override
+    public String toString() {
+        return "AuthorCreateParameter{" +
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", gender=" + gender +
+                '}';
+    }
 }
