@@ -7,10 +7,8 @@ public interface AuthorService {
 
     Author create(AuthorCreateParameter createParameter);
 
-    Author update();
-
     Author delete();
 
-    Author Author();
+    Author get();
 
 }

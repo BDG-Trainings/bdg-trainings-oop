@@ -1,15 +1,32 @@
 package com.bdg.bookstorage.aghazaryan.service;
 
-public class BookServiceImpl implements BookService{
+import com.bdg.bookstorage.aghazaryan.common.BookCreateParameter;
+import com.bdg.bookstorage.aghazaryan.common.BookUpdateParameter;
+import com.bdg.bookstorage.aghazaryan.entity.Book;
+
+public class BookServiceImpl implements BookService {
 
 
-    private AuthorService AuthorService;
 
-    public BookServiceImpl(AuthorService AuthorService){
-        this.AuthorService = AuthorService;
-        AuthorServiceImpl AuthImplObj = new AuthorServiceImpl();
 
+    @Override
+    public Book create(BookCreateParameter createParameter) {
+        return null;
     }
 
+    @Override
+    public Book update(BookUpdateParameter createParameter) {
+        return null;
+    }
+
+    @Override
+    public boolean delete() {
+        return false;
+    }
+
+    @Override
+    public Book get() {
+        return null;
+    }
 }
 

@@ -1,6 +1,7 @@
 package com.bdg.bookstorage.aghazaryan.service;
 
 import com.bdg.bookstorage.aghazaryan.common.BookCreateParameter;
+import com.bdg.bookstorage.aghazaryan.common.BookUpdateParameter;
 import com.bdg.bookstorage.aghazaryan.entity.Book;
 
 public interface BookService {
