@@ -1,7 +1,7 @@
-package com.bdg.bookstorage.warustamyan.service;
+package com.bdg.bookstorage.aghazaryan.service;
 
-import com.bdg.bookstorage.warustamyan.common.AuthorCreateParameter;
-import com.bdg.bookstorage.warustamyan.entity.Author;
+import com.bdg.bookstorage.aghazaryan.common.AuthorCreateParameter;
+import com.bdg.bookstorage.aghazaryan.entity.Author;
 
 public class AuthorServiceImpl implements AuthorService {
 
@@ -13,13 +13,14 @@ public class AuthorServiceImpl implements AuthorService {
         return author;
     }
 
+
     @Override
-    public Author get() {
+    public Author delete() {
         return null;
     }
 
     @Override
-    public boolean delete() {
-        return false;
+    public Author get() {
+        return null;
     }
 }

@@ -19,7 +19,7 @@ public class BookCreateParameter {
         return price;
     }
 
-    public AuthorCreateParameter[] getAuthorCreateParameter() {
+    public AuthorCreateParameter[] getAuthorCreateParameters() {
         return authorCreateParameters;
     }
 

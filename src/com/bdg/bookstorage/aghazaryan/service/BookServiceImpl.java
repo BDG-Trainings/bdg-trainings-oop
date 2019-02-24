@@ -1,10 +1,10 @@
-package com.bdg.bookstorage.warustamyan.service;
+package com.bdg.bookstorage.aghazaryan.service;
 
-import com.bdg.bookstorage.warustamyan.common.AuthorCreateParameter;
-import com.bdg.bookstorage.warustamyan.common.BookCreateParameter;
-import com.bdg.bookstorage.warustamyan.common.BookUpdateParameter;
-import com.bdg.bookstorage.warustamyan.entity.Author;
-import com.bdg.bookstorage.warustamyan.entity.Book;
+import com.bdg.bookstorage.aghazaryan.common.AuthorCreateParameter;
+import com.bdg.bookstorage.aghazaryan.common.BookCreateParameter;
+import com.bdg.bookstorage.aghazaryan.common.BookUpdateParameter;
+import com.bdg.bookstorage.aghazaryan.entity.Author;
+import com.bdg.bookstorage.aghazaryan.entity.Book;
 
 public class BookServiceImpl implements BookService {
 
@@ -28,7 +28,7 @@ public class BookServiceImpl implements BookService {
         }
 
 
-        final Book book = new Book(1, createParameter.getName(), createParameter.getTitle(), createParameter.getPrice(), authors);
+        final Book book = new Book(1, createParameter.getName(), createParameter.getPrice(), authors);
 
 
         return null;
@@ -49,3 +49,4 @@ public class BookServiceImpl implements BookService {
         return null;
     }
 }
+
