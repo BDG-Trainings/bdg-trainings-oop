@@ -1,4 +1,4 @@
-package com.bdg.aghazaryan.src.aghazaryan.src.interfaceHomework.movable;
+package com.bdg.aghazaryan.src.aghazaryan.src.interfacehomework.movable;
 
 public class MovablePoint implements Movable {
 

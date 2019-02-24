@@ -1,4 +1,4 @@
-package com.bdg.aghazaryan.src.aghazaryan.src.enumExercise;
+package com.bdg.aghazaryan.src.aghazaryan.src.enumexercise;
 
 
 public enum DaysOfWeek {
