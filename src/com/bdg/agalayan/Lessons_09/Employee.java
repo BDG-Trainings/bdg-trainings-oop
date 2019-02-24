@@ -3,12 +3,12 @@ package com.bdg.agalayan.Lessons_09;
 public class Employee{
     private double salary;
     private Person person;
-    private Department departments;
 
-    public Employee(double salary, Person person, Department departments) {
+
+    public Employee(double salary, Person person) {
         this.salary = salary;
         this.person = person;
-        this.departments = departments;
+
     }
 
     public double getSalary() {
@@ -18,9 +18,8 @@ public class Employee{
     public Person getPerson() {
         return person;
     }
-    public Department getDepartament() {
-        return departments;
-    }
+
+
 
     public void setPerson(Person person) {
         this.person = person;
@@ -30,8 +29,5 @@ public class Employee{
         this.salary = salary;
     }
 
-    public void setDepartment(Department department) {
-        this.departments = departments;
-    }
 
 }

@@ -6,10 +6,14 @@ import com.bdg.agalayan.bas.Country;
 public class ResourceManagement {
     private Department[]departments;
 
-    public void addEmployeetoDepartment(Employee emp, String departmentName){
-        Department dep=findDepartmentByName(departmentName);
-
+    public void addEmployeetoDepartment(Employee emp, String departmentName) {
+        for (int i = 0; i < departments.length; i++) {
+            if (departments[i].getDepartmentName().equals(departmentName)) {
+                this.departments[i].setEmployees(emp);
+            }
+        }
     }
+
     public Employee findEmployeebyName(String employeeName){
         for(int i = 0; i < departments.length; i++) {
             Employee[] emp = departments[i].getEmployees();
@@ -41,6 +45,7 @@ public class ResourceManagement {
             }
         }return department;
     }
+
     public void removeEmployeefromDepartment(Employee emp,String DepartmentName) {
             int index=-1;
         for(int i =0; i<departments[i].getEmployees().length; i++){
@@ -57,6 +62,7 @@ public class ResourceManagement {
             }
         }
     }
+
     public static void main(String[]args){
         ResourceManagement resourceMenegment= new ResourceManagement();
         Address addresses=new Address(Country.AM, "Qaxaq1", "Poxoc1", "653241");
@@ -65,6 +71,9 @@ public class ResourceManagement {
         Address []a2={addresses1};
         Person person= new Person("Anun1", "Azganun1", 22, a1);
         Person person1= new Person("Anun2", "Azganun2", 23, a2);
+        Employee []employees= new Employee[3];
+        employees[0]=new Employee(300000, person);
+        employees[1]= new Employee(350000, person1);
 
 
 
