@@ -23,4 +23,5 @@ public class AuthorServiceImpl implements AuthorService {
     public boolean delete() {
         return false;
     }
+
 }
