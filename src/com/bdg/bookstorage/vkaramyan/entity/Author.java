@@ -1,6 +1,6 @@
 package com.bdg.bookstorage.vkaramyan.entity;
 
-import com.bdg.bookstorage.vkaramyan.entity.common.Gender;
+import com.bdg.bookstorage.vkaramyan.common.Gender;
 
 public class Author {
 
