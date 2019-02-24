@@ -1,7 +1,7 @@
 package com.bdg.bookstorage.osahakyan.entity;
 
 
-import com.bdg.bookstorage.osahakyan.entity.common.Gender;
+import com.bdg.bookstorage.osahakyan.common.Gender;
 
 public class Author {
 
