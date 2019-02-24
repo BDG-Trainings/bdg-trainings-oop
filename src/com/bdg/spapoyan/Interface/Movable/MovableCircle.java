@@ -11,30 +11,26 @@ public class MovableCircle extends MovablePoint implements Movable {
     }
 
     @Override
+    public void moveUp() { center.moveUp(); }
+
+    @Override
+    public void moveDown() { center.moveDown(); }
+
+    @Override
+    public void moveLeft() { center.moveLeft(); }
+
+    @Override
+    public void moveRight() { center.moveRight(); }
+
+    @Override
     public String toString() {
         return "MovableCircle{" +
                 "radius=" + radius +
                 ", center=" + center +
+                ", x=" + x +
+                ", y=" + y +
+                ", xSpeed=" + xSpeed +
+                ", ySpeed=" + ySpeed +
                 '}';
-    }
-
-    @Override
-    public void moveUp() {
-
-    }
-
-    @Override
-    public void moveDown() {
-
-    }
-
-    @Override
-    public void moveLeft() {
-
-    }
-
-    @Override
-    public void moveRight() {
-
     }
 }
