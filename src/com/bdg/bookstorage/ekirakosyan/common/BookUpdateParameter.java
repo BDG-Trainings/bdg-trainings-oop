@@ -1,26 +1,22 @@
-package com.bdg.bookstorage.aghazaryan.entity;
+package com.bdg.bookstorage.ekirakosyan.common;
 
-import java.util.Arrays;
-
-public class Book {
+public class BookUpdateParameter {
 
     private int id;
     private String name;
     private double price;
-    private Author[] authors;
 
-    public Book(int id, String name, double price, Author[] authors) {
+    public BookUpdateParameter(int id, String name, double price){
         this.id = id;
         this.name = name;
         this.price = price;
-        this.authors = authors;
     }
 
-    public int getId() {
+    public int getId(){
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(int id){
         this.id = id;
     }
 
@@ -40,21 +36,12 @@ public class Book {
         this.price = price;
     }
 
-    public Author[] getAuthors() {
-        return authors;
-    }
-
-    public void setAuthors(Author[] authors) {
-        this.authors = authors;
-    }
-
     @Override
     public String toString() {
-        return "Book{" +
+        return "BookUpdateParameter{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", price=" + price +
-                ", authors=" + Arrays.toString(authors) +
                 '}';
     }
 }
