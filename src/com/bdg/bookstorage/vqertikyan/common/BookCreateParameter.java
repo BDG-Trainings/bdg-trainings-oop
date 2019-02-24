@@ -7,7 +7,7 @@ public class BookCreateParameter {
     private double price;
     private AuthorCreateParameter[] authorCreateParameters;
 
-    public BookCreateParameter(final String name, final double price, final BookCreateParameter[] bookCreateParameters) {
+    public BookCreateParameter(final String name, final double price, final AuthorCreateParameter[] authorCreateParameters) {
         this.name = name;
         this.price = price;
         this.authorCreateParameters = authorCreateParameters;
