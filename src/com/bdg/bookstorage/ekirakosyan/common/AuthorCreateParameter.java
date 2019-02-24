@@ -1,12 +1,12 @@
 package com.bdg.bookstorage.ekirakosyan.common;
 
-public class AutorCreateParameter {
+public class AuthorCreateParameter {
 
     private String name;
     private String surname;
     private Gender gender;
 
-    public AutorCreateParameter(final String name, final String surname, final Gender gender) {
+    public AuthorCreateParameter(final String name, final String surname, final Gender gender) {
         this.name = name;
         this.surname = surname;
         this.gender = gender;

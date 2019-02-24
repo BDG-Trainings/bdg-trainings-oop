@@ -1,7 +1,4 @@
 package com.bdg.bookstorage.ekirakosyan.common;
-
-import com.bdg.bookstorage.npetrosyan.createUpdateProject.AuthorCreateParameter;
-
 import java.util.Arrays;
 
 public class BookCreateParameter {
