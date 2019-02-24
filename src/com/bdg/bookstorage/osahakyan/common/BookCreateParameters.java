@@ -5,11 +5,13 @@ public class BookCreateParameters {
     private String name;
     private String title;
     private double price;
+    private AuthorCreateParameters[] authorCreateParameters;
 
-    public BookCreateParameters(final String name, final String title, final double price){
+    public BookCreateParameters(final String name, final String title, final double price, final AuthorCreateParameters[] authorCreateParameters){
         this.name = name;
         this.title = title;
         this.price = price;
+        this.authorCreateParameters = authorCreateParameters;
     }
 
     public String getName() {
@@ -24,5 +26,9 @@ public class BookCreateParameters {
         return price;
     }
 
-    
+    public AuthorCreateParameters[] getAuthorCreateParameters(){
+        return authorCreateParameters;
+    }
+
+
 }

@@ -1,14 +1,15 @@
 package com.bdg.bookstorage.osahakyan.service;
 
+import com.bdg.bookstorage.osahakyan.common.BookCreateParameters;
 import com.bdg.bookstorage.osahakyan.entity.Book;
 
 public interface BookService {
 
-    Book create();
+    BookCreateParameters create();
 
-    Book update();
+    BookCreateParameters update();
 
-    boolean delete();
+    BookCreateParameters delete();
 
     Book get();
 }
