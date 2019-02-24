@@ -1,14 +1,16 @@
-package com.bdg.bookstorage.spapoyan.Entitys;
+package com.bdg.bookstorage.spapoyan.entitys;
+
+import java.util.Arrays;
 
 public class Book {
 
-    int id;
-    String name;
-    String title;
-    double price;
-    Author author;
+    private int id;
+    private String name;
+    private String title;
+    private double price;
+    private Author [] author;
 
-    public Book(final int id, final String name, final String title, final double price, final Author author) {
+    public Book(final int id, final String name, final String title, final double price, final Author[] author) {
         this.id = id;
         this.name = name;
         this.title = title;
@@ -48,11 +50,22 @@ public class Book {
         this.price = price;
     }
 
-    public Author getAuthor() {
+    public Author[] getAuthor() {
         return author;
     }
 
-    public void setAuthor(Author author) {
+    public void setAuthor(Author[] author) {
         this.author = author;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", title='" + title + '\'' +
+                ", price=" + price +
+                ", author=" + Arrays.toString(author) +
+                '}';
     }
 }
