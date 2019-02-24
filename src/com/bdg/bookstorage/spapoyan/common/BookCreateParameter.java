@@ -3,12 +3,10 @@ package com.bdg.bookstorage.spapoyan.common;
 public class BookCreateParameter {
 
     private String name;
-    private String title;
     private double price;
 
-    public BookCreateParameter(final String name, final String title, final double price) {
+    public BookCreateParameter(final String name, final double price) {
         this.name = name;
-        this.title = title;
         this.price = price;
     }
 
@@ -20,13 +18,6 @@ public class BookCreateParameter {
         this.name = name;
     }
 
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
 
     public double getPrice() {
         return price;
@@ -40,7 +31,6 @@ public class BookCreateParameter {
     public String toString() {
         return "BookCreateParameter{" +
                 "name='" + name + '\'' +
-                ", title='" + title + '\'' +
                 ", price=" + price +
                 '}';
     }
