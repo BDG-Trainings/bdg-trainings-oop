@@ -4,14 +4,24 @@ import java.util.Arrays;
 
 public class BookCreateParameter {
 
+    private int id;
     private String name;
     private double price;
     private AuthorCreateParameter [] authorCreateParameters;
 
-    public BookCreateParameter(final String name, final double price, final AuthorCreateParameter[] authorCreateParameters) {
+    public BookCreateParameter(final int id, final String name, final double price, final AuthorCreateParameter[] authorCreateParameters) {
+        this.id = id;
         this.name = name;
         this.price = price;
         this.authorCreateParameters = authorCreateParameters;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -41,7 +51,8 @@ public class BookCreateParameter {
     @Override
     public String toString() {
         return "BookCreateParameter{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 ", price=" + price +
                 ", authorCreateParameters=" + Arrays.toString(authorCreateParameters) +
                 '}';
