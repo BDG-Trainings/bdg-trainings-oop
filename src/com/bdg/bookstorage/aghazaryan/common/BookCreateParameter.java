@@ -4,9 +4,9 @@ public class BookCreateParameter {
 
     private String name;
     private int price;
-    AuthorCreateParameter [] AuthorCreateParameter;
+    private AuthorCreateParameter[] authorCreateParameters;
 
-    public BookCreateParameter(String name, String title, int price) {
+    public BookCreateParameter(String name, String title, int price, AuthorCreateParameter[] authorCreateParameters) {
         this.name = name;
         this.price = price;
     }
@@ -15,12 +15,12 @@ public class BookCreateParameter {
         return name;
     }
 
-      public int getPrice() {
+    public int getPrice() {
         return price;
     }
 
-    public AuthorCreateParameter getAuthorCreateParameter(){
-        return getAuthorCreateParameter();
+    public AuthorCreateParameter[] getAuthorCreateParameter() {
+        return authorCreateParameters;
     }
 
     @Override
