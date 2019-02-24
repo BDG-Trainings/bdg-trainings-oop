@@ -4,5 +4,10 @@ import com.bdg.bookstorage.aghazaryan.entity.Book;
 
 public interface BookService {
 
+    Book get();
+    Book create();
+    Book update();
+    Book delete();
+
 
 }
