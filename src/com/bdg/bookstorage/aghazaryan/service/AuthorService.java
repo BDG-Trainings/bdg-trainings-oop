@@ -5,7 +5,7 @@ package com.bdg.bookstorage.aghazaryan.service;
 
 public interface AuthorService {
 
-    Author create(AuthorCreateParameterr createParameter);
+    Author create(AuthorCreateParameter createParameter);
 
     Author delete();
 
