@@ -5,11 +5,11 @@ import com.bdg.bookstorage.osahakyan.entity.Author;
 
 public interface AuthorService {
 
-    AuthorCreateParameters create();
+    Author create(AuthorCreateParameters authorCreateParameters);
 
-    AuthorCreateParameters update();
+    Author update();
 
     boolean delete();
 
-    AuthorCreateParameters get();
+    Author get();
 }
