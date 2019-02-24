@@ -1,14 +1,26 @@
 package com.bdg.bookstorage.npetrosyan.entity;
 
-public class Author {
-    String name;
-    String surname;
-    String gender;
+import com.bdg.bookstorage.npetrosyan.common.Gender;
 
-    public Author(String name, String surname, String gender) {
+public class Author {
+    private int id;
+    private String name;
+    private String surname;
+    private Gender gender;
+
+    public Author(int id, String name, String surname, Gender gender) {
+        this.id = id;
         this.name = name;
         this.surname = surname;
         this.gender = gender;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -27,12 +39,21 @@ public class Author {
         this.surname = surname;
     }
 
-    public String getGender() {
+    public Gender getGender() {
         return gender;
     }
 
-    public void setGender(String gender) {
+    public void setGender(Gender gender) {
         this.gender = gender;
     }
 
+    @Override
+    public String toString() {
+        return "Author{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", gender=" + gender +
+                '}';
+    }
 }
