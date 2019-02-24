@@ -4,6 +4,7 @@ public class BookCreateParameter {
 
     private String name;
     private int price;
+    AuthorCreateParameter [] AuthorCreateParameter;
 
     public BookCreateParameter(String name, String title, int price) {
         this.name = name;
@@ -16,6 +17,10 @@ public class BookCreateParameter {
 
       public int getPrice() {
         return price;
+    }
+
+    public AuthorCreateParameter getAuthorCreateParameter(){
+        return getAuthorCreateParameter();
     }
 
     @Override
