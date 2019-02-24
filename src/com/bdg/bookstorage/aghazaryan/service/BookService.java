@@ -4,7 +4,7 @@ import com.bdg.bookstorage.aghazaryan.entity.Book;
 
 public interface BookService {
 
-    Book create();
+    Book create(BookCreateParameter createParameter);
 
     Book update();
 
