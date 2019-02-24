@@ -1,12 +1,14 @@
-package com.bdg.bookstorage.spapoyan.common;
+package com.bdg.bookstorage.npetrosyan.common;
 
-public class BookCreateParameter {
+public final class BookCreateParameter {
 
     private String name;
+    private String title;
     private double price;
 
-    public BookCreateParameter(final String name, final double price) {
+    public BookCreateParameter(String name, String title, double price) {
         this.name = name;
+        this.title = title;
         this.price = price;
     }
 
@@ -18,19 +20,19 @@ public class BookCreateParameter {
         this.name = name;
     }
 
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
     public double getPrice() {
         return price;
     }
 
     public void setPrice(double price) {
         this.price = price;
-    }
-
-    @Override
-    public String toString() {
-        return "BookCreateParameter{" +
-                "name='" + name + '\'' +
-                ", price=" + price +
-                '}';
     }
 }

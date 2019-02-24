@@ -6,14 +6,12 @@ public class Book {
 
     private int id;
     private String name;
-    private String title;
     private double price;
     private Author[] authors;
 
-    public Book(final int id, final String name, final String title, final double price, final Author[] authors) {
+    public Book(final int id, final String name, final double price, final Author[] authors) {
         this.id = id;
         this.name = name;
-        this.title = title;
         this.price = price;
         this.authors = authors;
     }
@@ -24,10 +22,6 @@ public class Book {
 
     public String getName() {
         return name;
-    }
-
-    public String getTitle() {
-        return title;
     }
 
     public double getPrice() {
@@ -46,10 +40,6 @@ public class Book {
         this.name = name;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
     public void setPrice(double price) {
         this.price = price;
     }
@@ -60,7 +50,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book [id=" + id + ", name=" + name + ", title=" + title + ", price=" + price + ", authors="
+        return "Book [id=" + id + ", name=" + name + ", price=" + price + ", authors="
                 + Arrays.toString(authors) + "]";
     }
 
