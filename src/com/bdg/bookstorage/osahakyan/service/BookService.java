@@ -1,9 +1,14 @@
 package com.bdg.bookstorage.osahakyan.service;
 
+import com.bdg.bookstorage.osahakyan.entity.Book;
+
 public interface BookService {
 
-    BookService create();
-    BookService update();
-    BookService delete();
-    BookService get();
+    Book create();
+
+    Book update();
+
+    boolean delete();
+
+    Book get();
 }
