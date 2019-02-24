@@ -34,14 +34,7 @@ public class  MovableCircle extends MovablePoint implements Movable  {
     }
     public static void main(String args[]) {
         MovableCircle moveCirc = new MovableCircle(5, 6, 8, 9, 8);
-        System.out.println("moveCirc.moveUp()");
-        moveCirc.center.y;
-        System.out.println("moveCirc.moveDown()");
-        moveCirc.center.x;
-        System.out.println("moveCirc.moveLeft()");
-        moveCirc.center.xSpeed();
-        System.out.println("moveCirc.moveRight()");
-        moveCirc.center.ySpeed();
+        moveCirc.moveUp();
 
     }
 }
