@@ -43,7 +43,11 @@ public final class BookStorage extends AbstractBookStorage {
 
     @Override
     public boolean remove(Book book) {
-        return true;
+        if (currentStorageSize < bookStore.length) {
+            bookStore[currentStorageSize] = book;
+            currentStorageSize--;
 
+
+        }return true;
     }
 }

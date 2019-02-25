@@ -54,7 +54,12 @@ public class BookServiceImpl implements BookService {
         }return null;
     }
     @Override
-        public Book delete(int id) {
-           return null;
+        public boolean delete(int id) {
+        Author[] a = new Author[2];
+        a[0] = new Author(1, "name", "surname",Gender.FEMALE);
+        Book book = new Book(1, "b3", 4000, a);
+
+        bookStorage.remove(book);
+          return true;
     }
 }

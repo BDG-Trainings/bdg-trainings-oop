@@ -32,6 +32,7 @@ public class AuthorServiceImpl implements AuthorService {
 
     @Override
     public Author delete(int id) {
-        return null;
+
+        return authorStorage.get(id);
     }
 }
