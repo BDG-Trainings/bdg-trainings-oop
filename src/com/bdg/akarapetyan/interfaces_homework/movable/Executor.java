@@ -23,6 +23,14 @@ public class Executor {
         movableCircle2.moveDown();
         movableCircle2.moveLeft();
         System.out.println(movableCircle2.toString());
+        System.out.println();
+
+        MovableRectangle movableRectangle1 = new MovableRectangle(21,10, 5,1, 3,3);
+        System.out.println(movableRectangle1.toString());
+        movableRectangle1.moveUp();
+        movableRectangle1.moveRight();
+        System.out.println(movableRectangle1.toString());
+        System.out.println();
 
     }
 }
