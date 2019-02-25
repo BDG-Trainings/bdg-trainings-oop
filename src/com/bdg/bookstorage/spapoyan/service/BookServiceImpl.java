@@ -31,13 +31,16 @@ public class BookServiceImpl implements BookService {
             i++;
         }
 
-        final Book book = new Book(1, bookCreateParameter.getName(), bookCreateParameter.getPrice(), authors);
+        final Book book = new Book(bookCreateParameter.getId(), bookCreateParameter.getName(), bookCreateParameter.getPrice(), authors);
 
         return null;
     }
 
     @Override
     public Book update(BookUpdateParameter bookUpdateParameter) {
+
+
+
         return null;
     }
 
