@@ -33,7 +33,7 @@ public final class BookStorage extends AbstractBookStorage {
 
     @Override
     public Book get(int id) {
-        for (int i = 0; i < bookStore.length; i++) {
+        for (int i = 0; i < currentStorageSize; i++) {
             if (bookStore[i].getId() == id) {
                 return bookStore[i];
             }

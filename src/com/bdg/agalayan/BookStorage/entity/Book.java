@@ -82,6 +82,9 @@ public class Book {
 
         System.out.println(bookService.create(bookCreateParameter));
         System.out.println(bookService.update(bookUpdateParameter));
+        System.out.println(authorService.create(authorCreateParameter[0]));
+        System.out.println(authorService.get(1));
+
     }
 }
 
