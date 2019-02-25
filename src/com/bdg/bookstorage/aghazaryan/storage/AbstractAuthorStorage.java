@@ -1,4 +1,9 @@
 package com.bdg.bookstorage.aghazaryan.storage;
 
-public class AbstractAuthorStorage {
+import com.bdg.bookstorage.aghazaryan.entity.Author;
+import com.bdg.bookstorage.aghazaryan.service.AuthorServiceImpl;
+
+public abstract class AbstractAuthorStorage extends AuthorServiceImpl {
+
+
 }

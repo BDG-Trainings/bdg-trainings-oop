@@ -1,4 +1,15 @@
 package com.bdg.bookstorage.aghazaryan.storage;
 
-public class AbstractBookStorage {
-}
+
+import com.bdg.bookstorage.aghazaryan.service.BookService;
+import com.bdg.bookstorage.aghazaryan.service.BookServiceImpl;
+
+public abstract class AbstractBookStorage extends BookServiceImpl {
+
+
+
+
+
+
+    }
+

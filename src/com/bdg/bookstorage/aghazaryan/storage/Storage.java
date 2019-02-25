@@ -9,13 +9,26 @@ public abstract class Storage {
     protected Storage(int storageSize){
         this.storageSize = storageSize;
 
-}
+  }
 
-   public int getStorageSize(){
+    public void setStorageSize(int storageSize) {
+        this.storageSize = storageSize;
+    }
+
+    public void setGetCurrentStorageSize(int getCurrentStorageSize) {
+        this.getCurrentStorageSize = getCurrentStorageSize;
+    }
+
+    public int getCurrentStorageSize;{
+
+    }
+
+     public int getStorageSize(){
         return storageSize;
     }
 
-    public void setStorageSize(){
+     public void setStorageSize(){
+
         this.storageSize = storageSize;
     }
 
