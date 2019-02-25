@@ -31,7 +31,7 @@ public class BookServiceImpl implements BookService {
     public Book create(BookCreateParameter bookCreateParameter) {
         if (bookStorage.getCurrentStorageSize() < bookStorage.getBookStore().length) {
             Author[] a = new Author[1];
-            a[0] = new Author(1, "name", "surname", "MALE");
+            a[0] = new Author(1, "name", "surname", Gender.MALE);
             Book b = new Book(1, bookCreateParameter.getName(), bookCreateParameter.getPrice(), a);
             bookStorage.store(new Book(1, bookCreateParameter.getName(), bookCreateParameter.getPrice(), a));
             return b;
@@ -41,9 +41,9 @@ public class BookServiceImpl implements BookService {
     @Override
     public Book update(BookUpdateParameter bookUpdateParameter) {
         for (int i = 0; i < bookStorage.getBookStore().length; i++) {
-            if (bookStorage.getBookStore()[i].getId() != bookUpdateParameter.getId()) {
-                Author[] a = new Author[1];
-                a[0] = new Author(1, "name", "surname", "MALE");
+            if (bookStorage.getBookStore()[i].getId() == bookUpdateParameter.getId()) {
+                Author[] a = new Author[2];
+                a[0] = new Author(1, "name", "surname",Gender.FEMALE);
                 Book book = new Book(1, bookUpdateParameter.getName(), bookUpdateParameter.getPrice(), a);
                 bookStorage.getBookStore()[i] = book;
                 bookStorage.store(book);

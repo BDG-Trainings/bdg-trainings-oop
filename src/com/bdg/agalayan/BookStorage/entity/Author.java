@@ -1,12 +1,14 @@
 package com.bdg.agalayan.BookStorage.entity;
 
+import com.bdg.agalayan.BookStorage.common.Gender;
+
 public class Author {
         private String name;
         private String surname;
-        private String gender;
+        private Gender gender;
         private int id;
 
-        public Author(int id, String name, String surname, String gender) {
+        public Author(int id, String name, String surname, Gender gender) {
             this.id=id;
             this.name = name;
             this.surname = surname;
@@ -29,11 +31,11 @@ public class Author {
             this.surname = surname;
         }
 
-        public void setGender(String gender) {
+        public void setGender(Gender gender) {
             this.gender = gender;
         }
 
-        public String getGender() {
+        public Gender getGender() {
             return gender;
         }
 

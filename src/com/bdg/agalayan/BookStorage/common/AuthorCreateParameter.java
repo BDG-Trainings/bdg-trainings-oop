@@ -4,9 +4,9 @@ public class AuthorCreateParameter {
 
         private String name;
         private String surname;
-        private String gender;
+        private Gender gender;
 
-        public AuthorCreateParameter(String name, String surname, String gender) {
+        public AuthorCreateParameter(String name, String surname, Gender gender) {
             this.name = name;
             this.surname = surname;
             this.gender = gender;
@@ -20,7 +20,7 @@ public class AuthorCreateParameter {
             return surname;
         }
 
-        public String getGender() {
+        public Gender getGender() {
             return gender;
         }
 
