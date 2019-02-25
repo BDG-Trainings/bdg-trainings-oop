@@ -1,4 +1,4 @@
-package BookStorage;
+package com.bdg.agalayan.BookStorage.entity;
 
 public class Author {
         private String name;
@@ -44,5 +44,16 @@ public class Author {
     public void setId(int id) {
         this.id = id;
     }
-}
+    @Deprecated
+    public String toString(){
+            return "Author{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", gender=" + gender +
+                '}';
+            }
+
+    }
+
 

@@ -1,4 +1,4 @@
-package BookStorage;
+package com.bdg.agalayan.BookStorage.Storage;
 
 public abstract class Storage {
     protected int storageMaxSize;

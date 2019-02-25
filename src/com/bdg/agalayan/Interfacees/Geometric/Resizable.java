@@ -1,4 +1,4 @@
-package Interfacees.Geometric;
+package com.bdg.agalayan.Interfacees.Geometric;
 
 public interface Resizable {
 

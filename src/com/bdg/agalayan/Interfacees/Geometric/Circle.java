@@ -1,4 +1,4 @@
-package Interfacees.Geometric;
+package com.bdg.agalayan.Interfacees.Geometric;
 
 public class Circle implements GeometricObject {
     public  double radius=1.0;

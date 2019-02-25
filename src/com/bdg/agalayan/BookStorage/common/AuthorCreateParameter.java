@@ -1,4 +1,4 @@
-package BookStorage;
+package com.bdg.agalayan.BookStorage.common;
 
 public class AuthorCreateParameter {
 
@@ -26,10 +26,10 @@ public class AuthorCreateParameter {
 
         @Override
     public String toString(){
-            return "AuthorCreateParameter["+ "name="+
-                    name+ ","+
-                    "surname="+surname +","+
-                    "gender="+ gender + "]";
+            return "AuthorCreateParameter["+
+                    "name="+ name+
+                    ", surname="+surname +
+                    ", gender=" + gender + "]";
         }
     }
 
