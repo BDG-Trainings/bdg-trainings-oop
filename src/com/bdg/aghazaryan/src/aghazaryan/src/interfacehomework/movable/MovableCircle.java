@@ -15,28 +15,36 @@ public class  MovableCircle extends MovablePoint implements Movable  {
         return "MovableCircle [radius=" + radius + ", center=" + center + "]";
     }
 
-    public void moveUp() {
+    public void moveUp()
+    {
         center.y -= center.ySpeed;
     }
 
-    public void moveDown() {
+    public void moveDown()
+    {
         center.y += center.ySpeed;
     }
 
 
     public void moveLeft() {
+
         center.x -= center.xSpeed;
     }
 
 
     public void moveRight() {
+
         center.x += center.xSpeed;
     }
     public static void main(String args[]) {
         MovableCircle moveCirc = new MovableCircle(5, 6, 8, 9, 8);
+        System.out.println("moveCirc.moveUp(2)");
         moveCirc.moveUp();
+        System.out.println("moveCirc.moveDown(2)");
         moveCirc.moveDown();
+        System.out.println("moveCirc.moveLeft(5)");
         moveCirc.moveLeft();
+        System.out.println("moveCirc.moveRight(5)");
         moveCirc.moveRight();
 
     }

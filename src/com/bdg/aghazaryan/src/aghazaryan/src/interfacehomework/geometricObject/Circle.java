@@ -25,7 +25,7 @@ public class Circle implements GeometricObject {
   }*/
 
     public static void main(String args[]) {
-        com.bdg.aghazaryan.src.aghazaryan.src.interfacehomework.Circle circ = new com.bdg.aghazaryan.src.aghazaryan.src.interfacehomework.Circle(5);
+        Circle circ = new Circle(5);
         System.out.println("Area"  + circ.getArea());
         System.out.println("Perimeter"  + circ.getPerimeter());
 

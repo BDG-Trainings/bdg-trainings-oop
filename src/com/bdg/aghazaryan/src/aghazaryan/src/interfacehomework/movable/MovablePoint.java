@@ -34,13 +34,13 @@ public class MovablePoint implements Movable {
 
     public static void main(String args[]) {
         MovablePoint moveObj = new MovablePoint(5, 6, 8, 8);
-        System.out.println("moveObj.moveUp()");
+        System.out.println("moveObj.moveUp(5)");
         moveObj.moveUp();
-        System.out.println("moveObj.moveDown()");
+        System.out.println("moveObj.moveDown(6)");
         moveObj.moveDown();
-        System.out.println("moveObj.moveLeft()");
+        System.out.println("moveObj.moveLeft(4)");
         moveObj.moveLeft();
-        System.out.println("moveObj.moveRight()");
+        System.out.println("moveObj.moveRight(4)");
         moveObj.moveRight();
     }
 }
