@@ -1,18 +1,16 @@
 package com.bdg.bookstorage.vkaramyan.common;
 
-public final class BookUpdateParameter {
+public class BookUpdateParameter {
 	
 	private String name;
 	private int id;
 	private double price;
-	
 	public BookUpdateParameter(final String name, final int id, final double price) {
 		
 		this.name = name;
 		this.id = id;
 		this.price = price;
 	}
-	
 	public String getName() {
 		return name;
 	}
@@ -31,7 +29,6 @@ public final class BookUpdateParameter {
 	public void setPrice(double price) {
 		this.price = price;
 	}
-	
 	@Override
 	public String toString() {
 		return "BookUpdateParameter [name=" + name + ", id=" + id + ", price=" + price + "]";

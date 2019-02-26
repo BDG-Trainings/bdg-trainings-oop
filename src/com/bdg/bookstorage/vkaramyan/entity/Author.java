@@ -2,7 +2,7 @@ package com.bdg.bookstorage.vkaramyan.entity;
 
 import com.bdg.bookstorage.vkaramyan.common.Gender;
 
-public final class Author {
+public class Author {
 
     private String name;
     private String surname;

@@ -1,11 +1,13 @@
 package com.bdg.bookstorage.vkaramyan.service;
 
-
+import com.bdg.bookstorage.osahakyan.common.AuthorCreateParameters;
 import com.bdg.bookstorage.vkaramyan.common.AuthorCreateParameter;
 import com.bdg.bookstorage.vkaramyan.common.BookCreateParameter;
 import com.bdg.bookstorage.vkaramyan.common.BookUpdateParameter;
+import com.bdg.bookstorage.vkaramyan.common.Gender;
 import com.bdg.bookstorage.vkaramyan.entity.Author;
 import com.bdg.bookstorage.vkaramyan.entity.Book;
+import com.bdg.bookstorage.vkaramyan.storage.BookStorageImpl;
 
 public class BookServiceImpl implements BookService{
 	
@@ -26,7 +28,6 @@ public class BookServiceImpl implements BookService{
             authors[i] = this.authorService.create(p);
             i++;
         }   
-        
             final Book book = new Book(1, createParameter.getName(), createParameter.getPrice(), authors);
 
 
@@ -35,16 +36,20 @@ public class BookServiceImpl implements BookService{
 	}
 
 	@Override
-	public Book update(BookUpdateParameter bookUpdateParameter) {
+	public Book update(BookUpdateParameter updateParameter) {
 		
+		final Book book = new Book(updateParameter.getId(), updateParameter.getName(), updateParameter.getPrice());
 		
-		// TODO Auto-generated method stub
+		if(book != null) {
+			book.setPrice(updateParameter.getPrice());
+			return book;
+		}
 		return null;
 	}
 
 	@Override
 	public boolean delete() {
-		// TODO Auto-generated method stub
+    		
 		return false;
 	}
 

@@ -5,17 +5,16 @@ import com.bdg.bookstorage.aghazaryan.common.BookCreateParameter;
 import com.bdg.bookstorage.aghazaryan.common.BookUpdateParameter;
 import com.bdg.bookstorage.aghazaryan.entity.Author;
 import com.bdg.bookstorage.aghazaryan.entity.Book;
-import com.bdg.bookstorage.aghazaryan.storage.BookStorage;
 
 public class BookServiceImpl implements BookService {
 
-    private BookStorage bookStorage;
+
     private AuthorService authorService;
 
     public BookServiceImpl() {
         this.authorService = new AuthorServiceImpl();
-        this.bookStorage= new BookStorage(5);
     }
+
 
     @Override
     public Book create(final BookCreateParameter createParameter) {
@@ -28,7 +27,9 @@ public class BookServiceImpl implements BookService {
             i++;
         }
 
+
         final Book book = new Book(1, createParameter.getName(), createParameter.getPrice(), authors);
+
 
         return null;
     }
@@ -41,13 +42,11 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public boolean delete() {
-
         return false;
     }
 
     @Override
     public Book get() {
-
         return null;
     }
 }

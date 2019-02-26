@@ -6,7 +6,7 @@ import com.bdg.bookstorage.vkaramyan.entity.Author;
 public class AuthorServiceImpl implements AuthorService{
 
 	@Override
-	public Author create(final AuthorCreateParameter createParameter) {
+	public Author create(AuthorCreateParameter createParameter) {
 		 final Author author = new Author(createParameter.getSurname(), createParameter.getName(), 1, createParameter.getGender());
 
 	        return author;
