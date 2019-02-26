@@ -1,6 +1,6 @@
 package com.bdg.bookstorage.vkaramyan.common;
 
-public class AuthorCreateParameter {
+public final class AuthorCreateParameter {
 	
 	private String name;
 	private String surname;

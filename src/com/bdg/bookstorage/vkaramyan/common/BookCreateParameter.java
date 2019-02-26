@@ -2,11 +2,12 @@ package com.bdg.bookstorage.vkaramyan.common;
 
 import java.util.Arrays;
 
-public class BookCreateParameter {
+public final class BookCreateParameter {
 	
 	private String name;
 	private double price;
 	private AuthorCreateParameter [] authorCreateParameter;
+	
 	public BookCreateParameter(final String name, final double price, final AuthorCreateParameter[] authorCreateParameter) {
 		
 		this.name = name;
@@ -31,6 +32,7 @@ public class BookCreateParameter {
 	public void setAuthorCreateParameter(AuthorCreateParameter[] authorCreateParameter) {
 		this.authorCreateParameter = authorCreateParameter;
 	}
+	
 	@Override
 	public String toString() {
 		return "BookCreateParameter [name=" + name + ", price=" + price + ", authorCreateParameter="

@@ -2,7 +2,7 @@ package com.bdg.bookstorage.vkaramyan.entity;
 
 import java.util.Arrays;
 
-public class Book {
+public final class Book {
 
     private int id;
     private String name;
