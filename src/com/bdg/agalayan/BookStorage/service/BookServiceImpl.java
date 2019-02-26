@@ -1,6 +1,7 @@
 package com.bdg.agalayan.BookStorage.service;
 
 import com.bdg.agalayan.BookStorage.Storage.BookStorage;
+import com.bdg.agalayan.BookStorage.common.AuthorCreateParameter;
 import com.bdg.agalayan.BookStorage.common.BookCreateParameter;
 import com.bdg.agalayan.BookStorage.common.BookUpdateParameter;
 import com.bdg.agalayan.BookStorage.common.Gender;
@@ -29,11 +30,13 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public Book create(BookCreateParameter bookCreateParameter) {
+        AuthorCreateParameter authorCreateParameter = new AuthorCreateParameter("anun6", "azganun6", Gender.FEMALE);
 
+        Author[] a = new Author[1];
+        a[0]=authorService.create(authorCreateParameter);
         //need to create Authors using Author service and bookCreateParameter.getAuthors()
         if (bookStorage.getCurrentStorageSize() < bookStorage.getBookStore().length) {
-            Author[] a = new Author[1];
-            a[0] = new Author(1, "name", "surname", Gender.MALE);
+
             Book b = new Book(1, bookCreateParameter.getName(), bookCreateParameter.getPrice(), a);
             bookStorage.store(new Book(1, bookCreateParameter.getName(), bookCreateParameter.getPrice(), a));
             return b;

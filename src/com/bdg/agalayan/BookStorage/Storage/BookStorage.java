@@ -3,12 +3,12 @@ package com.bdg.agalayan.BookStorage.Storage;
 import com.bdg.agalayan.BookStorage.entity.Book;
 
 public final class BookStorage extends AbstractBookStorage {
-    private int currentStorageSize = 0;
+    private int currentStorageSize ;
 
 
-    //parameters should start from lower case StorageSize -> storageSize
-    public BookStorage(int StorageSize, Book[] books) {
-        super(StorageSize, books);
+
+    public BookStorage(int storageSize, Book[] books) {
+        super(storageSize, books);
 
     }
 

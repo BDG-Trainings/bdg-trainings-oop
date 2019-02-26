@@ -4,9 +4,12 @@ import com.bdg.agalayan.BookStorage.entity.Author;
 
 public final class AuthorStorage extends AbstractAuthorStorage {
    public Author[ ] authors;
+   private int currentStorageSize;
 
-    public AuthorStorage(int StorageMaxSize, Author [] authors) {
-        super(StorageMaxSize, authors);
+    public AuthorStorage(int storageMaxSize, Author [] authors) {
+
+        super(storageMaxSize, authors);
+
 
 
     }
@@ -19,25 +22,47 @@ public final class AuthorStorage extends AbstractAuthorStorage {
 
     @Override
     public Author store(Author author) {
-        Author []author1= new Author[authorStore.length+1];
-        for (int i=0; i<authorStore.length; i++) {
-            author1[i] = authorStore[i];
-        }author1[authorStore.length]=author;
+        if(currentStorageSize<authorStore.length){
+            authorStore[currentStorageSize]=author;
+            currentStorageSize++;
 
-        return author;
+        }return author;
+
     }
 
     @Override
-    public void remove(Author author) {
+    public boolean remove(Author author) {
+        Author[]authors= new Author[authorStore.length];
+        boolean t=false;
+        int k=0;
+        for(Author a:authorStore) {
+            if (a.getId() != author.getId()) {
+                authors[k] = author;
+                k++;
 
-    }
+            } else {
+                t = true;
+            }
+
+        }
+        currentStorageSize++;
+        authorStore=authors;
+        return t;
+
+        }
+
+
+
+
 
     @Override
     public Author get(int id) {
-        for (int i = 0; i < storageMaxSize; i++) {
-            if(authorStore[i].getId()==id);
-            return authorStore[i];
-        }return null;
+        for (int i = 0; i < currentStorageSize; i++) {
+            if (authorStore[i].getId() == id) {
+                return authorStore[i];
+            }
+        }
+        return null;
 
     }
 }

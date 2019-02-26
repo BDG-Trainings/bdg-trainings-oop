@@ -12,7 +12,7 @@ abstract class AbstractAuthorStorage extends Storage {
 
         public abstract Author store(Author author);
 
-        public abstract void remove(Author author);
+        public abstract boolean remove(Author author);
 
         public abstract Author get(int id);
 

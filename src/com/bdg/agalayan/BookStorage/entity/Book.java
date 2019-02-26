@@ -10,6 +10,8 @@ import com.bdg.agalayan.BookStorage.service.AuthorService;
 import com.bdg.agalayan.BookStorage.service.AuthorServiceImpl;
 import com.bdg.agalayan.BookStorage.service.BookServiceImpl;
 
+import java.util.Arrays;
+
 public class Book {
     private int id;
     private double price;
@@ -59,7 +61,7 @@ public class Book {
     public String toString(){
         return "Book[name="+getName()+
                 ", price="+getPrice() +
-                ", authors=" +authors+"]";
+                ", authors=" + Arrays.toString(authors) +"]";
 
     }
     public static void main(String[]args){

@@ -15,7 +15,8 @@ public class AuthorServiceImpl implements AuthorService {
 
 
     public Author get(int id) {
-        return authorStorage.get(id);
+
+        return this.authorStorage.get(id);
         }
 
 
@@ -25,14 +26,16 @@ public class AuthorServiceImpl implements AuthorService {
     public Author create(AuthorCreateParameter authorCreateParameter) {
             Author author = new Author(1, authorCreateParameter.getName(), authorCreateParameter.getSurname(),
                     authorCreateParameter.getGender());
-        return authorStorage.store(author);
+        return this.authorStorage.store(author);
         }
 
 
 
     @Override
-    public Author delete(int id) {
+    public boolean delete(int id) {
+        Author author=this.get(id);
 
-        return authorStorage.get(id);
+
+        return author!= null && this.authorStorage.remove(author);
     }
 }
