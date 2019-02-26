@@ -1,7 +1,6 @@
 package com.bdg.agalayan.BookStorage.service;
 
 import com.bdg.agalayan.BookStorage.Storage.BookStorage;
-import com.bdg.agalayan.BookStorage.common.AuthorCreateParameter;
 import com.bdg.agalayan.BookStorage.common.BookCreateParameter;
 import com.bdg.agalayan.BookStorage.common.BookUpdateParameter;
 import com.bdg.agalayan.BookStorage.common.Gender;
@@ -13,14 +12,15 @@ public class BookServiceImpl implements BookService {
     private BookStorage bookStorage;
 
 
-    public BookServiceImpl(AuthorService authorService, BookStorage storage){
-        this.authorService=authorService;
-        this.bookStorage=storage;
+    public BookServiceImpl(AuthorService authorService, BookStorage storage) {
+        this.authorService = authorService;
+        this.bookStorage = storage;
 
     }
+
     @Override
     public Book get(int id) {
-        for(int i=0; i<bookStorage.getCurrentStorageSize(); i++){
+        for (int i = 0; i < bookStorage.getCurrentStorageSize(); i++) {
             bookStorage.setCurrentStorageSize(id);
         }
 
@@ -29,13 +29,16 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public Book create(BookCreateParameter bookCreateParameter) {
+
+        //need to create Authors using Author service and bookCreateParameter.getAuthors()
         if (bookStorage.getCurrentStorageSize() < bookStorage.getBookStore().length) {
             Author[] a = new Author[1];
             a[0] = new Author(1, "name", "surname", Gender.MALE);
             Book b = new Book(1, bookCreateParameter.getName(), bookCreateParameter.getPrice(), a);
             bookStorage.store(new Book(1, bookCreateParameter.getName(), bookCreateParameter.getPrice(), a));
             return b;
-        }return null;
+        }
+        return null;
     }
 
     @Override
@@ -43,7 +46,7 @@ public class BookServiceImpl implements BookService {
         for (int i = 0; i < bookStorage.getBookStore().length; i++) {
             if (bookStorage.getBookStore()[i].getId() == bookUpdateParameter.getId()) {
                 Author[] a = new Author[2];
-                a[0] = new Author(1, "name", "surname",Gender.FEMALE);
+                a[0] = new Author(1, "name", "surname", Gender.FEMALE);
                 Book book = new Book(1, bookUpdateParameter.getName(), bookUpdateParameter.getPrice(), a);
                 bookStorage.getBookStore()[i] = book;
                 bookStorage.store(book);
@@ -51,15 +54,13 @@ public class BookServiceImpl implements BookService {
             }
 
 
-        }return null;
+        }
+        return null;
     }
-    @Override
-        public boolean delete(int id) {
-        Author[] a = new Author[2];
-        a[0] = new Author(1, "name", "surname",Gender.FEMALE);
-        Book book = new Book(1, "b3", 4000, a);
 
-        bookStorage.remove(book);
-          return true;
+    @Override
+    public boolean delete(int id) {
+        Book book = this.get(id);
+        return book != null && this.bookStorage.remove(book);
     }
 }
