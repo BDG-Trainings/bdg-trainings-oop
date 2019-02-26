@@ -8,8 +8,6 @@ import com.bdg.bookstorage.vkaramyan.common.Gender;
 import com.bdg.bookstorage.vkaramyan.entity.Author;
 import com.bdg.bookstorage.vkaramyan.entity.Book;
 import com.bdg.bookstorage.vkaramyan.storage.BookStorageImpl;
-import com.bdg.resourcemanagement.vkaramyan.Department;
-import com.bdg.resourcemanagement.vkaramyan.Employee;
 
 public class BookServiceImpl implements BookService{
 	
