@@ -24,6 +24,7 @@ public abstract class Storage {
     }
 
      public int getStorageSize(){
+
         return storageSize;
     }
 
