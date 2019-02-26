@@ -48,6 +48,10 @@ public final class BookStorage extends AbstractBookStorage {
             currentStorageSize--;
 
 
+
         }return true;
+
     }
+
+
 }
