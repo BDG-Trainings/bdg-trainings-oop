@@ -23,12 +23,16 @@ public class AuthorServiceImpl implements AuthorService {
 
     @Override
     public Author delete() {
-        return null;
+         Author author = new Author(delete().getId(), delete().getName(), delete().getSurname(), delete().getGender());
+
+        return author;
     }
 
     @Override
-    public Author get() {
-        return null;
+    public Author get(){
+
+        final Author author = new Author(1, get().getName(), get().getSurname(), get().getGender());
+        return author;
     }
 }
 
