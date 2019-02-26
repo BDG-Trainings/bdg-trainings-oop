@@ -41,17 +41,18 @@ public class BookServiceImpl implements BookService {
     @Override
     public Book update(BookUpdateParameter bookUpdateParameter) {
         for (int i = 0; i < bookStorage.getBookStore().length; i++) {
-            if (bookStorage.getBookStore()[i].getId() == bookUpdateParameter.getId()) {
+
                 Author[] a = new Author[2];
                 a[0] = new Author(1, "name", "surname",Gender.FEMALE);
+                Book b=new Book(1, "anun3", 5000,a);
+                bookStorage.remove(b);
                 Book book = new Book(1, bookUpdateParameter.getName(), bookUpdateParameter.getPrice(), a);
                 bookStorage.getBookStore()[i] = book;
-                bookStorage.store(book);
-                return book;
-            }
 
 
-        }return null;
+            bookStorage.store(book);
+            return book;
+            }return null;
     }
     @Override
         public boolean delete(int id) {

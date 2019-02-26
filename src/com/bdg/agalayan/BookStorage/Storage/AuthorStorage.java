@@ -29,13 +29,7 @@ public final class AuthorStorage extends AbstractAuthorStorage {
 
     @Override
     public void remove(Author author) {
-        Author []authors= new Author[authorStore.length];
-        for(int i=0; i<authorStore.length; i++){
-            if(authorStore[i]==author){
-                authors[i]=authorStore[i];
-                authorStore[authorStore.length+1]=author;
-            }
-        }
+
     }
 
     @Override

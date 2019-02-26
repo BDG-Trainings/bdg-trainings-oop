@@ -59,7 +59,7 @@ public class Book {
     public String toString(){
         return "Book[name="+getName()+
                 ", price="+getPrice() +
-                ", authors=" +getAuthors()+"]";
+                ", authors=" +authors+"]";
 
     }
     public static void main(String[]args){
@@ -78,14 +78,14 @@ public class Book {
         authorCreateParameter[0]= new AuthorCreateParameter("anun2", "azganun2", Gender.MALE);
 
         BookCreateParameter bookCreateParameter= new BookCreateParameter("b1", 1000, authorCreateParameter);
-        BookUpdateParameter bookUpdateParameter= new BookUpdateParameter(1, "b2", 3000);
+        BookUpdateParameter bookUpdateParameter= new BookUpdateParameter(3, "b2", 4500);
 
         System.out.println(bookService.create(bookCreateParameter));
         System.out.println(bookService.update(bookUpdateParameter));
         System.out.println(authorService.create(authorCreateParameter[0]));
         System.out.println(authorService.get(1));
         System.out.println(bookService.get(2));
-        System.out.println(bookStorage.get(2));
+        System.out.println(bookStorage.get(1));
         System.out.println(authorService.delete(1));
         System.out.println(bookService.delete(3));
         System.out.println(authorService.delete(2));
