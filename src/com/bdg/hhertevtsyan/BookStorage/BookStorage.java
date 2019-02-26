@@ -1,5 +1,7 @@
 package com.bdg.hhertevtsyan.BookStorage;
 
+import com.bdg.hhertevtsyan.BookStorage.entity.Book;
+
 public class BookStorage extends AbstractBookStorage {
     private int currentStorageSize;
 

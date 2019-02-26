@@ -1,7 +1,5 @@
 package com.bdg.hhertevtsyan.BookStorage.createupdateobjects;
 
-import com.bdg.hhertevtsyan.BookStorage.Author;
-
 public class AuthorCreateParameter {
     private int id;
 

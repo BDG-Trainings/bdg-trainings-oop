@@ -1,4 +1,4 @@
-package com.bdg.hhertevtsyan.BookStorage;
+package com.bdg.hhertevtsyan.BookStorage.entity;
 
 public class Book {
     private int id;

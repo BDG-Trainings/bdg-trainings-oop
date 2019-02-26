@@ -1,7 +1,9 @@
 package com.bdg.hhertevtsyan.BookStorage;
 
+import com.bdg.hhertevtsyan.BookStorage.entity.Book;
+
 public abstract class AbstractBookStorage extends Storage {
-    protected Book [] bookStore;
+    protected Book[] bookStore;
 
     protected AbstractBookStorage(int storageSize) {
         super(storageSize);

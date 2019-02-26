@@ -1,15 +1,17 @@
-package com.bdg.hhertevtsyan.BookStorage;
+package com.bdg.hhertevtsyan.BookStorage.entity;
+
+import com.bdg.hhertevtsyan.BookStorage.common.Gender;
 
 public class Author {
     private String name;
-    private String surename;
-    private String gender;
+    private String surname;
+    private Gender gender;
     private int id;
 
-    public Author (final int id, final String name, final String surename, final String gender) {
-        this.id=id;
+    public Author(final int id, final String name, final String surname, final Gender gender) {
+        this.id = id;
         this.name = name;
-        this.surename = surename;
+        this.surname = surname;
         this.gender = gender;
     }
 
@@ -30,18 +32,20 @@ public class Author {
     }
 
     public String getSurename() {
-        return surename;
+        return surname;
     }
 
     public void setSurename(String surename) {
-        this.surename = surename;
+        this.surname = surename;
     }
 
-    public String getGender() {
+    public Gender getGender() {
         return gender;
     }
 
-    public void setGender(String gender) {
+    public void setGender(Gender gender) {
         this.gender = gender;
     }
+
+
 }

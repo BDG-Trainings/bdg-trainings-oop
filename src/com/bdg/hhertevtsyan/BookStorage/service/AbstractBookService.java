@@ -1,6 +1,6 @@
-package com.bdg.hhertevtsyan.BookStorage.services;
+package com.bdg.hhertevtsyan.BookStorage.service;
 
-import com.bdg.hhertevtsyan.BookStorage.Book;
+import com.bdg.hhertevtsyan.BookStorage.entity.Book;
 import com.bdg.hhertevtsyan.BookStorage.createupdateobjects.BookCreateParameter;
 import com.bdg.hhertevtsyan.BookStorage.createupdateobjects.BookUpdateParameter;
 
