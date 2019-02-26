@@ -5,4 +5,5 @@ public interface Moveable {
     public void moveDown();
     public void moveLeft();
     public void moveRight();
+
 }
