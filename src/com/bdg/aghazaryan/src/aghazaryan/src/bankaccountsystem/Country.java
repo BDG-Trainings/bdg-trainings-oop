@@ -2,10 +2,10 @@ package com.bdg.aghazaryan.src.aghazaryan.src.bankaccountsystem;
 
 public enum Country {
     AM( "Armenia", "051"),
-    USA("New York", "10003"),
-    UK("London", "SW8 3NS"),
-    IT("Florence", "50123"),
-    FR("Nice", "06200");
+    USA("USA", "10003"),
+    UK("United Kingdom", "SW8 3NS"),
+    IT("Italy", "50123"),
+    FR("France", "06200");
 
     private final String countryName;
     private final String numericCode;

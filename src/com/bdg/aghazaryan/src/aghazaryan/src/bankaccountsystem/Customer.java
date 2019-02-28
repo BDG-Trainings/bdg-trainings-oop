@@ -25,6 +25,7 @@ public class Customer {
     }
 
     public void setCustomerSurname(String customerSurname) {
+
         this.customerSurname = customerSurname;
     }
 
@@ -33,6 +34,7 @@ public class Customer {
     }
 
     public void setcustomerAddress(Address customerAddress){
+
         this.customerAddress = customerAddress;
     }
 
