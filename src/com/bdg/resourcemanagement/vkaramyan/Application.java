@@ -32,12 +32,14 @@ public class Application {
         Department dep2 = new Department("Dep2", employee3, empArr2, DepartmentType.ACCOUNTING);
         Department dep3 = new Department("Dep3", employee3, empArr2, DepartmentType.MARKETING);
 
+        
+        
         ResourceManagement resourceManagement = new ResourceManagement(2);
 
         resourceManagement.addDepartment(dep1);
         resourceManagement.addDepartment(dep2);
         resourceManagement.addDepartment(dep3);
-
+        resourceManagement.removeEmployeeFromDepartment(employee1, "SALES");
 		
 	}
 
