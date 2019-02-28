@@ -2,7 +2,7 @@ package com.bdg.aghazaryan.src.aghazaryan.src.bankaccountsystem;
 
 public enum CountryCode {
 
-    AM("+374", "Armenia"),
+    ARM("+374", "Armenia"),
     USA("+1","USA"),
     UK("+44", "United Kingdom"),
     IT("+39","Italy"),

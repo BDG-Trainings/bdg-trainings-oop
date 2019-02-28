@@ -1,7 +1,7 @@
 package com.bdg.aghazaryan.src.aghazaryan.src.bankaccountsystem;
 
 public enum Country {
-    AM( "Armenia", "051"),
+    ARM( "Armenia", "051"),
     USA("USA", "10003"),
     UK("United Kingdom", "SW8 3NS"),
     IT("Italy", "50123"),
