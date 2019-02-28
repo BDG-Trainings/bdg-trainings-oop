@@ -6,5 +6,10 @@ public class Account {
     private AccountDetail accountDetail;
     private AccountBalance accountBalance;
 
+    public Account (Customer customer,AccountDetail accountDetail, AccountBalance accountBalance ){
+
+
+    }
+
 
 }
