@@ -20,7 +20,22 @@ public class Account {
         this.customer = customer;
     }
 
+    public AccountDetail getAccountDetail() {
+        return accountDetail;
+    }
 
+    public void setAccountDetail (AccountDetail accountDetail) {
+        this.accountDetail = accountDetail;
+    }
+
+    public AccountBalance getAccountBalance() {
+        return accountBalance;
+    }
+
+    public void setAccountBalance (AccountBalance accountBalance) {
+        this.accountBalance = accountBalance;
+
+    }
     @Override
     public String toString() {
         return "Account{" +
