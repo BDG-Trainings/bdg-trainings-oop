@@ -1,4 +1,7 @@
 package com.bdg.aghazaryan.src.aghazaryan.src.bankaccountsystem.enums;
 
-public class PhoneType {
+public enum PhoneType {
+    MOBILE,
+    WORK,
+    HOME;
 }
