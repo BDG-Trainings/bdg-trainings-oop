@@ -32,7 +32,7 @@ public final class Account {
     public String toString() {
         return "Account{"+
                     "deposit:" + '\'' + accountBalance.getBalance() + '\''+
-                    ",costumer:"+ '\'' + customer + '\''+
+                    ",costumer:"+ '\'' + customer.getCustomerSurname() + '\''+
                 "}";
     }
 }

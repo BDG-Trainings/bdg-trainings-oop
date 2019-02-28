@@ -8,19 +8,20 @@ import org.jetbrains.annotations.Nullable;
 public final class BankService {
 
     private int index;
-    private Account [] accounts;
+    private Account[] accounts;
+
     public BankService(final int maxAccountSize) {
         this.accounts = new Account[maxAccountSize];
     }
 
     public Account create(String customerName, String customerSurname, Country country, String street, String phoneNumber, double initialBalance) {
 
-            Address         address  = new Address(country,street,phoneNumber);
-            Customer        customer = new Customer(customerName,customerSurname,address);
-            AccountBalance  balance  = new AccountBalance(initialBalance);
-            Account         account  = new Account(customer,balance);
+        Address address = new Address(country, street, phoneNumber);
+        Customer customer = new Customer(customerName, customerSurname, address);
+        AccountBalance balance = new AccountBalance(initialBalance);
+        Account account = new Account(customer, balance);
 
-            accounts[index] = account;
+        accounts[index] = account;
 
         return account;
     }
@@ -29,10 +30,10 @@ public final class BankService {
     @Nullable
     public BankService transfer(final Account from, final Account to, final double amount) {
 
-        if (from.getAccountBalance() >= amount){
-                from.withdraw(amount);
-                to.deposit(amount);
-            }else {
+        if (from.getAccountBalance() >= amount) {
+            from.withdraw(amount);
+            to.deposit(amount);
+        } else {
             return null;
         }
 
@@ -42,19 +43,19 @@ public final class BankService {
     @Contract(pure = true)
     public Account[] findAllAccountWithBalanceRange(final double balanceFrom, final double balanceTo) {
         int i = 0;
-        Account [] finded = new Account[1];
+        Account[] finded = new Account[1];
         double balance;
-        for (Account account: accounts) {
-            if (account != null){
+        for (Account account : accounts) {
+            if (account != null) {
                 balance = account.getAccountBalance();
 
-            }else {
+            } else {
                 balance = 0;
             }
-                if (balance  >= balanceFrom && balance  <= balanceTo ){
-                    finded[i] = account;
-                   i++;
-                }
+            if (balance >= balanceFrom && balance <= balanceTo) {
+                finded[i] = account;
+                i++;
+            }
         }
         return finded;
     }
@@ -62,8 +63,8 @@ public final class BankService {
     @Nullable
     public Account findByCustomerName(final String customerName) {
 
-        for (Account acount: accounts) {
-            if (customerName == acount.getCustomer().getCustomerName()){
+        for (Account acount : accounts) {
+            if (customerName == acount.getCustomer().getCustomerName()) {
                 return acount;
             }
         }
@@ -71,25 +72,24 @@ public final class BankService {
     }
 
     public Account[] findAllAccountsByCountry(final Country country) {
-        Account[] accounts = new Account[10];
+        Account[] CostumerAccounts = new Account[10];
         int i = 0;
         for (Account account: accounts) {
             if (account != null){
                 if (country.getCountryName() == account.getCustomer().getAddress().getCountry().getCountryName()){
-                    accounts[i] = account;
-                    System.out.println(i);
+                    CostumerAccounts[i] = account;
                     i++;
                 }
             }
         }
 
-        return accounts;
+        return CostumerAccounts;
     }
 
     @NotNull
     @Contract(pure = true)
     @Override
     public String toString() {
-        return "Acounts{"+accounts[index]+"}";
+        return "Acounts{" + accounts[index] + "}";
     }
 }

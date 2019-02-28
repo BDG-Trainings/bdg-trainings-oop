@@ -1,4 +1,5 @@
 package com.bdg.master.bas;
+import javax.xml.ws.Endpoint;
 
 
 public final class BankSystem {
@@ -7,7 +8,11 @@ public final class BankSystem {
         BankService service = new BankService(10);
         service.create("Harutyun1","Hakobyan1",Country.FR,"Sebastia","12346679",150);
         Account [] acount = service.findAllAccountsByCountry(Country.FR);
-        System.out.println(acount);
+        System.out.println(acount[0]);
+
+
+
+
     }
 
 }
