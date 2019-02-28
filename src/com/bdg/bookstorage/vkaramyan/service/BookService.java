@@ -6,8 +6,8 @@ import com.bdg.bookstorage.vkaramyan.entity.Book;
 
 public interface BookService {
 	
-	Book create(BookCreateParameter bookCreateParameter);
-	Book update(BookUpdateParameter bookUpdateParameter);
+	Book create(BookCreateParameter createParameter);
+	Book update(BookUpdateParameter updateParameter);
 	boolean delete();
 	Book get();
 	
