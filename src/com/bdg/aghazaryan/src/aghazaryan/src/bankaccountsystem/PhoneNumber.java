@@ -1,5 +1,8 @@
 package com.bdg.aghazaryan.src.aghazaryan.src.bankaccountsystem;
 
+import com.bdg.aghazaryan.src.aghazaryan.src.bankaccountsystem.enums.CountryCode;
+import com.bdg.aghazaryan.src.aghazaryan.src.bankaccountsystem.enums.PhoneType;
+
 public class PhoneNumber {
 
     private CountryCode countryCode;

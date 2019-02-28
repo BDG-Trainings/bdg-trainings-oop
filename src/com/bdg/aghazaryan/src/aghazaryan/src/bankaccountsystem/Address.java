@@ -1,5 +1,7 @@
 package com.bdg.aghazaryan.src.aghazaryan.src.bankaccountsystem;
 
+import com.bdg.aghazaryan.src.aghazaryan.src.bankaccountsystem.enums.Country;
+
 import java.util.Arrays;
 
 public class Address {
@@ -15,21 +17,26 @@ public class Address {
 
     }
     public Country getCountry() {
+
         return country;
     }
     public void setCountry(Country country) {
+
         this.country = country;
     }
 
-    public String getStreet() {
+    public String getStreet()
+    {
         return street;
     }
 
-    public void setStreet(String street) {
+    public void setStreet(String street)
+    {
         this.street = street;
     }
 
     public PhoneNumber[] getPhoneNumber() {
+
         return phoneNumber;
     }
 
