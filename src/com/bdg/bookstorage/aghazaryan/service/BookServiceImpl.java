@@ -15,7 +15,6 @@ public class BookServiceImpl implements BookService {
         this.authorService = new AuthorServiceImpl();
     }
 
-
     @Override
     public Book create(final BookCreateParameter createParameter) {
 
