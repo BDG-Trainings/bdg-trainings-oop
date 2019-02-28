@@ -2,10 +2,11 @@ package com.bdg.spapoyan.bas;
 
 
 public final class AccountBalance {
-    private double balance;
 
-    public AccountBalance(final double balance) {
-        this.balance = balance;
+    public static double balance;
+
+
+    public AccountBalance(final double balance) { this.balance = balance;
     }
 
     public double getBalance() {
@@ -19,4 +20,6 @@ public final class AccountBalance {
     public void withdraw(final double amount) {
         this.balance = this.balance - amount;
     }
+
+
 }
