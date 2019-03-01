@@ -8,6 +8,7 @@ public enum CountryCode {
     IT("+39","Italy"),
     FR("+33", "France");
 
+
     private final String countryCode;
     private final Country country;
 
@@ -17,10 +18,12 @@ public enum CountryCode {
     }
 
     public String getCountryCode() {
+
         return countryCode;
     }
 
     public Country getCountry() {
+
         return country;
     }
 
