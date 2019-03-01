@@ -1,14 +1,13 @@
-package com.bdg.npetrosyan.snake_game;
-
+package com.bdg.npetrosyan.SnakeGame;
 import javax.swing.*;
 
 /**
- * Created by Narek Petrosyan 23.02.2019
+ * Created by infuntis on 15/01/17.
  */
-
 public class MainWindow extends JFrame {
+
     public MainWindow(){
-        setTitle("Snake");
+        setTitle("Змейка");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setSize(320,345);
         setLocation(400,400);
@@ -19,6 +18,4 @@ public class MainWindow extends JFrame {
     public static void main(String[] args) {
         MainWindow mw = new MainWindow();
     }
-
-
 }
