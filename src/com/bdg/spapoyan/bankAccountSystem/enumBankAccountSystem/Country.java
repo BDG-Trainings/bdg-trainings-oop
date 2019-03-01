@@ -9,7 +9,7 @@ public enum Country {
     private final String countryName;
     private final String numericCode;
 
-    Country(String countryName, String numericCode) {
+    Country(final String countryName, final String numericCode) {
         this.countryName = countryName;
         this.numericCode = numericCode;
     }
