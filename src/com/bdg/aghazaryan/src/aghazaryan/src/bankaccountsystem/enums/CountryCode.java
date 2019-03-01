@@ -2,13 +2,11 @@ package com.bdg.aghazaryan.src.aghazaryan.src.bankaccountsystem.enums;
 
 public enum CountryCode {
 
-//there is an error
-
-    ARM("+374", "Armenia"),
-    USA("+1","USA"),
-    UK("+44", "United Kingdom"),
-    IT("+39","Italy"),
-    FR("+33", "France");
+    ARM("+374", Country.ARM),
+    USA("+1",Country.USA),
+    UK("+44", Country.UK),
+    IT("+39",Country.IT),
+    FR("+33", Country.FR);
 
 
     private final String countryCode;
