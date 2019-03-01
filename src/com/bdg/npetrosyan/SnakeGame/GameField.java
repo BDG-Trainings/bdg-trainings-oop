@@ -8,7 +8,7 @@ import java.awt.event.KeyEvent;
 import java.util.Random;
 
 /**
- * Created by infuntis on 15/01/17.
+ * Created by Narek 23.02.2019.
  */
 public class GameField extends JPanel implements ActionListener{
     private final int SIZE = 320;

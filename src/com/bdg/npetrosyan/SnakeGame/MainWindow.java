@@ -2,7 +2,7 @@ package com.bdg.npetrosyan.SnakeGame;
 import javax.swing.*;
 
 /**
- * Created by infuntis on 15/01/17.
+ * Created by Narek 23.02.2019.
  */
 public class MainWindow extends JFrame {
 
