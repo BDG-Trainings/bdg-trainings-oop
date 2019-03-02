@@ -16,13 +16,13 @@ public class Application {
         Person person2 = new Person("FName2", "LName2", "MName2", (short) 35, addressArr2);
         Person person3 = new Person("FName3", "LName3", "MName3", (short) 18, addressArr3);
 
-        SalaryDetail salaryDetail = new SalaryDetail(125.300, "121212121");
-        SalaryDetail salaryDetai2 = new SalaryDetail(456.007, "786786786");
-        SalaryDetail salaryDetai3 = new SalaryDetail(345.500, "353453534");
+        SalaryDetail salaryDetail1 = new SalaryDetail(125.300, "121212121");
+        SalaryDetail salaryDetail2 = new SalaryDetail(456.007, "786786786");
+        SalaryDetail salaryDetail3 = new SalaryDetail(345.500, "353453534");
 
-        Employee employee1 = new Employee(salaryDetail, person1);
-        Employee employee2 = new Employee(salaryDetai2, person2);
-        Employee employee3 = new Employee(salaryDetai3, person3);
+        Employee employee1 = new Employee(salaryDetail1, person1);
+        Employee employee2 = new Employee(salaryDetail2, person2);
+        Employee employee3 = new Employee(salaryDetail3, person3);
 
         Employee[] empArr1 = {employee1, employee2, employee3};
         Employee[] empArr2 = {employee2, employee3};
@@ -40,7 +40,13 @@ public class Application {
         resourceManagement.addDepartment(dep2);
         resourceManagement.addDepartment(dep3);
         resourceManagement.removeEmployeeFromDepartment(employee1, "SALES");
-		
+        resourceManagement.findEmployeeByName(salaryDetail1, person1);
+        resourceManagement.findEmployeeByName(salaryDetail2, person2);
+        resourceManagement.findEmployeeByName(salaryDetail3, person3);
+        resourceManagement.findDepartmentByName("Dep1", employee1, empArr1, DepartmentType.ENGINEERING);
+        resourceManagement.findDepartmentByName("Dep2", employee3, empArr2, DepartmentType.ACCOUNTING);
+        resourceManagement.findDepartmentByName("Dep3", employee3, empArr2, DepartmentType.MARKETING);
+		resourceManagement.getDepartmentWithMaxSalary();
 	}
 
 }
