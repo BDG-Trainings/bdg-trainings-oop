@@ -4,5 +4,5 @@ import com.bdg.vqertikyan.bankaccountsystem.entity.Address;
 import com.bdg.vqertikyan.bankaccountsystem.entity.Customer;
 
 public interface CustomerService {
-    Customer create(String customerName, String customerSurname, Address customerAddress);
+    Customer create(int id, String customerName, String customerSurname, Address customerAddress);
 }
