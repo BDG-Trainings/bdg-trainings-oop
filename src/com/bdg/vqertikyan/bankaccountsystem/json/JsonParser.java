@@ -6,6 +6,7 @@ import com.bdg.vqertikyan.bankaccountsystem.entity.AccountBalance;
 import com.bdg.vqertikyan.bankaccountsystem.entity.Address;
 import com.bdg.vqertikyan.bankaccountsystem.entity.PhoneNumber;
 
+
 public final class JsonParser {
 
     private String content;
