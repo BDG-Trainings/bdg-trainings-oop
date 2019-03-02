@@ -1,37 +1,60 @@
 package com.bdg.agalayan.lessons_07;
 
 public class Date {
+
     private int day;
     private int month;
-    private int yaer;
+    private int year;
 
-    public Date(int day, int month, int yaer){
-        this.day = day;
-        this.month = month;
-        this.yaer = yaer;
+    public Date(int day, int month, int year) {
+        if(day<31){
+            this.day = day;
+        }if (month<12) {
+            this.month = month;
+        }
+        this.year = year;
     }
-    public int getDay(){
+
+
+    public int getDay() {
         return day;
-    }
+
+       }
+
+
     public int getMonth(){
         return month;
     }
-    public int getYaer(){
-        return yaer;
+    public int getYear(){
+        return year;
     }
-    public void SetDay(int day){
-        this.day = day;
+
+    public void setMonth(int month) {
+        if(month<12){
+        this.month = month;}
+
     }
-    public void SetMonth(int month){
-        this.month = month;
+
+
+
+    public void setDay(int day) {
+        if(day<31) {
+            this.day = day;
+        }
+        }
+
+    public void setYear(int year) {
+        this.year = year;
     }
-    public void SetYear(int yaer){
-        this.yaer = yaer;
-    }public void SetDate(int day, int month, int yaer){
-        this.day = day;
-        this.month = month;
-        this.yaer = yaer;
+
+
+
+    public void setDate(int day, int month, int year){
+        this.setDay(day);
+        this.setMonth(month);
+        this.setYear(year);
     }
+
     public String toString(){
         String amsativ = " "+day;
         if (day<9){
@@ -42,13 +65,12 @@ public class Date {
         }else{
             this.day=day;
             this.month=month;}
-        return "dd/mm/yyyy" +"="+ amsativ+ "/" + amis+ "/"+ yaer
-                ;
+        return "dd/mm/yyyy" +"="+ amsativ+ "/" + amis+ "/"+ year;
 
     }
     public static void main(String [] args){
-        Date Mesrop = new Date(15, 3, 2014);
-        System.out.print("Mesrop."+Mesrop.toString());
+        Date date = new Date(100, 3, 2014);
+        System.out.print(date.getMonth());
     }
 
 }

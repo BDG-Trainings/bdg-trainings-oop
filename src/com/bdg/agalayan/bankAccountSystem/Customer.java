@@ -2,12 +2,12 @@ package com.bdg.agalayan.bankAccountSystem;
 
 import com.bdg.agalayan.lessons_07.Date;
 
-public class Castomer extends AbstractBankEntity {
+public class Customer extends AbstractBankEntity {
     private String customerName;
     private String customerSurname;
     private Address address;
 
-    Castomer(int id, String customerName, String customerSurname, Address address) {
+    Customer(int id, String customerName, String customerSurname, Address address) {
         super(id);
         this.customerName=customerName;
         this.customerSurname=customerSurname;
