@@ -1,28 +1,30 @@
 package com.bdg.spapoyan.bankAccountSystem;
+
 public class Date {
+
         private int month;
         private int year;
 
-    public Date(int month, int year) {
-        this.month = month; this.year = year;
+    public Date(final int month, final int year) {
+        setDate(month, year);
     }
 
-    public int getMonth() { return month; }
-
-    public int getYear() { return year; }
-
-    public void setMonth(int month) {
-            if (month >= 1 && month <= 12) {
-                this.month = month;
-            }
+    public void setDate(final int month, final int year){
+        if (month >= 1 && month <= 12){
+            this.month = month;
+        }else {
+            this.month = 0;
         }
-    public void setYear(int year) {
-        if (year >= 1900 && year <= 9999) {
+        if (year > 2014 && year < 2100){
             this.year = year;
+        }else {
+            this.year = 0;
         }
     }
 
+    @Override
     public String toString() {
-        String total = "mm/yyyy"; return "mm/yyyy";
+        return month + "/" + year;
+
     }
 }
