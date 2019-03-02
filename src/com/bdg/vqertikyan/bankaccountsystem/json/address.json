@@ -1,0 +1,21 @@
+{
+  "country": "AM",
+  "street": "some street",
+  "phoneNumbers": [
+    {
+      "countryCode": "ARM",
+      "number": "091234567",
+      "phoneType": "MOBILE"
+    },
+    {
+      "countryCode": "ARM",
+      "number": "091234567",
+      "phoneType": "WORK"
+    },
+    {
+      "countryCode": "ARM",
+      "number": "091234567",
+      "phoneType": "HOME"
+    }
+  ]
+}
