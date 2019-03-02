@@ -8,13 +8,13 @@ public class Account extends AbstractBankEntity {
 
 
     private Customer customer;
-    private AccountDetail accountDetail;
+    private CreditCard creditCard;
     private AccountBalance accountBalance;
 
-    public Account(int id, Customer customer, AccountDetail accountDetail, AccountBalance accountBalance) {
+    public Account(int id, Customer customer, CreditCard creditCard, AccountBalance accountBalance) {
         super(id);
         this.customer = customer;
-        this.accountDetail = accountDetail;
+        this.creditCard = creditCard;
         this.accountBalance = accountBalance;
     }
 
@@ -26,13 +26,9 @@ public class Account extends AbstractBankEntity {
         this.customer = customer;
     }
 
-    public AccountDetail getAccountDetail() {
-        return accountDetail;
-    }
+    public CreditCard getCreditCard() { return creditCard; }
 
-    public void setAccountDetail(AccountDetail accountDetail) {
-        this.accountDetail = accountDetail;
-    }
+    public void setCreditCard(CreditCard creditCard) { this.creditCard = creditCard; }
 
     public AccountBalance getAccountBalance() {
         return accountBalance;
@@ -40,5 +36,14 @@ public class Account extends AbstractBankEntity {
 
     public void setAccountBalance(AccountBalance accountBalance) {
         this.accountBalance = accountBalance;
+    }
+
+    @Override
+    public String toString() {
+        return "Account{" +
+                "customer=" + customer +
+                ", creditCard=" + creditCard +
+                ", accountBalance=" + accountBalance +
+                '}';
     }
 }

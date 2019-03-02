@@ -3,6 +3,8 @@ package com.bdg.spapoyan.bankAccountSystem;
 import com.bdg.spapoyan.bankAccountSystem.entity.AbstractBankEntity;
 import com.bdg.spapoyan.bankAccountSystem.enumBankAccountSystem.Country;
 
+import java.util.Arrays;
+
 public class Address extends AbstractBankEntity {
 
     private Country country;
@@ -38,5 +40,14 @@ public class Address extends AbstractBankEntity {
 
     public void setPhoneNumbers(PhoneNumber[] phoneNumbers) {
         this.phoneNumbers = phoneNumbers;
+    }
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "country=" + country +
+                ", street='" + street + '\'' +
+                ", phoneNumbers=" + Arrays.toString(phoneNumbers) +
+                '}';
     }
 }

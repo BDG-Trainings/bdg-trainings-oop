@@ -8,7 +8,6 @@ public class Date {
     public Date(final int month, final int year) {
         setDate(month, year);
     }
-
     public void setDate(final int month, final int year){
         if (month >= 1 && month <= 12){
             this.month = month;
@@ -21,10 +20,8 @@ public class Date {
             this.year = 0;
         }
     }
-
     @Override
     public String toString() {
         return month + "/" + year;
-
     }
 }

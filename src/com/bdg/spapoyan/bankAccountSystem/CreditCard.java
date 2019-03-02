@@ -10,22 +10,23 @@ public class CreditCard extends AbstractBankEntity {
     private Date expirationDate;
     private CardType cardType;
 
-    public CreditCard(final int id, final int accountNumber, Date expDate, CardType cardType) {
+    public CreditCard(final int id, final String cardNumber, final int accountNumber, Date expDate, CardType cardType) {
         super(id);
-        this.accountNumber = accountNumber;
-        this.expirationDate = expDate;
-        this.cardType = cardType;
-    }
-
-    public String cardNumber(){
         int a = 0, b = 9999;
         int random_number1 = a + (int) (Math.random() * b);
         int random_number2 = a + (int) (Math.random() * b);
         int random_number3 = a + (int) (Math.random() * b);
         int random_number4 = a + (int) (Math.random() * b);
-        cardNumber = random_number1 + " " + random_number2 + " " + random_number3 + " " + random_number4;
-        return cardNumber;
+        this.cardNumber = random_number1 + " " + random_number2 + " " + random_number3 + " " + random_number4;
+        this.accountNumber = accountNumber;
+        this.expirationDate = expDate;
+        this.cardType = cardType;
     }
+
+   // public String cardNumber(){
+
+      //  return cardNumber;
+    //}
 
     public String getCardNumber() {
         return cardNumber;

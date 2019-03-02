@@ -38,4 +38,13 @@ public class Customer extends AbstractBankEntity {
     public void setCustomerAddress(Address customerAddress) {
         this.customerAddress = customerAddress;
     }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "customerName='" + customerName + '\'' +
+                ", customerSurname='" + customerSurname + '\'' +
+                ", customerAddress=" + customerAddress +
+                '}';
+    }
 }

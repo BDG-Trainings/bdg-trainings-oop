@@ -7,8 +7,8 @@ public class Test {
 
     public static void main(String[] args){
 
-        CreditCard creditCard = new CreditCard(1, 3, new Date(3,2019), CardType.VISA);
+    //CreditCard creditCard = new CreditCard(1, ,3,new Date(3,2019),CardType.MASTERCARD);
 
-        System.out.println(creditCard.toString());
+       // System.out.println(creditCard.toString());
     }
 }
