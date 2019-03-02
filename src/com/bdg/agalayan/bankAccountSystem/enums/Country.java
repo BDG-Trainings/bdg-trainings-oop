@@ -1,4 +1,4 @@
-package com.bdg.agalayan.bankAccountSystem;
+package com.bdg.agalayan.bankAccountSystem.enums;
 
 public enum  Country {
 
@@ -17,6 +17,7 @@ public enum  Country {
     }
 
     public String getCountryName() {
+
         return this.countryName;
     }
 

@@ -1,4 +1,4 @@
-package com.bdg.agalayan.bankAccountSystem;
+package com.bdg.agalayan.bankAccountSystem.enums;
 
 public enum CardType {
     VISA,

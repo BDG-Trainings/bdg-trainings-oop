@@ -1,6 +1,9 @@
-package com.bdg.agalayan.bankAccountSystem;
+package com.bdg.agalayan.bankAccountSystem.entity;
 
-import com.bdg.agalayan.lessons_07.Date;
+import com.bdg.agalayan.bankAccountSystem.entity.AbstractBankEntity;
+import com.bdg.agalayan.bankAccountSystem.entity.Address;
+
+import java.time.LocalDate;
 
 public class Customer extends AbstractBankEntity {
     private String customerName;
@@ -15,12 +18,12 @@ public class Customer extends AbstractBankEntity {
     }
 
     @Override
-    public Date getCreatedDate() {
+    public LocalDate getCreatedDate() {
         return super.getCreatedDate();
     }
 
     @Override
-    public Date getUpdatedDate() {
+    public LocalDate getUpdatedDate() {
         return super.getUpdatedDate();
     }
 
@@ -30,7 +33,7 @@ public class Customer extends AbstractBankEntity {
     }
 
     @Override
-    public void setCreatedDate(Date createdDate) {
+    public void setCreatedDate(LocalDate createdDate) {
         super.setCreatedDate(createdDate);
     }
 
@@ -40,7 +43,7 @@ public class Customer extends AbstractBankEntity {
     }
 
     @Override
-    public void setUpdatedDate(Date updatedDate) {
+    public void setUpdatedDate(LocalDate updatedDate) {
         super.setUpdatedDate(updatedDate);
     }
 

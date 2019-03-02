@@ -1,7 +1,9 @@
-package com.bdg.agalayan.bankAccountSystem;
+package com.bdg.agalayan.bankAccountSystem.enums;
+
+import com.bdg.agalayan.bankAccountSystem.enums.Country;
 
 public enum CountryCode {
-    AM("+374",Country.AM),
+    AM("+374", Country.AM),
     AF("+93", Country.AF),
     IT("+39", Country.IT),
     US("+1", Country.US),

@@ -1,21 +1,23 @@
-package com.bdg.agalayan.bankAccountSystem;
+package com.bdg.agalayan.bankAccountSystem.entity;
 
 import com.bdg.agalayan.bas.AccountBalance;
-import com.bdg.agalayan.lessons_07.Date;
+
+
+import java.time.LocalDate;
 
 public class Account extends AbstractBankEntity {
     private Customer customer;
-    private AccountDetail accountDetail;
+    private CreditCard creditCard;
     private AccountBalance accountBalance;
 
-    Account(int id,AccountBalance balance, AccountDetail detail) {
+    Account(int id, AccountBalance balance, CreditCard creditCard) {
         super(id);
-        this.accountDetail=detail;
+        this.creditCard=creditCard;
         this.accountBalance=balance;
     }
 
     @Override
-    public void setUpdatedDate(Date updatedDate) {
+    public void setUpdatedDate(LocalDate updatedDate) {
         super.setUpdatedDate(updatedDate);
     }
 
@@ -25,7 +27,7 @@ public class Account extends AbstractBankEntity {
     }
 
     @Override
-    public void setCreatedDate(Date createdDate) {
+    public void setCreatedDate(LocalDate createdDate) {
         super.setCreatedDate(createdDate);
     }
 
@@ -35,12 +37,12 @@ public class Account extends AbstractBankEntity {
     }
 
     @Override
-    public Date getUpdatedDate() {
+    public LocalDate getUpdatedDate() {
         return super.getUpdatedDate();
     }
 
     @Override
-    public Date getCreatedDate() {
+    public LocalDate getCreatedDate() {
         return super.getCreatedDate();
     }
 
@@ -48,24 +50,26 @@ public class Account extends AbstractBankEntity {
         return accountBalance;
     }
 
-    public AccountDetail getAccontDetail() {
-        return accountDetail;
+    public CreditCard getCreditCard() {
+        return creditCard;
+    }
 
+    public void setCreditCard(CreditCard creditCard) {
+        this.creditCard = creditCard;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 
     public Customer getCustomer() {
         return customer;
     }
 
-    public void setAccontDetail(AccountDetail accountDetail) {
-        this.accountDetail = accountDetail;
-    }
 
     public void setAccountBalance(AccountBalance accountBalance) {
         this.accountBalance = accountBalance;
     }
 
-    public void setCastomer(Customer customer) {
-        this.customer = customer;
-    }
+
 }

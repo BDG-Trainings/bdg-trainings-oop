@@ -1,29 +1,38 @@
-package com.bdg.agalayan.bankAccountSystem;
+package com.bdg.agalayan.bankAccountSystem.entity;
 
-import com.bdg.agalayan.lessons_07.Date;
+
+
+import com.bdg.agalayan.bankAccountSystem.enums.CardType;
+
+import java.time.LocalDate;
+import java.util.UUID;
 
 public class CreditCard extends AbstractBankEntity {
     private String cardNumber;
     private int accountNumber;
-    private Date expirationDate;
+    private LocalDate expirationDate;
     private CardType cardType;
 
 
-    public CreditCard(int id, String cardNumber, int accountNumber, Date expirationDate, CardType cardType) {
+    public CreditCard(int id, int accountNumber, LocalDate expirationDate, CardType cardType) {
         super(id);
+        cardNumber=this.generateString();
         this.accountNumber=accountNumber;
-        this.cardNumber=cardNumber;
         this.cardType=cardType;
         this.expirationDate=expirationDate;
     }
+    public String generateString() {
+        String uuid = UUID.randomUUID().toString();
+        return  uuid;
+    }
 
     @Override
-    public Date getCreatedDate() {
+    public LocalDate getCreatedDate() {
         return super.getCreatedDate();
     }
 
     @Override
-    public Date getUpdatedDate() {
+    public LocalDate getUpdatedDate() {
         return super.getUpdatedDate();
     }
 
@@ -33,7 +42,7 @@ public class CreditCard extends AbstractBankEntity {
     }
 
     @Override
-    public void setCreatedDate(Date createdDate) {
+    public void setCreatedDate(LocalDate createdDate) {
         super.setCreatedDate(createdDate);
     }
 
@@ -43,7 +52,7 @@ public class CreditCard extends AbstractBankEntity {
     }
 
     @Override
-    public void setUpdatedDate(Date updatedDate) {
+    public void setUpdatedDate(LocalDate updatedDate) {
         super.setUpdatedDate(updatedDate);
     }
 
@@ -51,7 +60,7 @@ public class CreditCard extends AbstractBankEntity {
         return cardType;
     }
 
-    public Date getExpirationDate() {
+    public LocalDate getExpirationDate() {
         return expirationDate;
     }
 
@@ -67,15 +76,17 @@ public class CreditCard extends AbstractBankEntity {
         this.accountNumber = accountNumber;
     }
 
-    public void setCardNumber(String cardNumber) {
-        this.cardNumber = cardNumber;
-    }
 
     public void setCardType(CardType cardType) {
         this.cardType = cardType;
     }
 
-    public void setExpirationDate(Date expirationDate) {
+    public void setExpirationDate(LocalDate expirationDate) {
         this.expirationDate = expirationDate;
+    }
+
+    public static void main(String[] args) {
+       CreditCard card= new CreditCard(1,12,LocalDate.now(),CardType.CLASSIC);
+       System.out.println(card.getCardNumber());
     }
 }

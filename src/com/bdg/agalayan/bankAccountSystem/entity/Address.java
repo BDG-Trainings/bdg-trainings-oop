@@ -1,11 +1,15 @@
-package com.bdg.agalayan.bankAccountSystem;
+package com.bdg.agalayan.bankAccountSystem.entity;
 
-import com.bdg.agalayan.lessons_07.Date;
+
+
+import com.bdg.agalayan.bankAccountSystem.enums.Country;
+
+import java.time.LocalDate;
 
 public class Address extends AbstractBankEntity {
     private Country country;
     private String street;
-    private PhoneNumber [] phoneNumbers;
+    private PhoneNumber[] phoneNumbers;
 
 
     Address(int id, Country country, String street, PhoneNumber [] phoneNumbers) {
@@ -17,7 +21,7 @@ public class Address extends AbstractBankEntity {
     }
 
     @Override
-    public void setUpdatedDate(Date updatedDate) {
+    public void setUpdatedDate(LocalDate updatedDate) {
         super.setUpdatedDate(updatedDate);
     }
 
@@ -27,7 +31,7 @@ public class Address extends AbstractBankEntity {
     }
 
     @Override
-    public void setCreatedDate(Date createdDate) {
+    public void setCreatedDate(LocalDate createdDate) {
         super.setCreatedDate(createdDate);
     }
 
@@ -37,12 +41,12 @@ public class Address extends AbstractBankEntity {
     }
 
     @Override
-    public Date getUpdatedDate() {
+    public LocalDate getUpdatedDate() {
         return super.getUpdatedDate();
     }
 
     @Override
-    public Date getCreatedDate() {
+    public LocalDate getCreatedDate() {
         return super.getCreatedDate();
     }
 
