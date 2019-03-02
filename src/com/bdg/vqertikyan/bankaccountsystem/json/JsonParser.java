@@ -1,9 +1,10 @@
 package com.bdg.vqertikyan.bankaccountsystem.json;
 
 
-import com.bdg.warustamyan.bankaccountsystem.entity.AccountBalance;
-import com.bdg.warustamyan.bankaccountsystem.entity.Address;
-import com.bdg.warustamyan.bankaccountsystem.entity.PhoneNumber;
+import com.bdg.vqertikyan.bankaccountsystem.common.ObjectType;
+import com.bdg.vqertikyan.bankaccountsystem.entity.AccountBalance;
+import com.bdg.vqertikyan.bankaccountsystem.entity.Address;
+import com.bdg.vqertikyan.bankaccountsystem.entity.PhoneNumber;
 
 public final class JsonParser {
 
@@ -24,13 +25,17 @@ public final class JsonParser {
             case ACCOUNT_BALANCE:
                 return this.parseAccountBalance();
             default:
-                throw new ObjectTypeNotFoundException("Object type : " + objectType + " not found");
+                return null;
+                // implement
+        //        throw new ObjectTypeNotFoundException("Object type : " + objectType + " not found");
 
         }
     }
 
     private Address parseAddress() {
-        return new Address();
+        // implement
+       // return new Address();
+        return null;
     }
 
     private AccountBalance parseAccountBalance() {
