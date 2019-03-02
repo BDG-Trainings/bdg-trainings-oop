@@ -23,11 +23,6 @@ public class CreditCard extends AbstractBankEntity {
         this.cardType = cardType;
     }
 
-   // public String cardNumber(){
-
-      //  return cardNumber;
-    //}
-
     public String getCardNumber() {
         return cardNumber;
     }
