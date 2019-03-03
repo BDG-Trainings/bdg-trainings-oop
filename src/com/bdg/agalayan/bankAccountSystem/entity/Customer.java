@@ -1,8 +1,5 @@
 package com.bdg.agalayan.bankAccountSystem.entity;
 
-import com.bdg.agalayan.bankAccountSystem.entity.AbstractBankEntity;
-import com.bdg.agalayan.bankAccountSystem.entity.Address;
-
 import java.time.LocalDate;
 
 public class Customer extends AbstractBankEntity {
@@ -10,11 +7,13 @@ public class Customer extends AbstractBankEntity {
     private String customerSurname;
     private Address address;
 
+
+    //ID :)
     Customer(int id, String customerName, String customerSurname, Address address) {
         super(id);
-        this.customerName=customerName;
-        this.customerSurname=customerSurname;
-        this.address=address;
+        this.customerName = customerName;
+        this.customerSurname = customerSurname;
+        this.address = address;
     }
 
     @Override

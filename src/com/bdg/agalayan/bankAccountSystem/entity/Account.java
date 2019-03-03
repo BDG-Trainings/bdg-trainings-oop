@@ -2,7 +2,6 @@ package com.bdg.agalayan.bankAccountSystem.entity;
 
 import com.bdg.agalayan.bas.AccountBalance;
 
-
 import java.time.LocalDate;
 
 public class Account extends AbstractBankEntity {
@@ -10,10 +9,13 @@ public class Account extends AbstractBankEntity {
     private CreditCard creditCard;
     private AccountBalance accountBalance;
 
+
+    //Remove id from constructor parameters
+    //id is internal field and should be setup in persistence time
     Account(int id, AccountBalance balance, CreditCard creditCard) {
         super(id);
-        this.creditCard=creditCard;
-        this.accountBalance=balance;
+        this.creditCard = creditCard;
+        this.accountBalance = balance;
     }
 
     @Override

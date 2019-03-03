@@ -6,8 +6,8 @@ public interface AccountService {
 
     Account get(int id);
 
-    Account create (Account account);
+    Account create(Account account);
 
-    boolean delete (int id);
+    boolean delete(int id);
 
 }

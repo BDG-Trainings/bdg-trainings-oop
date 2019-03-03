@@ -1,7 +1,5 @@
 package com.bdg.agalayan.bankAccountSystem.entity;
 
-import com.bdg.agalayan.lessons_07.Date;
-
 import java.time.LocalDate;
 
 public abstract class AbstractBankEntity {
@@ -11,11 +9,14 @@ public abstract class AbstractBankEntity {
     protected LocalDate deletedDate;
 
 
-    AbstractBankEntity(int id){
-        this.id=id;
+    //
+    AbstractBankEntity(int id) {
+        this.id = id;
 
     }
 
+    //We don't need a getter setter in this abstract class
+    //It should be provided by child classes.
     public void setUpdatedDate(LocalDate updatedDate) {
         this.updatedDate = updatedDate;
     }
@@ -48,4 +49,4 @@ public abstract class AbstractBankEntity {
         return id;
     }
 
-   }
+}

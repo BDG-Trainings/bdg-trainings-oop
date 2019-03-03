@@ -1,6 +1,6 @@
 package com.bdg.agalayan.bankAccountSystem.enums;
 
-public enum  Country {
+public enum Country {
 
     AF("Afghanistan", "004"),
     AM("Armenia", "051"),
@@ -27,7 +27,7 @@ public enum  Country {
 
 
     @Override
-    public String toString(){
-        return "Country [name = "+ getCountryName() + ","+ "numericCode = "+ getNumericCode()+ "]";
+    public String toString() {
+        return "Country [name = " + getCountryName() + "," + "numericCode = " + getNumericCode() + "]";
     }
 }

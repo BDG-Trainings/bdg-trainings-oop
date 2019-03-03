@@ -1,7 +1,6 @@
 package com.bdg.agalayan.bankAccountSystem.entity;
 
 
-
 import com.bdg.agalayan.bankAccountSystem.enums.Country;
 
 import java.time.LocalDate;
@@ -12,11 +11,12 @@ public class Address extends AbstractBankEntity {
     private PhoneNumber[] phoneNumbers;
 
 
-    Address(int id, Country country, String street, PhoneNumber [] phoneNumbers) {
+    //Same here remove id please
+    Address(int id, Country country, String street, PhoneNumber[] phoneNumbers) {
         super(id);
-        this.country=country;
-        this.street=street;
-        this.phoneNumbers=phoneNumbers;
+        this.country = country;
+        this.street = street;
+        this.phoneNumbers = phoneNumbers;
 
     }
 

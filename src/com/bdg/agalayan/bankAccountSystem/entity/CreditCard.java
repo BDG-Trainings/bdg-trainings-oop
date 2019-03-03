@@ -14,6 +14,7 @@ public class CreditCard extends AbstractBankEntity {
     private CardType cardType;
 
 
+    //id :(
     public CreditCard(int id, int accountNumber, LocalDate expirationDate, CardType cardType) {
         super(id);
         cardNumber=this.generateString();
@@ -21,7 +22,10 @@ public class CreditCard extends AbstractBankEntity {
         this.cardType=cardType;
         this.expirationDate=expirationDate;
     }
+
+    //Not meaningful method name
     public String generateString() {
+        //unusable reference replace with method return << return UUID.randomUUID().toString(); >>
         String uuid = UUID.randomUUID().toString();
         return  uuid;
     }

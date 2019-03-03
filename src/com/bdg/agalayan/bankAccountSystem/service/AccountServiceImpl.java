@@ -3,53 +3,58 @@ package com.bdg.agalayan.bankAccountSystem.service;
 import com.bdg.agalayan.bankAccountSystem.entity.Account;
 
 public class AccountServiceImpl implements AccountService {
-    private Account[]accounts;
+    private Account[] accounts;
     private int currentAccount;
 
-    public AccountServiceImpl (Account []accounts){
-        this.accounts=accounts;
+
+    //This is service class and responsible to create or return account
+    //remove this constructor parameter
+    public AccountServiceImpl(Account[] accounts) {
+        this.accounts = accounts;
     }
 
     @Override
     public Account get(int id) {
-        for(int i=0; i < accounts.length; i++){
-        if(accounts[i].getId()==id){
-           return accounts[i];
+        for (int i = 0; i < accounts.length; i++) {
+            if (accounts[i].getId() == id) {
+                return accounts[i];
+            }
         }
-    }return null;
+        return null;
     }
 
+    //This method should accept parameters and create Account according that parameters
     @Override
     public Account create(Account account) {
-        if(currentAccount<accounts.length){
-            accounts[currentAccount]=account;
+        if (currentAccount < accounts.length) {
+            accounts[currentAccount] = account;
             currentAccount++;
         }
         return account;
     }
 
 
-
     @Override
     public boolean delete(int id) {
-        boolean t=false;
-        for(int i=0; i< currentAccount; i++){
-            if(accounts[i].getId()==id){
-                t=true;
+        boolean t = false;
+        for (int i = 0; i < currentAccount; i++) {
+            if (accounts[i].getId() == id) {
+                t = true;
             }
-        }if(t=true){
-            Account [] accounts1= new Account[accounts.length];
-            for(int j=0; j<currentAccount; j++){
-                if(accounts[j].getId()!=id){
-                    accounts1[j]=accounts[j];
+        }
+        if (t) {
+            Account[] accounts1 = new Account[accounts.length];
+            for (int j = 0; j < currentAccount; j++) {
+                if (accounts[j].getId() != id) {
+                    accounts1[j] = accounts[j];
 
                 }
 
-            }currentAccount--;
-            accounts=accounts1;
+            }
+            currentAccount--;
+            accounts = accounts1;
             return true;
-        }
-        else{
+        } else {
             return false;
 
         }
