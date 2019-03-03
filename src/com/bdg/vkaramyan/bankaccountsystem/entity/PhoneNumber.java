@@ -1,4 +1,7 @@
-package com.bdg.vkaramyan.bankaccountsystem;
+package com.bdg.vkaramyan.bankaccountsystem.entity;
+
+import com.bdg.vkaramyan.bankaccountsystem.common.CountryCode;
+import com.bdg.vkaramyan.bankaccountsystem.common.PhoneType;
 
 public class PhoneNumber extends AbstractBankEntity {
 

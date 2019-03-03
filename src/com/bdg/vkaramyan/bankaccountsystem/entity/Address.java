@@ -1,6 +1,8 @@
-package com.bdg.vkaramyan.bankaccountsystem;
+package com.bdg.vkaramyan.bankaccountsystem.entity;
 
 import java.util.Arrays;
+
+import com.bdg.vkaramyan.bankaccountsystem.common.Country;
 
 public class Address extends AbstractBankEntity{
 

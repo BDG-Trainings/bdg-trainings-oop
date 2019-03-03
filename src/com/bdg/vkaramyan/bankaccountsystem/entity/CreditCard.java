@@ -1,16 +1,18 @@
-package com.bdg.vkaramyan.bankaccountsystem;
+package com.bdg.vkaramyan.bankaccountsystem.entity;
 
-import java.util.Date;
-import java.util.Random;
+import java.time.LocalDate;
+import java.util.UUID;
+
+import com.bdg.vkaramyan.bankaccountsystem.common.CardType;
 
 public class CreditCard extends AbstractBankEntity {
 
 	private String cardNumber = "0123456789";
 	private int accountNumber;
-	private Date expirationDate;
+	private LocalDate expirationDate;
 	private CardType cardType;
 
-	public CreditCard(final int id, final String cardNumber, final int accountNumber, final Date expirationDate,
+	public CreditCard(final int id, final String cardNumber, final int accountNumber, final LocalDate expirationDate,
 			final CardType cardType) {
 
 		super(id);
@@ -21,16 +23,17 @@ public class CreditCard extends AbstractBankEntity {
 	}
 
 	public String getCardNumber() {
-		Random random = new Random();
-		random.nextInt();
+		UUID uuid = UUID.fromString(cardNumber);
+		cardNumber = uuid.toString();
 		return cardNumber;
+		
 	}
 
 	public int getAccountNumber() {
 		return accountNumber;
 	}
 
-	public Date getExpirationDate() {
+	public LocalDate getExpirationDate() {
 		return expirationDate;
 	}
 
@@ -46,7 +49,7 @@ public class CreditCard extends AbstractBankEntity {
 		this.accountNumber = accountNumber;
 	}
 
-	public void setExpirationDate(Date expirationDate) {
+	public void setExpirationDate(LocalDate expirationDate) {
 		this.expirationDate = expirationDate;
 	}
 
@@ -56,8 +59,7 @@ public class CreditCard extends AbstractBankEntity {
 
 	@Override
 	public String toString() {
-		return "CreditCard [cardNumber=" + cardNumber + ", accountNumber=" + accountNumber + ", expirationDate="
-				+ expirationDate + ", cardType=" + cardType + "]";
+		return "CreditCard [cardNumber=" + cardNumber + ", accountNumber=" + accountNumber + ", cardType=" + cardType + "]";
 	}
-
+	
 }

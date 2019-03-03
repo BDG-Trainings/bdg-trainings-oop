@@ -1,4 +1,4 @@
-package com.bdg.vkaramyan.bankaccountsystem;
+package com.bdg.vkaramyan.bankaccountsystem.common;
 
 public enum CountryCode {
 	
