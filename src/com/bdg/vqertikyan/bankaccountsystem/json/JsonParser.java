@@ -5,6 +5,11 @@ import com.bdg.vqertikyan.bankaccountsystem.common.ObjectType;
 import com.bdg.vqertikyan.bankaccountsystem.entity.AccountBalance;
 import com.bdg.vqertikyan.bankaccountsystem.entity.Address;
 import com.bdg.vqertikyan.bankaccountsystem.entity.PhoneNumber;
+import jdk.nashorn.internal.parser.JSONParser;
+
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 
 
 public final class JsonParser {
@@ -17,7 +22,8 @@ public final class JsonParser {
         this.objectType = objectType;
     }
 
-    public Object parse() {
+
+    public Object parse() throws FileNotFoundException {
         switch (this.objectType) {
             case ADDRESS:
                 return this.parseAddress();
@@ -26,16 +32,17 @@ public final class JsonParser {
             case ACCOUNT_BALANCE:
                 return this.parseAccountBalance();
             default:
-                return null;
-                // implement
-        //        throw new ObjectTypeNotFoundException("Object type : " + objectType + " not found");
-
+                throw new ObjectTypeNotFoundException("Object type : " + objectType + " not found");
         }
     }
 
-    private Address parseAddress() {
-        // implement
-       // return new Address();
+    private Address parseAddress() throws FileNotFoundException {
+     /*   final String filePath = "address.json";
+        FileReader reader = new FileReader(filePath);
+
+        JSONParser jsonParser = new JSONParser();
+        JSONObject jsonObject = (JSONObject) jsonParser.parse(reader);
+           return new Address();*/
         return null;
     }
 
@@ -48,3 +55,4 @@ public final class JsonParser {
     }
 
 }
+
