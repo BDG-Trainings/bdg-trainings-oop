@@ -1,4 +1,4 @@
-package com.bdg.osahakyan.bankaccountsystem;
+package bankaccountsystem;
 
 public class Customer {
 

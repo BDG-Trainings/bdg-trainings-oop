@@ -1,7 +1,7 @@
-package com.bdg.osahakyan.bankaccountsystem;
+package bankaccountsystem;
 
-import com.bdg.osahakyan.bankaccountsystem.enums.CountryCode;
-import com.bdg.osahakyan.bankaccountsystem.enums.PhoneType;
+import bankaccountsystem.enums.CountryCode;
+import bankaccountsystem.enums.PhoneType;
 
 public class PhoneNumber {
 

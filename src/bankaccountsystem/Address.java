@@ -1,6 +1,6 @@
-package com.bdg.osahakyan.bankaccountsystem;
+package bankaccountsystem;
 
-import com.bdg.osahakyan.bankaccountsystem.enums.Country;
+import bankaccountsystem.enums.Country;
 
 import java.util.Arrays;
 

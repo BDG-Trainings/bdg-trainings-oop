@@ -1,4 +1,4 @@
-package interfacetasks;
+package com.bdg.osahakyan.interfacetasks;
 
 public class Circle implements GeometricObject {
 

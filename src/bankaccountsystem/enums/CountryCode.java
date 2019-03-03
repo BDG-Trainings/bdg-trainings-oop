@@ -1,12 +1,12 @@
-package com.bdg.osahakyan.bankaccountsystem.enums;
+package bankaccountsystem.enums;
 
 public enum  CountryCode {
 
 //source--> https://countrycode.org/
 
-    ARM("+374", "Armenia"),
-    USA("+1", "United States of America" ),
-    CHN("+86", "China");
+    AM("+374", Country.AM),
+    USA("+1", Country.USA),
+    CHN("+86", Country.CHN);
 
     private String countryCode;
     private Country country;

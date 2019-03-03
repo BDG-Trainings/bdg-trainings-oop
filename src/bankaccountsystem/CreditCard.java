@@ -1,6 +1,6 @@
-package com.bdg.osahakyan.bankaccountsystem;
+package bankaccountsystem;
 
-import com.bdg.osahakyan.bankaccountsystem.enums.CardType;
+import bankaccountsystem.enums.CardType;
 import com.bdg.osahakyan.date.Date;
 
 import java.util.UUID;

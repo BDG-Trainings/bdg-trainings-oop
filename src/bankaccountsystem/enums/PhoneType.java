@@ -1,4 +1,4 @@
-package com.bdg.osahakyan.bankaccountsystem.enums;
+package bankaccountsystem.enums;
 
 public enum PhoneType {
 

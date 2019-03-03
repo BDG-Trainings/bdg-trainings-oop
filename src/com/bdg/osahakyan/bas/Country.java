@@ -1,4 +1,4 @@
-package bas;
+package com.bdg.osahakyan.bas;
 
 public enum Country {
 
