@@ -3,13 +3,13 @@ package com.bdg.vkaramyan.bankaccountsystem;
 public class Account extends AbstractBankEntity {
 
 	private Customer customer;
-	private Account accountDetail;
-	private Account accountBalance;
+	private CreditCard creditCard;
+	private AccountBalance accountBalance;
 
-	public Account(int id, Customer customer, Account accountDetail, Account accountBalance) {
+	public Account(int id, Customer customer, CreditCard creditCard, AccountBalance accountBalance) {
 		super(id);
 		this.customer = customer;
-		this.accountDetail = accountDetail;
+		this.creditCard = creditCard;
 		this.accountBalance = accountBalance;
 	}
 
@@ -17,11 +17,11 @@ public class Account extends AbstractBankEntity {
 		return customer;
 	}
 
-	public Account getAccountDetail() {
-		return accountDetail;
+	public CreditCard getAccountDetail() {
+		return creditCard;
 	}
 
-	public Account getAccountBalance() {
+	public AccountBalance getAccountBalance() {
 		return accountBalance;
 	}
 
@@ -29,17 +29,17 @@ public class Account extends AbstractBankEntity {
 		this.customer = customer;
 	}
 
-	public void setAccountDetail(Account accountDetail) {
-		this.accountDetail = accountDetail;
+	public void setAccountDetail(CreditCard creditCard) {
+		this.creditCard = creditCard;
 	}
 
-	public void setAccountBalance(Account accountBalance) {
+	public void setAccountBalance(AccountBalance accountBalance) {
 		this.accountBalance = accountBalance;
 	}
 
 	@Override
 	public String toString() {
-		return "Account [customer=" + customer + ", accountDetail=" + accountDetail + ", accountBalance="
+		return "Account [customer=" + customer + ", creditCard=" + creditCard + ", accountBalance="
 				+ accountBalance + "]";
 	}
 

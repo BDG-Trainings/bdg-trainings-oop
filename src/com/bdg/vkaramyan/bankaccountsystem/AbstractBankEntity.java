@@ -1,12 +1,13 @@
 package com.bdg.vkaramyan.bankaccountsystem;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class AbstractBankEntity {
 
 	protected int id;
-	protected Date createDate;
-	protected Date updateDate;
+	protected LocalDate createDate;
+	protected LocalDate updateDate;
+	protected LocalDate deleteDate;
 
 	public AbstractBankEntity(int id) {
 
@@ -17,29 +18,38 @@ public class AbstractBankEntity {
 		return id;
 	}
 
-	public Date getCreateDate() {
+	public LocalDate getCreateDate() {
 		return createDate;
 	}
 
-	public Date getUpdateDate() {
+	public LocalDate getUpdateDate() {
 		return updateDate;
+	}
+
+	public LocalDate getDeleteDate() {
+		return deleteDate;
 	}
 
 	public void setId(int id) {
 		this.id = id;
 	}
 
-	public void setCreateDate(Date createDate) {
+	public void setCreateDate(LocalDate createDate) {
 		this.createDate = createDate;
 	}
 
-	public void setUpdateDate(Date updateDate) {
+	public void setUpdateDate(LocalDate updateDate) {
 		this.updateDate = updateDate;
+	}
+
+	public void setDeleteDate(LocalDate deleteDate) {
+		this.deleteDate = deleteDate;
 	}
 
 	@Override
 	public String toString() {
-		return "AbstractBankEntity [id=" + id + ", createDate=" + createDate + ", updateDate=" + updateDate + "]";
+		return "AbstractBankEntity [id=" + id + ", createDate=" + createDate + ", updateDate=" + updateDate
+				+ ", deleteDate=" + deleteDate + "]";
 	}
 
 }
