@@ -1,10 +1,11 @@
-package bankaccountsystem;
+package bankaccountsystem.objects;
 
+import bankaccountsystem.entity.AbstractBASEntity;
 import bankaccountsystem.enums.Country;
 
 import java.util.Arrays;
 
-public class Address {
+public class Address extends AbstractBASEntity {
 
     private Country country;
     private String street;

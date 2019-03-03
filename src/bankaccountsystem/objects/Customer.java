@@ -1,6 +1,8 @@
-package bankaccountsystem;
+package bankaccountsystem.objects;
 
-public class Customer {
+import bankaccountsystem.entity.AbstractBASEntity;
+
+public class Customer extends AbstractBASEntity {
 
     private String customerName;
     private String customerSurname;

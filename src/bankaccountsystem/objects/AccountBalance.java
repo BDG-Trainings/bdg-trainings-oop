@@ -1,6 +1,8 @@
-package bankaccountsystem;
+package bankaccountsystem.objects;
 
-public class AccountBalance {
+import bankaccountsystem.entity.AbstractBASEntity;
+
+public class AccountBalance extends AbstractBASEntity {
 
     private double balance;
 

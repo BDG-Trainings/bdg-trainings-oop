@@ -1,11 +1,12 @@
-package bankaccountsystem;
+package bankaccountsystem.objects;
 
+import bankaccountsystem.entity.AbstractBASEntity;
 import bankaccountsystem.enums.CardType;
 import com.bdg.osahakyan.date.Date;
 
 import java.util.UUID;
 
-public class CreditCard {
+public class CreditCard extends AbstractBASEntity {
 
     private String cardNumber;
     private int accountNumber;

@@ -1,9 +1,10 @@
-package bankaccountsystem;
+package bankaccountsystem.objects;
 
+import bankaccountsystem.entity.AbstractBASEntity;
 import bankaccountsystem.enums.CountryCode;
 import bankaccountsystem.enums.PhoneType;
 
-public class PhoneNumber {
+public class PhoneNumber extends AbstractBASEntity {
 
     private CountryCode countryCode;
     private String number;
