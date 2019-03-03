@@ -5,10 +5,10 @@ import com.bdg.resourcemanagement.vkaramyan.DepartmentType;
 import com.bdg.resourcemanagement.vkaramyan.Employee;
 
 public class DepartmentService {
-	
-	public Department create(final String departmentName, final Employee departmentHead, final Employee[] employees, final DepartmentType departmentType){
-	       Department department = new Department(departmentName, departmentHead, employees, departmentType);
-	               return department;
-	   }
+
+    public Department create(final String departmentName, final Employee departmentHead, final Employee[] employees, final DepartmentType departmentType) {
+        Department department = new Department(departmentName, departmentHead, employees, departmentType);
+        return department;
+    }
 
 }

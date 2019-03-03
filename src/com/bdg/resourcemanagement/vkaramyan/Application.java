@@ -46,7 +46,7 @@ public class Application {
         resourceManagement.findDepartmentByName("Dep1", employee1, empArr1, DepartmentType.ENGINEERING);
         resourceManagement.findDepartmentByName("Dep2", employee3, empArr2, DepartmentType.ACCOUNTING);
         resourceManagement.findDepartmentByName("Dep3", employee3, empArr2, DepartmentType.MARKETING);
-		resourceManagement.getDepartmentWithMaxSalary();
+		resourceManagement.findDepartmentWithMaxSalary();
 	}
 
 }

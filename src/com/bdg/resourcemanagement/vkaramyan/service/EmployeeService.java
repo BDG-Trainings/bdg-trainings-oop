@@ -7,10 +7,14 @@ import com.bdg.resourcemanagement.vkaramyan.SalaryDetail;
 //constructori anhrajeshtutyun chka qani vor ogtagorcelu enq service-i create methody vory stanaluya parameternery new ani u het veradarcni
 
 public class EmployeeService {
-	
+
+
+    //We don't need to keep employee reference in this case, just return that
+
+    //We nned some interface for this service. for example EmployeeService with  create method
+
 	public Employee create(final Person person, final SalaryDetail salaryDetail){
-        Employee employee = new Employee(salaryDetail, person);
-        return employee;
+        return new Employee(salaryDetail, person);
         
 	}
 	
