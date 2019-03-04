@@ -10,43 +10,14 @@ public class Account extends AbstractBankEntity {
     private AccountBalance accountBalance;
 
 
-    //Remove id from constructor parameters
-    //id is internal field and should be setup in persistence time
-    Account(int id, AccountBalance balance, CreditCard creditCard) {
+
+    Account(int id,Customer customer, CreditCard creditCard, AccountBalance balance) {
         super(id);
+        this.customer=customer;
         this.creditCard = creditCard;
         this.accountBalance = balance;
     }
 
-    @Override
-    public void setUpdatedDate(LocalDate updatedDate) {
-        super.setUpdatedDate(updatedDate);
-    }
-
-    @Override
-    public void setId(int id) {
-        super.setId(id);
-    }
-
-    @Override
-    public void setCreatedDate(LocalDate createdDate) {
-        super.setCreatedDate(createdDate);
-    }
-
-    @Override
-    public int getId() {
-        return super.getId();
-    }
-
-    @Override
-    public LocalDate getUpdatedDate() {
-        return super.getUpdatedDate();
-    }
-
-    @Override
-    public LocalDate getCreatedDate() {
-        return super.getCreatedDate();
-    }
 
     public AccountBalance getAccountBalance() {
         return accountBalance;

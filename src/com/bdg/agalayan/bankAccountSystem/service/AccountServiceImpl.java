@@ -9,8 +9,8 @@ public class AccountServiceImpl implements AccountService {
 
     //This is service class and responsible to create or return account
     //remove this constructor parameter
-    public AccountServiceImpl(Account[] accounts) {
-        this.accounts = accounts;
+    public AccountServiceImpl() {
+
     }
 
     @Override

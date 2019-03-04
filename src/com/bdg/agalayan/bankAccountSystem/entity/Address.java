@@ -11,43 +11,13 @@ public class Address extends AbstractBankEntity {
     private PhoneNumber[] phoneNumbers;
 
 
-    //Same here remove id please
-    Address(int id, Country country, String street, PhoneNumber[] phoneNumbers) {
+
+    Address( int id,Country country, String street, PhoneNumber[] phoneNumbers) {
         super(id);
         this.country = country;
         this.street = street;
         this.phoneNumbers = phoneNumbers;
 
-    }
-
-    @Override
-    public void setUpdatedDate(LocalDate updatedDate) {
-        super.setUpdatedDate(updatedDate);
-    }
-
-    @Override
-    public void setId(int id) {
-        super.setId(id);
-    }
-
-    @Override
-    public void setCreatedDate(LocalDate createdDate) {
-        super.setCreatedDate(createdDate);
-    }
-
-    @Override
-    public int getId() {
-        return super.getId();
-    }
-
-    @Override
-    public LocalDate getUpdatedDate() {
-        return super.getUpdatedDate();
-    }
-
-    @Override
-    public LocalDate getCreatedDate() {
-        return super.getCreatedDate();
     }
 
     public void setStreet(String street) {

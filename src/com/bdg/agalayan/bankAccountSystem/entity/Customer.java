@@ -8,43 +8,14 @@ public class Customer extends AbstractBankEntity {
     private Address address;
 
 
-    //ID :)
-    Customer(int id, String customerName, String customerSurname, Address address) {
+
+    Customer(int id,String customerName, String customerSurname, Address address) {
         super(id);
         this.customerName = customerName;
         this.customerSurname = customerSurname;
         this.address = address;
     }
 
-    @Override
-    public LocalDate getCreatedDate() {
-        return super.getCreatedDate();
-    }
-
-    @Override
-    public LocalDate getUpdatedDate() {
-        return super.getUpdatedDate();
-    }
-
-    @Override
-    public int getId() {
-        return super.getId();
-    }
-
-    @Override
-    public void setCreatedDate(LocalDate createdDate) {
-        super.setCreatedDate(createdDate);
-    }
-
-    @Override
-    public void setId(int id) {
-        super.setId(id);
-    }
-
-    @Override
-    public void setUpdatedDate(LocalDate updatedDate) {
-        super.setUpdatedDate(updatedDate);
-    }
 
     public void setCustomerSurname(String customerSurname) {
         this.customerSurname = customerSurname;

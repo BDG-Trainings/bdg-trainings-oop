@@ -16,4 +16,11 @@ public enum CountryCode {
         this.country = country;
     }
 
+    public Country getCountry() {
+        return country;
+    }
+    public String getCountryCode() {
+        return countryCode;
+    }
+
 }
