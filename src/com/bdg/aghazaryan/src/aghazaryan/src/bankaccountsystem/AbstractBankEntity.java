@@ -2,46 +2,53 @@ package com.bdg.aghazaryan.src.aghazaryan.src.bankaccountsystem;
 
 import com.bdg.aghazaryan.src.aghazaryan.src.classexercises.Date;
 
-public  abstract class AbstractBankEntity {
+import java.time.LocalDate;
+
+public abstract class AbstractBankEntity {
 
     protected int id;
-    protected Date createdDate;
-    protected Date updatedDate;
+    protected LocalDate createdDate;
+    protected LocalDate updatedDate;
 
-    public AbstractBankEntity (int id ) {
+    public LocalDate getDeletedDate() {
+        return deletedDate;
+    }
+
+    public void setDeletedDate(LocalDate deletedDate) {
+        this.deletedDate = deletedDate;
+    }
+
+    protected LocalDate deletedDate;
+
+    public AbstractBankEntity(int id) {
+
         this.id = id;
     }
 
     public int getId() {
+
         return id;
     }
 
     public void setId(int id) {
+
         this.id = id;
     }
 
-    public Date getCreatedDate() {
+    public LocalDate getCreatedDate() {
+
         return createdDate;
     }
 
-    public void setCreatedDate(Date createdDate) {
+    public void setCreatedDate(LocalDate createdDate) {
         this.createdDate = createdDate;
     }
 
-    public Date getUpdatedDate() {
+    public LocalDate getUpdatedDate() {
         return updatedDate;
     }
 
-    public void setUpdatedDate(Date updatedDate) {
+    public void setUpdatedDate(LocalDate updatedDate) {
         this.updatedDate = updatedDate;
-    }
-
-    @Override
-    public String toString() {
-        return "AbstractBankEntity{" +
-                "id=" + id +
-                ", createdDate=" + createdDate +
-                ", updatedDate=" + updatedDate +
-                '}';
     }
 }
