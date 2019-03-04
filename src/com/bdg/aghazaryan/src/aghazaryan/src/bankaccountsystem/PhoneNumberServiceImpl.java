@@ -1,5 +1,7 @@
 package com.bdg.aghazaryan.src.aghazaryan.src.bankaccountsystem;
 
+import com.bdg.aghazaryan.src.aghazaryan.src.bankaccountsystem.enums.CountryCode;
+import com.bdg.aghazaryan.src.aghazaryan.src.bankaccountsystem.enums.PhoneType;
 import com.bdg.aghazaryan.src.aghazaryan.src.bankaccountsystem.json.parser.JsonParseResult;
 import com.bdg.aghazaryan.src.aghazaryan.src.bankaccountsystem.json.parser.JsonParseResults;
 import com.bdg.aghazaryan.src.aghazaryan.src.bankaccountsystem.json.parser.JsonParser;
@@ -26,7 +28,7 @@ public final class PhoneNumberServiceImpl implements PhoneNumberService {
         for (final JsonParseResult jpr : results.getResults()) {
             switch (jpr.getJsonKey()) {
                 case "countryCode":
-                    phoneNumber.setCountryCode(CountryCode.findByCountryCode(jpr.getJsonValue()));
+                    phoneNumber.setCountryCode (CountryCode.findByCountryCode(jpr.getJsonValue()));
                     break;
                 case "number":
                     phoneNumber.setNumber(jpr.getJsonValue());
