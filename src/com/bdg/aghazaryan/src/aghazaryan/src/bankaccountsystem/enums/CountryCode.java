@@ -1,5 +1,7 @@
 package com.bdg.aghazaryan.src.aghazaryan.src.bankaccountsystem.enums;
 
+import com.bdg.aghazaryan.src.aghazaryan.src.bankaccountsystem.CountryCodeNotFoundException;
+
 public enum CountryCode {
 
     ARM("+374", Country.ARM),
@@ -27,11 +29,12 @@ public enum CountryCode {
         return country;
     }
 
-    @Override
-    public String toString() {
-        return "Country{" +
-                "countryName='" + countryCode + '\'' +
-                ", countryCapital='" + country + '\'' +
-                '}';
+    public static CountryCode findByCountryCode(final String countryCode) {
+        for (final CountryCode c : values()) {
+            if (c.countryCode.equalsIgnoreCase(countryCode)) {
+                return c;
+            }
+        }
+        throw new CountryCodeNotFoundException(countryCode);
     }
 }

@@ -3,12 +3,12 @@ package com.bdg.aghazaryan.src.aghazaryan.src.bankaccountsystem;
 public class Account {
 
     private Customer customer;
-    private AccountDetail accountDetail;
+    private CreditCard  creditCard ;
     private AccountBalance accountBalance;
 
     public Account(Customer customer, AccountDetail accountDetail, AccountBalance accountBalance) {
         this.customer = customer;
-        this.accountDetail = accountDetail;
+        this.creditCard = creditCard;
         this.accountBalance = accountBalance;
 
     }
@@ -20,12 +20,14 @@ public class Account {
         this.customer = customer;
     }
 
-    public AccountDetail getAccountDetail() {
-        return accountDetail;
+    public CreditCard getCreditCard()
+    {
+        return creditCard;
     }
 
-    public void setAccountDetail (AccountDetail accountDetail) {
-        this.accountDetail = accountDetail;
+    public void setCreditCard (CreditCard creditCard) {
+
+        this.creditCard = creditCard;
     }
 
     public AccountBalance getAccountBalance() {
@@ -40,7 +42,7 @@ public class Account {
     public String toString() {
         return "Account{" +
                 "customer=" + customer +
-                ", accountDetail=" + accountDetail +
+                ", accountDetail=" + creditCard +
                 ", accountBalance=" + accountBalance +
                 '}';
     }
