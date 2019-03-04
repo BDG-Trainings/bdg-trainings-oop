@@ -11,8 +11,8 @@ public class Account extends AbstractBankEntity {
 
 
 
-    Account(int id,Customer customer, CreditCard creditCard, AccountBalance balance) {
-        super(id);
+   public Account(Customer customer, CreditCard creditCard, AccountBalance balance) {
+
         this.customer=customer;
         this.creditCard = creditCard;
         this.accountBalance = balance;
@@ -43,6 +43,16 @@ public class Account extends AbstractBankEntity {
     public void setAccountBalance(AccountBalance accountBalance) {
         this.accountBalance = accountBalance;
     }
+
+    public String toString(){
+       return "Account[customer:"+customer+
+               ", creditCard:"+creditCard+
+               ", balance:"+accountBalance+"]";
+    }
+
+
+
+
 
 
 }

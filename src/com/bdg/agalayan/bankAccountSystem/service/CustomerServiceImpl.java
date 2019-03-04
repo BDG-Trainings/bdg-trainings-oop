@@ -8,7 +8,7 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public Customer get(int id) {
-        for (int i = 0; i < customers.length; i++) {
+        for (int i = 0; i < currentCustomer; i++) {
             if (customers[i].getId() == id) {
                 return customers[i];
             }
@@ -17,12 +17,14 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public Customer create(Customer customer) {
-        if (currentCustomer < customers.length) {
-            customers[currentCustomer] = customer;
-            currentCustomer++;
+    public Customer create(CustomerCreateParameter parameter) {
+        Customer customer=new Customer(parameter.getCustomerName(), parameter.getCustomerSurname(),parameter.getAddress());
+        int i=0;
+        if (i < currentCustomer) {
+            customers[i] = customer;
+            i++;
         }
-        return null;
+        return customer;
     }
 
     @Override
@@ -34,7 +36,7 @@ public class CustomerServiceImpl implements CustomerService {
             }
         }
         if (t = true) {
-            Customer[] customers1 = new Customer[customers.length];
+            Customer[] customers1 = new Customer[currentCustomer];
             for (int j = 0; j < currentCustomer; j++) {
                 if (customers[j].getId() != id) {
                     customers1[j] = customers[j];

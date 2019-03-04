@@ -11,10 +11,17 @@ public class PhoneNumber extends AbstractBankEntity{
     private final String number;
     private final PhoneType type;
 
-    public PhoneNumber(int id, CountryCode countryCode, String number, PhoneType type) {
-        super(id);
+    public PhoneNumber(CountryCode countryCode, String number, PhoneType type) {
+
         this.countryCode = countryCode;
         this.number = number;
         this.type = type;
     }
+    @Override
+    public String toString(){
+        return "CountryCode:"+ countryCode+
+                ", PhonType:"+type+
+                ", number:" +number+ "]";
+    }
+
 }

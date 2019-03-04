@@ -19,4 +19,11 @@ public final class AccountBalance {
     public void withdraw(final double amount) {
         this.balance = this.balance - amount;
     }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+    public String toString(){
+        return "Balance:"+balance;
+    }
 }

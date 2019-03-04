@@ -9,8 +9,8 @@ public class Customer extends AbstractBankEntity {
 
 
 
-    Customer(int id,String customerName, String customerSurname, Address address) {
-        super(id);
+   public Customer(String customerName, String customerSurname, Address address) {
+
         this.customerName = customerName;
         this.customerSurname = customerSurname;
         this.address = address;
@@ -39,6 +39,13 @@ public class Customer extends AbstractBankEntity {
 
     public Address getAddress() {
         return address;
+    }
+
+    @Override
+    public String toString(){
+       return "Customer[name:"+customerName+
+               ", surname:"+customerSurname+
+               ", address:"+address +"]";
     }
 
 }

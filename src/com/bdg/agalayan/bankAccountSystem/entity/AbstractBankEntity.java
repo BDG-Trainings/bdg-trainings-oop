@@ -10,7 +10,7 @@ public abstract class AbstractBankEntity {
 
 
 
-    AbstractBankEntity(int id) {
+    AbstractBankEntity() {
         this.id = id;
 
     }

@@ -1,6 +1,12 @@
 package com.bdg.agalayan.bankAccountSystem.service;
 
 import com.bdg.agalayan.bankAccountSystem.entity.Account;
+import com.bdg.agalayan.bankAccountSystem.entity.Address;
+import com.bdg.agalayan.bankAccountSystem.entity.Customer;
+import com.bdg.agalayan.bankAccountSystem.entity.PhoneNumber;
+import com.bdg.agalayan.bankAccountSystem.enums.Country;
+import com.bdg.agalayan.bankAccountSystem.enums.CountryCode;
+import com.bdg.agalayan.bankAccountSystem.enums.PhoneType;
 
 public class AccountServiceImpl implements AccountService {
     private Account[] accounts;
@@ -15,7 +21,7 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public Account get(int id) {
-        for (int i = 0; i < accounts.length; i++) {
+        for (int i = 0; i < currentAccount; i++) {
             if (accounts[i].getId() == id) {
                 return accounts[i];
             }
@@ -25,10 +31,13 @@ public class AccountServiceImpl implements AccountService {
 
     //This method should accept parameters and create Account according that parameters
     @Override
-    public Account create(Account account) {
-        if (currentAccount < accounts.length) {
-            accounts[currentAccount] = account;
-            currentAccount++;
+    public Account create(AccountCreateParameter parameter) {
+        Account account= new Account(parameter.getCustomer(), parameter.getCreditCard(), parameter.getAccountBalance());
+        int i=0;
+        if (i<currentAccount) {
+            accounts[i] = account;
+            i++;
+
         }
         return account;
     }

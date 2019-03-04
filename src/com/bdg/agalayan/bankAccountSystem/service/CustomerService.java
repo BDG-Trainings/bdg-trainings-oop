@@ -6,7 +6,7 @@ public interface CustomerService {
 
     Customer get(int id);
 
-    Customer create(Customer customer);
+    Customer create(CustomerCreateParameter parameter);
 
 
     boolean delete(int id);
