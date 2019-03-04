@@ -1,7 +1,12 @@
 package com.bdg.vkaramyan.bankaccountsystem;
 
+import com.bdg.vkaramyan.bankaccountsystem.common.Country;
+import com.bdg.vkaramyan.bankaccountsystem.common.CountryCode;
+import com.bdg.vkaramyan.bankaccountsystem.common.PhoneType;
 import com.bdg.vkaramyan.bankaccountsystem.entity.AccountBalance;
 import com.bdg.vkaramyan.bankaccountsystem.entity.Address;
+import com.bdg.vkaramyan.bankaccountsystem.entity.CreditCard;
+import com.bdg.vkaramyan.bankaccountsystem.entity.Customer;
 import com.bdg.vkaramyan.bankaccountsystem.entity.PhoneNumber;
 
 public class JsonParser {
@@ -29,7 +34,7 @@ public class JsonParser {
     }
 
     private Address parseAddress() {
-        return new Address();
+        return new Address(1);
     }
 
     private AccountBalance parseAccountBalance() {

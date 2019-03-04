@@ -14,6 +14,26 @@ public enum CountryCode {
 		this.countryCode = countryCode;
 		this.country = country;
 	}
+
+	public String getCountryCode() {
+		return countryCode;
+	}
+
+	public Country getCountry() {
+		return country;
+	}
+
+	public static CountryCode findByCountryCode(final String countryCode) {
+        for (final CountryCode c : values()) {
+            if (c.countryCode.equalsIgnoreCase(countryCode)) {
+                return c;
+            }
+        }
+        throw new CountryCodeNotFoundException(countryCode);
+    }
+	
+	
+	
 	
 }
 

@@ -6,7 +6,12 @@ import com.bdg.vkaramyan.bankaccountsystem.common.Country;
 
 public class Address extends AbstractBankEntity{
 
-		private Country country;
+	public Address(int id) {
+		super(id);
+		// TODO Auto-generated constructor stub
+	}
+
+	/*	private Country country;
 		private String street;
 		private PhoneNumber[] phoneNumber;
 	
@@ -45,6 +50,6 @@ public class Address extends AbstractBankEntity{
 		public String toString() {
 		return "Address [country=" + country + ", street=" + street + ", phoneNumber=" + Arrays.toString(phoneNumber)
 					+ "]";
-		}
+		}*/
 
 }
