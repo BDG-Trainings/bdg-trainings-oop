@@ -45,10 +45,12 @@ public abstract class AbstractBankEntity {
     }
 
     public LocalDate getUpdatedDate() {
+
         return updatedDate;
     }
 
     public void setUpdatedDate(LocalDate updatedDate) {
+
         this.updatedDate = updatedDate;
     }
 }

@@ -6,26 +6,30 @@ public class Account {
     private CreditCard  creditCard;
     private AccountBalance accountBalance;
 
-    public Account(Customer customer,CreditCard  creditCard, AccountBalance accountBalance) {
+    public Account(Customer customer,CreditCard creditCard, AccountBalance accountBalance) {
         this.customer = customer;
         this.creditCard = creditCard;
         this.accountBalance = accountBalance;
 
     }
     public Customer getCustomer() {
+
         return customer;
     }
 
     public void setCustomer(Customer customer) {
+
         this.customer = customer;
     }
 
     public CreditCard getCreditCard()
     {
+
         return creditCard;
     }
 
-    public void setCreditCard (CreditCard creditCard) {
+    public void setCreditCard (
+            CreditCard creditCard) {
 
         this.creditCard = creditCard;
     }
