@@ -3,7 +3,7 @@ package com.bdg.agalayan.bankAccountSystem.service;
 import com.bdg.agalayan.bankAccountSystem.entity.Customer;
 
 public class CustomerServiceImpl implements CustomerService {
-    private Customer[] customers;
+    private Customer[] customers= new Customer[10];
     private int currentCustomer;
 
     @Override
@@ -19,10 +19,10 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public Customer create(CustomerCreateParameter parameter) {
         Customer customer=new Customer(parameter.getCustomerName(), parameter.getCustomerSurname(),parameter.getAddress());
-        int i=0;
-        if (i < currentCustomer) {
-            customers[i] = customer;
-            i++;
+
+        if (currentCustomer< customers.length) {
+            customers[currentCustomer] = customer;
+            currentCustomer++;
         }
         return customer;
     }

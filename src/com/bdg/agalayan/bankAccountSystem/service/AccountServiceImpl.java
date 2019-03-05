@@ -9,7 +9,7 @@ import com.bdg.agalayan.bankAccountSystem.enums.CountryCode;
 import com.bdg.agalayan.bankAccountSystem.enums.PhoneType;
 
 public class AccountServiceImpl implements AccountService {
-    private Account[] accounts;
+    private Account[] accounts= new Account[10];
     private int currentAccount;
 
 
@@ -33,10 +33,10 @@ public class AccountServiceImpl implements AccountService {
     @Override
     public Account create(AccountCreateParameter parameter) {
         Account account= new Account(parameter.getCustomer(), parameter.getCreditCard(), parameter.getAccountBalance());
-        int i=0;
-        if (i<currentAccount) {
-            accounts[i] = account;
-            i++;
+
+        if (currentAccount< accounts.length) {
+            accounts[currentAccount] = account;
+            currentAccount++;
 
         }
         return account;
