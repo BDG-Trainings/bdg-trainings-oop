@@ -4,9 +4,9 @@ import com.bdg.aghazaryan.src.aghazaryan.src.bankaccountsystem.Customer;
 
 public interface CustomerService {
 
-    Customer create ();
+    Customer create (Customer createParameter);
 
-    Customer update ();
+    Customer update (Customer createParameter);
 
     Customer delete ();
 
