@@ -16,22 +16,20 @@ public abstract class AccountServiceImpl implements AccountService {
 
     @Override
 
-    public Account update(final Account updateParameter) {
+    public Account update(final Account createParameter) {
 
-        final Account account = new Account(updateParameter.getCustomer(), updateParameter.getCreditCard(), (updateParameter.getAccountBalance()));
+        return null;
+    }
 
-        return account;
-        {
-            return null;
-        }
-        @Override
-        public Account delete () {
-            return null;
-        }
+    @Override
+    public Account delete() {
+        return null;
+    }
 
-        @Override
-        public Account get () {
-            return null;
-        }
+    @Override
+    public Account get() {
+        return null;
     }
 }
+
+
