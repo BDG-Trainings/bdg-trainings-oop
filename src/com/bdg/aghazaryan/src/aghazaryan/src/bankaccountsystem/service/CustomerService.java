@@ -6,7 +6,7 @@ public interface CustomerService {
 
     Customer create (Customer createParameter);
 
-    Customer update (Customer createParameter);
+    Customer update ();
 
     Customer delete ();
 
