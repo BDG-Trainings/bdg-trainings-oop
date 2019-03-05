@@ -1,5 +1,7 @@
 package com.bdg.vkaramyan.bankaccountsystem.entity;
 
+import com.bdg.vkaramyan.bankaccountsystem.common.Country;
+
 public class Account extends AbstractBankEntity {
 
 	private Customer customer;
@@ -13,6 +15,7 @@ public class Account extends AbstractBankEntity {
 		this.accountBalance = accountBalance;
 	}
 
+	
 	public Customer getCustomer() {
 		return customer;
 	}
