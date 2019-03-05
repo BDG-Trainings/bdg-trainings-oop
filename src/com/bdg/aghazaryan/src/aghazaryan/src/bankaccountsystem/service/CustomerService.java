@@ -12,6 +12,4 @@ public interface CustomerService {
 
     Customer get ();
 
-
-
 }
