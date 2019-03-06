@@ -1,8 +1,8 @@
 package com.bdg.vkaramyan.bankaccountsystem.service;
 
 
-import com.bdg.vkaramyan.bankaccountsystem.common.AccountCreateParameter;
-import com.bdg.vkaramyan.bankaccountsystem.common.CustomerCreateParameter;
+import com.bdg.vkaramyan.bankaccountsystem.CRUD.AccountCreateParameter;
+import com.bdg.vkaramyan.bankaccountsystem.CRUD.CustomerCreateParameter;
 import com.bdg.vkaramyan.bankaccountsystem.entity.Account;
 import com.bdg.vkaramyan.bankaccountsystem.entity.Customer;
 

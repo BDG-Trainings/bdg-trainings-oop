@@ -1,4 +1,4 @@
-package com.bdg.vkaramyan.bankaccountsystem.common;
+package com.bdg.vkaramyan.bankaccountsystem.CRUD;
 
 import com.bdg.vkaramyan.bankaccountsystem.entity.Address;
 
