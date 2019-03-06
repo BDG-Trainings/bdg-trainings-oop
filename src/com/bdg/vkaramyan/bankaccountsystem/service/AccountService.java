@@ -6,9 +6,10 @@ import com.bdg.vkaramyan.bankaccountsystem.entity.Account;
 
 public interface AccountService {
 	
-	Account create(AccountCreateParameter accountCreateParameter);
-	Account delete();
+	Account create(AccountCreateParameter createParameter);
+	boolean delete();
 	Account update();
 	Account get();
+	
 
 }
