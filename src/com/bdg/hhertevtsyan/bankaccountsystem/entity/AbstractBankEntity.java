@@ -1,15 +1,15 @@
-package com.bdg.hhertevtsyan.bankaccountsystem;
+package com.bdg.hhertevtsyan.bankaccountsystem.entity;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public abstract class AbstractBankEntity {
    protected int id;
-   protected Date createdDate;
-   protected Date updatedDate;
+   protected LocalDate createdDate;
+   protected LocalDate updatedDate;
 
    public AbstractBankEntity (final int id) {
-       this.id = id;
-   }
+        this.id = id;
+    }
 
     public int getId() {
         return id;
@@ -19,19 +19,19 @@ public abstract class AbstractBankEntity {
         this.id = id;
     }
 
-    public Date getCreatedDate() {
+    public LocalDate getCreatedDate() {
         return createdDate;
     }
 
-    public void setCreatedDate(Date createdDate) {
+    public void setCreatedDate(LocalDate createdDate) {
         this.createdDate = createdDate;
     }
 
-    public Date getUpdatedDate() {
+    public LocalDate getUpdatedDate() {
         return updatedDate;
     }
 
-    public void setUpdatedDate(Date updatedDate) {
+    public void setUpdatedDate(LocalDate updatedDate) {
         this.updatedDate = updatedDate;
     }
 }

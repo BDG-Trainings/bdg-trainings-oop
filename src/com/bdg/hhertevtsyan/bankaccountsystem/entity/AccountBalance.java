@@ -1,4 +1,4 @@
-package com.bdg.hhertevtsyan.bankaccountsystem;
+package com.bdg.hhertevtsyan.bankaccountsystem.entity;
 
 public final class AccountBalance {
     private double balance;

@@ -1,4 +1,4 @@
-package com.bdg.hhertevtsyan.bankaccountsystem;
+package com.bdg.hhertevtsyan.bankaccountsystem.entity;
 
 import com.bdg.hhertevtsyan.bankaccountsystem.common.Country;
 
@@ -6,7 +6,7 @@ public class Address {
 
     private Country country;
     private String street;
-    private PhoneNumber [] phoneNumbers;
+    private PhoneNumber[] phoneNumbers;
 
     public Address (final Country country, final String street, final PhoneNumber [] phoneNumbers) {
         this.country = country;

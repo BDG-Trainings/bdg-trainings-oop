@@ -1,8 +1,5 @@
 package com.bdg.hhertevtsyan.bankaccountsystem.entity;
 
-import com.bdg.hhertevtsyan.bankaccountsystem.AbstractBankEntity;
-import com.bdg.hhertevtsyan.bankaccountsystem.Address;
-
 public class Customer extends AbstractBankEntity {
     private String customerName;
     private String customerSurname;

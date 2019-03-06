@@ -1,7 +1,6 @@
 package com.bdg.hhertevtsyan.bankaccountsystem.entity;
 
 import com.bdg.hhertevtsyan.Date;
-import com.bdg.hhertevtsyan.bankaccountsystem.AbstractBankEntity;
 import com.bdg.hhertevtsyan.bankaccountsystem.common.CardType;
 
 public class CreditCard extends AbstractBankEntity {
