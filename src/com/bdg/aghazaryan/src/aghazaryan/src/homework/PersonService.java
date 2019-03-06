@@ -1,4 +1,7 @@
 package com.bdg.aghazaryan.src.aghazaryan.src.homework;
 
-public class PersonService {
+public interface PersonService {
+
+    PersonService create();
 }
+
