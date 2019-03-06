@@ -7,12 +7,18 @@ import com.bdg.vkaramyan.bankaccountsystem.entity.CreditCard;
 import com.bdg.vkaramyan.bankaccountsystem.entity.Customer;
 import com.bdg.vkaramyan.bankaccountsystem.entity.PhoneNumber;
 
+
+//ete menq unenq AccountCreateParameter class => vor ira bolor field-ery petqa linen create parameters nerov
+//orinak PhoneNumberCreateParameter kam CreditCardCreateParameter
+
 public class AccountCreateParameter {
 	
-	
+	//Inchiya mez petq customer-y estex?
+    //nerqevum unenq arden customerCreateParameter
 	private Customer customer;
 	private Country country;
 	private PhoneNumber phoneNumber;
+	//Account class-um 1 customer ka => CustomerCreateParameter chpetq e array lini
 	private CustomerCreateParameter [] customerCreateParameter;
 	private CreditCard creditCard;
 	private AccountBalance accountBalance;
