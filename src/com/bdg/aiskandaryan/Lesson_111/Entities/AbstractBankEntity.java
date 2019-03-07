@@ -10,6 +10,8 @@ public abstract class AbstractBankEntity {
 
     public AbstractBankEntity(final int id) {
         this.id = id;
+        this.updatedDate = null;
+        this.deletedDate = null;
     }
 
     public int getId() {

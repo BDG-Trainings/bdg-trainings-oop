@@ -2,6 +2,8 @@ package com.bdg.aiskandaryan.Lesson_111;
 
 import com.bdg.aiskandaryan.Lesson_111.Entities.AbstractBankEntity;
 
+import java.time.LocalDate;
+
 public class Customer extends AbstractBankEntity {
 
     private String customerName;
@@ -13,8 +15,6 @@ public class Customer extends AbstractBankEntity {
         this.customerName = customerName;
         this.customerSurname = customerSurname;
         this.customerAddress = customerAddress;
-        this.setDeletedDate(null);
-        this.setUpdatedDate(null);
     }
 
     public String getCustomerName() {
@@ -23,6 +23,7 @@ public class Customer extends AbstractBankEntity {
 
     public void setCustomerName(final String customerName) {
         this.customerName = customerName;
+        this.updatedDate = LocalDate.now();
     }
 
     public String getCustomerSurname() {
@@ -31,6 +32,7 @@ public class Customer extends AbstractBankEntity {
 
     public void setCustomerSurname(final String customerSurname) {
         this.customerSurname = customerSurname;
+        this.updatedDate = LocalDate.now();
     }
 
     public Address getCustomerAddress() {
@@ -39,5 +41,6 @@ public class Customer extends AbstractBankEntity {
 
     public void setCustomerAddress(final Address customerAddress) {
         this.customerAddress = customerAddress;
+        this.updatedDate = LocalDate.now();
     }
 }

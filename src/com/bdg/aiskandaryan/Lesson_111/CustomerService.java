@@ -66,10 +66,11 @@ public class CustomerService {
         CustomerService customerService = new CustomerService();
 
         customerService.addCustomer(new CustomerParameter("Customer#1F", "Customer#1L", new Address(Country.AM, "Customer #1 Street", new PhoneNumber[1])));
+        customerService.addCustomer(new CustomerParameter("Customer#2F", "Customer#2L", new Address(Country.AM, "Customer #2 Street", new PhoneNumber[3])));
         customerService.updateCustomer(0, new CustomerParameter("UpdatedF", "UpdatedL", customerService.getCustomer(0).getCustomerAddress()));
         System.out.println(customerService.getCustomer(0).getCustomerName());
         System.out.println(customerService.getCustomer(0).getCustomerSurname());
-        System.out.println(customerService.getCustomer(0).getCustomerAddress());
+        System.out.println(customerService.getCustomer(0).getCustomerAddress().getPhoneNumbers());
         System.out.println(customerService.getCustomer(0).getCreatedDate());
         System.out.println(customerService.getCustomer(0).getUpdatedDate());
         System.out.println(customerService.getCustomer(0).getDeletedDate());
