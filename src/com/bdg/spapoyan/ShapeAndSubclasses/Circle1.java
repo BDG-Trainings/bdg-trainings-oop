@@ -1,13 +1,13 @@
-package com.bdg.spapoyan;
-public class Circle {
+package com.bdg.spapoyan.ShapeAndSubclasses;
+public class Circle1 {
     private double radius;
     private String color;
-    public Circle ()
+    public Circle1()
     {
         radius = 1;
         color  = "red";
     }
-    public Circle (double r)
+    public Circle1(double r)
     {
         radius = r;
         color  = "red";
@@ -21,6 +21,6 @@ public class Circle {
     }
 
     public String toString() {
-        return "Circle - [radius = " + radius + " color = " + color + "]";
+        return "Circle1 - [radius = " + radius + " color = " + color + "]";
     }
 }

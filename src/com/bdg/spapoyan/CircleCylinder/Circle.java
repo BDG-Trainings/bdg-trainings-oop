@@ -38,6 +38,6 @@ public class Circle {
 
     @Override
     public String toString(){
-        return "Circle[radius = " + radius + ", " + "color = " + color + "]";
+        return "Circle1[radius = " + radius + ", " + "color = " + color + "]";
     }
 }
