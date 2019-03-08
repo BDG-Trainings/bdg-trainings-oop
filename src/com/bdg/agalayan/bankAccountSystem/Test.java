@@ -13,8 +13,8 @@ import java.time.LocalDate;
 public class Test {
     public static void main(String[] args) {
         PhoneNumber[]numbers=new PhoneNumber[2];
-        numbers[0]= new PhoneNumber( CountryCode.AM, "091234567", PhoneType.MOBILE);
-        Address address= new Address( Country.AM, "street1", numbers);
+        numbers[0]= new PhoneNumber(PhoneType.MOBILE, "091234567", CountryCode.AM);
+        Address address= new Address(Country.FR, "street1", numbers);
         Customer customer= new Customer("name1", "surname1",address);
         CreditCard creditCard= new CreditCard(1, LocalDate.now(), CardType.CLASSIC);
         AccountBalance balance= new AccountBalance(200000.0);

@@ -1,10 +1,13 @@
-package com.bdg.master.bankaccountsystem;
+package com.bdg.agalayan.bankAccountSystem;
 
 
-import com.bdg.master.json.parser.JsonParseResult;
-import com.bdg.master.json.parser.JsonParseResults;
-import com.bdg.master.json.parser.JsonParser;
-import com.bdg.master.json.parser.SimpleJsonParser;
+
+
+import com.bdg.agalayan.json.parser.JsonParseResult;
+import com.bdg.agalayan.json.parser.JsonParseResults;
+import com.bdg.agalayan.json.parser.JsonParser;
+import com.bdg.agalayan.json.parser.SimpleJsonParser;
+
 
 /**
  * Phone number service class to provide base CRUD functionality
@@ -18,8 +21,8 @@ public final class PhoneNumberServiceImpl implements PhoneNumberService {
      * @param jsonPhoneNumberContent PhoneNumber json representation
      * @return PhoneNumber entity.
      */
-    @Override
-    public PhoneNumber create(final String jsonPhoneNumberContent) {
+@Override
+    public PhoneNumber[] create(final String jsonPhoneNumberContent) {
 
         final JsonParseResults results = phoneNumberJsonParser.doParse(jsonPhoneNumberContent);
         final PhoneNumber phoneNumber = new PhoneNumber();
@@ -37,7 +40,6 @@ public final class PhoneNumberServiceImpl implements PhoneNumberService {
                     break;
             }
         }
-
         return phoneNumber;
     }
 
@@ -52,4 +54,7 @@ public final class PhoneNumberServiceImpl implements PhoneNumberService {
         final PhoneNumber phoneNumber = phoneNumberService.create(content);
         System.out.println(phoneNumber);
     }
-}
+
+
+    }
+

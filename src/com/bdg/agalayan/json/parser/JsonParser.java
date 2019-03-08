@@ -1,7 +1,7 @@
-package com.bdg.master.json.parser;
+package com.bdg.agalayan.json.parser;
 
 
-import com.bdg.master.json.validator.InvalidJsonException;
+import com.bdg.agalayan.json.validator.InvalidJsonException;
 
 public interface JsonParser {
 

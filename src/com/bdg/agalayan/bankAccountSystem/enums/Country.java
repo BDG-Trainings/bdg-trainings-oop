@@ -25,6 +25,26 @@ public enum Country {
         return this.numericCode;
     }
 
+    public  Country findByCountryName(final String countryName) {
+        for(Country c : Country.values()){
+            if(c.getCountryName().equals(countryName)){
+                return c;
+            }
+        }
+        return null;
+    }
+
+    public Country findByNumericCode(final String numericCode) {
+        for(Country c: Country.values()){
+            if(c.getCountryName().equals(numericCode)){
+                return c;
+            }
+        }
+        return null;
+    }
+
+
+
 
     @Override
     public String toString() {

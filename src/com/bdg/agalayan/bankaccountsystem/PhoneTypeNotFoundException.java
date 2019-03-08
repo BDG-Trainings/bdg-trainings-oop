@@ -1,4 +1,4 @@
-package com.bdg.master.bankaccountsystem;
+package com.bdg.agalayan.bankAccountSystem;
 
 
 public final class PhoneTypeNotFoundException extends RuntimeException {

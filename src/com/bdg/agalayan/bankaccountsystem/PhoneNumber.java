@@ -1,7 +1,11 @@
-package com.bdg.master.bankaccountsystem;
+package com.bdg.agalayan.bankAccountSystem;
 
 
-public final class PhoneNumber {
+import com.bdg.agalayan.bankAccountSystem.entity.AbstractBankEntity;
+import com.bdg.agalayan.bankAccountSystem.enums.CountryCode;
+import com.bdg.agalayan.bankAccountSystem.enums.PhoneType;
+
+public final class PhoneNumber extends AbstractBankEntity {
 
     private PhoneType phoneType;
     private String number;
@@ -9,12 +13,13 @@ public final class PhoneNumber {
 
 
     public PhoneNumber(final PhoneType phoneType, final String number, final CountryCode countryCode) {
+
         this.phoneType = phoneType;
         this.number = number;
         this.countryCode = countryCode;
     }
+    public PhoneNumber(){
 
-    public PhoneNumber() {
     }
 
     public PhoneType getPhoneType() {

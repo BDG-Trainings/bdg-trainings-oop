@@ -1,4 +1,4 @@
-package com.bdg.master.bankaccountsystem;
+package com.bdg.agalayan.bankAccountSystem;
 
 
 public class CountryCodeNotFoundException extends RuntimeException {

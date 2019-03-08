@@ -1,4 +1,4 @@
-package com.bdg.master.json.validator;
+package com.bdg.agalayan.json.validator;
 
 
 /**

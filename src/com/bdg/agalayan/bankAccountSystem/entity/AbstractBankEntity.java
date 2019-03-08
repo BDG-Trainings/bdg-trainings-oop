@@ -10,11 +10,9 @@ public abstract class AbstractBankEntity {
 
 
 
-    AbstractBankEntity() {
-        this.id = id;
+       public AbstractBankEntity() {
 
     }
-
 
 
     public void setId(int id) {

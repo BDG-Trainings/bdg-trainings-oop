@@ -1,4 +1,4 @@
-package com.bdg.master.bankaccountsystem;
+package com.bdg.agalayan.bankAccountSystem;
 
 
 public enum PhoneType {
@@ -14,14 +14,14 @@ public enum PhoneType {
 
     public static PhoneType findByPhoneTypeName(final String phoneTypeName) {
         for (final PhoneType pt : values()) {
-            if (pt.phoneTypeName.equalsIgnoreCase(phoneTypeName)) {
-                return pt;
-            }
-        }
+           if (pt.phoneTypeName.equalsIgnoreCase(phoneTypeName)) {
+               return pt;
+           }
+       }
         throw new PhoneTypeNotFoundException(phoneTypeName);
-    }
+   }
 
-    public String getPhoneTypeName() {
-        return this.phoneTypeName;
+   public String getPhoneTypeName() {
+      return this.phoneTypeName;
     }
 }

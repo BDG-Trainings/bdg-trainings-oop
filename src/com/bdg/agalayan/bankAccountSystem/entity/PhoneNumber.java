@@ -20,7 +20,7 @@ public class PhoneNumber extends AbstractBankEntity{
     @Override
     public String toString(){
         return "CountryCode:"+ countryCode+
-                ", PhonType:"+type+
+                ", PhoneType:"+type+
                 ", number:" +number+ "]";
     }
 

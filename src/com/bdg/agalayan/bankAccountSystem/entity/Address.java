@@ -3,8 +3,8 @@ package com.bdg.agalayan.bankAccountSystem.entity;
 
 import com.bdg.agalayan.bankAccountSystem.enums.Country;
 
-import java.time.LocalDate;
 import java.util.Arrays;
+
 
 public class Address extends AbstractBankEntity {
     private Country country;
@@ -13,13 +13,17 @@ public class Address extends AbstractBankEntity {
 
 
 
-   public Address( Country country, String street, PhoneNumber[] phoneNumbers) {
+   public Address() {
 
         this.country = country;
         this.street = street;
         this.phoneNumbers = phoneNumbers;
 
     }
+
+    public Address(Country country, String street1, com.bdg.agalayan.bankAccountSystem.PhoneNumber[] numbers) {
+    }
+
 
     public void setStreet(String street) {
         this.street = street;

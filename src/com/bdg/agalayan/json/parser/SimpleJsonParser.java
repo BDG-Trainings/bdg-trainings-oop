@@ -1,9 +1,10 @@
-package com.bdg.master.json.parser;
+package com.bdg.agalayan.json.parser;
 
 
-import com.bdg.master.json.validator.InvalidJsonException;
-import com.bdg.master.json.validator.JsonContentValidator;
-import com.bdg.master.json.validator.JsonValidator;
+import com.bdg.agalayan.json.validator.InvalidJsonException;
+import com.bdg.agalayan.json.validator.JsonContentValidator;
+import com.bdg.agalayan.json.validator.JsonValidator;
+
 
 /**
  * SimpleJsonParser class.
