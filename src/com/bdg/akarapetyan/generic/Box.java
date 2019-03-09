@@ -1,6 +1,6 @@
 package com.bdg.akarapetyan.generic;
 
-public class Box<T> {
+public class Box <T> {
     private T t;
 
     public void add(T t) {
@@ -15,7 +15,7 @@ public class Box<T> {
         Box<Integer> integerBox = new Box<Integer>();
         Box<String> stringBox = new Box<String>();
 
-        integerBox.add(new Integer(10));
+        integerBox.add(10);
         stringBox.add(new String("Hello World"));
 
         System.out.printf("Integer Value :%d\n\n", integerBox.get());
