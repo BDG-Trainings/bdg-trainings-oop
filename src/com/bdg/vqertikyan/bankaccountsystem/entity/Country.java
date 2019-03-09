@@ -1,7 +1,7 @@
-package com.bdg.master.bankaccountsystem.entity;
+package com.bdg.vqertikyan.bankaccountsystem.entity;
 
 
-import com.bdg.master.bankaccountsystem.CountryNotFoundException;
+import com.bdg.vqertikyan.bankaccountsystem.CountryNotFoundException;
 
 public enum Country {
 

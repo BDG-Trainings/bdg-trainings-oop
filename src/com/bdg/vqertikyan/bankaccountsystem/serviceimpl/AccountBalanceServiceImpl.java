@@ -1,12 +1,12 @@
-package com.bdg.master.bankaccountsystem.serviceimpl;
+package com.bdg.vqertikyan.bankaccountsystem.serviceimpl;
 
 
-import com.bdg.master.bankaccountsystem.entity.AccountBalance;
-import com.bdg.master.bankaccountsystem.service.AccountBalanceService;
-import com.bdg.master.json.parser.JsonParseResult;
-import com.bdg.master.json.parser.JsonParseResults;
-import com.bdg.master.json.parser.JsonParser;
-import com.bdg.master.json.parser.SimpleJsonParser;
+import com.bdg.vqertikyan.bankaccountsystem.entity.AccountBalance;
+import com.bdg.vqertikyan.bankaccountsystem.service.AccountBalanceService;
+import com.bdg.vqertikyan.json.parser.JsonParseResult;
+import com.bdg.vqertikyan.json.parser.JsonParseResults;
+import com.bdg.vqertikyan.json.parser.JsonParser;
+import com.bdg.vqertikyan.json.parser.SimpleJsonParser;
 
 public class AccountBalanceServiceImpl implements AccountBalanceService {
 

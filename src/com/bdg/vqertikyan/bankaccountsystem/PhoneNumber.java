@@ -1,4 +1,4 @@
-package com.bdg.master.bankaccountsystem;
+package com.bdg.vqertikyan.bankaccountsystem;
 
 
 public final class PhoneNumber {

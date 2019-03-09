@@ -1,4 +1,4 @@
-package com.bdg.master.address;
+package com.bdg.vqertikyan.address;
 
 
 public interface AddressService {

@@ -1,8 +1,8 @@
-package com.bdg.master.bankaccountsystem.service;
+package com.bdg.vqertikyan.bankaccountsystem.service;
 
 
-import com.bdg.master.bankaccountsystem.entity.Address;
-import com.bdg.master.bankaccountsystem.entity.Country;
+import com.bdg.vqertikyan.bankaccountsystem.entity.Address;
+import com.bdg.vqertikyan.bankaccountsystem.entity.Country;
 
 public interface AddressService {
 

@@ -1,4 +1,4 @@
-package com.bdg.master.json.parser;
+package com.bdg.vqertikyan.json.parser;
 
 
 public final class JsonParseResult {

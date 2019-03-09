@@ -1,16 +1,16 @@
-package com.bdg.master.address;
+package com.bdg.vqertikyan.address;
 
 
-import com.bdg.master.bankaccountsystem.PhoneNumber;
-import com.bdg.master.bankaccountsystem.PhoneNumberService;
-import com.bdg.master.bankaccountsystem.PhoneNumberServiceImpl;
-import com.bdg.master.bankaccountsystem.entity.Country;
-import com.bdg.master.json.parser.JsonArrayParser;
-import com.bdg.master.json.parser.JsonArrayParserImpl;
-import com.bdg.master.json.parser.JsonParseResult;
-import com.bdg.master.json.parser.JsonParseResults;
-import com.bdg.master.json.parser.JsonParser;
-import com.bdg.master.json.parser.SimpleJsonParser;
+import com.bdg.vqertikyan.bankaccountsystem.PhoneNumber;
+import com.bdg.vqertikyan.bankaccountsystem.PhoneNumberService;
+import com.bdg.vqertikyan.bankaccountsystem.PhoneNumberServiceImpl;
+import com.bdg.vqertikyan.bankaccountsystem.entity.Country;
+import com.bdg.vqertikyan.json.parser.JsonArrayParser;
+import com.bdg.vqertikyan.json.parser.JsonArrayParserImpl;
+import com.bdg.vqertikyan.json.parser.JsonParseResult;
+import com.bdg.vqertikyan.json.parser.JsonParseResults;
+import com.bdg.vqertikyan.json.parser.JsonParser;
+import com.bdg.vqertikyan.json.parser.SimpleJsonParser;
 
 public final class AddressServiceImpl implements AddressService {
 

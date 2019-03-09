@@ -1,4 +1,4 @@
-package com.bdg.master.bankaccountsystem.service;
+package com.bdg.vqertikyan.bankaccountsystem.service;
 
 
 public interface AccountService {

@@ -1,7 +1,7 @@
-package com.bdg.master.bankaccountsystem.service;
+package com.bdg.vqertikyan.bankaccountsystem.service;
 
 
-import com.bdg.master.bankaccountsystem.entity.AccountBalance;
+import com.bdg.vqertikyan.bankaccountsystem.entity.AccountBalance;
 
 public interface AccountBalanceService {
 

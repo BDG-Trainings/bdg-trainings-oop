@@ -1,8 +1,9 @@
-package com.bdg.master.address;
+package com.bdg.vqertikyan.address;
 
 
-import com.bdg.master.bankaccountsystem.PhoneNumber;
-import com.bdg.master.bankaccountsystem.entity.Country;
+import com.bdg.vqertikyan.bankaccountsystem.PhoneNumber;
+import com.bdg.vqertikyan.bankaccountsystem.entity.Country;
+
 
 import java.util.Arrays;
 
@@ -54,4 +55,5 @@ public final class Address {
                 ", street='" + street + '\'' +
                 '}';
     }
+
 }

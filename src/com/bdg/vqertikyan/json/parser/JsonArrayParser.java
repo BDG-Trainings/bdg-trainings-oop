@@ -1,7 +1,7 @@
-package com.bdg.master.json.parser;
+package com.bdg.vqertikyan.json.parser;
 
 
-import com.bdg.master.json.validator.InvalidJsonException;
+import com.bdg.vqertikyan.json.validator.InvalidJsonException;
 
 public interface JsonArrayParser {
 

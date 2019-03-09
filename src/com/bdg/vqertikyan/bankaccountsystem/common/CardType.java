@@ -1,4 +1,4 @@
-package com.bdg.master.bankaccountsystem.common;
+package com.bdg.vqertikyan.bankaccountsystem.common;
 
 
 public enum CardType {
