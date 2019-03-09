@@ -1,10 +1,10 @@
 package com.bdg.akarapetyan.bankaccountsystem;
 
 import com.bdg.akarapetyan.bas.AccountBalance;
-import com.sun.org.apache.bcel.internal.generic.ObjectType;
+//import com.sun.org.apache.bcel.internal.generic.ObjectType;
 
 public final class JsonParser {
-
+/*
     private String content;
     private ObjectType objectType;
 
@@ -12,7 +12,7 @@ public final class JsonParser {
         this.content = jsonContent;
         this.objectType = objectType;
     }
-    /*
+
     public Object parse() {
         switch (this.objectType) {
             case ADDRESS:
@@ -30,7 +30,7 @@ public final class JsonParser {
 
     private Address parseAddress() {
         return new Address();
-    }*/
+    }
 
     private AccountBalance parseAccountBalance() {
         return null;
@@ -39,5 +39,6 @@ public final class JsonParser {
     private PhoneNumber parsePhoneNumber() {
         return null;
     }
+    */
 
 }

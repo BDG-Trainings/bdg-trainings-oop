@@ -1,12 +1,14 @@
 package com.bdg.akarapetyan.bankaccountsystem;
 
+import com.bdg.akarapetyan.bas.Country;
+
 public class Executor {
 
     public static void main(String[] args) {
 
 
-        Address address1 = new Address(Country.IT, "Moscovyan", "094566747" );
-        Address address2 = new Address(Country.IT, "Pushkin", "+37455222222");
+        Address address1 = new Address(CountryCode.RUS, "Moscovyan", "094566747" );
+        Address address2 = new Address(CountryCode.USA, "Pushkin", "+37455222222");
 
 
 
