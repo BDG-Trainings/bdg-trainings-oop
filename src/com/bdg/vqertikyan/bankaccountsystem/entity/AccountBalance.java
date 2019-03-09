@@ -1,24 +1,29 @@
-package com.bdg.vqertikyan.bankaccountsystem.entity;
+package com.bdg.master.bankaccountsystem.entity;
 
-public class AccountBalance extends AbstractBankEntity {
-    private double balance;
 
-    public AccountBalance(double balance) {
-        this.balance = balance;
+public final class AccountBalance extends AbstractBankEntity {
+    private double amount;
+
+    public AccountBalance(final double amount) {
+        this.amount = amount;
     }
 
-    public double getBalance() {
-        return balance;
+    public double getAmount() {
+        return amount;
     }
 
-    public void setBalance(double balance) {
-        this.balance = balance;
+    public void setAmount(final double amount) {
+        this.amount = amount;
     }
 
     @Override
     public String toString() {
         return "AccountBalance{" +
-                "balance=" + balance +
+                "amount=" + amount +
+                ", id=" + id +
+                ", createdDate=" + createdDate +
+                ", updatedDate=" + updatedDate +
+                ", deletedDate=" + deletedDate +
                 '}';
     }
 }

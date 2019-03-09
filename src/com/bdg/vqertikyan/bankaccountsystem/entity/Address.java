@@ -1,25 +1,20 @@
-package com.bdg.vqertikyan.bankaccountsystem.entity;
+package com.bdg.master.bankaccountsystem.entity;
 
-import com.bdg.vqertikyan.bankaccountsystem.common.Country;
 
-import java.util.Arrays;
-
-public class Address extends AbstractBankEntity{
+public final class Address extends AbstractBankEntity {
     private Country country;
     private String street;
-    private PhoneNumber[] phoneNumbers;
 
-    public Address(Country country, String street, PhoneNumber[] phoneNumbers) {
+    public Address(final Country country, final String street) {
         this.country = country;
         this.street = street;
-        this.phoneNumbers = phoneNumbers;
     }
 
     public Country getCountry() {
         return country;
     }
 
-    public void setCountry(Country country) {
+    public void setCountry(final Country country) {
         this.country = country;
     }
 
@@ -27,16 +22,8 @@ public class Address extends AbstractBankEntity{
         return street;
     }
 
-    public void setStreet(String street) {
+    public void setStreet(final String street) {
         this.street = street;
-    }
-
-    public PhoneNumber[] getPhoneNumbers() {
-        return phoneNumbers;
-    }
-
-    public void setPhoneNumbers(PhoneNumber[] phoneNumbers) {
-        this.phoneNumbers = phoneNumbers;
     }
 
     @Override
@@ -44,7 +31,10 @@ public class Address extends AbstractBankEntity{
         return "Address{" +
                 "country=" + country +
                 ", street='" + street + '\'' +
-                ", phoneNumbers=" + Arrays.toString(phoneNumbers) +
+                ", id=" + id +
+                ", createdDate=" + createdDate +
+                ", updatedDate=" + updatedDate +
+                ", deletedDate=" + deletedDate +
                 '}';
     }
 }

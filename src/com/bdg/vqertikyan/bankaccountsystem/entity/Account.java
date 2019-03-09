@@ -1,12 +1,13 @@
-package com.bdg.vqertikyan.bankaccountsystem.entity;
+package com.bdg.master.bankaccountsystem.entity;
 
-public class Account extends AbstractBankEntity{
+
+public final class Account extends AbstractBankEntity {
 
     private Customer customer;
     private CreditCard creditCard;
     private AccountBalance accountBalance;
 
-    public Account(Customer customer, CreditCard creditCard, AccountBalance accountBalance) {
+    public Account(final Customer customer, final CreditCard creditCard, final AccountBalance accountBalance) {
         this.customer = customer;
         this.creditCard = creditCard;
         this.accountBalance = accountBalance;
@@ -16,7 +17,7 @@ public class Account extends AbstractBankEntity{
         return customer;
     }
 
-    public void setCustomer(Customer customer) {
+    public void setCustomer(final Customer customer) {
         this.customer = customer;
     }
 
@@ -24,7 +25,7 @@ public class Account extends AbstractBankEntity{
         return creditCard;
     }
 
-    public void setCreditCard(CreditCard creditCard) {
+    public void setCreditCard(final CreditCard creditCard) {
         this.creditCard = creditCard;
     }
 
@@ -32,7 +33,7 @@ public class Account extends AbstractBankEntity{
         return accountBalance;
     }
 
-    public void setAccountBalance(AccountBalance accountBalance) {
+    public void setAccountBalance(final AccountBalance accountBalance) {
         this.accountBalance = accountBalance;
     }
 
@@ -42,6 +43,10 @@ public class Account extends AbstractBankEntity{
                 "customer=" + customer +
                 ", creditCard=" + creditCard +
                 ", accountBalance=" + accountBalance +
+                ", id=" + id +
+                ", createdDate=" + createdDate +
+                ", updatedDate=" + updatedDate +
+                ", deletedDate=" + deletedDate +
                 '}';
     }
 }

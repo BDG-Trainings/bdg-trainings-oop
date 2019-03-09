@@ -1,19 +1,20 @@
-package com.bdg.vqertikyan.bankaccountsystem.entity;
+package com.bdg.master.bankaccountsystem.entity;
 
-import com.bdg.vqertikyan.bankaccountsystem.common.CardType;
 
-import java.util.Date;
+import com.bdg.master.bankaccountsystem.common.CardType;
 
-public class CreditCard extends AbstractBankEntity {
+import java.time.LocalDate;
+
+public final class CreditCard extends AbstractBankEntity {
+
     private String cardNumber;
-    private int accountNumber;
-    private Date expiration;
+    private int accountId;
+    private LocalDate expirationDate;
     private CardType cardType;
 
-    public CreditCard(String cardNumber, int accountNumber, Date expiration, CardType cardType) {
-        this.cardNumber = cardNumber;
-        this.accountNumber = accountNumber;
-        this.expiration = expiration;
+    public CreditCard(final int accountId, final LocalDate expirationDate, final CardType cardType) {
+        this.accountId = accountId;
+        this.expirationDate = expirationDate;
         this.cardType = cardType;
     }
 
@@ -21,31 +22,31 @@ public class CreditCard extends AbstractBankEntity {
         return cardNumber;
     }
 
-    public void setCardNumber(String cardNumber) {
+    public void setCardNumber(final String cardNumber) {
         this.cardNumber = cardNumber;
     }
 
-    public int getAccountNumber() {
-        return accountNumber;
+    public int getAccountId() {
+        return accountId;
     }
 
-    public void setAccountNumber(int accountNumber) {
-        this.accountNumber = accountNumber;
+    public void setAccountId(final int accountId) {
+        this.accountId = accountId;
     }
 
-    public Date getExpiration() {
-        return expiration;
+    public LocalDate getExpirationDate() {
+        return expirationDate;
     }
 
-    public void setExpiration(Date expiration) {
-        this.expiration = expiration;
+    public void setExpirationDate(final LocalDate expirationDate) {
+        this.expirationDate = expirationDate;
     }
 
     public CardType getCardType() {
         return cardType;
     }
 
-    public void setCardType(CardType cardType) {
+    public void setCardType(final CardType cardType) {
         this.cardType = cardType;
     }
 
@@ -53,9 +54,13 @@ public class CreditCard extends AbstractBankEntity {
     public String toString() {
         return "CreditCard{" +
                 "cardNumber='" + cardNumber + '\'' +
-                ", accountNumber=" + accountNumber +
-                ", expiration=" + expiration +
+                ", accountId=" + accountId +
+                ", expirationDate=" + expirationDate +
                 ", cardType=" + cardType +
+                ", id=" + id +
+                ", createdDate=" + createdDate +
+                ", updatedDate=" + updatedDate +
+                ", deletedDate=" + deletedDate +
                 '}';
     }
 }

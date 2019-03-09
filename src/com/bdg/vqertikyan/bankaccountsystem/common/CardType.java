@@ -1,5 +1,6 @@
-package com.bdg.vqertikyan.bankaccountsystem.common;
+package com.bdg.master.bankaccountsystem.common;
+
 
 public enum CardType {
-    VISE, MASTERCARD;
+    VISA, MASTERCARD
 }
