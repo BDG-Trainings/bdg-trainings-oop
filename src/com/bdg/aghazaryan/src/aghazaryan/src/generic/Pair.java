@@ -12,7 +12,7 @@ public final class Pair <U, V>  {
     }
     public Pair() {
     }
-   
+
         public U getObj1() {
         return obj1;
     }
