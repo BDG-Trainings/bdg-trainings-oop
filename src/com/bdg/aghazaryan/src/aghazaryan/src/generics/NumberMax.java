@@ -1,4 +1,4 @@
-package com.bdg.aghazaryan.src.aghazaryan.src.generic;
+package com.bdg.aghazaryan.src.aghazaryan.src.generics;
 
 public class NumberMax <T> {
 
