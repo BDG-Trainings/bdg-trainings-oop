@@ -5,7 +5,7 @@ public class NumberMax<V> {
     private V v;
 
 public <V extends Comparable>V getMaxNumber(V v, V t){
-    if(v.compareTo(t)>0){
+    if(v.compareTo(t)==1){
         return v;
     }else {
         return t;
