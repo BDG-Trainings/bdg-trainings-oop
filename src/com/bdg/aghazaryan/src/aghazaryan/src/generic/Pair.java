@@ -10,7 +10,9 @@ public final class Pair <U, V>  {
         this.obj2 = obj2;
 
     }
-
+    public Pair() {
+    }
+   
         public U getObj1() {
         return obj1;
     }
