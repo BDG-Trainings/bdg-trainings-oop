@@ -17,11 +17,7 @@ public final class Pair <U, V>  {
         return obj1;
     }
 
-    public void setObj1(U obj1) {
-        this.obj1 = obj1;
-    }
-
-    public V getObj2() {
+        public V getObj2() {
         return obj2;
     }
 
