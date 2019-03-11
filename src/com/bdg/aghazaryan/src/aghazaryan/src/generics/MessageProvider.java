@@ -2,7 +2,7 @@ package com.bdg.aghazaryan.src.aghazaryan.src.generics;
 
 import java.util.List;
 
-public interface MessageProvider <T>{
+public interface MessageProvider <T> {
 
    public void getMessage(String test);
     String str = "New York City";
@@ -18,7 +18,7 @@ public interface MessageProvider <T>{
            System.out.println(buffer);
 
            StringBuilder builder = new StringBuilder(str);
-           builder.append("Anahit Ghazaryan");
+           builder.append(" Anahit Ghazaryan ");
            System.out.println(builder);
 
        }
