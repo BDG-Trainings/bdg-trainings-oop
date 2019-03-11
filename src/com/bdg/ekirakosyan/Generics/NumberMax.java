@@ -1,4 +1,4 @@
-package com.bdg.ekirakosyan.Generics;
+package com.bdg.ekirakosyan.za;
 
 public class NumberMax {
 
