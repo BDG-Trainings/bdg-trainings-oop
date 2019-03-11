@@ -18,10 +18,9 @@ public interface MessageProvider <T> {
            System.out.println(buffer);
 
            StringBuilder builder = new StringBuilder(str);
-           builder.append(" Anahit Ghazaryan ");
+           builder.append(" Anahit ");
            System.out.println(builder);
 
        }
 }
-
 
