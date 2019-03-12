@@ -1,8 +1,6 @@
 package com.bdg.aidaghalayan.generics;
 
-public interface MassageProvider <T extends CharSequence>{
+public interface MassageProvider <T extends String>{
 
-    public <T>  void getMassage(T t);
-
-
+    String getMassage(String massage);
 }
