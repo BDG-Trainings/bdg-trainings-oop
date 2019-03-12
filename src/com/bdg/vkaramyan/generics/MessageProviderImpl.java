@@ -1,6 +1,7 @@
 package com.bdg.vkaramyan.generics;
 
 
+//as you can see T is unused :)
 public class MessageProviderImpl <T> implements MessageProvider<String, StringBuilder, StringBuffer> {
 	
 	

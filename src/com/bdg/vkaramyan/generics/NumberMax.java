@@ -1,7 +1,9 @@
 package com.bdg.vkaramyan.generics;
 
 
-
+//DON'T use Comparable
+//Use T in class level not in method scope
+//And finally T should extend from some numeric type instead of comparable
 public class NumberMax {
 
 	public static <T extends Comparable <T>> T max(T... elements) {

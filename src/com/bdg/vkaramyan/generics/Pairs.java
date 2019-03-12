@@ -1,38 +1,39 @@
 package com.bdg.vkaramyan.generics;
 
-public final class Pairs <U, V> {
-	
-	private U u;
-	private V v;
-	
-	
-	public Pairs(final U u, final V v) {
-		
-		this.u = u;
-		this.v = v;
-	}
+
+//Valid
+public final class Pairs<U, V> {
+
+    private U u;
+    private V v;
 
 
-	public Pairs() {
-	
-	}
+    public Pairs(final U u, final V v) {
+
+        this.u = u;
+        this.v = v;
+    }
 
 
-	public U getU() {
-		return u;
-	}
+    public Pairs() {
+
+    }
 
 
-	public V getV() {
-		return v;
-	}
+    public U getU() {
+        return u;
+    }
 
 
-	@Override
-	public String toString() {
-		return "Pairs [u=" + u + ", v=" + v + "]";
-	}
-	
-	
+    public V getV() {
+        return v;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Pairs [u=" + u + ", v=" + v + "]";
+    }
+
 
 }
