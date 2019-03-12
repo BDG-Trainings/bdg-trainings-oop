@@ -1,25 +1,34 @@
 package com.bdg.vkaramyan.generics;
 
-public class MessageProviderImpl <T extends MessageProvider> {
+
+public class MessageProviderImpl <T> implements MessageProvider<String, StringBuilder, StringBuffer> {
 	
-	private  T t;
-
-	public MessageProviderImpl(T t) {
+	
+	
+	@Override
+	public String getMessage() {
 		
-		this.t = t;
+		StringBuffer strBuffer = new StringBuffer(this.getMessage());
+		strBuffer.append("New Message");
+	
+		return strBuffer.toString();
 	}
-
-	public T getT() {
-		return t;
-	}
-
-	public void setT(T t) {
-		this.t = t;
-	}
+	
 	
 	public static void main(String[] args) {
-		StringBuilder sbuilder = new StringBuilder();
-		sbuilder.append("Vika");
+		
+		String str = "New message";
+		
+	    StringBuilder strBuilder = new StringBuilder();
+		strBuilder.append(str);
+		System.out.println("Message:" + str);
+		
+		
+		StringBuffer strBuffer = new StringBuffer();
+		strBuffer.append(str);
+		System.out.println("Message:" + str);
+		
+		
 	}
 
 }

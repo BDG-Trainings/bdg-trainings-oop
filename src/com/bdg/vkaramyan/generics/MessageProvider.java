@@ -1,8 +1,10 @@
 package com.bdg.vkaramyan.generics;
 
-public interface MessageProvider {
+public interface MessageProvider <T extends String, StringBuilder, StringBuffer>{
 	
-	void getMessage();
+		
+	 String getMessage();
+
 	
 	
 }
