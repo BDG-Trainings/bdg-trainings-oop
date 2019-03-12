@@ -2,6 +2,8 @@ package com.bdg.aghazaryan.src.aghazaryan.src.generics;
 
 import java.util.List;
 
+//where is implementation ? :)
+//T should extends from some literal type as upper bounds
 public interface MessageProvider <T> {
 
    public void getMessage(String test);
