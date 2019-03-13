@@ -5,10 +5,15 @@ package com.bdg.vkaramyan.generics;
 //Base type should be parent for String, StringBuilder, StringBuffer
 
 //Should provide 3 implementation for example MessageProviderString, MessageProviderStringBuffer, and MessageProviderStringBuffer
-public interface MessageProvider <T extends String, StringBuilder, StringBuffer>{
+public interface MessageProvider  {
 	
 		
-	 String getMessage();
+	 String MessageProviderString();
+	 
+	 StringBuffer MessageProviderStringBuffer();
+	 
+	 StringBuilder MessageProviderStringBuilder();
+	 
 
 	
 	
