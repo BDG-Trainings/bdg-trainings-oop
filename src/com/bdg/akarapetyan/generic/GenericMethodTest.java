@@ -2,9 +2,9 @@ package com.bdg.akarapetyan.generic;
 
 public class GenericMethodTest {
 
-    public static <E> void printArray (E[] inputArray){
+    public static <A> void printArray (A[] inputArray){
 
-        for (E element : inputArray){
+        for (A element : inputArray){
             System.out.printf("%s ", element);
         }
         System.out.println();
