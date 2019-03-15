@@ -117,7 +117,17 @@ public class newArrayList <E> implements Collection<E> {
 
     @Override
     public void clear() {
+        return;
 
+    }
+
+    @Override
+    public String toString() {
+        return "newArrayList{" +
+                "o=" + Arrays.toString(o) +
+                ", count=" + count +
+                ", size=" + size +
+                '}';
     }
 
     public static void main(String[] args) {
@@ -133,6 +143,10 @@ public class newArrayList <E> implements Collection<E> {
         Object[]objects=arrayList.toArray();
         System.out.println(Arrays.toString(objects));
         System.out.println(arrayList.remove(8));
+        arrayList.clear();
+        System.out.println(arrayList.size());
+
+
 
 
 
