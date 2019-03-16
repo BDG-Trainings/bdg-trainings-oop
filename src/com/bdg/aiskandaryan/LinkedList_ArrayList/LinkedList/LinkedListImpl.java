@@ -18,7 +18,7 @@ public class LinkedListImpl {
         LL.addNode(node5);
         System.out.println(LL);
 
-        LL.switchNodes(LL.get(2), LL.get(4));
+        LL.switchNodes(LL.get(2), LL.get(3));
         System.out.println(LL);
         try {
             LL.get(11).setValue(15);
