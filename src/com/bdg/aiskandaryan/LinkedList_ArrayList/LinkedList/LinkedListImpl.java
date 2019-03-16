@@ -20,6 +20,12 @@ public class LinkedListImpl {
 
         LL.switchNodes(LL.get(1), LL.get(3));
         System.out.println(LL);
+        try {
+            LL.get(1).setValue(15);
+        } catch (NullPointerException e) {
+            System.err.println("wrong index specified !!!");
+        }
+        System.out.println(LL);
 /*
         System.out.println(LL.get(1));
         System.out.println(LL.get(2));
