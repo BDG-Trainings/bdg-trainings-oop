@@ -35,6 +35,7 @@ public class newLinkedList <E> implements Collection<E> {
     @Override
     public boolean contains(Object o) {
 
+
         return false;
     }
 
@@ -117,6 +118,8 @@ public class newLinkedList <E> implements Collection<E> {
         System.out.println(list.add(2));
         System.out.println(list.size);
         System.out.println(list.isEmpty());
+
+
 
     }
 }

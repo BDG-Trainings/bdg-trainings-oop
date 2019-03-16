@@ -1,25 +1,23 @@
 package com.bdg.collections;
 
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Iterator;
+import java.util.*;
 
-public class newArrayList <E> implements Collection<E> {
-    private Object[] o ;
+public class NewArrayList <E> implements Collection<E> {
+    private Object[] elements ;
     private int count=0;
     private int size=10;
 
 
 
-    public newArrayList(){
-        o = new Object[this.size];
+    public NewArrayList(){
+        elements = new Object[this.size];
     }
 
 
 
     public E get(int index) {
         if(index < count){
-            E elem= (E) o[index];
+            E elem= (E) elements[index];
             return elem;
         }else {
             throw new ArrayIndexOutOfBoundsException();
@@ -28,7 +26,7 @@ public class newArrayList <E> implements Collection<E> {
     }
 
     private void reSizeArray(){
-        o = Arrays.copyOf(o, o.length/2);
+        elements = Arrays.copyOf(elements, elements.length/2);
     }
 
     @Override
@@ -48,7 +46,7 @@ public class newArrayList <E> implements Collection<E> {
         @Override
     public boolean contains(Object object) {
         for(int i=0; i<count; i++){
-            if(o[i]==object){
+            if(elements[i]==object){
                 return true;
             }
         }
@@ -65,7 +63,7 @@ public class newArrayList <E> implements Collection<E> {
     public Object[] toArray() {
         Object[]objects= new Object[count];
         for(int i=0; i<count; i++){
-            objects[i]=o[i];
+            objects[i]=elements[i];
 
 
         }
@@ -81,24 +79,42 @@ public class newArrayList <E> implements Collection<E> {
 
     @Override
     public boolean add(E e) {
-        if(count==o.length){
+        if(count==elements.length){
             this.reSizeArray();
         }
-        o[count++] = e;
+        elements[count++] = e;
         return true;
     }
 
     @Override
     public boolean remove(Object object) {
+        Object [] objects= new Object[this.count];
+        boolean t= false;
+        int k=0;
+        for(int i=0; i<count; i++) {
 
-        return false;
+            if (elements[i] != object) {
+                elements[k] = object;
+                k++;
+
+            } else {
+                t = true;
+            }
+        }
+            count=k;
+            elements=objects;
+            return t;
+
     }
+
+
 
     @Override
     public boolean containsAll(Collection<?> c) {
 
-        return false;
-    }
+
+            return false;
+        }
 
     @Override
     public boolean addAll(Collection<? extends E> c) {
@@ -123,15 +139,15 @@ public class newArrayList <E> implements Collection<E> {
 
     @Override
     public String toString() {
-        return "newArrayList{" +
-                "o=" + Arrays.toString(o) +
+        return "NewArrayList{" +
+                "elements=" + Arrays.toString(elements) +
                 ", count=" + count +
                 ", size=" + size +
                 '}';
     }
 
     public static void main(String[] args) {
-        newArrayList<Integer> arrayList= new newArrayList<>();
+        NewArrayList<Integer> arrayList= new NewArrayList<>();
         arrayList.add(2);
         arrayList.add(8);
         arrayList.add(5);
@@ -139,12 +155,12 @@ public class newArrayList <E> implements Collection<E> {
         System.out.println(arrayList.size());
         System.out.println(arrayList.isEmpty());
         System.out.println(arrayList.contains(10));
-        System.out.println(arrayList.iterator());
+
         Object[]objects=arrayList.toArray();
         System.out.println(Arrays.toString(objects));
-        System.out.println(arrayList.remove(8));
-        arrayList.clear();
+
         System.out.println(arrayList.size());
+
 
 
 
