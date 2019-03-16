@@ -6,26 +6,29 @@ public class LinkedListImpl {
         Node node1 = new Node(1);
         Node node2 = new Node(2);
         Node node3 = new Node(3);
+        Node node4 = new Node(4);
+        Node node5 = new Node(5);
 
         System.out.println(LL);
         LL.addNode(node1);
-        System.out.println(LL);
         LL.addNode(node2);
         System.out.println(LL);
-
         LL.addNode(node3);
+        LL.addNode(node4);
+        LL.addNode(node5);
         System.out.println(LL);
 
+/*
         System.out.println(LL.get(1));
         System.out.println(LL.get(2));
-        System.out.println(LL.get(3));
+        System.out.println(LL.get(3)); */
 
         LL.switchNodes(LL.get(1), LL.get(3));
-//        System.out.println(LL);
-
+        System.out.println(LL);
+/*
         System.out.println(LL.get(1));
         System.out.println(LL.get(2));
         System.out.println(LL.get(3));
-
+*/
     }
 }
