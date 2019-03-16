@@ -108,6 +108,21 @@ public class LinkedList {
             return false;
         }
 
+        // Change references to a and b from next and previous Nodes
+        if (a.hasNext()) {
+            a.getNextNode().setPreviousNode(b);
+        }
+        if (b.hasNext()) {
+            b.getNextNode().setPreviousNode(a);
+        }
+        if (a.hasPrevious()) {
+            a.getPreviousNode().setNextNode(b);
+        }
+        if (b.hasPrevious()) {
+            b.getPreviousNode().setNextNode(a);
+        }
+
+
         // Change references to next and previous Nodes
         Node tmp = null;
         tmp = a.getNextNode();
@@ -118,18 +133,17 @@ public class LinkedList {
         b.setPreviousNode(tmp);
 
         // Assign new values to firstNode and lastNode (if needed)
-        if (lastNode == b) {
-            lastNode = a;
-        }
         if (firstNode == b) {
             firstNode = a;
-        }
-        if (lastNode == a) {
-            lastNode = b;
-        }
-        if (firstNode == a) {
+        } else if (firstNode == a) {
             firstNode = b;
         }
+        if (lastNode == b) {
+            lastNode = a;
+        } else if (lastNode == a) {
+            lastNode = b;
+        }
+
         return true;
     }
 }

@@ -15,10 +15,17 @@ public class LinkedListImpl {
 
         LL.addNode(node3);
         System.out.println(LL);
-        LL.switchNodes(LL.get(1), LL.get(2));
-        System.out.println(LL);
 
         System.out.println(LL.get(1));
+        System.out.println(LL.get(2));
+        System.out.println(LL.get(3));
+
+        LL.switchNodes(LL.get(1), LL.get(3));
+//        System.out.println(LL);
+
+        System.out.println(LL.get(1));
+        System.out.println(LL.get(2));
+        System.out.println(LL.get(3));
 
     }
 }
