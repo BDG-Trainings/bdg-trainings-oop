@@ -18,10 +18,10 @@ public class LinkedListImpl {
         LL.addNode(node5);
         System.out.println(LL);
 
-        LL.switchNodes(LL.get(1), LL.get(3));
+        LL.switchNodes(LL.get(2), LL.get(4));
         System.out.println(LL);
         try {
-            LL.get(1).setValue(15);
+            LL.get(11).setValue(15);
         } catch (NullPointerException e) {
             System.err.println("wrong index specified !!!");
         }
