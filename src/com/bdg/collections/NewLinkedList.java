@@ -1,16 +1,14 @@
 package com.bdg.collections;
 
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.Iterator;
-import java.util.LinkedList;
 
-public class newLinkedList <E> implements Collection<E> {
+public class NewLinkedList<E> implements Collection<E> {
     private Node head;
     private Node tail;
     private int size=0;
 
-    public newLinkedList() {
+    public NewLinkedList() {
         this.head = head;
         this.tail = tail;
         this.size = size;
@@ -101,7 +99,7 @@ public class newLinkedList <E> implements Collection<E> {
 
     @Override
     public String toString() {
-        return "newLinkedList{" +
+        return "NewLinkedList{" +
                 "head=" + head +
                 ", tail=" + tail +
                 ", size=" + size +
@@ -109,15 +107,17 @@ public class newLinkedList <E> implements Collection<E> {
     }
 
     public static void main(String[] args) {
-        newLinkedList<Integer> list= new newLinkedList<>();
+        NewLinkedList<Integer> list= new NewLinkedList<>();
         list.add(1);
         list.add(5);
         list.add(8);
         list.add(10);
 
+
         System.out.println(list.add(2));
         System.out.println(list.size);
         System.out.println(list.isEmpty());
+
 
 
 
