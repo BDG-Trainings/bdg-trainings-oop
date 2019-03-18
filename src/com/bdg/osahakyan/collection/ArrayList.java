@@ -6,19 +6,38 @@ import java.util.Iterator;
 
 public class ArrayList<Е> implements Collection<Е> {
 
+    // Definition of custom ArrayList
+    private static final int DEFAULT_CAPACITY = 11;
+    private Object[] elementData = {};
+
+    // Constructor of custom ArrayList
+    public ArrayList(){
+        this.elementData = new Object[DEFAULT_CAPACITY];
+    if( elementData.length >= DEFAULT_CAPACITY ){
+        this.elementData = new  Object[elementData.length + DEFAULT_CAPACITY];
+    }}
+
 
     @Override
     public int size() {
-        return 0;
+        return this.elementData.length;
     }
 
     @Override
     public boolean isEmpty() {
+        if (elementData.length == 0){
+            return true;
+        }
         return false;
     }
 
     @Override
-    public boolean contains(Object o) {
+    public boolean contains(Object element) {
+        for (Object elements: this.elementData  ){
+            if(elements.equals(element)){
+                return true;
+            }
+        }
         return false;
     }
 
@@ -29,7 +48,7 @@ public class ArrayList<Е> implements Collection<Е> {
 
     @Override
     public Object[] toArray() {
-        return new Object[0];
+        return this.elementData;
     }
 
     @Override
@@ -70,6 +89,11 @@ public class ArrayList<Е> implements Collection<Е> {
     @Override
     public Object[] toArray(Object[] a) {
         return new Object[0];
+    }
+
+
+    public static void main(String[] args){
+
     }
 }
 
