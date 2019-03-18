@@ -90,9 +90,10 @@ public class NewArrayList <E> implements Collection<E> {
 
     @Override
     public boolean remove(Object object) {
-           return false;
 
-    }
+                return false;
+
+     }
 
     @Override
     public boolean containsAll(Collection<?> c) {
@@ -115,8 +116,13 @@ public class NewArrayList <E> implements Collection<E> {
 
     @Override
     public boolean removeAll(Collection<?> c) {
-
-        return false;
+        boolean t=false;
+        for(int i=0; i<c.toArray().length; i++){
+            t=this.remove(c.toArray()[i]);
+        }if(t==false){
+            return false;
+        }
+        return true;
     }
 
     @Override
@@ -167,8 +173,11 @@ public class NewArrayList <E> implements Collection<E> {
         System.out.println(arrayList.toString());
         NewArrayList <Integer> integers1= new NewArrayList<>();
         integers1.add(5);
-        integers1.add(15);
+        integers1.add(1);
         System.out.println(arrayList.containsAll(integers1));
+
+
+
 
 
 
