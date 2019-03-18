@@ -1,7 +1,6 @@
 package com.bdg.warustamyan.list;
 
 
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.Iterator;
 
@@ -155,9 +154,21 @@ public class ArrayList<E> implements Collection<E> {
 
     @Override
     public String toString() {
-        return "ArrayList{" +
-                "elements=" + Arrays.toString(elements) +
-                '}';
+
+        final StringBuilder toString = new StringBuilder();
+        toString.append("[");
+
+        for (final Object element : elements) {
+            if (element == null) {
+                toString.append("null, ");
+            } else {
+                toString.append(element.toString()).append(", ");
+            }
+        }
+
+        toString.replace(toString.length() - 2, toString.length(), "");
+        toString.append("]");
+        return toString.toString();
     }
 
     private void increaseCapacity() {
