@@ -1,17 +1,19 @@
 package com.bdg.aghazaryan.src.aghazaryan.src.generics;
 
-public class NumberMax<T> {
+import java.lang.reflect.Type;
+
+public class NumberMax {
 
     //replace generic method with regular and resolve upper bounds in class name
     //use numeric type instead of comparable
-    public static <T extends Comparable<T>> T maximum(T x, T y) {
+    public static <T extends Number > T maximum(T x, T y) {
         T max = x;
-        if (y.compareTo(max) > 0) {
+        if (y.intValue() > 0) {
             max = y;
 
         }
 
-        if (x.compareTo(max) > 0) {
+        if (x.intValue() > 0) {
             max = x;
         }
 
