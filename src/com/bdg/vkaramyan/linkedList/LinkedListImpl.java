@@ -3,68 +3,102 @@ package com.bdg.vkaramyan.linkedList;
 import java.util.Collection;
 import java.util.Iterator;
 
-public class LinkedListImpl<E> implements Collection<E> {
+public class LinkedListImpl<E> implements Collection<E>, Iterator<E> {
 
-	private Node head;
-	private Node tail;
+	private Node<E> head;
+	private Node<E> tail;
 	private int size = 0;
-	
 	
 
 	@Override
 	public int size() {
-		// TODO Auto-generated method stub
-		return 0;
+		for (Node<E> n = head; n.next != null; n = n.next) {
+			size++;
+
+		}
+		return size;
 	}
+	
 
 	@Override
 	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		return false;
+		
+		return size == 0;
 	}
 
 	@Override
 	public boolean contains(Object o) {
-		// TODO Auto-generated method stub
+		for(E item : this) {
+			if(o == null ? item == null : o.equals(item)) {
+				
+					return true;
+				
+			}
+		}
+		
 		return false;
 	}
+	
 
 	@Override
 	public Iterator<E> iterator() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return new LinkedListImpl();
 	}
+	
 
 	@Override
 	public Object[] toArray() {
-		// TODO Auto-generated method stub
-		return null;
+		Object[] array = new Object[size()];
+		int i = 0;
+		for (E item : this) {
+			array[i] = item;
+			i++;
+		}
+			
+		return array;
 	}
 
 	@Override
 	public <T> T[] toArray(T[] a) {
-		// TODO Auto-generated method stub
-		return null;
+		T[] result = a;
+		if(size() > result.length) {
+			result = T[size()];
+		}
+		
+		int i = 0;
+		for (E item : this) {
+			result [i] = item;
+			i++;
+		}
+		
+		if (result.length > i) {
+			result[i] = null;
+		}
+		
+		
+		return (T[]) result;
 	}
 
 	@Override
-	public boolean add(E element) {
-		Node node =  new Node(element);
-		if (head == null){
-	      head = node;
-	    }
-	    else{
-	      tail.next = node;
-	    }
-
-	    tail = node;
-	    ++size;
-
-		return false;
+	public boolean add(E item) {
+		
+		Node<E> newnode = new Node<>(item);
+		if(head == null) {
+			head = newnode;
+			tail = newnode;
+		}else {
+			tail.next = newnode;
+			tail = newnode;
+		}
+		
+		return true;
 	}
 
 	@Override
-	public boolean remove() {
+	public boolean remove(Object o) {
+		
+		
 		
 		return false;
 	}
@@ -95,10 +129,25 @@ public class LinkedListImpl<E> implements Collection<E> {
 
 	@Override
 	public void clear() {
-		// TODO Auto-generated method stub
 		
+		this.head = null;
+
 	}
-	
-	
-	
+
+
+	@Override
+	public boolean hasNext() {
+		
+		return head != null;
+	}
+
+
+	@Override
+	public E next() {
+		
+		
+		
+		return null;
+	}
+
 }
