@@ -6,7 +6,7 @@ import java.util.Iterator;
 public class NewLinkedList<E> implements Collection<E> {
     private Node head;
     private Node tail;
-    private int size=0;
+    private int size=10;
 
     public NewLinkedList() {
         this.head = head;
@@ -18,12 +18,13 @@ public class NewLinkedList<E> implements Collection<E> {
 
     @Override
     public int size() {
-        return size;
+
+        return this.size;
     }
 
     @Override
     public boolean isEmpty() {
-        if(size==0){
+        if(this.size==0){
             return true;
         }
 
@@ -54,12 +55,11 @@ public class NewLinkedList<E> implements Collection<E> {
 
     @Override
     public boolean add(Object e) {
-        size++;
         if(head==null){
             head=new Node( e, null,null);
-            tail=head;
+
         }else {
-            Node node= new Node(e, null, tail);
+            Node node= new Node(e, tail, head);
             this.tail=node;
 
 
@@ -108,14 +108,18 @@ public class NewLinkedList<E> implements Collection<E> {
 
     public static void main(String[] args) {
         NewLinkedList<Integer> list= new NewLinkedList<>();
+
+        System.out.println(list.isEmpty());
         list.add(1);
+        System.out.println(list.toString());
         list.add(5);
+        System.out.println(list.toString());
         list.add(8);
         list.add(10);
-
-
+        System.out.println(list.size());
         System.out.println(list.add(2));
-        System.out.println(list.size);
+
+
         System.out.println(list.isEmpty());
 
 

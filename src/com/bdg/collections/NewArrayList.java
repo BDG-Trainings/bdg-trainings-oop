@@ -15,7 +15,7 @@ public class NewArrayList <E> implements Collection<E> {
 
 
 
-    public E get(int index) {
+    private E get(int index) {
         if(index < count){
             E element= (E) elements[index];
             return element;
@@ -32,7 +32,7 @@ public class NewArrayList <E> implements Collection<E> {
 
     @Override
     public int size() {
-        return count;
+        return this.count;
     }
 
     @Override
@@ -74,8 +74,18 @@ public class NewArrayList <E> implements Collection<E> {
 
     @Override
     public <T> T[] toArray(T[] a) {
+       T []t= (T[]) new Object[this.count];
+       for(int i =0; i<count; i++){
+            for(int j=0; j<a.length; j++){
+                if(elements[i]==a[j]&& elements[i]!=null){
 
-        return null;
+                  t[i] = (T) elements[i];
+                }
+            }
+        }
+
+
+        return t;
     }
 
     @Override
@@ -88,12 +98,28 @@ public class NewArrayList <E> implements Collection<E> {
         return true;
     }
 
+    private boolean removeByIndex(final int i) {
+        System.arraycopy(this.elements, i + 1, this.elements, i, this.count - i - 1);
+        this.elements[--count] = null;
+        return true;
+    }
+
     @Override
     public boolean remove(Object object) {
-
-                return false;
-
-     }
+        if (object == null) {
+            for (int i = 0; i < this.count; i++) {
+                if (this.elements[i] == null) {
+                    return this.removeByIndex(i);
+                }
+            }
+        } else {
+            for (int i = 0; i < this.count; i++)
+                if (object.equals(this.elements[i])) {
+                    return this.removeByIndex(i);
+                }
+        }
+        return false;
+    }
 
     @Override
     public boolean containsAll(Collection<?> c) {
@@ -127,30 +153,52 @@ public class NewArrayList <E> implements Collection<E> {
 
     @Override
     public boolean retainAll(Collection<?> c) {
+        for(int i=0; i<elements.length; i++) {
+            for (int j = 0; j < c.toArray().length; j++) {
+                if (elements[i] != c.toArray()[j]) {
+                    this.remove(elements[i]);
+                    return true;
+                }
+            }
 
+        }
          return false;
     }
 
     @Override
     public void clear() {
-        return;
+       for(int i=0; i<count; i++){
+          elements[i]=null;
 
+       }count=0;
     }
 
     @Override
     public String toString() {
-        return "NewArrayList{" +
-                "elements=" + Arrays.toString(elements) +
-                ", count=" + count +
-                ", size=" + size +
-                '}';
+        final StringBuilder toString = new StringBuilder();
+        toString.append("[");
+
+        for (final Object element : elements) {
+            if (element == null) {
+                toString.append("null, ");
+            } else {
+                toString.append(element.toString()).append(", ");
+            }
+        }
+
+        toString.replace(toString.length() - 2, toString.length(), "");
+        toString.append("]");
+        return toString.toString();
     }
+
 
     public static void main(String[] args) {
         NewArrayList <Integer> arrayList= new NewArrayList<>();
         arrayList.add(2);
         arrayList.add(8);
         arrayList.add(5);
+        arrayList.add(54);
+
         System.out.println(arrayList.get(1));
         System.out.println(arrayList.size());
         System.out.println(arrayList.isEmpty());
@@ -172,9 +220,36 @@ public class NewArrayList <E> implements Collection<E> {
         System.out.println(arrayList.addAll(integers));
         System.out.println(arrayList.toString());
         NewArrayList <Integer> integers1= new NewArrayList<>();
-        integers1.add(5);
-        integers1.add(1);
+        integers1.add(6);
+        integers1.add(6);
         System.out.println(arrayList.containsAll(integers1));
+        System.out.println(arrayList.removeByIndex(2));
+        System.out.println(arrayList.toString());
+        System.out.println(arrayList.remove(8));
+        System.out.println(arrayList.toString());
+        System.out.println(arrayList.size());
+        Object []t = new Object[2];
+        t[0]=6;
+        t[1]=54;
+        Object []t1= arrayList.toArray(t);
+        System.out.println(Arrays.toString(t1));
+
+        System.out.println(arrayList.removeAll(integers1));
+        System.out.println(arrayList.toString());
+        System.out.println(arrayList.size());
+        NewArrayList <Integer> integers2= new NewArrayList<>();
+        integers2.add(6);
+        integers2.add(3);
+        System.out.println(arrayList.retainAll(integers2));
+        System.out.println(arrayList.toString());
+        System.out.println(arrayList.size());
+        arrayList.clear();
+        System.out.println(arrayList.toString());
+        System.out.println(arrayList.size());
+        System.out.println(arrayList.isEmpty());
+
+
+
 
 
 
