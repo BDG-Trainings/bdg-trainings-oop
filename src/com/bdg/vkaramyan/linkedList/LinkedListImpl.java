@@ -2,6 +2,7 @@ package com.bdg.vkaramyan.linkedList;
 
 import java.util.Collection;
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 public class LinkedListImpl<E> implements Collection<E>, Iterator<E> {
 
@@ -97,7 +98,16 @@ public class LinkedListImpl<E> implements Collection<E>, Iterator<E> {
 
 	@Override
 	public boolean remove(Object o) {
+		Iterator<E> iterator = this.iterator();
 		
+		while(iterator.hasNext()) {
+			E e = iterator.next();
+			
+			if(o == null ? e == null : o.equals(e)) {
+				iterator.remove();
+				return true;
+			}
+		}
 		
 		
 		return false;
@@ -105,14 +115,25 @@ public class LinkedListImpl<E> implements Collection<E>, Iterator<E> {
 
 	@Override
 	public boolean containsAll(Collection<?> c) {
-		// TODO Auto-generated method stub
-		return false;
+		Iterator<?> e = c.iterator();
+		while(e.hasNext()) {
+			if(!contains(e.next())) {
+				return false;
+			}
+		}
+		return true;
 	}
 
 	@Override
 	public boolean addAll(Collection<? extends E> c) {
-		// TODO Auto-generated method stub
-		return false;
+		for (int i = 0; i < c.size(); i++) {
+			for(Iterator<? extends E> iterator = c.iterator(); iterator.hasNext();) {
+				if(!add((E)iterator.next())) {
+					return false;
+				}
+			}
+		}
+		return true;
 	}
 
 	@Override
@@ -145,9 +166,14 @@ public class LinkedListImpl<E> implements Collection<E>, Iterator<E> {
 	@Override
 	public E next() {
 		
+		if(head == null) {
+			throw new NoSuchElementException();
+			
+		}
 		
+		head = head.getNext();
 		
-		return null;
+		return next();
 	}
 
 }
