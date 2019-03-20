@@ -30,7 +30,7 @@ public class LinkedList2<T> implements Collection<T> {
 
     @Override
     public boolean isEmpty() {
-        if (size == 0) {
+        if (size == 0) { // if firstNode2 == null ...
             return true;
         }
         return false;
@@ -38,12 +38,32 @@ public class LinkedList2<T> implements Collection<T> {
 
     @Override
     public boolean contains(Object o) {
+        Iterator itr = this.iterator();
+        do {
+            if (itr.equals(o)) {
+                return true;
+            }
+        } while (itr.hasNext());
         return false;
     }
 
     @Override
     public Iterator<T> iterator() {
-        return null;
+        Iterator<T> it = new Iterator<T>() {
+            private Node2 node = firstNode2;
+            @Override
+            public boolean hasNext() {
+                return node.hasNext();
+            }
+
+            @Override
+            public T next() {
+                if (!hasNext()) { throw new UnsupportedOperationException(); }
+                node = node.getNextNode2();
+                return (T) node;
+            }
+        };
+        return it;
     }
 
     @Override
