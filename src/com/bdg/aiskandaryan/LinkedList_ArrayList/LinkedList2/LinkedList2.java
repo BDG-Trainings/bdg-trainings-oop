@@ -23,10 +23,6 @@ public class LinkedList2<T> implements Collection<T> {
         return lastNode2;
     }
 
-    public int getSize() {
-        return size;
-    }
-
     @Override
     public int size() {
         return this.size;
@@ -51,45 +47,62 @@ public class LinkedList2<T> implements Collection<T> {
     }
 
     @Override
-    public Node2[] toArray() {
-        if (this.size > 0) {
-            Node2[] arr = new Node2[this.size];
-            int i = 0;
-            return arr;
-
-        } else {
-            return null;
-        }
+    public Object[] toArray() {
+        Object[] result = new Object[size];
+        int i = 0;
+        for (Node2<T> x = firstNode2; x != null; x = x.getNextNode2())
+            result[i++] = x;
+        return result;
     }
 
     @Override
     public <T> T[] toArray(T[] a) {
+
         return null;
     }
 
     @Override
     public boolean add(final T t) {
-        return false;
-
-    }
-
-    @Override
-    public boolean add(Node2 node2) {
-        if (firstNode2 == null && lastNode2 == null) {
-            node2.setPrev (null);
-            firstNode = node;
+        if (size > 0) {
+            lastNode2.setNextNode2((Node2)t);
+            ((Node2) t).setPreviousNode2(lastNode2);
         } else {
-            node.setPreviousNode(this.lastNode);
-            lastNode.setNextNode(node);
+            firstNode2 = (Node2)t;
+            ((Node2) t).setPreviousNode2(null);
         }
-        node.setNextNode(null);
-        lastNode = node;
-
-        return false;
+        lastNode2 = (Node2) t;
+        ((Node2) t).setNextNode2(null);
+        size++;
+        return true;
     }
 
     @Override
     public boolean remove(Object o) {
+        for (Node2<T> x = firstNode2; x != null; x.getNextNode2()) {
+
+        }
+
+        if (o == null) {
+            System.out.println("Invalid Node specified !!!");
+            return false;
+        }/*
+        if (o.hasNext() && node.hasPrevious()) { // if node is the ONLY Node
+            this.firstNode = null;
+            this.lastNode = null;
+            return;
+        }
+        if (node.hasNext()) { // if node is last Node
+            node.getPreviousNode().setNextNode(null);
+            node.setPreviousNode(null);
+            return;
+        }
+        if (node.hasPrevious()) { // if node is first Node
+            node.getNextNode().setPreviousNode(null);
+            node.setNextNode(null);
+        }
+        node.getNextNode().setPreviousNode(node.getPreviousNode());
+        node.getPreviousNode().setNextNode(node.getNextNode());
+*/
         return false;
     }
 
@@ -100,11 +113,6 @@ public class LinkedList2<T> implements Collection<T> {
 
     @Override
     public boolean addAll(final Collection<? extends T> c) {
-        return false;
-    }
-
-    @Override
-    public boolean addAll(Collection<? extends Node2> c) {
         return false;
     }
 

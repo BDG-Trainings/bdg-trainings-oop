@@ -1,6 +1,6 @@
 package com.bdg.aiskandaryan.LinkedList_ArrayList.LinkedList2;
 
-public class Node2<N extends Number> {
+public class Node2<N> {
     private N value;
     private Node2 previousNode2;
     private Node2 nextNode2;
