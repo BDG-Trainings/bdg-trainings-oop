@@ -154,7 +154,6 @@ public class LinkedList {
         } else if (lastNode == a) {
             lastNode = b;
         }
-
         return true;
     }
 }

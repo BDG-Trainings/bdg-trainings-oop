@@ -109,14 +109,16 @@ public class ArrayList<E> implements Collection<E> {
         return true;
     }
 
-    public boolean removeByIndex(final int i) {
-        if (i >= this.currentSize) {
+    public boolean removeByIndex(final int index) {
+        if (index >= this.currentSize) {
             System.out.println("Remove By Index: wrong index is specified!!!");
             return false;
         } else {
-            System.arraycopy(this.elements, i + 1, this.elements, i, this.currentSize - i - 1);
-            this.elements[currentSize - 1] = null;
+            for(int i = 0; i < this.currentSize -1; i++) {
+                this.elements[i] = this.elements[i + 1];
+            }
             currentSize--;
+            this.elements[currentSize] = null;
             return true;
         }
     }
