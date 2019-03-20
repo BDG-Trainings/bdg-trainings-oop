@@ -41,19 +41,22 @@ public class LinkedList {
             System.out.println("Invalid Node specified !!!");
             return;
         }
-        if (node.hasNext() && node.hasPrevious()) { // if node is the ONLY Node
+        if (!node.hasNext() && !node.hasPrevious()) { // if node is the ONLY Node
             this.firstNode = null;
             this.lastNode = null;
             return;
         }
-        if (node.hasNext()) { // if node is last Node
-            node.getPreviousNode().setNextNode(null);
+        if (!node.hasNext()) { // if node is last Node
+            lastNode = node.getPreviousNode();
+            lastNode.setNextNode(null);
             node.setPreviousNode(null);
             return;
         }
-        if (node.hasPrevious()) { // if node is first Node
-            node.getNextNode().setPreviousNode(null);
+        if (!node.hasPrevious()) { // if node is first Node
+            firstNode = node.getNextNode();
+            firstNode.setPreviousNode(null);
             node.setNextNode(null);
+            return;
         }
         node.getNextNode().setPreviousNode(node.getPreviousNode());
         node.getPreviousNode().setNextNode(node.getNextNode());
