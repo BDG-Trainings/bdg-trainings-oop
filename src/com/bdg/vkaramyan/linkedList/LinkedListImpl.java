@@ -2,40 +2,53 @@ package com.bdg.vkaramyan.linkedList;
 
 import java.util.Collection;
 import java.util.Iterator;
-import java.util.NoSuchElementException;
 
-public class LinkedListImpl<E> implements Collection<E>, Iterator<E> {
+
+public class LinkedListImpl<E> implements Collection<E> {
 
 	private Node<E> head;
 	private Node<E> tail;
 	private int size = 0;
 	
+	
+	
+
+	public LinkedListImpl() {
+		
+	}
+
 
 	@Override
 	public int size() {
-		for (Node<E> n = head; n.next != null; n = n.next) {
-			size++;
-
-		}
-		return size;
+		return this.size;
+		
 	}
 	
 
 	@Override
 	public boolean isEmpty() {
 		
-		return size == 0;
+		return this.size == 0;
 	}
 
 	@Override
 	public boolean contains(Object o) {
-		for(E item : this) {
-			if(o == null ? item == null : o.equals(item)) {
-				
+		Node<E> current = this.head;
+		if(current != null) {
+			if(current.getItem().equals(o)) {
 					return true;
 				
 			}
 		}
+		
+		while(current.getItem().equals(o)) {
+			if(current.next.getItem().equals(o)) {
+				return true;
+			}
+			
+			current = current.next;
+		}
+		
 		
 		return false;
 	}
@@ -44,17 +57,28 @@ public class LinkedListImpl<E> implements Collection<E>, Iterator<E> {
 	@Override
 	public Iterator<E> iterator() {
 		
-		return new LinkedListImpl();
+		return null;
 	}
 	
 
 	@Override
 	public Object[] toArray() {
-		Object[] array = new Object[size()];
+		if(this.size == 0) {
+			return null;
+		}
+		
+		Object[] array = new Object[this.size()];
+		
+		Node<E> current = head.next;
+		
 		int i = 0;
-		for (E item : this) {
-			array[i] = item;
+		array[i] = head.getItem();
+		
 			i++;
+			while(i< this.size) {
+				array[i] = current.getItem();
+				current = current.next;
+				i++;
 		}
 			
 		return array;
@@ -62,7 +86,7 @@ public class LinkedListImpl<E> implements Collection<E>, Iterator<E> {
 
 	@Override
 	public <T> T[] toArray(T[] a) {
-		T[] result = a;
+		/*T[] result = a;
 		if(size() > result.length) {
 			result = T[size()];
 		}
@@ -78,47 +102,56 @@ public class LinkedListImpl<E> implements Collection<E>, Iterator<E> {
 		}
 		
 		
-		return (T[]) result;
+		return (T[]) result;*/
+		
+		return null;
 	}
 
 	@Override
 	public boolean add(E item) {
 		
-		Node<E> newnode = new Node<>(item);
-		if(head == null) {
-			head = newnode;
-			tail = newnode;
-		}else {
-			tail.next = newnode;
-			tail = newnode;
-		}
-		
+		Node<E> t = this.tail;
+		Node<E> node = new Node<E>((Node<E>) item, t,null);
+		this.tail = node;
+		if(t == null) {
+			this.head = node;
+			}else {
+				t.next = node;
+			}
+		this.size++;
 		return true;
 	}
 
 	@Override
 	public boolean remove(Object o) {
-		Iterator<E> iterator = this.iterator();
-		
-		while(iterator.hasNext()) {
-			E e = iterator.next();
-			
-			if(o == null ? e == null : o.equals(e)) {
-				iterator.remove();
-				return true;
-			}
-		}
-		
-		
-		return false;
-	}
+		 if (this.head.getItem().equals(o)) {
+	            this.head = this.head.next;
+	            this.head.previous = null;
+	            this.size--;
+	            return true;
+	        }
+
+	        Node<E> current = this.head.next;
+
+	        while (current != null) {
+	            if (current.getItem().equals(o)) {
+	                current.previous.next = current.next;
+	                current.next.previous = current.previous;
+	                this.size--;
+	                return true;
+	            }
+	            current = current.next;
+	        }
+
+	        return false;
+	    }
+
 
 	@Override
 	public boolean containsAll(Collection<?> c) {
-		Iterator<?> e = c.iterator();
-		while(e.hasNext()) {
-			if(!contains(e.next())) {
-				return false;
+		 for (final Object object : c) {
+	            if (!this.contains(object)) {
+	                return false;
 			}
 		}
 		return true;
@@ -151,12 +184,12 @@ public class LinkedListImpl<E> implements Collection<E>, Iterator<E> {
 	@Override
 	public void clear() {
 		
-		this.head = null;
+		
 
 	}
 
 
-	@Override
+	/*@Override
 	public boolean hasNext() {
 		
 		return head != null;
@@ -174,6 +207,35 @@ public class LinkedListImpl<E> implements Collection<E>, Iterator<E> {
 		head = head.getNext();
 		
 		return next();
-	}
+	}*/
+	
+	 @Override
+	    public String toString() {
+	        if (head == null && tail == null) {
+	            return "[]";
+	        } else {
+	            final StringBuilder sb = new StringBuilder();
+	            sb.append("[").append(this.head.getItem()).append(", ");
+	            Node<E> current = this.head.next;
+	            while (current != null) {
+	                sb.append(current.getItem()).append(", ");
+	                current = current.next;
+	            }
+	            sb.replace(sb.length() - 2, sb.length(), "");
+	            sb.append("]");
+	            return sb.toString();
+	        }
+	    }
+
+	    
+
+	    public static void main(String[] args) {
+	        final LinkedListImpl<String> linkedList = new LinkedListImpl<>();
+	        linkedList.add("A");
+	        linkedList.add("B");
+	        linkedList.add("C");
+	        System.out.println(linkedList);
+
+	    }
 
 }

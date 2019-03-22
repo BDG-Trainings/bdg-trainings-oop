@@ -7,6 +7,16 @@ public class Node <E> {
 	private E item;
 	
 	
+	
+	
+	public Node(Node<E> previous, Node<E> next, E item) {
+		
+		this.previous = previous;
+		this.next = next;
+		this.item = item;
+	}
+
+
 	public Node(E element) {
 		
 		
