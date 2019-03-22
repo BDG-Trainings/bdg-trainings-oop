@@ -76,78 +76,96 @@ public class LinkedList2<T> implements Collection<T> {
     }
 
     @Override
-    public <T> T[] toArray(T[] a) {
-
-        return null;
-    }
+    public <T> T[] toArray(T[] a) { return null; }
 
     @Override
     public boolean add(final T t) {
+        Node2<T> newNode = new Node2<>(t);
         if (size > 0) {
-            last.setNextNode2((Node2)t);
-            ((Node2) t).setPreviousNode2(last);
+            last.setNextNode2(newNode);
+            newNode.setPreviousNode2(last);
         } else {
-            first = (Node2)t;
-            ((Node2) t).setPreviousNode2(null);
+            first = newNode;
+            newNode.setPreviousNode2(null);
         }
-        last = (Node2) t;
-        ((Node2) t).setNextNode2(null);
+        last = newNode;
+        newNode.setNextNode2(null);
         size++;
         return true;
     }
 
     @Override
     public boolean remove(Object o) {
-        for (Node2<T> x = first; x != null; x.getNextNode2()) {
-
-        }
-
         if (o == null) {
             System.out.println("Invalid Node specified !!!");
             return false;
-        }/*
-        if (o.hasNext() && node.hasPrevious()) { // if node is the ONLY Node
-            this.firstNode = null;
-            this.lastNode = null;
-            return;
         }
-        if (node.hasNext()) { // if node is last Node
-            node.getPreviousNode().setNextNode(null);
-            node.setPreviousNode(null);
-            return;
+        Node2 node = (Node2)o;
+        if (first.equals(node) && last.equals(node)) { // if node is the ONLY Node
+            this.first = null;
+            this.last = null;
+            size--;
+            return true;
         }
-        if (node.hasPrevious()) { // if node is first Node
-            node.getNextNode().setPreviousNode(null);
-            node.setNextNode(null);
+        if (last.equals(node)) { // if node is last Node
+            last.getPreviousNode2().setNextNode2(null);
+            last.setPreviousNode2(null);
+            size--;
+            return true;
         }
-        node.getNextNode().setPreviousNode(node.getPreviousNode());
-        node.getPreviousNode().setNextNode(node.getNextNode());
-*/
-        return false;
+        if (first.equals(node)) { // if node is first Node
+            first.getNextNode2().setPreviousNode2(null);
+            first.setNextNode2(null);
+            size--;
+            return true;
+        }
+        node.getNextNode2().setPreviousNode2(node.getPreviousNode2());
+        node.getPreviousNode2().setNextNode2(node.getNextNode2());
+        size--;
+        return true;
     }
 
     @Override
-    public boolean containsAll(Collection<?> c) {
-        return false;
+    public boolean containsAll(Collection<?> collection) {
+        for(final Object o: collection) {
+            if (!contains(o)) {
+                return false;
+            }
+        }
+        return true;
     }
 
     @Override
-    public boolean addAll(final Collection<? extends T> c) {
-        return false;
+    public boolean addAll(final Collection<? extends T> collection) {
+        for(final T element: collection) {
+            add(element);
+            size++;
+        }
+        return true;
     }
 
     @Override
-    public boolean removeAll(Collection<?> c) {
-        return false;
+    public boolean removeAll(Collection<?> collection) {
+        for(final Object element: collection) {
+            remove(element);
+            size--;
+        }
+        return true;
     }
 
     @Override
     public boolean retainAll(Collection<?> c) {
+        for (Node2<T> x = first; x != null; x = x.getNextNode2()){
+
+        }
         return false;
     }
 
     @Override
     public void clear() {
+        first = null;
+        last = null;
+        size = 0;
 
     }
 }

@@ -158,7 +158,7 @@ public class ArrayList<E> implements Collection<E> {
             this.elements[currentSize] = element;
             currentSize++;
         }
-        return false;
+        return true;
     }
 
     @Override
@@ -194,5 +194,33 @@ public class ArrayList<E> implements Collection<E> {
             this.elements[i] = null;
         }
         this.currentSize = 0;
+    }
+
+    public void selectionSort(int[] array, boolean ascending) {
+        for (int i = 0; i < array.length - 1; i++) {
+            int index = i;
+            for (int k = i + 1; i < array.length; i++) {
+                if (array[k] > array[index] == ascending) {
+                    index = k;
+                }
+            }
+            if (index != i) {
+                int tmp = array[i];
+                array[i] = array[index];
+                array[index] = tmp;
+            }
+        }
+    }
+
+    public void bubbleSort(int[] array, boolean ascending) {
+        for (int i = 0; i < array.length - 1; i++) {
+            for (int k = i + 1; k < array.length - 1; k++) {
+                if (array[k] > array[k + 1] == ascending) {
+                    int tmp = array[k];
+                    array[k] = array[k + 1];
+                    array[k + 1] = tmp;
+                }
+            }
+        }
     }
 }
