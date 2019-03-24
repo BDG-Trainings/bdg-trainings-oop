@@ -6,10 +6,10 @@ public class Node <E>{
     private Node next;
     private Node prev;
 
-    public Node(E element, Node next, Node prev) {
-        this.item = element;
+    public Node(Object element, Node next, Object prev) {
+        this.item = (E) element;
         this.next = next;
-        this.prev = prev;
+        this.prev = (Node) prev;
     }
     public E getItem() {
         return item;
