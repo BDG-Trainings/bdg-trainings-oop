@@ -1,4 +1,4 @@
-package com.bdg.spapoyan.sorting;
+package com.bdg.spapoyan.sortingAlgorithms;
 
 public class ArrayBub {
 
