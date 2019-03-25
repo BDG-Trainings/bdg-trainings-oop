@@ -14,12 +14,12 @@ public class NewLinkedList<E> implements Collection<E> {
         this.tail = tail;
         this.size = size;
     }
-    private class Node<T> {
+    private static class Node<T> {
         T element;
         Node<T> prev;
         Node<T> next;
 
-        Node(final Node<T> prev, final T element, final Node<T> next) {
+        public Node(final Node<T> prev, final T element, final Node<T> next) {
             this.prev = prev;
             this.element = element;
             this.next = next;

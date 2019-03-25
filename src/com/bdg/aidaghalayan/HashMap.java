@@ -4,7 +4,6 @@ package com.bdg.aidaghalayan;
 import java.util.Arrays;
 import java.util.LinkedList;
 
-import static java.util.LinkedList.*;
 
 public class HashMap {
     private String key;
@@ -13,20 +12,21 @@ public class HashMap {
 
 
     public String get(String key){
-       return null;
+        int i = Math.abs(key.hashCode()) % 16;
 
+            return String.valueOf(objects[i]);
+        }
 
-
-    }
-    public LinkedList put(String key, String value) {
+    public void put(String key, String value) {
         int i = Math.abs(key.hashCode()) % 16;
         if (objects[i] == null) {
             this.value = value;
         }
-        LinkedList <String> list= new LinkedList<>();
-        objects[i] = list;
+       LinkedList list = new LinkedList<>();
+
         list.add(value);
-        return  list;
+        objects[i]=list;
+
     }
 
     public String remove(String key){
@@ -34,14 +34,21 @@ public class HashMap {
 return null;
     }
     public boolean containsKey(String key){
-return false;
+        for(int i =0; i<objects.length; i++){
+            if(objects[i]==key){
+                return true;
+            }
+        }
+        return false;
     }
+
     public int size(){
-return Integer.parseInt(null);
+     return objects.length;
     }
 
     @Override
     public String toString() {
+
         return "HashMap{"  +
                 "objects=" + Arrays.toString(objects) +
                 '}';
@@ -51,18 +58,20 @@ return Integer.parseInt(null);
         HashMap map= new HashMap();
         map.put("1", "aaa");
         map.put("2", "bbb");
-        map.put("3", "bbb");
-        map.put("njnnj", "bbb");
-        map.put("njnnla", "bbb");
-        map.put("njnnlas", "bbb");
-        map.put("njnnls", "bbb");
-        map.put("njnnldf", "bbb");
-        map.put("njnnlfg", "bbb");
-        map.put("njnnlfh", "bbb");
-        map.put("njnnlgf", "bbb");
-        map.put("njnnlddfs", "bbb");
+        map.put("3", "ccc");
+        map.put("njnnj", "ddd");
+        map.put("njnnla", "eee");
+        map.put("njnnlas", "fff");
+        map.put("njnnls", "ggg");
+        map.put("njnnldf", "hhh");
+        map.put("njnnlfg", "iii");
+        map.put("njnnlfh", "jjj");
+        map.put("njnnlgf", "kkk");
+        map.put("njnnlddfs", "lll");
         System.out.println(map.toString());
         System.out.println(map.get("njnnls"));
+        System.out.println(map.containsKey("njnnlgf"));
+        System.out.println(map.size());
     }
 }
 
