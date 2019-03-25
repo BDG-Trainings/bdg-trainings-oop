@@ -3,6 +3,7 @@ package com.bdg.aidaghalayan;
 import java.util.HashMap;
 
 public class PhoneDirectory {
+    //Also you can change HashMap reference with Map
     private HashMap<String, String> hashMap = new HashMap<>();
 
 
@@ -12,6 +13,7 @@ public class PhoneDirectory {
 
     }
 
+    //Need to return found object instead of check if exists.
     private boolean find(String name) {
         return hashMap.get(name) != null;
     }
