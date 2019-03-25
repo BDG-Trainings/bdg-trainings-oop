@@ -1,4 +1,4 @@
-package com.bdg.npetrosyan.SnakeGame;
+package com.bdg.npetrosyan.snakeGame;
 import javax.swing.*;
 
 /**

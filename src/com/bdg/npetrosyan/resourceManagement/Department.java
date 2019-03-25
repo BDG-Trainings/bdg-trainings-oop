@@ -1,4 +1,4 @@
-package com.bdg.npetrosyan.ResourceManagement;
+package com.bdg.npetrosyan.resourceManagement;
 
 public class Department {
     private String departmentName;
