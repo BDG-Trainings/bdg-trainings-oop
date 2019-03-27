@@ -1,6 +1,7 @@
 package com.bdg.npetrosyan.homeworks;
 //bacasakan ev drakan unecoxneri qanak@
 public class App220 {
+//positive and negative numbers count
     public static void main(String[] args) {
         int[] y = new int[6];
         y[0] = 95;
@@ -10,15 +11,15 @@ public class App220 {
         y[4] = 3;
         y[5] = 10;
 
-        int negativeIndex = 0;
-        int positiveIndex = 0;
+        int negativeNumbers = 0;
+        int positiveNumbers = 0;
         for(int i = 0; i < y.length; i++){
             if (y[i] > 0){
-                positiveIndex++;
+                positiveNumbers++;
             }else {
-                negativeIndex++;
+                negativeNumbers++;
             }
         }
-        System.out.println("Positive Index "+positiveIndex + ", Negative Index "+negativeIndex);
+        System.out.println("Positive Numbers Count "+positiveNumbers + ", Negative Numbers Count "+negativeNumbers);
     }
 }
