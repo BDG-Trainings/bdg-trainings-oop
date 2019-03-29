@@ -14,7 +14,7 @@ public final class RendererFactory {
     static {
         renderInstanceHolder = new EnumMap<>(RenderObjectType.class);
         renderInstanceHolder.put(RenderObjectType.PDF, PDFRenderer.getInstance());
-        renderInstanceHolder.put(RenderObjectType.XML, new LoggedRequestRendererProxy(new XMLRenderer()));
+        renderInstanceHolder.put(RenderObjectType.XML, new LoggedRequestRendererProxy());
     }
 
     public static RequestRenderer getRenderer(RenderObjectType objectType) {
