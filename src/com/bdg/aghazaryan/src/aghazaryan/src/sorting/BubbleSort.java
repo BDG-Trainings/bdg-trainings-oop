@@ -5,7 +5,7 @@ package com.bdg.aghazaryan.src.aghazaryan.src.sorting;
 public class BubbleSort {
     public static void main(String[] args) {
 
-        int[] list = new int[]{15, 31, 90, 35, 45, 150, 9, 83};
+        int[] list = new int[]{15, 31, 90, 35, 51, 150, 9, 83};
 
         list = bubbleSort(list, list.length );
 
