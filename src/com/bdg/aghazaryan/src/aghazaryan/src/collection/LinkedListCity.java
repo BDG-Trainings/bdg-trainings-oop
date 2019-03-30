@@ -49,7 +49,7 @@ public class LinkedListCity <E> implements Collection <E> {
     public boolean add(E e) {
       Node node = new Node();
      // node.data = data;
-      node.next = null;
+   //   node.next = null;
 
 
 
