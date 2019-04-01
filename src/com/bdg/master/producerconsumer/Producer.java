@@ -14,8 +14,8 @@ public final class Producer implements Runnable {
     @Override
     public void run() {
         while (true) {
-            while (this.container.size() == 20) {
-                synchronized (this.container) {
+            synchronized (this.container) {
+                while (this.container.size() == 20) { //<-- while should be in synchronized scope
                     try {
                         System.out.println("WAITING thread : " + Thread.currentThread().getName());
                         this.container.wait();
@@ -24,9 +24,8 @@ public final class Producer implements Runnable {
                         return;
                     }
                 }
-            }
-            synchronized (this.container) {
-                this.container.add("Thread -> " + Thread.currentThread().getName());
+                //And also we don't need another synch block
+                this.container.add("Thread -> " + Thread.currentThread().getName() + " Current size : " + this.container.size());
                 this.container.notify();
             }
         }

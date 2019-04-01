@@ -14,8 +14,9 @@ public final class Consumer implements Runnable {
     @Override
     public void run() {
         while (true) {
-            while (this.container.isEmpty()) {
-                synchronized (this.container) {
+            synchronized (this.container) {
+                while (this.container.isEmpty()) {
+
                     try {
                         this.container.wait();
                     } catch (InterruptedException e) {
@@ -23,9 +24,6 @@ public final class Consumer implements Runnable {
                         return;
                     }
                 }
-            }
-
-            synchronized (this.container) {
                 this.container.notifyAll();
                 System.out.println("Consuming value : " + this.container.poll());
             }
