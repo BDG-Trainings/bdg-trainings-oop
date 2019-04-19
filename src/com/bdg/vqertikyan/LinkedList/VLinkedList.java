@@ -1,9 +1,11 @@
-package com.bdg.vqertikyan.LinkedList;
+/*
+package com.bdg.master.linkedlist;
+
 
 import java.util.Collection;
 import java.util.Iterator;
 
-class LinkedList<E> implements Collection<E> {
+public class LinkedList<E> implements Collection<E> {
 
 
     private Node<E> first;
@@ -70,19 +72,17 @@ class LinkedList<E> implements Collection<E> {
         return null;
     }
 
-
     @Override
     public boolean add(final E element) {
-        Node node = new Node(element);
-        if (first == null){
-            first = node;
-            last = first;
+        final Node<E> l = this.last;
+        final Node<E> node = new Node<>(l, element, null);
+        this.last = node;
+        if (l == null) {
+            this.first = node;
         } else {
-            last.next = node;
-            node.prev = last;
-            last = node;
+            l.next = node;
         }
-        currentSize++;
+        this.currentSize++;
         return true;
     }
 
@@ -163,8 +163,10 @@ class LinkedList<E> implements Collection<E> {
         Node<T> prev;
         Node<T> next;
 
-        Node(final T element) {
+        Node(final Node<T> prev, final T element, final Node<T> next) {
+            this.prev = prev;
             this.element = element;
+            this.next = next;
         }
     }
 
@@ -173,8 +175,8 @@ class LinkedList<E> implements Collection<E> {
         linkedList.add("A");
         linkedList.add("B");
         linkedList.add("C");
-        linkedList.add("D");
         System.out.println(linkedList);
 
     }
 }
+*/

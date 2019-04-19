@@ -1,23 +1,28 @@
-package com.bdg.vqertikyan.bankaccountsystem;
+/*
+package com.bdg.master.bankaccountsystem;
 
 
-import com.bdg.vqertikyan.json.parser.JsonParseResult;
-import com.bdg.vqertikyan.json.parser.JsonParseResults;
-import com.bdg.vqertikyan.json.parser.JsonParser;
-import com.bdg.vqertikyan.json.parser.SimpleJsonParser;
+import com.bdg.master.json.parser.JsonParseResult;
+import com.bdg.master.json.parser.JsonParseResults;
+import com.bdg.master.json.parser.JsonParser;
+import com.bdg.master.json.parser.SimpleJsonParser;
 
+*/
 /**
  * Phone number service class to provide base CRUD functionality
- */
+ *//*
+
 public final class PhoneNumberServiceImpl implements PhoneNumberService {
 
     private final JsonParser phoneNumberJsonParser = new SimpleJsonParser();
 
 
-    /**
+    */
+/**
      * @param jsonPhoneNumberContent PhoneNumber json representation
      * @return PhoneNumber entity.
-     */
+     *//*
+
     @Override
     public PhoneNumber create(final String jsonPhoneNumberContent) {
 
@@ -53,3 +58,4 @@ public final class PhoneNumberServiceImpl implements PhoneNumberService {
         System.out.println(phoneNumber);
     }
 }
+*/
