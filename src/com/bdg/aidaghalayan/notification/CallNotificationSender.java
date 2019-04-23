@@ -4,10 +4,15 @@ public class CallNotificationSender implements NotificationSender {
 
     private static CallNotificationSender callNotificationSenderInstance = new CallNotificationSender();
 
-    private CallNotificationSender() {
+    CallNotificationSender() {
     }
 
     public static CallNotificationSender getInstance(){
         return callNotificationSenderInstance;
+    }
+
+    @Override
+    public void send(Notification notification) {
+
     }
 }

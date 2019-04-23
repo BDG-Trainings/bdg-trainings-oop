@@ -4,9 +4,14 @@ public class EmailNotificationSender implements NotificationSender {
     private static EmailNotificationSender emailNotificationSenderInstance= new EmailNotificationSender();
 
 
-    private EmailNotificationSender() {
+    EmailNotificationSender() {
     }
     public static EmailNotificationSender getInstance(){
         return emailNotificationSenderInstance;
+    }
+
+    @Override
+    public void send(Notification notification) {
+
     }
 }
