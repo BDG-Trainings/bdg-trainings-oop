@@ -15,20 +15,13 @@ public class NotificationSenderFactory {
     }
 
     public NotificationSender getNotification(final NotificationType type) {
-        return this.registry.get(type);
-    }
 
-    public NotificationSender getNotificationSender(NotificationType notificationType) {
-        if (notificationType == NotificationType.CALL) {
-            return new CallNotificationSender();
-        }
-        if (notificationType == NotificationType.SMS) {
-            return new MobileSMSNotificationSender();
-        }
-        if (notificationType == NotificationType.EMAIL) {
-            return new EmailNotificationSender();
+        NotificationSender sender = this.registry.get(type);
 
+        if (sender == null) {
+            throw new NotificationSenderNotFoundException(type);
         }
-        return  null;
+
+        return sender;
     }
 }
