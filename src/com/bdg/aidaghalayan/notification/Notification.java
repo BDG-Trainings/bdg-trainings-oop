@@ -11,9 +11,11 @@ public final class Notification {
     private String message;
     private String receiver;
     private String  emailAddress;
+    private Integer x;
 
     public Notification(final String message) {
         this.message = message;
+        x.toString();
     }
 
     public String getReceiver() {

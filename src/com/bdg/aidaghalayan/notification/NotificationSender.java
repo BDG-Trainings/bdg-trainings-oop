@@ -2,5 +2,5 @@ package com.bdg.aidaghalayan.notification;
 
 public interface NotificationSender {
 
-    void send(Notification notification);
+    void send(Notification notification) throws NotificationSendException;
 }
